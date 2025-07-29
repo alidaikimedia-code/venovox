@@ -25,7 +25,7 @@ const navData = {
     { name: "About Us", path: "/my-en/about" },
     {
       name: "Our Services",
-      path: "/my-en/our-services", // updated
+      path: "/my-en/our-services",
       subItems: [
         { name: "Risk Intelligence", path: "/my-en/background-screening/risk-intelligence/" },
         { name: "Due Diligence", path: "/my-en/background-screening/due-diligence/" },

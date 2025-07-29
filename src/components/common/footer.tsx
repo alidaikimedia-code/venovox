@@ -172,113 +172,65 @@ const Footer = () => {
               <h3 className="text-lg font-semibold text-gray-900">
                 Get In Touch
               </h3>
-              <form
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  const form = e.target as HTMLFormElement;
-
-                  const name = (form.elements.namedItem("name") as HTMLInputElement).value;
-                  const email = (form.elements.namedItem("email") as HTMLInputElement).value;
-                  const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
-                  const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
-
-                  const formData = {
-                    name,
-                    email,
-                    phone,
-                    subject: "VENOVOX: Get In Touch",
-                    message,
-                  };
-
-                  const res = await fetch("/contact.php", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(formData),
-                  });
-
-                  if (res.ok) {
-                    alert("Message sent successfully!");
-                    form.reset();
-                  } else {
-                    alert("Failed to send message. Please try again later.");
-                  }
-                }}
-              >
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your name"
-                  required
-                  className="w-full px-4 py-2 border rounded-md ..."
-                />
-              </motion.div>
-
-              <br />
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your email"
-                  required
-                  className="w-full px-4 py-2 border rounded-md ..."
-                />
-              </motion.div>
-
-              <br />
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="Your number"
-                  required
-                  className="w-full px-4 py-2 border rounded-md ..."
-                />
-              </motion.div>
-
-              <br />
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              >
-                <textarea
-                  name="message"
-                  placeholder="Your message"
-                  rows={3}
-                  required
-                  className="w-full px-4 py-2 border rounded-md ..."
-                />
-              </motion.div>
-
-              <br />
-
-              <motion.button
-                type="submit"
-                className="w-full flex items-center justify-center py-2 bg-gradient-to-r from-red-600 to-red-700 ..."
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Send className="h-4 w-4 mr-2" />
-                Send Message
-              </motion.button>
-            </form>
-
+              <form onSubmit={handleSubmit} className="space-y-3">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    required
+                    className="w-full px-4 py-2 border rounded-md border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent focus:outline-none text-sm transition-all"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    required
+                    className="w-full px-4 py-2 border rounded-md border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent focus:outline-none text-sm transition-all"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                >
+                  <input
+                    type="number"
+                    placeholder="Your number"
+                    required
+                    className="w-full px-4 py-2 border rounded-md border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent focus:outline-none text-sm transition-all"
+                  />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.2 }}
+                >
+                  <textarea
+                    placeholder="Your message"
+                    rows={3}
+                    required
+                    className="w-full px-4 py-2 border rounded-md border-gray-300 focus:ring-2 focus:ring-red-600 focus:border-transparent focus:outline-none text-sm transition-all"
+                  />
+                </motion.div>
+                <motion.button
+                  type="submit"
+                  className="w-full flex items-center justify-center py-2 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-md hover:from-red-700 hover:to-red-800 transition-all duration-300 text-sm font-medium shadow-md hover:shadow-lg"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Send className="h-4 w-4 mr-2" />
+                  Send Message
+                </motion.button>
+              </form>
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
