@@ -16,8 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Venovox",
-  description: "Venovox is a leading provider of risk intelligence and background screening solutions, empowering businesses to make informed hiring decisions.",
+  title: "Trusted Background Screening & Company Search | Venovox",
+  description: "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services.",
+  keywords: [
+    "company name search malaysia",
+    "ctos score report",
+    "new company registration number malaysia",
+    "malaysia company registration number search",
+    "ssm search malaysia, Anti-money laundering services",
+    "malaysia company search",
+    "Background check agency Kuala Lumpur",
+    "ssm report",
+    "ctos report for company",
+    "company profile malaysia",
+    "Background screening Malaysia"
+  ]
 
 };
 
