@@ -6,12 +6,11 @@ import { blogData } from "@/data/blogsData";
 const iconMap: { [key: string]: any } = { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network };
 
 interface BlogPageProps {
-    params: Promise<{ slug: string }>; // ✅ Fixed: params is now a Promise in Next.js 15
+    params: Promise<{ slug: string }>;
 }
 
-// ✅ Dynamic Metadata Generation
 export async function generateMetadata({ params }: BlogPageProps) {
-    const { slug } = await params; // ✅ Await the params Promise
+    const { slug } = await params;
     const blog = blogData.find((b) => b.slug === slug);
     if (!blog) return {};
 
@@ -37,7 +36,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-    const { slug } = await params; // ✅ Await the params Promise
+    const { slug } = await params;
     const blog = blogData.find((b) => b.slug === slug);
 
     if (!blog) return notFound();
@@ -216,17 +215,17 @@ export default async function BlogPage({ params }: BlogPageProps) {
                             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-full"></div>
                         </div>
                         <div className="flex justify-center lg:justify-end">
-                            <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300">
+                            <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 w-[600px] h-[400px]">
                                 <Image
                                     src={blog.featuredImage}
                                     alt={blog.altTag}
-                                    width={600}
-                                    height={400}
+                                    fill
                                     className="object-cover hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
