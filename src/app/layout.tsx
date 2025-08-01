@@ -60,6 +60,7 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
+        <link rel="canonical" href="https://venovox.com/" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased hyphens-none`}

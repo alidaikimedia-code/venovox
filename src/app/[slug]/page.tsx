@@ -208,8 +208,11 @@ export default async function BlogPage({ params }: BlogPageProps) {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px] mt-20">
                         <div className="space-y-8">
                             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                                <span className="bg-gradient-to-r from-red-600 to-red-600 bg-clip-text text-transparent">
-                                    {blog.h1}
+                                <span className="text-white">
+                                    {blog.h1.split(" ").slice(0, -3).join(" ")}{" "}
+                                </span>
+                                <span className="text-red-600">
+                                    {blog.h1.split(" ").slice(-3).join(" ")}
                                 </span>
                             </h1>
                             <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-full"></div>
