@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network } from "lucide-react";
+import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay } from "lucide-react";
 import { blogData } from "@/data/blogsData";
 
-const iconMap: { [key: string]: any } = { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network };
+const iconMap: { [key: string]: any } = { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay };
 
 interface BlogPageProps {
     params: Promise<{ slug: string }>;
