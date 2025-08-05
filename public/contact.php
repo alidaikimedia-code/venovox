@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = htmlspecialchars($data['subject'] ?? 'VENOVOX: Contact Us');
     $message = nl2br(htmlspecialchars($data['message'] ?? ''));
 
-    $to = "kelly@venovox.com, dato.devan@venovox.com, troubleshoot@venovox.com"; // <- Replace with your actual email
+    $to = "kelly@venovox.com, dato.devan@venovox.com, troubleshoot@venovox.com";
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8\r\n";
     $headers .= "From: Venovox Contact Us <$email>" . "\r\n";
