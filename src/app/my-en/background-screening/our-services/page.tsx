@@ -178,7 +178,7 @@ export default function OurServicesPage() {
               console.log(service),
               <motion.div
                 key={service.id}
-                variants={fadeInUp}
+                // variants={fadeInUp}
                 className="group bg-white border border-gray-200 overflow-hidden flex flex-col h-full"
               >
                 <div className="relative h-48 overflow-hidden">
@@ -263,7 +263,7 @@ export default function OurServicesPage() {
         {/* Call to action */}
         <motion.div
           className="mt-24 bg-black text-white p-12"
-          variants={scaleIn}
+          // variants={scaleIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
