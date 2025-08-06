@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
+// import Image from "next/image";
 import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay } from "lucide-react";
 import { blogData } from "@/data/blogsData";
 
@@ -7,6 +7,13 @@ const iconMap: { [key: string]: any } = { CheckCircle, Shield, Clock, Users, Inf
 
 interface BlogPageProps {
     params: Promise<{ slug: string }>;
+}
+
+// Add this function to generate static params for all blog slugs
+export async function generateStaticParams() {
+    return blogData.map((blog) => ({
+        slug: blog.slug,
+    }));
 }
 
 export async function generateMetadata({ params }: BlogPageProps) {
@@ -89,7 +96,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                 </div>
                                 <div className="flex justify-center">
                                     <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-                                        <Image
+                                        <img
                                             src={section.image}
                                             alt={section.imageAlt}
                                             width={500}
@@ -113,7 +120,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                                 <div className="flex justify-center">
                                     <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300">
-                                        <Image
+                                        <img
                                             src={section.image}
                                             alt={section.imageAlt}
                                             width={500}
@@ -219,10 +226,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                         </div>
                         <div className="flex justify-center lg:justify-end">
                             <div className="relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-shadow duration-300 w-[600px] h-[400px]">
-                                <Image
+                                <img
                                     src={blog.featuredImage}
                                     alt={blog.altTag}
-                                    fill
+                                    // fill
                                     className="object-cover hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
