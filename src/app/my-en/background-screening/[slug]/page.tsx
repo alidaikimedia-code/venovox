@@ -1,5 +1,6 @@
 import ServicePageClient from "./ServicePageClient";
 import servicesData from "@/data/our-services.json";
+import Head from "next/head";
 
 export async function generateStaticParams() {
     return servicesData.services.map((service) => ({
@@ -13,5 +14,12 @@ export default async function ServicePage({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
-    return <ServicePageClient slug={slug} />;
+    return (
+        <>
+            <Head>
+                <link rel="canonical" href={`https://www.venovox.com/my-en/background-screening/${slug}`} />
+            </Head>
+            <ServicePageClient slug={slug} />
+        </>
+    );
 }

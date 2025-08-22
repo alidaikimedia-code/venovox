@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-// import Image from "next/image";
 import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay } from "lucide-react";
 import { blogData } from "@/data/blogsData";
+
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://venovox.com';
 
 const iconMap: { [key: string]: any } = { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay };
 
@@ -9,7 +11,6 @@ interface BlogPageProps {
     params: Promise<{ slug: string }>;
 }
 
-// Add this function to generate static params for all blog slugs
 export async function generateStaticParams() {
     return blogData.map((blog) => ({
         slug: blog.slug,
@@ -21,16 +22,27 @@ export async function generateMetadata({ params }: BlogPageProps) {
     const blog = blogData.find((b) => b.slug === slug);
     if (!blog) return {};
 
+    // Dynamic canonical URL generation based on slug
+    const canonicalUrl = `${BASE_URL}/blog/${slug}`;
+
     return {
         title: blog.seo.metaTitle,
         description: blog.seo.metaDescription,
         keywords: blog.seo.keywords.join(", "),
-        alternates: { canonical: blog.seo.canonicalUrl },
+        // Dynamic canonical URL
+        alternates: {
+            canonical: canonicalUrl
+        },
         openGraph: {
             title: blog.seo.metaTitle,
             description: blog.seo.metaDescription,
-            url: blog.seo.canonicalUrl,
-            images: [{ url: blog.featuredImage, width: 800, height: 600, alt: blog.altTag }],
+            url: canonicalUrl, // OG URL bhi dynamic
+            images: [{
+                url: blog.featuredImage,
+                width: 800,
+                height: 600,
+                alt: blog.altTag
+            }],
             type: "article",
         },
         twitter: {
@@ -42,11 +54,34 @@ export async function generateMetadata({ params }: BlogPageProps) {
     };
 }
 
+// Alternative approach - function to generate canonical URL
+function generateCanonicalUrl(slug: string, category?: string): string {
+    if (category) {
+        return `${BASE_URL}/${category}/${slug}`;
+    }
+    return `${BASE_URL}/blog/${slug}`;
+}
+
+// Another approach - with more complex URL structure
+function generateSEOCanonicalUrl(slug: string, blogData: any): string {
+    // If blog has custom canonical URL, use it
+    if (blogData.seo?.canonicalUrl) {
+        return blogData.seo.canonicalUrl;
+    }
+
+    // Otherwise, generate based on slug
+    const baseUrl = BASE_URL.replace(/\/$/, ''); // Remove trailing slash
+    return `${baseUrl}/blog/${slug}`;
+}
+
 export default async function BlogPage({ params }: BlogPageProps) {
     const { slug } = await params;
     const blog = blogData.find((b) => b.slug === slug);
 
     if (!blog) return notFound();
+
+    // Example usage of canonical URL generation
+    const canonicalUrl = generateCanonicalUrl(slug);
 
     const renderSection = (section: any, index: number) => {
         switch (section.type) {
@@ -234,7 +269,6 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>

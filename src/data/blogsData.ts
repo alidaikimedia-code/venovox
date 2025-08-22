@@ -90,7 +90,6 @@ export const blogData = [
             "metaTitle": "Benefits of Certified Background Screening Worldwide",
             "metaDescription": "Learn how certified screening partners help global firms meet regulatory standards, protect brand reputation, and streamline international hiring processes",
             "keywords": ["background screening", "global hiring", "due diligence", "Malaysia", "certified screening", "employment verification"],
-            "canonicalUrl": "https://venovox.com/why-global-firms-need-certified-screening-help"
         }
     },
     {
@@ -176,7 +175,7 @@ export const blogData = [
             "metaTitle": "Future of Background Checks: AI, Ethics & Data Privacy",
             "metaDescription": "AI, ethics, and data privacy are reshaping background screening, enabling smarter hiring, improved compliance, and greater transparency across industries.",
             "keywords": ["background screening", "AI technology", "data privacy", "ethics", "Malaysia", "employment verification"],
-            "canonicalUrl": "https://venovox.com/future-of-background-screening-ai-privacy-ethics"
+
         }
     },
     {
@@ -262,7 +261,7 @@ export const blogData = [
             "metaTitle": "How Risk Intelligence Boosts Corporate Protection | Venovox",
             "metaDescription": "Integrate risk intelligence to protect your business from emerging threats, improve resilience, and support informed decision-making at every level.",
             "keywords": ["risk intelligence", "corporate due diligence", "business intelligence", "Malaysia", "risk management"],
-            "canonicalUrl": "https://venovox.com/how-risk-intelligence-boosts-corporate-defense"
+
         }
     },
     {
@@ -351,7 +350,7 @@ export const blogData = [
             "metaTitle": "AI in Action: Smarter Detection of Financial Crimes",
             "metaDescription": " Learn how AI technologies are helping businesses combat financial crimes through predictive analytics, automated monitoring, and faster threat detection.",
             "keywords": ["AI technology", "financial crimes", "corporate due diligence", "Malaysia", "fraud detection"],
-            "canonicalUrl": "https://venovox.com/the-growing-role-of-ai-in-detecting-financial-crimes"
+
         }
     },
     {
@@ -437,7 +436,7 @@ export const blogData = [
             "metaTitle": "How AI Reduces False Positives in Financial Crime Detection",
             "metaDescription": "AI helps reduce false positives in financial crime detection by improving pattern recognition, enhancing accuracy, and streamlining compliance workflows.",
             "keywords": ["AI technology", "financial crimes", "fraud detection", "Malaysia", "company screening"],
-            "canonicalUrl": "https://venovox.com/what-role-does-ai-play-in-reducing-false-positives-in-financial-crime-detection"
+
         }
     },
     {
@@ -531,7 +530,7 @@ export const blogData = [
             "metaTitle": "Essential Tools for Real-Time Risk Detection & Monitoring | Venovox",
             "metaDescription": "Real-time risk monitoring tools and techniques designed to enhance threat detection, minimize disruptions, and support consistent compliance outcomes.",
             "keywords": ["risk monitoring", "SSM Search Malaysia", "CTOS report", "company profile Malaysia", "risk management"],
-            "canonicalUrl": "https://venovox.com/top-tools-and-techniques-for-real-time-risk-monitoring"
+
         }
     },
     {
@@ -620,7 +619,7 @@ export const blogData = [
             "metaTitle": "Top 5 Background Check Mistakes & How to Avoid Them | Venovox",
             "metaDescription": "Hiring mistakes can be costly. These 5 background screening missteps often go unnoticed—learn how to prevent them, protect your business, and stay compliant.",
             "keywords": ["background screening", "HR background checks", "employment verification", "Malaysia", "risk management"],
-            "canonicalUrl": "https://venovox.com/top-5-screening-mistakes-and-how-to-prevent-them"
+
         }
     },
     {
@@ -703,9 +702,9 @@ export const blogData = [
             "metaTitle": "Avoid Screening Mistakes: Do’s and Don’ts for Employers",
             "metaDescription": "Understand the critical do’s and don’ts of background checks to avoid hiring missteps, protect your business, and stay aligned with legal standards.",
             "keywords": ["background screening", "Malaysia", "employment verification", "hiring process", "due diligence"],
-            "canonicalUrl": "https://venovox.com/the-dos-and-donts-of-background-screening-a-practical-guide"
         }
-    }, {
+    },
+    {
         "id": 9,
         "slug": "smart-hiring-tricks-to-make-background-checks-faster-safer-and-more-reliable",
         "title": "Reliable Background Checks for Smarter Hiring Decisions",
@@ -785,7 +784,7 @@ export const blogData = [
             "metaTitle": "Reliable Background Checks for Smarter Hiring Decisions",
             "metaDescription": "Make hiring smarter with proven tricks to accelerate and secure background checks. Ensure reliable, compliant results while improving candidate experience.",
             "keywords": ["background checks", "Kuala Lumpur", "corporate due diligence", "financial crime investigation", "smart hiring"],
-            "canonicalUrl": "https://venovox.com/smart-hiring-tricks-to-make-background-checks-faster-safer-and-more-reliable"
+
         }
     },
     {
@@ -873,7 +872,7 @@ export const blogData = [
             "metaTitle": "Avoid Hiring Risks: Spot and Fix Background Check Red Flags",
             "metaDescription": "Learn how to identify and resolve background check red flags before they lead to hiring mistakes, legal risks, or long-term damage to your company’s reputation.",
             "keywords": ["background checks", "due diligence", "Malaysia", "company registration", "hiring risks"],
-            "canonicalUrl": "https://venovox.com/how-to-spot-and-solve-background-check-red-flags-before-they-cost-you"
+
         }
     },
     {
@@ -959,7 +958,7 @@ export const blogData = [
             "metaTitle": "Safeguard Brand IP in Emerging Markets – Key Strategies",
             "metaDescription": "Safeguard your brand’s intellectual property in emerging markets with proven strategies to combat counterfeiting, piracy, legal gaps, and regulatory risks.",
             "keywords": ["intellectual property", "brand protection", "Malaysia", "due diligence", "emerging markets"],
-            "canonicalUrl": "https://venovox.com/how-to-protect-your-brands-intellectual-property-in-emerging-markets"
+
         }
     },
     {
@@ -1045,7 +1044,7 @@ export const blogData = [
             "metaTitle": "Smart Ways to Use Risk Intelligence in Business Operations",
             "metaDescription": "Integrate risk intelligence into daily operations to strengthen decision-making, reduce exposure to threats, and improve overall business performance.",
             "keywords": ["risk intelligence", "business intelligence", "Malaysia", "due diligence", "business operations"],
-            "canonicalUrl": "https://venovox.com/how-to-integrate-risk-intelligence-into-day-to-day-business-operations"
+
         }
     },
     {
@@ -1131,7 +1130,7 @@ export const blogData = [
             "metaTitle": "Safe Global Hiring: Background Checks & Legal Compliance",
             "metaDescription": "Learn how to run global background checks while staying compliant with local laws. Hire smarter, reduce risks, and protect your team from costly legal violations.",
             "keywords": ["background checks", "global hiring", "due diligence", "legal compliance", "corporate due diligence"],
-            "canonicalUrl": "https://venovox.com/how-to-conduct-a-global-background-check-without-violating-local-laws"
+
         }
     },
     {
@@ -1217,7 +1216,7 @@ export const blogData = [
             "metaTitle": "Cybersecurity & Financial Crime: 2025 Collaboration",
             "metaDescription": "Collaboration between cybersecurity and financial crime units is essential in 2025 to manage evolving risks, data breaches, and compliance challenges.",
             "keywords": ["cybersecurity", "financial crime", "collaboration", "compliance", "technology"],
-            "canonicalUrl": "https://venovox.com/how-cybersecurity-and-financial-crime-teams-must-collaborate-in-2025"
+
         }
     },
     {
@@ -1303,7 +1302,6 @@ export const blogData = [
             "metaTitle": "Top Compliance Trends 2025: What Businesses Must Know",
             "metaDescription": "Stay ahead in 2025 with key compliance insights on AI, cybersecurity, ESG, and data laws. Discover what every business must know to avoid legal risks.",
             "keywords": ["compliance", "business intelligence", "hiring", "data privacy", "regulations"],
-            "canonicalUrl": "https://venovox.com/compliance-in-2025-key-regulations-every-business-should-know"
         }
     },
     {
@@ -1360,7 +1358,6 @@ export const blogData = [
             "metaTitle": "The Unholy Marriage of Corruption & Due Diligence in Malaysia",
             "metaDescription": "Explore the critical relationship between corruption and due diligence in Malaysia, highlighting how robust due diligence practices can prevent fraud, mitigate risks, and ensure compliance with anti-corruption laws.",
             "keywords": ["corruption", "due diligence", "business intelligence", "compliance", "anti-corruption"],
-            "canonicalUrl": "https://venovox.com/corruption-and-due-diligence-in-malaysia"
         }
     },
     {
@@ -1435,7 +1432,6 @@ export const blogData = [
             "metaTitle": "Reputation Risk: Managing Threats to Your Business in 2025",
             "metaDescription": "Explore the critical nature of reputational risk in 2025, its impact on businesses, and strategies to mitigate threats through due diligence, transparency, and proactive risk management.",
             "keywords": ["reputation risk", "business intelligence", "compliance", "due diligence", "risk management"],
-            "canonicalUrl": "https://venovox.com/reputation-risk-management"
         }
     },
     {
@@ -1510,7 +1506,6 @@ export const blogData = [
             "metaTitle": "PTPTN TO TAKE LEGAL ACTION!",
             "metaDescription": "Explore PTPTN's announcement to take legal action against 430,000 debtors owing nearly RM6 billion, the impacts, penalties, and ways to manage loan repayments responsibly.",
             "keywords": ["PTPTN", "loan repayment", "compliance", "debt management", "business intelligence"],
-            "canonicalUrl": "https://venovox.com/ptptn-legal-action-2025"
         }
     },
     {
@@ -1621,7 +1616,6 @@ export const blogData = [
             "metaTitle": "People are your Assets; Network is your Money!",
             "metaDescription": "Discover the power of networking in 2025, its importance for personal and professional growth, and effective strategies to build meaningful connections that unlock opportunities.",
             "keywords": ["networking", "career development", "business growth", "professional relationships", "business intelligence"],
-            "canonicalUrl": "https://venovox.com/people-are-your-assets-network-is-your-money"
         }
     },
     {
@@ -1686,7 +1680,6 @@ export const blogData = [
             "metaTitle": "FRAUD: THE INVISIBLE THREAT LURKING WITHIN ORGANIZATIONS",
             "metaDescription": "Explore the growing threat of fraud risks in organizations, common types, impacts, and strategies to mitigate them in 2025.",
             "keywords": ["fraud risk", "business intelligence", "compliance", "cyber fraud", "internal controls"],
-            "canonicalUrl": "https://venovox.com/fraud-invisible-threat-organizations"
         }
     },
     {
@@ -1738,7 +1731,6 @@ export const blogData = [
             "metaTitle": "Dato Devan: The Visionary Behind Venovox’s Success",
             "metaDescription": "Discover the journey of Dato Devan, the Founder & Director of Venovox, whose innovative leadership in background screening has transformed hiring practices in Malaysia and beyond.",
             "keywords": ["Dato Devan", "Venovox", "background screening", "compliance", "business intelligence"],
-            "canonicalUrl": "https://venovox.com/dato-devan-venovox-founder"
         }
     },
     {
@@ -1790,7 +1782,6 @@ export const blogData = [
             "metaTitle": "When Even a Kitten Becomes a Narco Courier: Why INTERPOL Checks Matter in a Globalized Hiring Landscape",
             "metaDescription": "Explore why INTERPOL checks are essential in today's global hiring landscape, highlighted by bizarre cases like a kitten used as a drug courier, emphasizing the need for advanced background screening to mitigate risks.",
             "keywords": ["INTERPOL checks", "background screening", "global hiring", "compliance", "risk management"],
-            "canonicalUrl": "https://venovox.com/interpol-checks-global-hiring-landscape"
         }
     },
     {
@@ -1834,7 +1825,6 @@ export const blogData = [
             "metaTitle": "Venovox & INTI Celebrating Future Leaders in Human Resources",
             "metaDescription": "Discover how Venovox and INTI International University & College are nurturing future HR leaders through their partnership, highlighted by the 2025 Best Student Award in Human Resources Management.",
             "keywords": ["FutureTalent", "HumanResources", "IndustryPartnership", "EducationMatters", "CSR", "Venovox", "VenovoxAcademy", "VenovoxINTI", "VenovoxProtege", "INTIConvocation2025"],
-            "canonicalUrl": "https://venovox.com/venovox-inti-future-leaders-human-resources"
         }
     },
     {
@@ -1933,7 +1923,6 @@ export const blogData = [
             "metaTitle": "The Role of Background Screening Company in Preventing Unfair Dismissal",
             "metaDescription": "Discover how background screening companies like VENOVOX help prevent unfair dismissal by providing verified information, ensuring compliance, and reducing hiring risks for employers",
             "keywords": ["background screening", "unfair dismissal", "Malaysia", "employment law", "VENOVOX", "hiring risks"],
-            "canonicalUrl": "https://venovox.com/role-of-background-screening-company-in-preventing-unfair-dismissal"
         }
     },
     {
@@ -1990,7 +1979,6 @@ export const blogData = [
             "metaTitle": "The Rising Threat of Deepfakes in Malaysia",
             "metaDescription": "Explore the growing threat of deepfake technology in Malaysia, its impact on privacy and security, and how Venovox’s specialized services can mitigate these risks.",
             "keywords": ["deepfakes", "cybersecurity", "background verification", "AI misuse", "security auditing"],
-            "canonicalUrl": "https://venovox.com/rising-threat-deepfakes-malaysia"
         }
     },
     {
@@ -2079,7 +2067,6 @@ export const blogData = [
             "metaTitle": "Rethinking Employee Engagement in the Era of Inclusive Capitalism",
             "metaDescription": "Explore how inclusive capitalism reshapes employee engagement, moving beyond surface solutions like team building to foster ethical, data-informed, and psychologically safe work cultures.",
             "keywords": ["employee engagement", "inclusive capitalism", "company culture", "ESG", "talent retention"],
-            "canonicalUrl": "https://venovox.com/rethinking-employee-engagement-inclusive-capitalism"
         }
     },
     {
@@ -2183,7 +2170,6 @@ export const blogData = [
             "metaTitle": "The Gas Pipe Leak Incident at Putra Heights 2025: How Security Auditing Strengthens Corporate Safety",
             "metaDescription": "Explore how the 2025 Putra Heights gas pipeline explosion highlights the need for robust security auditing to enhance corporate safety, ensure compliance, and build public trust in Malaysia’s energy and construction sectors.",
             "keywords": ["security auditing", "Putra Heights incident", "corporate safety", "risk management", "CSR", "Malaysia", "compliance"],
-            "canonicalUrl": "https://venovox.com/putra-heights-gas-leak-incident-2025-security-auditing"
         }
     },
     {
@@ -2277,7 +2263,6 @@ export const blogData = [
             "metaTitle": "Police Mobile Phone Checks and PDPA 2010: Balancing Law Enforcement and Privacy",
             "metaDescription": "Explore the balance between police authority to inspect mobile phones and personal data protection under Malaysia’s Personal Data Protection Act (PDPA) 2010, highlighting legal frameworks and privacy concerns.",
             "keywords": ["PDPA 2010", "mobile phone checks", "data privacy", "law enforcement", "Malaysia", "human rights", "Criminal Procedure Code"],
-            "canonicalUrl": "https://venovox.com/police-mobile-checks-and-pdpa-2010"
         }
     },
     {
@@ -2371,7 +2356,6 @@ export const blogData = [
             "metaTitle": "Navigating Corporate Liability Under Section 17A MACC and Emerging Behavioural Risks",
             "metaDescription": "Explore how Section 17A of the MACC Act intersects with emerging behavioural risks, emphasizing proactive strategies to mitigate corruption, enhance compliance, and foster ethical corporate culture in Malaysia.",
             "keywords": ["Section 17A MACC", "corporate liability", "behavioural risks", "anti-corruption", "compliance", "Malaysia", "Venovox"],
-            "canonicalUrl": "https://venovox.com/corporate-liability-macc-17a-behavioural-risks"
         }
     },
     {
@@ -2519,7 +2503,6 @@ export const blogData = [
             "metaTitle": "Malaysia’s National Guidelines on AI Governance and Ethics: Shaping Responsible AI",
             "metaDescription": "Discover Malaysia’s National Guidelines on AI Governance and Ethics, launched in 2024, and their impact on ethical AI development, HR screening, and balancing innovation with fairness and privacy.",
             "keywords": ["AI governance", "Malaysia AI guidelines", "ethical AI", "HR screening", "data privacy", "fairness", "Venovox"],
-            "canonicalUrl": "https://venovox.com/malaysia-national-guidelines-ai-governance-ethics"
         }
     },
     {
@@ -2608,7 +2591,6 @@ export const blogData = [
             "metaTitle": "FRU Crash Tragedy: Why Driving Violation Checks Are Essential",
             "metaDescription": "The tragic FRU crash on May 13, 2025, underscores the critical need for driving violation checks in hiring to prevent fatal risks and ensure public safety in Malaysia.",
             "keywords": ["FRU crash", "driving violation checks", "background screening", "public safety", "Malaysia", "PDPA compliance"],
-            "canonicalUrl": "https://venovox.com/fru-crash-tragedy-driving-violation-checks"
         }
     },
     {
@@ -2692,7 +2674,6 @@ export const blogData = [
             "metaTitle": "Cybersecurity and Background Screening: Fortifying Malaysia’s Digital Defences",
             "metaDescription": "Explore how Venovox enhances cybersecurity through real-time threat monitoring, data encryption, and PDPA compliance, addressing vulnerabilities highlighted by the recent MAHB cyber-attack in Malaysia.",
             "keywords": ["cybersecurity", "background screening", "PDPA 2010", "Cybersecurity Act 2024", "data protection", "Malaysia", "Venovox"],
-            "canonicalUrl": "https://venovox.com/cybersecurity-background-screening-digital-defences"
         }
     },
     {
@@ -2786,7 +2767,6 @@ export const blogData = [
             "metaTitle": "BNM’s HSBC Fine: Why KYC and KYB Screening Are Non-Negotiable",
             "metaDescription": "Bank Negara Malaysia’s RM3.26 million fine on HSBC highlights the critical need for robust KYC and KYB screening to mitigate financial crime risks and ensure compliance across industries.",
             "keywords": ["KYC", "KYB", "AML/CFT", "BNM fine", "HSBC", "compliance", "Malaysia", "Venovox"],
-            "canonicalUrl": "https://venovox.com/bnm-hsbc-fine-kyc-kyb-screening"
         }
     },
     {
@@ -2951,10 +2931,6 @@ export const blogData = [
             "metaTitle": "2025 Global Security Landscape: Navigating Emerging Threats",
             "metaDescription": "Explore the key security threats shaping the global landscape in 2025, from geopolitical tensions and cyberattacks to climate change and emerging technologies, and how Venovox addresses these challenges.",
             "keywords": ["global security", "cybersecurity", "geopolitical tensions", "climate change", "emerging technologies", "Venovox", "South East Asia"],
-            "canonicalUrl": "https://venovox.com/global-security-landscape-2025"
         }
     }
-
-
-
 ]
