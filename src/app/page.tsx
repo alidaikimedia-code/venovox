@@ -1,13 +1,18 @@
 "use client";
+
+
 import { motion } from 'framer-motion';
 // import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
-
+import Head from "next/head";
 
 export default function Home() {
-  return (
+  return (<>
+    <Head>
+      <link rel="canonical" href="https://www.venovox.com/" />
+    </Head>
     <main className="bg-white text-black">
       {/* Hero Section */}
       <HeroSection />
@@ -216,5 +221,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+  </>
   );
 }

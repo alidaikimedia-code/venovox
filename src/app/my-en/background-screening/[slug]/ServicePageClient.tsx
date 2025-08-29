@@ -43,6 +43,8 @@ interface ServicePageClientProps {
     slug: string;
 }
 
+
+
 export default function ServicePageClient({ slug }: ServicePageClientProps) {
     const [service, setService] = useState<Service | null>(null);
     const [isMounted, setIsMounted] = useState(false);

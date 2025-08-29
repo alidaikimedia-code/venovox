@@ -21,7 +21,7 @@ const navData = {
   logo: "/venovox-logo.png",
   endLogo: "/venovox-logo2.png",
   menuItems: [
-    { name: "Home", path: "/my-en/background-screening" },
+    { name: "Home", path: "/" },
     { name: "About Us", path: "/my-en/about" },
     {
       name: "Our Services",
@@ -39,7 +39,8 @@ const navData = {
       ]
     },
     { name: "Contact Us", path: "/my-en/contact-us" },
-    { name: "Career", path: "/my-en/Career" }
+    { name: "Career", path: "/my-en/Career" },
+    { name: "Publication", path: "/blogs" },
   ] as MenuItem[]
 };
 

@@ -3,13 +3,17 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   //this  will give me out file 
   output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 
   async redirects() {
     return [
       // Main pages
       {
         source: "/",
-        destination: "/my-en/background-screening",
+        destination: "/",
         permanent: true,
       },
       {
@@ -99,6 +103,82 @@ const nextConfig: NextConfig = {
       {
         source: "/whistleblowing-policy",
         destination: "/privacy/whistleblowing-policy",
+        permanent: true,
+      },
+      // Blog redirects
+      {
+        source: "/why-global-firms-need-certified-screening-help",
+        destination: "/why-global-firms-need-certified-screening-help",
+        permanent: true,
+      },
+      {
+        source: "/future-of-background-screening-ai-privacy-ethics",
+        destination: "/future-of-background-screening-ai-privacy-ethics",
+        permanent: true,
+      },
+      {
+        source: "/how-risk-intelligence-boosts-corporate-defense",
+        destination: "/how-risk-intelligence-boosts-corporate-defense",
+        permanent: true,
+      },
+      {
+        source: "/the-growing-role-of-ai-in-detecting-financial-crimes",
+        destination: "/the-growing-role-of-ai-in-detecting-financial-crimes",
+        permanent: true,
+      },
+      {
+        source: "/what-role-does-ai-play-in-reducing-false-positives-in-financial-crime-detection",
+        destination: "/what-role-does-ai-play-in-reducing-false-positives-in-financial-crime-detection",
+        permanent: true,
+      },
+      {
+        source: "/top-tools-and-techniques-for-real-time-risk-monitoring",
+        destination: "/top-tools-and-techniques-for-real-time-risk-monitoring",
+        permanent: true,
+      },
+      {
+        source: "/top-5-screening-mistakes-and-how-to-prevent-them",
+        destination: "/top-5-screening-mistakes-and-how-to-prevent-them",
+        permanent: true,
+      },
+      {
+        source: "/the-dos-and-donts-of-background-screening-a-practical-guide",
+        destination: "/the-dos-and-donts-of-background-screening-a-practical-guide",
+        permanent: true,
+      },
+      {
+        source: "/smart-hiring-tricks-to-make-background-checks-faster-safer-and-more-reliable",
+        destination: "/smart-hiring-tricks-to-make-background-checks-faster-safer-and-more-reliable",
+        permanent: true,
+      },
+      {
+        source: "/how-to-spot-and-solve-background-check-red-flags-before-they-cost-you",
+        destination: "/how-to-spot-and-solve-background-check-red-flags-before-they-cost-you",
+        permanent: true,
+      },
+      {
+        source: "/how-to-protect-your-brands-intellectual-property-in-emerging-markets",
+        destination: "/how-to-protect-your-brands-intellectual-property-in-emerging-markets",
+        permanent: true,
+      },
+      {
+        source: "/how-to-integrate-risk-intelligence-into-day-to-day-business-operations",
+        destination: "/how-to-integrate-risk-intelligence-into-day-to-day-business-operations",
+        permanent: true,
+      },
+      {
+        source: "/how-to-conduct-a-global-background-check-without-violating-local-laws",
+        destination: "/how-to-conduct-a-global-background-check-without-violating-local-laws",
+        permanent: true,
+      },
+      {
+        source: "/how-cybersecurity-and-financial-crime-teams-must-collaborate-in-2025",
+        destination: "/how-cybersecurity-and-financial-crime-teams-must-collaborate-in-2025",
+        permanent: true,
+      },
+      {
+        source: "/compliance-in-2025-key-regulations-every-business-should-know",
+        destination: "/compliance-in-2025-key-regulations-every-business-should-know",
         permanent: true,
       },
     ];

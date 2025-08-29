@@ -4,11 +4,14 @@ import { motion } from 'framer-motion';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
-
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main className="bg-white text-black">
+      <Head>
+        <link rel="canonical" href="https://www.venovox.com/my-en/background-screening" />
+      </Head>
       {/* Hero Section */}
       <HeroSection />
       <RecognizedBy />

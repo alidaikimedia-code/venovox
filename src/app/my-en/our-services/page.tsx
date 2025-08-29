@@ -2,9 +2,10 @@
 
 import { useState, useRef } from "react"
 import Link from "next/link"
-// import Image from "next/image"
 import { motion, useInView, AnimatePresence, Variants } from "framer-motion"
 import servicesData from "@/data/our-services.json"
+import Head from "next/head"
+
 
 export default function OurServicesPage() {
     const [searchTerm, setSearchTerm] = useState("")
@@ -77,7 +78,10 @@ export default function OurServicesPage() {
         setImgErrors(prev => ({ ...prev, [serviceId]: true }))
     }
 
-    return (
+    return (<>
+        <Head>
+            <link rel="canonical" href="https://www.venovox.com/my-en/our-services" />
+        </Head>
         <div className="bg-white">
             {/* Hero section */}
             <div className="relative bg-black text-white">
@@ -118,6 +122,7 @@ export default function OurServicesPage() {
             </div>
 
             <div className="container mx-auto px-4 py-16">
+
                 {/* Search and filter */}
                 <div className="mb-12">
                     <div className="max-w-3xl mx-auto">
@@ -203,7 +208,7 @@ export default function OurServicesPage() {
                                             : service.metaDescription}
                                     </p>
                                     <Link
-                                        href={`/my-en/background-screening/our-services/${service.id}`}
+                                        href={`/my-en/background-screening/${service.id}`}
                                         className="inline-flex items-center text-red-600 font-medium group-hover:translate-x-2 transition-transform duration-300"
                                     >
                                         Learn more
@@ -398,9 +403,11 @@ export default function OurServicesPage() {
                                 </p>
                             </motion.div>
                         ))}
+
                     </div>
                 </div>
             </div>
         </div>
+    </>
     )
 }
