@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/header";
 import StickyPromoBar from "@/components/common/cta-section";
-
+import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -62,6 +62,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
 
         {/* <link rel="canonical" href="https://venovox.com/" /> */}
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="vyNUm6TmmkE39TRFt230yA"
+          strategy="afterInteractive"
+          async
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased hyphens-none`}

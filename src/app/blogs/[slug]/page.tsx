@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay } from "lucide-react";
 import { blogData } from "@/data/blogsData";
+import Link from "next/link";
 
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://venovox.com';
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
         openGraph: {
             title: blog.seo.metaTitle,
             description: blog.seo.metaDescription,
-            url: canonicalUrl, // OG URL bhi dynamic
+            url: canonicalUrl,
             images: [{
                 url: blog.featuredImage,
                 width: 800,
@@ -273,9 +274,38 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 </div>
             </section>
 
+
             <main className="container mx-auto px-6 py-20">
                 <div className="space-y-8 text-justify">
                     {blog.sections.map((section, index) => renderSection(section, index))}
+                </div>
+                <div className="flex items-center justify-between mt-12">
+                    <Link href="/author">
+                        <div className="flex items-start space-x-3">
+                            {/* Image */}
+                            <div className="w-16 h-16 rounded-full overflow-hidden">
+                                <img
+                                    src="/author.jpg"
+                                    alt="Author"
+                                    width={70}
+                                    height={70}
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            {/* Text Content */}
+                            <div className="flex flex-col">
+                                <h2 className="text-gray-700 text-xl">
+                                    <span className="font-bold text-black ">Author:</span> Dato’ Venodevan Mariemuthu
+                                </h2>
+                                <h2 className="text-gray-700 text-base mt-2">
+                                    <span className="font-bold text-black">Bio:</span> Every risk is an opportunity in disguise, one that only the prepared can harness
+                                </h2>
+                            </div>
+                        </div>
+
+                    </Link>
+                    <span className="text-gray-500 text-xl">August 8th, 2024</span>
                 </div>
             </main>
         </div>

@@ -57,8 +57,8 @@ export default function BlogsPage() {
                                         {blog.seo.metaDescription}
                                     </p>
 
-
-                                    <div className="pt-4">
+                                    <div className="pt-4 flex items-center justify-between">
+                                        {/* Left side: Read More button */}
                                         <Link
                                             href={`/blogs/${blog.slug}`}
                                             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold rounded-lg hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-md hover:shadow-lg group"
@@ -78,7 +78,27 @@ export default function BlogsPage() {
                                                 />
                                             </svg>
                                         </Link>
+
+                                        {/* Right side: Static Author section with link */}
+                                        <Link href="/author" className="flex items-center gap-2 text-right cursor-pointer">
+                                            {/* Avatar */}
+                                            <img
+                                                src="/author.jpg"
+                                                alt="Author"
+                                                className="w-10 h-10 rounded-full object-cover border"
+                                            />
+
+                                            {/* Name + Short description */}
+                                            <div className="hidden sm:block">
+                                                <h4 className="text-sm font-semibold">Dato' Venodevan</h4>
+                                                <p className="text-xs text-gray-500 line-clamp-1">
+                                                    Risk is an opportunity
+                                                </p>
+                                            </div>
+                                        </Link>
                                     </div>
+
+
                                 </div>
                             </article>
                         ))}
