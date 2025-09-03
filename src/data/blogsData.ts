@@ -4299,5 +4299,39 @@ export const blogData = [
         "websiteUrl": "https://venovox.com/",
         "pageUrl": "https://venovox.com/ptptn-to-take-legal-action-against-loan-defaulters-in-malaysia/"
     },
-
+    {
+        "id": 52,
+        "slug": "fraud-the-invisible-threat-lurking-within-organizations",
+        "title": "Fraud: Invisible Threat in Organizations | Due Diligence Malaysia",
+        "description": "Shield your business from hidden risks with SSM, CTOS, due diligence, AML screening, and employment background checks—trusted compliance tools in Malaysia.",
+        "h1": "FRAUD: THE INVISIBLE THREAT LURKING WITHIN ORGANIZATIONS",
+        "featuredImage": "/business-fraud-risk.png",
+        "altTag": "Business fraud risk",
+        "author": "VENOVOX Team",
+        "publishDate": "2025-09-02",
+        "readTime": "7 min read",
+        "tags": ["Fraud Risk", "SSM Search Malaysia", "CTOS", "Due Diligence", "AML Screening", "Employment Background Checks", "Venovox"],
+        "category": "Business Verification and Compliance",
+        "sections": [
+            {
+                "type": "introduction",
+                "content": "Fraud risk represents the potential threat to an organization from deceptive or dishonest activities, which can lead to financial losses, damage to reputation, or legal repercussions. Statistics suggest that fraud risk will only increase in the coming years.\n\nTo grasp the concept of fraud risk, it's essential to understand what fraud entails. Fraud involves deliberate deception to secure something of value, typically money. Fraud is committed through false statements, misrepresentation, or dishonest conduct aimed at misleading or deceiving others. Thus, fraud risk refers to the likelihood of financial loss due to intentional deception carried out by individuals or groups, either within or outside the organization. In some instances, both internal and external perpetrators may be involved.\n\nThe earliest recorded instance of financial fraud dates back to 194 AD in the Roman Empire when a group of soldiers assassinated the emperor with the intention of auctioning off the empire's leadership to the highest bidder. However, their scheme ultimately failed.\n\nFraud can have a catastrophic impact on organizations, resulting in substantial financial losses, irreversible harm to reputation, potential legal consequences, and a decline in employee morale and trust. These factors can ultimately threaten the entity's very survival.\n\nNo organization is immune to the severe damage that fraudulent activities can inflict. Fraud can occur in organizations of all sizes, whether large or small. The effects of occupational fraud can be widespread, leading to devastating financial, reputational, and operational losses.\n\nSome common types of fraud risks include financial fraud, which encompasses activities like embezzlement, misappropriation of funds, and falsification of financial statements. Asset misappropriation involves the theft or misuse of company assets, such as skimming cash, stealing inventory, or using company property for personal gain. Corruption includes bribery, kickbacks, and conflicts of interest, where employees or executives might engage in unethical practices to gain personal benefits. Cyber fraud covers hacking, phishing, and other forms of cybercrime aimed at stealing sensitive information or funds. Fraudulent financial reporting involves manipulating financial records to present a false picture of the company's financial health. Vendor fraud entails collusion with vendors to overcharge the company or deliver substandard goods or services. Finally, employee fraud includes activities like payroll fraud, expense reimbursement fraud, and misuse of company resources."
+            },
+            {
+                "type": "content_with_image",
+                "heading": "Recent Fraud Cases Highlight Ongoing Risks",
+                "content": "On 17th November 2024, a company owner was detained for four days on suspicion of involvement in a fraudulent claim amounting to approximately RM10 million. Magistrate Adlin Ahmad Khairul Razi issued the four-day remand order following an application by the Malaysian Anti-Corruption Commission (MACC) at the Putrajaya Magistrate's Court on Sunday morning. According to sources, the male suspect, in his 40s, was arrested while providing testimony at the MACC Headquarters at 7 pm on Saturday, 16th November. \"The initial investigation revealed that the suspect committed offences from 2019 to this year,\" a representative stated. This suspect's arrest follows the recent detention of a former senior engineering manager associated with a basic necessities production company. Last week, this manager was involved in false claims and fraud totalling approximately RM2 million. The suspect, who also manages a machine repair company at a facility producing basic necessities, allegedly submitted false claims for repair work and bribed company staff to approve these false claims. Meanwhile, Datuk Seri Ahmad Khusairi Yahaya, the MACC Deputy Chief Commissioner (Operations), stated that the investigation is being conducted under Section 16(a)(A) of the MACC Act 2009.\n\nOrganizations can mitigate these risks by implementing strong internal controls, conducting regular audits, promoting a culture of ethics and integrity, and using technology to detect and prevent fraudulent activities. Businesses in Malaysia often rely on company name search Malaysia to verify the legitimacy of vendors and partners as part of their fraud prevention and corporate due diligence processes.\n\nBukit Aman reported a total of 32,462 online fraud cases, resulting in losses amounting to RM1.3 billion from January to November in 2023. According to Datuk Seri Ramli Mohamed Yoosuf, the director of the Bukit Aman Commercial Crime Investigation Department, e-commerce crime cases were the highest, totaling 10,993, followed by telecommunications crime (9,526), non-existent investment (5,036), non-existent loans (4,018), e-financial crime (2,006), and love scams (883). He noted that the number of cases increased by 37.5% from January to November 2023, compared to 23,608 cases during the same period in 2022. Companies conducting corporate due diligence services can leverage these insights to strengthen their risk management and prevent financial losses.",
+                "image": "/recent-corporate-fraud-cases.png",
+                "imageAlt": "Recent corporate fraud cases",
+                "imagePosition": "right"
+            }
+        ],
+        "seo": {
+            "metaTitle": "Fraud: Invisible Threat in Organizations | Due Diligence Malaysia",
+            "metaDescription": "Shield your business from hidden risks with SSM, CTOS, due diligence, AML screening, and employment background checks—trusted compliance tools in Malaysia.",
+            "keywords": ["fraud risk", "SSM search Malaysia", "CTOS", "due diligence", "AML screening", "employment background checks", "Venovox"]
+        },
+        "websiteUrl": "https://venovox.com/",
+        "pageUrl": "https://venovox.com/fraud-the-invisible-threat-lurking-within-organizations/"
+    }
 ]
