@@ -15,6 +15,7 @@ const ContactUs = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
+    phone: "",   // <-- Include this
     subject: "",
     message: ""
   });
@@ -30,25 +31,32 @@ const ContactUs = () => {
   };
   const openWhatsApp = () => window.open("https://wa.me/60128008888", "_blank");
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-    setFormStatus("sending");
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setFormStatus("sending");
 
-    // Simulate form submission
-    setTimeout(() => {
+  try {
+    const response = await fetch("/contact.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    });
+
+    if (response.ok) {
       setFormStatus("success");
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormStatus("idle");
-        setFormValues({
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
-        });
-      }, 3000);
-    }, 2000);
-  };
+      setFormValues({ name: "", email: "", phone: "", subject: "", message: "" });
+      setTimeout(() => setFormStatus("idle"), 3000);
+    } else {
+      throw new Error("Submission failed");
+    }
+  } catch (error) {
+    alert("Something went wrong. Please try again later.");
+    setFormStatus("idle");
+  }
+};
+
 
   return (
     <div className="bg-white">
@@ -198,6 +206,22 @@ const ContactUs = () => {
                     />
                   </div>
 
+                  <div>
+                    <label htmlFor="phone" className="block mb-2 font-medium text-gray-700">
+                      Phone Number <span className="text-red-600">*</span>
+                    </label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    value={formValues.phone}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-700 focus:border-red-700 outline-none transition bg-gray-50"
+                    placeholder="+60 12 345 6789"
+                  />
+                  </div>
+                  
                   <div>
                     <label htmlFor="subject" className="block mb-2 font-medium text-gray-700">
                       Subject

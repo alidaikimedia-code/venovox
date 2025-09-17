@@ -105,7 +105,7 @@ export default function StickyPromoBar() {
         }
         
         .whatsapp-button {
-          background: linear-gradient(135deg, #25D366, #128C7E);
+          background: linear-gradient(135deg, #ffffffff, #8c1212ff);
           border: none;
           border-radius: 30px;
           padding: 10px 24px;
@@ -124,7 +124,7 @@ export default function StickyPromoBar() {
         .whatsapp-button:hover {
           transform: translateY(-2px);
           box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-          background: linear-gradient(135deg, #25D366, #075E54);
+          background: linear-gradient(135deg, #d32525ff, #5e0707ff);
         }
         
         .pulse {
@@ -132,7 +132,7 @@ export default function StickyPromoBar() {
         }
         
         @keyframes pulse {
-          0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+          0% { box-shadow: 0 0 0 0 rgba(211, 37, 37, 0.7); }
           70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
           100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
