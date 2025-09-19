@@ -13,11 +13,7 @@ export default function SecurityPolicyPage() {
         <>
             <PageBanner />
             <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify [text-justify:inter-word] hyphens-none ">
-<<<<<<< HEAD
-                <h1 className="text-3xl font-semibold mb-6">Information Security Policy</h1>
-=======
                 <h2 className="text-3xl font-semibold mb-6">Information Security Policy</h2>
->>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
 
                 <p className="mb-4">
                     VENOVOX Group (&quot;VENOVOX&quot;) is committed to putting in place and proactively managing an Information Security Management System (&quot;ISMS&quot;) which recognizes that Confidentiality, Integrity, and Availability in information security are integral parts of its management function.
