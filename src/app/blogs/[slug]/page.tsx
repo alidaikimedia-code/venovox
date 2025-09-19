@@ -30,27 +30,8 @@ export async function generateMetadata({ params }: BlogPageProps) {
         title: blog.seo.metaTitle,
         description: blog.seo.metaDescription,
         keywords: blog.seo.keywords.join(", "),
-        // Dynamic canonical URL
         alternates: {
             canonical: canonicalUrl
-        },
-        openGraph: {
-            title: blog.seo.metaTitle,
-            description: blog.seo.metaDescription,
-            url: canonicalUrl,
-            images: [{
-                url: blog.featuredImage,
-                width: 800,
-                height: 600,
-                alt: blog.altTag
-            }],
-            type: "article",
-        },
-        twitter: {
-            card: "summary_large_image",
-            title: blog.seo.metaTitle,
-            description: blog.seo.metaDescription,
-            images: [blog.featuredImage],
         },
     };
 }

@@ -14,15 +14,15 @@ const VenovoxCredibilitySection = () => {
                     <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
 
                         {/* Left Image */}
-                        <div className="md:w-[40%] flex justify-center md:justify-start">
+                        <div className="w-full md:w-[40%] flex justify-center md:justify-start">
                             <img
                                 src="/career1.jpg"
-                                height={400}
-                                width={400}
                                 alt="Handshake with Tech Overlay"
-                                className="object-contain h-auto"
+                                className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full aspect-square"
                             />
                         </div>
+
+
 
                         {/* Right Content */}
                         <div className="md:w-[60%] text-center md:text-left space-y-6 md:space-y-8">
@@ -33,7 +33,7 @@ const VenovoxCredibilitySection = () => {
                             </h2>
 
                             <p className="leading-relaxed text-justify [text-justify:inter-word] hyphens-none">
-                                At VENOVOX, we believe trust is earned—and we help you build it from the ground up. By joining us, you&lsquo;re choosing a partner committed to transparency, accuracy, and integrity. Whether it&lsquo;s background screening, due diligence, or compliance checks, our work speaks for itself. We don’t just deliver reports—we deliver peace of mind.
+                                At VENOVOX, we believe trust is earned and we help you build it from the ground up. By joining us, you&lsquo;re choosing a partner committed to transparency, accuracy, and integrity. Whether it&lsquo;s background screening, due diligence, or compliance checks, our work speaks for itself. We don’t just deliver reports we deliver peace of mind.
                             </p>
                         </div>
                     </div>

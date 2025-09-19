@@ -5,12 +5,20 @@ import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
 import Head from "next/head";
+export const metadata = {
+  title: "Background Screening | Venovox",
+  description:
+    "Learn about our journey from Texas headquarters to becoming APAC's premier risk consultancy offering security advisory and intelligence analysis.",
+  alternates: {
+    canonical: "https://venovox.com/my-en/background-screening",
+  },
+};
 
 export default function Home() {
   return (
     <main className="bg-white text-black">
       <Head>
-        <link rel="canonical" href="https://www.venovox.com/my-en/background-screening" />
+        <link rel="canonical" href="https://venovox.com/my-en/background-screening" />
       </Head>
       {/* Hero Section */}
       <HeroSection />

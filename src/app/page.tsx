@@ -1,18 +1,30 @@
 "use client";
 
-
 import { motion } from 'framer-motion';
 // import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
-import Head from "next/head";
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    // Add canonical tag to head
+    const canonicalLink = document.createElement('link');
+    canonicalLink.rel = 'canonical';
+    canonicalLink.href = 'https://venovox.com/';
+
+    // Remove existing canonical if any
+    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    if (existingCanonical) {
+      existingCanonical.remove();
+    }
+
+    // Add the new canonical link
+    document.head.appendChild(canonicalLink);
+  }, []);
+
   return (<>
-    <Head>
-      <link rel="canonical" href="https://www.venovox.com/" />
-    </Head>
     <main className="bg-white text-black">
       {/* Hero Section */}
       <HeroSection />
