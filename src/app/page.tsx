@@ -14,13 +14,21 @@ export default function Home() {
     const canonicalLink = document.createElement('link');
     canonicalLink.rel = 'canonical';
     canonicalLink.href = 'https://venovox.com/';
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
     // Remove existing canonical if any
     const existingCanonical = document.querySelector('link[rel="canonical"]');
     if (existingCanonical) {
       existingCanonical.remove();
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
     // Add the new canonical link
     document.head.appendChild(canonicalLink);
   }, []);

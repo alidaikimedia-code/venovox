@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BlogsClient from "@/components/blogs/BlogsClient";
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
     title: "Our Latest Blog Posts | Venovox",
     description: "Discover insights, tips, and expert advice to help you stay ahead in the digital world. Read our latest blog posts on background screening, company verification, and business intelligence.",
     keywords: [
@@ -17,6 +18,23 @@ export const metadata: Metadata = {
     alternates: {
         canonical: "https://venovox.com/blogs"
     }
+=======
+  title: "Our Latest Blog Posts | Venovox",
+  description: "Discover insights, tips, and expert advice to help you stay ahead in the digital world. Read our latest blog posts on background screening, company verification, and business intelligence.",
+  keywords: [
+    "blog posts",
+    "background screening insights",
+    "company verification tips",
+    "business intelligence articles",
+    "malaysia business news",
+    "hr insights",
+    "risk management blog",
+    "venovox blog"
+  ],
+  alternates: {
+    canonical: "https://venovox.com/blogs"
+  }
+>>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
 };
 
 export default function BlogsPage() {

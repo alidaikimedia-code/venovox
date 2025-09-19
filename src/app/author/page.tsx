@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
 import Head from "next/head";
 export const metadata = {
     title: "Author | Venovox",
@@ -131,6 +134,9 @@ export default function AuthorPage() {
                 </div>
             </div>
         </>
+<<<<<<< HEAD
 
+=======
+>>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
     );
 }
