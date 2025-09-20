@@ -21,15 +21,15 @@ const VenovoxHero = () => {
                             </div>
 
                             {/* Right Image */}
-                            <div className="md:w-[40%] flex justify-center md:justify-end">
+                            <div className="w-full md:w-[40%] flex justify-center md:justify-end">
                                 <img
-                                    src="/venovoxx.jpg"
+                                    src="/venovoxx-removebg-preview.png"
                                     alt="Join Our Team"
-                                    width={400}
-                                    height={400}
-                                    className="object-contain h-auto"
+                                    className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full aspect-square"
                                 />
                             </div>
+
+
 
                         </div>
                     </div>

@@ -1,40 +1,17 @@
 "use client";
-
 import { motion } from 'framer-motion';
 // import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
-import { useEffect } from 'react';
-import Head from 'next/head';
+import Head from "next/head";
 
-export default function Home() {
-  useEffect(() => {
-    // Add canonical tag to head
-    const canonicalLink = document.createElement('link');
-    canonicalLink.rel = 'canonical';
-    canonicalLink.href = 'https://venovox.com/';
-
-    // Remove existing canonical if any
-    const existingCanonical = document.querySelector('link[rel="canonical"]');
-    if (existingCanonical) {
-      existingCanonical.remove();
-    }
-
-    // Add the new canonical link
-    document.head.appendChild(canonicalLink);
-  }, []);
-
-  return (<>
-    {/* <Head>
-        <title>VENOVOX - Risk Management & Background Screening</title>
-        <meta
-          name="description"
-          content="VENOVOX is a premier risk management and background screening consultancy offering specialised services globally."
-        />
-        <link rel="canonical" href="https://venovox.com/" />
-      </Head> */}
+export default function BackgroundScreeningClient() {
+  return (
     <main className="bg-white text-black">
+      <Head>
+        <link rel="canonical" href="https://venovox.com/my-en/background-screening" />
+      </Head>
       {/* Hero Section */}
       <HeroSection />
       <RecognizedBy />
@@ -66,7 +43,8 @@ export default function Home() {
                 <img
                   src="/about-us.jpg"
                   alt="VENOVOX Global Team"
-                  className="object-contain md:object-cover w-full h-full"
+                  // fill
+                  className="object-contain md:object-cover"
                 />
               </div>
             </div>
@@ -242,6 +220,5 @@ export default function Home() {
         </div>
       </section>
     </main>
-  </>
   );
 }

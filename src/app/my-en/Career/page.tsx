@@ -5,6 +5,7 @@ import GrowWithUsSection from "@/components/Career/GrowWithUsSection";
 import VenovoxHero from "@/components/Career/top-section";
 import Form from "@/components/Career/submit-form";
 import type { Metadata } from "next";
+import Head from "next/head";
 
 import React from "react"
 export const metadata: Metadata = {
@@ -12,14 +13,16 @@ export const metadata: Metadata = {
     description:
         "Explore exciting career opportunities at VENOVOX. Become part of a global leader in risk consultancy, security advisory, and intelligence analysis.",
     alternates: {
-        canonical: "https://www.venovox.com/my-en/Career",
+        canonical: "https://venovox.com/my-en/Career",
     },
 };
 
 export default function Careers() {
     return (
         <>
-
+            <Head>
+                <link rel="canonical" href="https://venovox.com/my-en/Career" />
+            </Head>
             < VenovoxHero />
             <VenovoxCredibilitySection />
             <GrowWithUsSection />

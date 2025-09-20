@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
             <PrivateBanner />
             <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify [text-justify:inter-word] hyphens-none ">
 
-                <h1 className="text-3xl font-semibold mb-6">Privacy Policy</h1>
+                <h2 className="text-3xl font-semibold mb-6">Privacy Policy</h2>
 
                 <p className="mb-4">
                     At Venovox, we are committed to protecting the privacy and personal information of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website www.venovox.com (&quot;Website&quot;). By accessing or using the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, you should not use the Website.
