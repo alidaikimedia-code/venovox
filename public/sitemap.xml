@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Generated dynamically on 2025-09-19T08:46:04.763Z -->
+<!-- Generated dynamically on 2025-09-22T10:05:53.621Z -->
 <url>
   <loc>https://venovox.com/</loc>
   <lastmod>2025-01-14T10:43:49+00:00</lastmod>
@@ -285,8 +285,4 @@
   <loc>https://venovox.com/blogs/fraud-the-invisible-threat-lurking-within-organizations</loc>
   <lastmod>2025-09-02T00:00:00.000Z</lastmod>
 </url>
-<<<<<<< HEAD
 </urlset>
-=======
-</urlset>
->>>>>>> bd34bc7a51aa3cfa4c4dd1fa6220c6c2df04c133
