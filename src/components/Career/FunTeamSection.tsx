@@ -14,7 +14,7 @@ const FunTeamSection = () => {
                     <div className="space-y-4 md:space-y-6 text-center lg:text-left">
                         <h2 className="text-4xl md:text-6xl font-bold text-white py-2">
                             Be Part of a <br />
-                            <span className="ml-12">Credible</span>
+                            <span className="md:ml-12">Credible</span>
                             <br className="hidden md:block" /> and Fun Team!
                         </h2>
                         <p className="text-gray-200 text-justify [text-justify:inter-word] hyphens-none max-w-xl mx-auto lg:mx-0">
@@ -30,19 +30,19 @@ const FunTeamSection = () => {
                     </div>
 
                     {/* Right Image Section with Logo in Background */}
-                    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
+                    <div className="relative w-full flex justify-center lg:justify-end py-6 md:py-8">
                         {/* Background Venovox Logo */}
-                        <img
+                        {/* <img
                             src="/venovox-logo.png"
                             alt="Venovox Logo"
                             className="absolute inset-0 w-full h-full object-contain opacity-10 z-0"
-                        />
+                        /> */}
 
                         {/* Person Image */}
                         <img
-                            src="/funteam.png"
+                            src="/funteam1.png"
                             alt="Team Member"
-                            className="absolute inset-0 w-full h-full object-contain z-10"
+                            className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover rounded-full mx-auto lg:ml-auto mt-8 md:mt-10"
                         />
                     </div>
 
