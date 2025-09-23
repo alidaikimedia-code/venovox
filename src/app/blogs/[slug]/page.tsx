@@ -41,7 +41,7 @@ function generateCanonicalUrl(slug: string, category?: string): string {
     if (category) {
         return `${BASE_URL}/${category}/${slug}`;
     }
-    return `${BASE_URL}/blog/${slug}`;
+    return `${BASE_URL}/blogs/${slug}`;
 }
 
 // Another approach - with more complex URL structure
