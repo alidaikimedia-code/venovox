@@ -12,7 +12,7 @@ export default function TermsAndConditionsPage() {
     return (
         <>
             <PageBanner />
-            <div className="container mx-auto px-6 py-10 text-lg text-gray-800 text-justify [text-justify:inter-word] hyphens-none ">
+            <div className="container mx-auto px-6 py-10 text-base text-gray-800 text-justify [text-justify:inter-word] hyphens-none ">
                 <h2 className="text-3xl font-semibold mb-6">Terms and Conditions</h2>
 
                 <p className="mb-4 text-justify">
@@ -46,7 +46,7 @@ export default function TermsAndConditionsPage() {
                 <p className="mb-2 text-justify">6.1. Venovox reserves the right to modify, suspend, or discontinue any part of the Website at any time without prior notice.</p>
                 <p className="mb-2 text-justify">6.2. Venovox may update these Terms from time to time, and the updated Terms will be effective upon posting on the Website. Your continued use of the Website after any modifications to the Terms constitutes acceptance of those changes.</p>
 
-                <p className="mt-6">
+                <p className="mt-6 text-lg text-justify">
                     Please read these Terms carefully before using the Website. If you have any questions or concerns regarding these Terms, please contact us at <a href="mailto:administrator@venovox.com" className="text-blue-600 underline">administrator@venovox.com</a>.
                 </p>
             </div>

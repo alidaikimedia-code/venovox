@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     "company profile malaysia",
     "Background screening Malaysia"
   ],
-
-
 };
 
 export default function RootLayout({
