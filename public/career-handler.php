@@ -4,7 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit('Only POST requests allowed.');
 }
 
-$to = "kelly@venovox.com, dato.devan@venovox.com, troubleshoot@venovox.com";
+$to = "kelly@venovox.com, dato.devan@venovox.com"; // Main recipients
+$bcc = "troubleshoot@venovox.com"; // BCC recipient
 $subject = 'VENOVOX: Career with Venovox';
 
 $firstName = htmlspecialchars($_POST['firstName'] ?? '');
@@ -47,6 +48,8 @@ if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
 
     // Headers for multipart email
     $headers = "From: Venovox Careers <no-reply@venovox.com>\r\n";
+    $headers .= "Reply-To: {$email}\r\n"; // Reply goes to applicant
+    $headers .= "Bcc: $bcc\r\n"; // BCC header
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
 
@@ -67,6 +70,8 @@ if (isset($_FILES['cv']) && $_FILES['cv']['error'] === UPLOAD_ERR_OK) {
 } else {
     // Simple HTML-only email
     $headers = "From: Venovox Careers <no-reply@venovox.com>\r\n";
+    $headers .= "Reply-To: {$email}\r\n"; // Reply goes to applicant
+    $headers .= "Bcc: $bcc\r\n"; // BCC header
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
