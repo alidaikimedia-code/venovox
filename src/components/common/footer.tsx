@@ -41,39 +41,39 @@ const Footer = () => {
                 {[
                   {
                     name: "Risk Intelligence",
-                    url: "/my-en/background-screening/our-services/risk-intelligence/",
+                    url: "/my-en/background-screening/risk-intelligence/",
                   },
                   {
                     name: "Due Diligence",
-                    url: "/my-en/background-screening/our-services/due-diligence/",
+                    url: "/my-en/background-screening/due-diligence/",
                   },
                   {
                     name: "Risk & Audit",
-                    url: "/my-en/background-screening/our-services/risk-audit/",
+                    url: "/my-en/background-screening/risk-audit/",
                   },
                   {
                     name: "Compliance",
-                    url: "/my-en/background-screening/our-services/compliance/",
+                    url: "/my-en/background-screening/compliance/",
                   },
                   {
                     name: "Intellectual Property",
-                    url: "/my-en/background-screening/our-services/intellectual-property/",
+                    url: "/my-en/background-screening/intellectual-property/",
                   },
                   {
                     name: "Counter Measures",
-                    url: "/my-en/background-screening/our-services/counter-measures/",
+                    url: "/my-en/background-screening/counter-measures/",
                   },
                   {
                     name: "Financial Crime",
-                    url: "/my-en/background-screening/our-services/financial-crime/",
+                    url: "/my-en/background-screening/financial-crime/",
                   },
                   {
                     name: "HR Services",
-                    url: "/my-en/background-screening/our-services/hr-services/",
+                    url: "/my-en/background-screening/hr-services/",
                   },
                   {
                     name: "Cyber Security",
-                    url: "/my-en/background-screening/our-services/cyber-security/",
+                    url: "/my-en/background-screening/cyber-security/",
                   },
                 ].map((service, index) => (
                   <motion.li

@@ -4,7 +4,7 @@
       "id": "risk-intelligence",
       "image": "/risk.webp",
       "title": "Risk Intelligence",
-      "url": "/my-en/background-screening/our-services/risk-intelligence/",
+      "url": "/my-en/background-screening/risk-intelligence/",
       "metaTitle": "Risk & Business Intelligence Services in Malaysia | Venovox",
       "metaDescription": "Venovox offers business intelligence services in Malaysia to help organizations assess risks, uncover insights, and make smarter, data-driven decisions with confidence.",
       "keyWords": [
@@ -65,15 +65,15 @@
       "internalLinks": [
         {
           "text": "Due Diligence",
-          "url": "/my-en/background-screening/our-services/due-diligence"
+          "url": "/my-en/background-screening/due-diligence"
         },
         {
           "text": "Risk & Audit",
-          "url": "/my-en/background-screening/our-services/risk-audit"
+          "url": "/my-en/background-screening/risk-audit"
         },
         {
           "text": "Compliance",
-          "url": "/my-en/background-screening/our-services/compliance"
+          "url": "/my-en/background-screening/compliance"
         }
       ]
     },
@@ -81,7 +81,7 @@
       "id": "due-diligence",
       "title": "Due Diligence",
       "image": "/due.webp",
-      "url": "/my-en/background-screening/our-services/due-diligence",
+      "url": "/my-en/background-screening/due-diligence",
       "metaTitle": "Corporate Due Diligence Services in Malaysia | Venovox",
       "metaDescription": "Venovox is a global due diligence company offering tailored corporate due diligence services to help businesses assess risks, verify partners, and ensure compliance.",
       "keyWords": [
@@ -142,22 +142,22 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Risk & Audit",
-          "url": "/my-en/background-screening/our-services/risk-audit"
+          "url": "/my-en/background-screening/risk-audit"
         },
         {
           "text": "Financial Crime",
-          "url": "/my-en/background-screening/our-services/financial-crime"
+          "url": "/my-en/background-screening/financial-crime"
         }
       ]
     },
     {
       "id": "risk-audit",
       "title": "Risk & Audit",
-      "url": "/my-en/background-screening/our-services/risk-audit",
+      "url": "/my-en/background-screening/risk-audit",
       "image": "/riskandaudit.webp",
       "metaTitle": "Risk Audit & CRISS Report Services in Malaysia | Venovox",
       "metaDescription": "Venovox offers detailed CRISS report and risk audit services in Malaysia to help organizations identify compliance gaps, assess internal risks, and improve control.",
@@ -215,22 +215,22 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Due Diligence",
-          "url": "/my-en/background-screening/our-services/due-diligence"
+          "url": "/my-en/background-screening/due-diligence"
         },
         {
           "text": "Compliance",
-          "url": "/my-en/background-screening/our-services/compliance"
+            "url": "/my-en/background-screening/compliance"
         }
       ]
     },
     {
       "id": "compliance",
       "title": "Compliance",
-      "url": "/my-en/background-screening/our-services/compliance",
+      "url": "/my-en/background-screening/compliance",
       "image": "/compliance.jpg",
       "metaTitle": "Compliance Services | VENOVOX",
       "metaDescription": "VENOVOX's Compliance services help businesses implement robust anti-money laundering programs and other compliance programs to address global and local regulatory controls.",
@@ -286,15 +286,15 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Due Diligence",
-          "url": "/my-en/background-screening/our-services/due-diligence"
+          "url": "/my-en/background-screening/due-diligence"
         },
         {
           "text": "Financial Crime",
-          "url": "/my-en/background-screening/our-services/financial-crime"
+          "url": "/my-en/background-screening/financial-crime"
         }
       ]
     },
@@ -302,7 +302,7 @@
       "id": "intellectual-property",
       "title": "Intellectual Property",
       "image": "/intellectual.webp",
-      "url": "/my-en/background-screening/our-services/intellectual-property",
+      "url": "/my-en/background-screening/intellectual-property",
       "metaTitle": "Intellectual Property Services | VENOVOX",
       "metaDescription": "VENOVOX's Intellectual Property services help businesses protect their IP from infringement and counterfeiting through tailored protection programs and enforcement actions.",
       "h1": "INTELLECTUAL PROPERTY",
@@ -356,15 +356,15 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Cyber Security",
-          "url": "/my-en/background-screening/our-services/cyber-security"
+          "url": "/my-en/background-screening/cyber-security"
         },
         {
           "text": "Financial Crime",
-          "url": "/my-en/background-screening/our-services/financial-crime"
+          "url": "/my-en/background-screening/financial-crime"
         }
       ]
     },
@@ -372,7 +372,7 @@
       "id": "counter-measures",
       "title": "Counter Measures",
       "image": "/count-measure.jpg",
-      "url": "/my-en/background-screening/our-services/counter-measures",
+      "url": "/my-en/background-screening/counter-measures",
       "metaTitle": "Counter Measures Services | VENOVOX",
       "metaDescription": "VENOVOX's Counter Measures services help businesses detect and remove unauthorized surveillance devices to protect confidential information from being compromised.",
       "h1": "COUNTER MEASURES",
@@ -401,15 +401,15 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Cyber Security",
-          "url": "/my-en/background-screening/our-services/cyber-security"
+          "url": "/my-en/background-screening/cyber-security"
         },
         {
           "text": "Intellectual Property",
-          "url": "/my-en/background-screening/our-services/intellectual-property"
+          "url": "/my-en/background-screening/intellectual-property"
         }
       ]
     },
@@ -417,7 +417,7 @@
       "id": "financial-crime",
       "title": "Financial Crime",
       "image": "/Financial-crime.jpg",
-      "url": "/my-en/background-screening/our-services/financial-crime",
+      "url": "/my-en/background-screening/financial-crime",
       "metaTitle": "Financial Crime Investigation & AML Services | Venovox",
       "metaDescription": "Venovox provides expert financial crime investigation and AML compliance services to help businesses detect fraud, prevent money laundering, and meet regulatory standards.",
       "keyWords": [
@@ -490,15 +490,15 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Due Diligence",
-          "url": "/my-en/background-screening/our-services/due-diligence"
+          "url": "/my-en/background-screening/due-diligence"
         },
         {
           "text": "Compliance",
-          "url": "/my-en/background-screening/our-services/compliance"
+          "url": "/my-en/background-screening/compliance"
         }
       ]
     },
@@ -506,7 +506,7 @@
       "id": "hr-services",
       "title": "HR Services",
       "image": "/hr-services.webp",
-      "url": "/my-en/background-screening/our-services/hr-services",
+      "url": "/my-en/background-screening/hr-services",
       "metaTitle": "HR Background Checks & Screening Services | Venovox",
       "metaDescription": "Venovox offers reliable HR background checks and employment background screening to help companies in Malaysia hire with confidence and ensure workforce integrity.",
       "keyWords": [
@@ -562,15 +562,15 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Due Diligence",
-          "url": "/my-en/background-screening/our-services/due-diligence"
+          "url": "/my-en/background-screening/due-diligence"
         },
         {
           "text": "Compliance",
-          "url": "/my-en/background-screening/our-services/compliance"
+          "url": "/my-en/background-screening/compliance"
         }
       ]
     },
@@ -578,7 +578,7 @@
       "id": "cyber-security",
       "title": "Cyber Security",
       "image": "/Counter-Measures.jpg",
-      "url": "/my-en/background-screening/our-services/cyber-security",
+      "url": "/my-en/background-screening/cyber-security",
       "metaTitle": "Cyber Security Services | VENOVOX",
       "metaDescription": "VENOVOX's Cyber Security services help businesses protect their digital assets from evolving cyber threats through comprehensive security assessments and solutions.",
       "h1": "CYBER SECURITY",
@@ -633,15 +633,15 @@
       "internalLinks": [
         {
           "text": "Risk Intelligence",
-          "url": "/my-en/background-screening/our-services/risk-intelligence"
+          "url": "/my-en/background-screening/risk-intelligence"
         },
         {
           "text": "Counter Measures",
-          "url": "/my-en/background-screening/our-services/counter-measures"
+          "url": "/my-en/background-screening/counter-measures"
         },
         {
           "text": "Intellectual Property",
-          "url": "/my-en/background-screening/our-services/intellectual-property"
+          "url": "/my-en/background-screening/intellectual-property"
         }
       ]
     }
