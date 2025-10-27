@@ -68,14 +68,14 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <motion.h2
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight"
             >
-              <span className="text-red-600">Contact</span>   Us</motion.h2>
+            <h1>  <span className="text-red-600">Contact</span>   Us </h1></motion.div>
 
             <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto mt-4 rounded-full" />
 

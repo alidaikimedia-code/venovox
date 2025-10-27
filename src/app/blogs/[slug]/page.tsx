@@ -82,7 +82,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 return (
                     <section key={index} className="mb-12">
                         <div className="mx-auto py-12">
-                            <h2 className="text-4xl font-bold mb-8 text-black text-center mb-12">
+                            <h2 className="text-4xl font-bold  text-black text-center mb-12">
                                 {section.heading}
                             </h2>
                             <p className="text-gray-600 leading-relaxed text-lg text-justify">

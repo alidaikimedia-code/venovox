@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Terms and Conditions | Venovox",
-    description: "At Venovox, we are committed to protecting the privacy and personal information of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website www.venovox.com (&quot;Website&quot;). By accessing or using the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, you should not use the Website.",
+    description: "By using Venovox’s website and services, you agree to the terms and conditions that govern access, use, and responsibilities of all users of this platform.",
     alternates: {
         canonical: "https://venovox.com/privacy/terms-and-conditions",
     },

@@ -11,7 +11,10 @@ export default function BlogsClient() {
 
     const startIndex = (currentPage - 1) * BLOGS_PER_PAGE;
     const endIndex = startIndex + BLOGS_PER_PAGE;
-    const currentBlogs = blogData.slice(startIndex, endIndex);
+
+    const reversedBlogs = [...blogData].reverse();
+    const currentBlogs = reversedBlogs.slice(startIndex, endIndex);
+    
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -118,7 +121,7 @@ export default function BlogsClient() {
                                         className="w-12 h-12 rounded-full object-cover "
                                     />
                                     <div className="hidden sm:block">
-                                        <h4 className="text-sm font-semibold">Dato' Venodevan</h4>
+                                        <h4 className="text-sm font-semibold">Dato&apos; Venodevan</h4>
                                         <p className="text-xs text-gray-500 line-clamp-1">
                                             Risk is an opportunity
                                         </p>
@@ -200,7 +203,7 @@ export default function BlogsClient() {
                         </div>
                         <h3 className="text-2xl font-bold text-gray-900">No Blog Posts Yet</h3>
                         <p className="text-gray-600 max-w-md mx-auto">
-                            We're working on creating amazing content for you. Check back soon!
+                            We&apos;re working on creating amazing content for you. Check back soon!
                         </p>
                     </div>
                 </div>

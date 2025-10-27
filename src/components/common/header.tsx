@@ -40,7 +40,7 @@ const navData = {
     },
     { name: "Contact Us", path: "/my-en/contact-us" },
     { name: "Career", path: "/my-en/Career" },
-    { name: "Publication", path: "/blogs" },
+    { name: "Publication", path: "/blogs/" },
   ] as MenuItem[]
 };
 

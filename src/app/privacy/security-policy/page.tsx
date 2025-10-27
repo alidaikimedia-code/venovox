@@ -3,7 +3,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Information Security Policy | Venovox",
-    description: "At Venovox, we are committed to protecting the privacy and personal information of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website www.venovox.com (&quot;Website&quot;). By accessing or using the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, you should not use the Website.",
+    description: "Venovox ensures information security by maintaining confidentiality, integrity, and availability through strict policies and systems to protect your data.",
     alternates: {
         canonical: "https://venovox.com/privacy/security-policy",
     },
