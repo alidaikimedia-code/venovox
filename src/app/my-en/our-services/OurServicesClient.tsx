@@ -81,13 +81,13 @@ export default function OurServicesClient() {
             {/* Hero section */}
             <div className="relative bg-black text-white">
                 <div className="absolute inset-0 z-0">
-                    <img
+                    {/* <img
                         src="/images/services-hero.jpg"
                         alt="Our Services"
                         // fill
                         style={{ objectFit: "cover", objectPosition: "center" }}
                     // priority
-                    />
+                    /> */}
                     <div className="absolute inset-0 bg-black bg-opacity-70"></div>
                 </div>
 
