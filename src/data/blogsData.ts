@@ -5330,63 +5330,65 @@ export const blogData = [
 },
 {
     "id": 66,
-    "slug": "why-cybersecurity-roles-require-stricter-background-screening",
-    "title": "Why Cybersecurity Needs Stricter Background Screening in Malaysia",
-    "description": "Venovox Sendirian Berhad offers Malaysia background screening services, including HR checks, cybersecurity checks, property oversight, and international investigations.",
-    "h1": "Why Cybersecurity Roles Require Stricter Background Screening",
-    "featuredImage": "/cybersecurity-background-check-malaysia.png",
-    "altTag": "Cybersecurity Background Check Malaysia",
-    "author": "VENOVOX Team",
-    "publishDate": "2025-09-02",
-    "readTime": "6 min read",
-    "tags": ["Cybersecurity Screening", "Background Checks", "HR Checks", "Compliance", "Malaysia", "Venovox"],
-    "category": "Business Verification and Compliance",
-    "sections": [
-        {
-            "type": "introduction",
-            "content": "Cybersecurity is no longer merely a technological problem; it's a question of trust. People who work with sensitive data are not just protecting technology, but also the reputation and future of whole companies. This is why it's more important than ever to do background checks on people who work in cyber security. Cybersecurity jobs require more careful hiring than other jobs since the people who are given access to digital assets need to be both qualified and trustworthy."
-        },
-        {
-            "type": "content_section",
-            "heading": "The Growing Risk in a Digital World",
-            "content": "Hackers, phishing attempts, and insider data theft are demanding situations that corporations confront every day. Advanced security tools can assist; however, humans are nevertheless the weakest link. By doing thorough historical past checks, organizations decrease the likelihood of hiring someone who has hidden dangers. This method checks more than just your education and work history. It looks at things like financial honesty, criminal records, and past job practices that could be a sign of potential problems. Cybersecurity experts often have access to important systems; thus, this level of screening is quite important."
-        },
-        {
-            "type": "content_with_image",
-            "heading": "Why Cybersecurity Jobs Need Extra Scrutiny",
-            "content": "Background checks are crucial in a lot of fields, but they are necessary in cybersecurity. Someone in this position can get into company networks, private customer information, and even government information. Companies that don't do extensive cyber security background checks could lose millions of dollars if there is a breach. People who work in these jobs need to be able to do the job technically and also be honest and responsible. This extra step of verification gives businesses the peace of mind that they can defend themselves from insider threats.",
-            "image": "/cybersecurity-job-scrutiny.png",
-            "imageAlt": "Cybersecurity Job Scrutiny",
-            "imagePosition": "right"
-        },
-        {
-            "type": "content_section",
-            "heading": "Insider Threats and the Importance of Trust",
-            "content": "These are conditions wherein personnel abuse their right of entry to scouse borrow or leak information. Strong vetting earlier than hiring is important to avoid these varieties of hazards. Companies can locate patterns that could contribute to destiny troubles, consisting of prior fraud or disciplinary complaints, by using history test offerings. Because cybersecurity jobs offer human beings access to sensitive records, trustworthiness is just as essential as technical skills. Companies can be confident that they are hiring dependable people in the event that they do better background checks."
-        },
-        {
-            "type": "content_with_image",
-            "heading": "Compliance and Legal Demands",
-            "content": "There are severe rules about how to handle data in several fields, such as finance, healthcare, and government. Employers must show that they have done something to keep consumer information safe. Background investigation services help businesses satisfy compliance regulations and gain the trust of their customers. Regulatory organizations are asking for proof that companies are carefully checking their employees more and more. Companies that don't do this could get fined or lose important contracts. Stricter screening is both a legal requirement and a way to keep people safe.",
-            "image": "/legal-and-compliance-checks.png",
-            "imageAlt": "Legal and Compliance Checks",
-            "imagePosition": "right"
-        },
-        {
-            "type": "content_section",
-            "heading": "Building a Safer Future for Digital Security",
-            "content": "There is a growing need for cybersecurity specialists, but there is also a growing requirement for trust in those professions. Companies can't afford to recruit people without doing their homework first. Businesses protect themselves from both outside and within hazards by using extensive background check services. Checks that are dependable help make hiring decisions that lower risks and ensure that only the right personnel can see sensitive data."
-        },
-        {
-            "type": "conclusion",
-            "heading": "Conclusion",
-            "content": "As cyber-attacks get more sophisticated, it's more important than ever to trust people who work in cybersecurity. Stronger screening doesn't mean fewer chances; it means making sure that only the most trustworthy people are in charge of important digital assets. Organizations protect their precious information and their future by doing rigorous cybersecurity background checks and using dependable background investigation services. Contact Venovox today to find out more about how sophisticated screening technologies may improve your cybersecurity hiring process. This is the next step toward a safer digital future."
-        }
-    ],
-    "seo": {
-        "metaTitle": "Why Cybersecurity Needs Stricter Background Screening in Malaysia",
-        "metaDescription": "Venovox Sendirian Berhad offers Malaysia background screening services, including HR checks, cybersecurity checks, property oversight, and international investigations.",
-        "keywords": ["cybersecurity screening", "background checks", "HR checks", "compliance", "Malaysia", "Venovox"]
+  "slug": "the-silent-risk-ignoring-employee-engagement-in-the-company",
+  "title": "The Silent Risk: Ignoring Employee Engagement in the Company",
+  "description": "Employee engagement is not just an HR metric — it’s a governance issue that influences resilience, ethics, and long-term corporate value.",
+  "h1": "The Silent Risk: Ignoring Employee Engagement in the Company",
+  "featuredImage": "/Employee Engagement Risk.png",
+  "altTag": "Employee Engagement Risk",
+  "author": "VENOVOX Team",
+  "publishDate": "2025-10-27",
+  "readTime": "5 min read",
+  "tags": ["Employee Engagement", "Corporate Governance", "ESG", "Workplace Culture", "Venovox"],
+  "category": "Corporate Governance and Risk Management",
+  "sections": [
+    {
+      "type": "introduction",
+      "content": "In many companies, conversations about employee engagement are relegated to the realm of human resources. Metrics on morale, retention, and well-being are treated as operational concerns, far removed from the strategic and fiduciary duties of directors. But this perception overlooks a silent risk which can erode corporate resilience, damage reputation, and undermine long-term value."
+    },
+    {
+      "type": "content_section",
+      "heading": "Employee Engagement: More Than a 'Soft' Factor",
+      "content": "Employee engagement is not just a “soft” factor. It is a barometer of trust between leadership and workforce, an indicator of whether employees feel aligned with the company’s vision, and a predictor of productivity and innovation. Disengaged employees are not simply underperformers; they represent vulnerabilities. High turnover, workplace conflicts, reputational backlash on social platforms, and even whistleblowing scandals often trace back to disengagement that companies failed to address."
+    },
+    {
+      "type": "content_with_image",
+      "heading": "The Fiduciary Duty of Directors",
+      "content": "Companies and directors have a fiduciary duty to safeguard not only shareholder returns and client engagements but also the sustainability of the enterprise. In today’s environment, where ESG metrics, diversity, and transparency are increasingly scrutinized, ignoring employee sentiment is tantamount to ignoring financial risk or reputational risk. Companies celebrated for resilience often share a common trait of directors who prioritize culture, ethics, and well-being as much as balance sheets.",
+      "image": "/Employee Engagement Risk2.png",
+      "imageAlt": "Corporate Fiduciary Duty",
+      "imagePosition": "right"
+    },
+    {
+      "type": "content_section",
+      "heading": "Integrating Engagement into Governance",
+      "content": "To integrate employee engagement into governance, companies should: \n1. Treat employee engagement as a strategic KPI. Beyond financial dashboards, companies should regularly review metrics on employee satisfaction, turnover, and workplace culture.\n2. Ask the right questions. How does leadership measure morale? What systems are in place to detect early signs of burnout or disengagement?\n3. Link engagement to risk oversight. Disengaged employees are more likely to drive compliance breaches, customer dissatisfaction, and reputational crises.\n4. Recognize it as a driver of value creation. Engaged employees innovate, advocate for the brand, and contribute to stronger stakeholder trust."
+    },
+    {
+      "type": "content_with_image",
+      "heading": "Why Engagement Is a Governance Issue",
+      "content": "The notion that employee engagement belongs solely to HR is outdated. In reality, it is a governance issue with direct implications for resilience, ethical conduct, and market competitiveness. Companies that overlook it are not just neglecting their workforce but they are overlooking a core component of corporate survival.",
+      "image": "/Employee Engagement3 .png",
+      "imageAlt": "Employee Engagement Governance",
+      "imagePosition": "left"
+    },
+    {
+      "type": "conclusion",
+      "heading": "Conclusion",
+      "content": "In a business world where trust and reputation can be lost overnight, we at Venovox uphold that directors must understand that engagement is not an accessory, but it is central and vital to governance, ethics, and the future of a company."
     }
-}
+  ],
+  "seo": {
+    "metaTitle": "The Silent Risk: Ignoring Employee Engagement in the Company | Venovox",
+    "metaDescription": "Ignoring employee engagement can erode trust, harm corporate culture, and expose governance risks. Learn why engagement is a core component of business resilience and ethics.",
+    "keywords": ["employee engagement", "corporate governance", "ESG", "risk management", "Venovox", "leadership"]
+  
+    }
+},
+
+
+
+
+
+
 ]
