@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -11,36 +11,67 @@ import {
   CheckCircle,
   TrendingUp,
   AlertCircle,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
+import { FiPhone } from "react-icons/fi";
+import { useState } from "react";
+
 
 export default function CorporateInvestigations() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqs = [
+    {
+      question: "How quickly can you start",
+      answer: "Usually within hours once we agree on scope and access."
+    },
+    {
+      question: "Will our staff be treated fairly",
+      answer: "Yes. We follow a fair process. We protect privacy and dignity."
+    },
+    {
+      question: "Can you work under legal privilege",
+      answer: "Yes. We align with counsel to protect privilege where possible."
+    },
+    {
+      question: "Do you work in multiple countries",
+      answer: "Yes. We handle cross border matters and complex structures."
+    },
+    {
+      question: "What do your reports include",
+      answer: "Facts, timelines, methods, evidence lists, and clear next steps."
+    }
+  ];
+
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
-      <section className="relative mt-20 w-full min-h-[50vh] overflow-hidden flex items-center">
+      <section className="relative mt-20 w-full min-h-[50vh] overflow-hidden flex items-center justify-center">
         <img
           src="/hero.webp"
           alt="Corporate Investigations"
           className="absolute inset-0 w-full h-full object-cover brightness-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-        <div className="container mx-auto px-6 relative z-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
+
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center  mx-auto"
+            className="text-center max-w-3xl mx-auto"
           >
-          
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Corporate Investigations
             </h1>
-            <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed px-2 sm:px-0">
               Serious problems inside a company create stress and doubt. In these moments you need steady guidance and a clear plan. Our investigators handle sensitive matters with care, structure, and respect for every person involved. We find facts, reduce risk, and help leaders act with confidence.
             </p>
           </motion.div>
         </div>
       </section>
+
 
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
@@ -90,15 +121,16 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Scope of work
                 </h2>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  We investigate problems that can harm your people, money, data, and reputation.
+                  Each topic below includes a short overview of how we work and the results you can expect.
+                  Every item links to a detailed service page.
+                </p>
               </div>
-              <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none leading-relaxed mb-8">
-                We investigate problems that can harm your people, money, data, and reputation. Each topic below includes a short overview of how we work and the results you can expect. Every item links to a detailed service page.
-              </p>
 
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Internal fraud */}
@@ -106,12 +138,13 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <ShieldCheck className="text-red-700 w-6 h-6" />
+                  <div className="flex items-center mb-4">
+                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
+                      <ShieldCheck className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Internal fraud</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Internal fraud</h3>
                   </div>
+
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We uncover embezzlement, false billing, conflict of interest, ghost employees, and financial manipulation. Our team analyzes books and records, expense data, and approval logs. We map who had access and who gained from the scheme. We interview staff and review messages and emails where needed. You receive a clear timeline, an estimate of loss, and evidence that can support recovery and HR action.
                   </p>
@@ -122,12 +155,13 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <Globe className="text-red-700 w-6 h-6" />
+                  <div className="flex items-center mb-4">
+                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
+                      <Globe className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Third party fraud</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Third party fraud</h3>
                   </div>
+
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We test the integrity of vendors, distributors, partners, and agents. We look for kickbacks, bid rigging, diversion, duplicate invoicing, and false claims. We review contracts, side letters, pricing, rebate structures, and proof of delivery. We compare expected activity to actual activity using data analytics. You receive findings and a practical plan to fix controls and recover value.
                   </p>
@@ -138,16 +172,17 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <Users className="text-red-700 w-6 h-6" />
+                  <div className="flex items-center mb-4">
+                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
+                      <Users className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Workplace misconduct</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Workplace misconduct</h3>
                   </div>
+
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We handle harassment, discrimination, bullying, and code of conduct breaches with care and fairness. We use a trauma informed approach. We set ground rules, protect privacy, and avoid harm. We gather evidence from interviews, policies, devices, and systems. We provide balanced findings and recommendations that meet HR and legal standards.
                   </p>
-                  <Link href="/workplace-misconduct-investigations/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/workplace-misconduct-investigations/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -157,16 +192,17 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <Target className="text-red-700 w-6 h-6" />
+                      <Target className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Data and cyber incidents</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Data and cyber incidents</h3>
                   </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
+
+                  <p className="text-gray-700 text-justify [text-justify:inter-word] hyphens-none leading-relaxed">
                     We investigate insider threats, data theft, account compromise, and ransomware impact. We preserve devices, cloud data, and logs. We identify what was accessed, what was taken, and how it happened. We support containment with your IT and security teams. You receive a clear incident report, evidence logs, and guidance for notification and recovery.
                   </p>
-                  <Link href="/digital-forensics-and-incident-investigations/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/digital-forensics-and-incident-investigations/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -176,16 +212,16 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <AlertCircle className="text-red-700 w-6 h-6" />
+                      <AlertCircle className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Regulatory breaches</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Regulatory breaches</h3>
                   </div>
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We investigate ABC and AML matters, sanctions exposure, books and records issues, and dawn raid response. We test transactions and counterparties. We review approvals, controls, and training. We assess exposure against the laws that apply in your markets. We prepare briefing packs for counsel and regulators and propose a practical remediation plan.
                   </p>
-                  <Link href="/regulatory-and-compliance-investigations/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/regulatory-and-compliance-investigations/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -195,16 +231,16 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <TrendingUp className="text-red-700 w-6 h-6" />
+                      <TrendingUp className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Asset tracing</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Asset tracing</h3>
                   </div>
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We follow money and assets across borders and through complex structures. We use corporate records, court filings, trade data, travel data, and open sources to build a picture of ownership and control. We identify bankable leads for freezing orders and enforcement. You receive a recovery map that aligns evidence with legal options.
                   </p>
-                  <Link href="/asset-tracing-and-recovery/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/asset-tracing-and-recovery/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -214,16 +250,16 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <Briefcase className="text-red-700 w-6 h-6" />
+                      <Briefcase className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Litigation support</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Litigation support</h3>
                   </div>
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We gather evidence, protect chain of custody, and coordinate with eDiscovery teams. We validate the source of documents and confirm authenticity. We locate witnesses and provide background on counterparties. We supply expert reports and testimony where required. Your legal team gains facts they can trust.
                   </p>
-                  <Link href="/litigation-support-investigations/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/litigation-support-investigations/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -233,16 +269,16 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <ShieldCheck className="text-red-700 w-6 h-6" />
+                      <ShieldCheck className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Brand and IP protection</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Brand and IP protection</h3>
                   </div>
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We fight counterfeit and grey market leakage. We run test buys on and offline. We track serial numbers and map supply chain weak points. We work with platforms, hosts, and local partners to support takedowns and seizures. You get evidence that supports enforcement and steps to protect revenue.
                   </p>
-                  <Link href="/brand-and-ip-investigations/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/brand-and-ip-investigations/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -252,16 +288,16 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <Globe className="text-red-700 w-6 h-6" />
+                      <Globe className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Intelligence and OSINT</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Intelligence and OSINT</h3>
                   </div>
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We deliver enhanced due diligence, background checks on people and companies, and human source insights. We assess market entry risk and partner risk. We combine online sources with field research where appropriate. You receive a clear view of integrity, reputation, and hidden risk before you act.
                   </p>
-                  <Link href="/corporate-intelligence-and-osint/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/corporate-intelligence-and-osint/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -271,16 +307,16 @@ export default function CorporateInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="flex items-start mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="bg-red-100 p-3 rounded-full mr-4">
-                      <CheckCircle className="text-red-700 w-6 h-6" />
+                      <CheckCircle className="text-red-600 w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Prevention and controls</h3>
+                    <h3 className="text-2xl font-bold text-gray-900">Prevention and controls</h3>
                   </div>
                   <p className="text-gray-700 text-justify leading-relaxed">
                     We test controls, use data analytics, and train teams to stop issues early. We run fraud risk assessments and process walk throughs. We design simple monitoring that your team can run. We help you build a culture that values speaking up and early action.
                   </p>
-                  <Link href="/fraud-risk-management-and-prevention/" className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center">
+                  <Link href="/fraud-risk-management-and-prevention/" className="text-red-600 hover:text-red-600 font-medium mt-4 inline-flex items-center">
                     Learn more →
                   </Link>
                 </motion.div>
@@ -300,15 +336,16 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12 mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Industries we serve
                 </h2>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  We support clients in many sectors. Each industry has its own rules, risks, and pressure points.
+                  We tailor our plan to fit your context and your culture.
+                </p>
               </div>
-              <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none leading-relaxed mb-8">
-                We support clients in many sectors. Each industry has its own rules, risks, and pressure points. We tailor our plan to fit your context and your culture.
-              </p>
+
 
               <div className="grid md:grid-cols-2 gap-8">
                 <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
@@ -367,7 +404,7 @@ export default function CorporateInvestigations() {
 
       {/* How We Work Section */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -375,91 +412,73 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   How we work
                 </h2>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  Our method is simple and strong. It keeps your matter defensible and your people respected.
+                  We plan carefully, move with purpose, and explain each step in plain language.
+                </p>
               </div>
-              <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none leading-relaxed mb-8">
-                Our method is simple and strong. It keeps your matter defensible and your people respected. We plan carefully, move with purpose, and explain each step in plain language.
-              </p>
+
 
               <div className="space-y-8">
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-start mb-4">
-                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                      1
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Intake and scoping</h3>
-                      <p className="text-gray-700 text-justify leading-relaxed">
-                        We listen to your concerns and gather the facts you already have. We define the problem, the goals, and the limits. We agree on access, roles, and timelines. We set early safeguards so nothing is lost and nobody is harmed.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+                {[1, 2, 3, 4, 5].map((num, i) => (
+                  <motion.div key={i} className="bg-white p-6 rounded-lg shadow-sm">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center">
 
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-start mb-4">
-                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                      2
+                      <div>
+                        {num === 1 && (
+                          <>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Intake and scoping</h3>
+                            <p className="text-gray-700 text-justify leading-relaxed">
+                              We listen to your concerns and gather the facts you already have. We define the problem, the goals, and the limits. We agree on access, roles, and timelines. We set early safeguards so nothing is lost and nobody is harmed.
+                            </p>
+                          </>
+                        )}
+                        {num === 2 && (
+                          <>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Evidence preservation</h3>
+                            <p className="text-gray-700 text-justify leading-relaxed">
+                              We secure devices, emails, chat records, cloud drives, and paper files. We document every action to protect chain of custody. We place holds where needed and isolate systems that may be at risk. Our goal is to freeze the scene without stopping your business.
+                            </p>
+                          </>
+                        )}
+                        {num === 3 && (
+                          <>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Collection and analysis</h3>
+                            <p className="text-gray-700 text-justify leading-relaxed">
+                              We collect data and testimony in a fair and consistent way. We use digital forensics, accounting reviews, OSINT and HUMINT checks, and structured interviews. We build a clear timeline that shows who did what and when. We test competing theories and note what we cannot confirm.
+                            </p>
+                          </>
+                        )}
+                        {num === 4 && (
+                          <>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Findings and reporting</h3>
+                            <p className="text-gray-700 text-justify leading-relaxed">
+                              We turn complex facts into a clear story. You get a concise executive summary and detailed appendices with evidence, methods, and sources. We explain limits and confidence levels. We brief leaders, HR, and counsel and support next steps.
+                            </p>
+                          </>
+                        )}
+                        {num === 5 && (
+                          <>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">Remediation and prevention</h3>
+                            <p className="text-gray-700 text-justify leading-relaxed">
+                              We help close gaps and improve controls. We update policies, design monitoring, and train teams on do and do not rules. We propose quick wins and longer term fixes. We plan follow up testing and can help you report progress to your board and stakeholders.
+                            </p>
+                          </>
+                        )}
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Evidence preservation</h3>
-                      <p className="text-gray-700 text-justify leading-relaxed">
-                        We secure devices, emails, chat records, cloud drives, and paper files. We document every action to protect chain of custody. We place holds where needed and isolate systems that may be at risk. Our goal is to freeze the scene without stopping your business.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-start mb-4">
-                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                      3
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Collection and analysis</h3>
-                      <p className="text-gray-700 text-justify leading-relaxed">
-                        We collect data and testimony in a fair and consistent way. We use digital forensics, accounting reviews, OSINT and HUMINT checks, and structured interviews. We build a clear timeline that shows who did what and when. We test competing theories and note what we cannot confirm.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-start mb-4">
-                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                      4
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Findings and reporting</h3>
-                      <p className="text-gray-700 text-justify leading-relaxed">
-                        We turn complex facts into a clear story. You get a concise executive summary and detailed appendices with evidence, methods, and sources. We explain limits and confidence levels. We brief leaders, HR, and counsel and support next steps.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm">
-                  <div className="flex items-start mb-4">
-                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                      5
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">Remediation and prevention</h3>
-                      <p className="text-gray-700 text-justify leading-relaxed">
-                        We help close gaps and improve controls. We update policies, design monitoring, and train teams on do and do not rules. We propose quick wins and longer term fixes. We plan follow up testing and can help you report progress to your board and stakeholders.
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
 
       {/* Legal and Regulatory Interface Section */}
       <section className="py-16 bg-white">
@@ -471,15 +490,16 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Legal and regulatory interface
                 </h2>
+                <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                  Many investigations sit inside legal privilege and may face regulators or courts.
+                  We work closely with counsel from the start so your matter is protected and efficient.
+                </p>
               </div>
-              <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none leading-relaxed mb-8">
-                Many investigations sit inside legal privilege and may face regulators or courts. We work closely with counsel from the start so your matter is protected and efficient.
-              </p>
+
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -525,12 +545,12 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-600">
                   Outcomes you can expect
                 </h2>
               </div>
+
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -572,9 +592,9 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+
+                <h2 className="text-3xl md:text-4xl font-bold  text-red-600">
                   Why choose us
                 </h2>
               </div>
@@ -630,9 +650,9 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+
+                <h2 className="text-3xl md:text-4xl font-bold  text-red-600">
                   When to act
                 </h2>
               </div>
@@ -677,7 +697,7 @@ export default function CorporateInvestigations() {
                   </li>
                 </ul>
 
-                <div className="mt-8 p-6 bg-red-50 rounded-lg border-l-4 ">
+                <div className="mt-8 p-6 bg-red-50 rounded-lg  ">
                   <p className="text-gray-800 font-semibold text-lg">
                     If this is urgent, contact us now. We can start with a short scoping call and a quick preservation plan.
                   </p>
@@ -691,55 +711,68 @@ export default function CorporateInvestigations() {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className=" mx-auto">
+          <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Frequently asked questions
                 </h2>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">How quickly can you start</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Usually within hours once we agree on scope and access.
-                  </p>
-                </div>
+              <div className="space-y-4 max-w-4xl mx-auto">
+                {faqs.map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+                  >
+                    <button
+                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                      className="w-full p-6 flex items-center justify-between text-left  focus:ring-red-600 focus:ring-inset"
+                    >
+                      <h3 className="text-lg md:text-xl font-bold text-gray-900 pr-4">
+                        {faq.question}
+                      </h3>
+                      <motion.div
+                        animate={{ rotate: openIndex === index ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="flex-shrink-0"
+                      >
+                        {openIndex === index ? (
+                          <ChevronUp className="w-6 h-6 text-red-600" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-gray-400" />
+                        )}
+                      </motion.div>
+                    </button>
 
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Will our staff be treated fairly</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Yes. We follow a fair process. We protect privacy and dignity.
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Can you work under legal privilege</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Yes. We align with counsel to protect privilege where possible.
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Do you work in multiple countries</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Yes. We handle cross border matters and complex structures.
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">What do your reports include</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Facts, timelines, methods, evidence lists, and clear next steps.
-                  </p>
-                </div>
+                    <AnimatePresence>
+                      {openIndex === index && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <div className="px-6 pb-6 pt-0">
+                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -756,9 +789,9 @@ export default function CorporateInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center mb-8">
-                <div className="w-1 h-12  mr-4"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-black">
+              <div className="text-center mb-8">
+
+                <h2 className="text-3xl md:text-4xl font-bold  text-red-600">
                   Related services
                 </h2>
               </div>
@@ -796,51 +829,58 @@ export default function CorporateInvestigations() {
       {/* Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
         <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              
-              <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm mb-6">
-                <p className="text-lg leading-relaxed mb-6">
-                  Speak with an investigations specialist today. Tell us what happened, what you need, and your timeline. We will propose a simple plan and the first safe steps to protect people and evidence.
-                </p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            {/* Content box */}
+            <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm mb-10 text-left md:text-center">
+              <p className="text-lg leading-relaxed mb-6">
+                Speak with an investigations specialist today. Tell us what happened,
+                what you need, and your timeline. We will propose a simple plan and
+                the first safe steps to protect people and evidence.
+              </p>
 
-                <div className="space-y-4 text-left">
+              <div className="space-y-6">
+                <div>
                   <p className="font-semibold text-lg">Prefer email</p>
                   <p className="text-gray-300">
                     Send a short note and we will reply with times for a quick call.
                   </p>
+                </div>
 
-                  <p className="font-semibold text-lg mt-6">Prefer a document</p>
+                <div>
+                  <p className="font-semibold text-lg">Prefer a document</p>
                   <p className="text-gray-300">
                     We can send a one page plan that outlines scope, timing, and estimated effort.
                   </p>
                 </div>
               </div>
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/my-en/contact-us"
-                  className="px-8 py-4  text-white font-medium hover: transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-lg"
-                >
-                  Contact Us Now
-                </Link>
-                <a
-                  href="tel:+60128008888"
-                  className="px-8 py-4 bg-white text-gray-900 font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-lg"
-                >
-                  Call +60 12-800 8888
-                </a>
-              </div>
-            </motion.div>
-          </div>
+            {/* Buttons */}
+            <div className="flex flex-wrap justify-center gap-6">
+              <Link
+                href="/my-en/contact-us"
+                className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
+              >
+                Contact Us Now
+              </Link>
+              <a
+                href="tel:+60128008888"
+                className="flex items-center gap-2 px-6 py-3 bg-white text-red-600 border-2 border-red-600 font-bold rounded-lg hover:bg-red-50 transition-colors"
+              >
+                <FiPhone className="text-lg" />
+                Call Us
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
+
     </div>
   );
 }
