@@ -29,7 +29,7 @@ export default function CorporateInvestigations() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center  mx-auto"
           >
           
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -62,7 +62,7 @@ export default function CorporateInvestigations() {
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,7 +83,7 @@ export default function CorporateInvestigations() {
       {/* Scope of Work Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Scope of work
                 </h2>
@@ -293,7 +293,7 @@ export default function CorporateInvestigations() {
       {/* Industries We Serve Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -301,7 +301,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12 mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Industries we serve
                 </h2>
@@ -368,7 +368,7 @@ export default function CorporateInvestigations() {
       {/* How We Work Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -376,7 +376,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   How we work
                 </h2>
@@ -388,7 +388,7 @@ export default function CorporateInvestigations() {
               <div className="space-y-8">
                 <motion.div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-start mb-4">
-                    <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
                       1
                     </div>
                     <div>
@@ -402,7 +402,7 @@ export default function CorporateInvestigations() {
 
                 <motion.div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-start mb-4">
-                    <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
                       2
                     </div>
                     <div>
@@ -416,7 +416,7 @@ export default function CorporateInvestigations() {
 
                 <motion.div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-start mb-4">
-                    <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
                       3
                     </div>
                     <div>
@@ -430,7 +430,7 @@ export default function CorporateInvestigations() {
 
                 <motion.div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-start mb-4">
-                    <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
                       4
                     </div>
                     <div>
@@ -444,7 +444,7 @@ export default function CorporateInvestigations() {
 
                 <motion.div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-start mb-4">
-                    <div className="bg-red-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
+                    <div className=" text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
                       5
                     </div>
                     <div>
@@ -464,7 +464,7 @@ export default function CorporateInvestigations() {
       {/* Legal and Regulatory Interface Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -472,7 +472,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Legal and regulatory interface
                 </h2>
@@ -518,7 +518,7 @@ export default function CorporateInvestigations() {
       {/* Outcomes Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -526,7 +526,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Outcomes you can expect
                 </h2>
@@ -565,7 +565,7 @@ export default function CorporateInvestigations() {
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -573,7 +573,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Why choose us
                 </h2>
@@ -623,7 +623,7 @@ export default function CorporateInvestigations() {
       {/* When to Act Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -631,7 +631,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   When to act
                 </h2>
@@ -677,7 +677,7 @@ export default function CorporateInvestigations() {
                   </li>
                 </ul>
 
-                <div className="mt-8 p-6 bg-red-50 rounded-lg border-l-4 border-red-600">
+                <div className="mt-8 p-6 bg-red-50 rounded-lg border-l-4 ">
                   <p className="text-gray-800 font-semibold text-lg">
                     If this is urgent, contact us now. We can start with a short scoping call and a quick preservation plan.
                   </p>
@@ -691,7 +691,7 @@ export default function CorporateInvestigations() {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -699,7 +699,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Frequently asked questions
                 </h2>
@@ -749,7 +749,7 @@ export default function CorporateInvestigations() {
       {/* Related Services Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -757,7 +757,7 @@ export default function CorporateInvestigations() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center mb-8">
-                <div className="w-1 h-12 bg-red-600 mr-4"></div>
+                <div className="w-1 h-12  mr-4"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-black">
                   Related services
                 </h2>
@@ -796,7 +796,7 @@ export default function CorporateInvestigations() {
       {/* Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
+          <div className=" mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -826,7 +826,7 @@ export default function CorporateInvestigations() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/my-en/contact-us"
-                  className="px-8 py-4 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-lg"
+                  className="px-8 py-4  text-white font-medium hover: transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded-lg"
                 >
                   Contact Us Now
                 </Link>
