@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -11,37 +11,35 @@ import {
   CheckCircle,
   TrendingUp,
   AlertCircle,
-  ChevronDown,
-  ChevronUp,
 } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
-import { useState } from "react";
+import { Faqs } from "../common/faq-section";
 
 
 export default function CorporateInvestigations() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "How quickly can you start",
-      answer: "Usually within hours once we agree on scope and access."
+      id: "1",
+      question: "How quickly can an investigation start?",
+      answer: "We can usually begin once scope and access are agreed. We prioritize evidence preservation and a safe plan first."
     },
     {
-      question: "Will our staff be treated fairly",
-      answer: "Yes. We follow a fair process. We protect privacy and dignity."
+      id: "2",
+      question: "Do you work under legal privilege?",
+      answer: "Yes. We align with your counsel from the start, keep clean files, and protect privilege where possible."
     },
     {
-      question: "Can you work under legal privilege",
-      answer: "Yes. We align with counsel to protect privilege where possible."
+      id: "3",
+      question: "Can Venovox operate across borders?",
+      answer: "Yes. We work internationally with trusted local partners and follow local rules and privacy laws."
     },
     {
-      question: "Do you work in multiple countries",
-      answer: "Yes. We handle cross border matters and complex structures."
+      id: "4",
+      question: "What will the final report include?",
+      answer: "A plain language summary, a detailed timeline, evidence lists, methods, limits, and clear next steps."
     },
-    {
-      question: "What do your reports include",
-      answer: "Facts, timelines, methods, evidence lists, and clear next steps."
-    }
+   
   ];
 
   return (
@@ -708,76 +706,7 @@ export default function CorporateInvestigations() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-                  Frequently asked questions
-                </h2>
-              </div>
-
-              <div className="space-y-4 max-w-4xl mx-auto">
-                {faqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-                  >
-                    <button
-                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                      className="w-full p-6 flex items-center justify-between text-left  focus:ring-red-600 focus:ring-inset"
-                    >
-                      <h3 className="text-lg md:text-xl font-bold text-gray-900 pr-4">
-                        {faq.question}
-                      </h3>
-                      <motion.div
-                        animate={{ rotate: openIndex === index ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-shrink-0"
-                      >
-                        {openIndex === index ? (
-                          <ChevronUp className="w-6 h-6 text-red-600" />
-                        ) : (
-                          <ChevronDown className="w-6 h-6 text-gray-400" />
-                        )}
-                      </motion.div>
-                    </button>
-
-                    <AnimatePresence>
-                      {openIndex === index && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-6 pb-6 pt-0">
-                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <Faqs faqs={faqs} head="Frequently asked questions" />
 
       {/* Related Services Section */}
       <section className="py-16 bg-gray-50">

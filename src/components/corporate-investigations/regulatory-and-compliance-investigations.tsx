@@ -14,8 +14,32 @@ import {
   Globe,
 } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
+import { Faqs } from "../common/faq-section";
 
 export default function RegulatoryAndComplianceInvestigations() {
+
+  const faqs = [
+    {
+      id: "1",
+      question: "Do you help with voluntary disclosures?",
+      answer: "Yes. We align with counsel to plan timing, scope, and messaging for constructive regulator engagement."
+    },
+    {
+      id: "2",
+      question: "How do you select transactions for testing?",
+      answer: "We use risk based sampling that focuses on high risk markets, channels, counterparties, and red flag patterns."
+    },
+    {
+      id: "3",
+      question: "Can you support a dawn raid response?",
+      answer: "Yes. We provide playbooks, on call guidance, evidence logging, and post event stabilization and review."
+    },
+    {
+      id: "4",
+      question: "What outcomes should we expect?",
+      answer: "Clear answers to regulator questions, evidence that stands up to review, and a practical remediation roadmap."
+    },
+  ];
 
  
     return (
@@ -549,6 +573,8 @@ export default function RegulatoryAndComplianceInvestigations() {
           </div>
         </div>
       </section>
+
+      <Faqs faqs={faqs} head="Frequently asked questions" />
 
       {/* Why Venovox Section */}
       <section className="py-16 bg-gray-50">

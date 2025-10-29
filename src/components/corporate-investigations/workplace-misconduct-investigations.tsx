@@ -1,42 +1,42 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion,  } from "framer-motion";
 import Link from "next/link";
 import {
   ShieldCheck,
   Users,
   AlertCircle,
   CheckCircle,
-  ChevronDown,
-  ChevronUp,
+
 } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
-import { useState } from "react";
+import { Faqs } from "../common/faq-section";
+
 
 export default function WorkplaceMisconductInvestigations() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "How quickly can you start",
-      answer: "Usually within 24 hours for intake and within days for a full investigation once scope is set."
+      id: "1",
+      question: "Will participants be protected from retaliation?",
+      answer: "Yes. We set clear safeguards, remind managers of duties, and monitor for subtle harms such as isolation or lost opportunities."
     },
     {
-      question: "Will the people involved be treated fairly",
-      answer: "Yes. We follow fair process, protect dignity, and apply policy consistently. All parties get a chance to be heard."
+      id: "2",
+      question: "How are interviews conducted?",
+      answer: "We use fair, trauma informed interviews with clear consent, simple ground rules, and respectful language."
     },
     {
-      question: "How do you protect privacy",
-      answer: "We limit access to the core team. We secure data. We follow local privacy rules. We communicate with care."
+      id: "3",
+      question: "Can reports be anonymous?",
+      answer: "In many locations yes. Where names are required, we limit access to the core team and protect privacy."
     },
     {
-      question: "What if we need urgent action",
-      answer: "We can start intake immediately and put safety measures in place within hours."
+      id: "4",
+      question: "How long does a typical case take?",
+      answer: "It depends on scope and evidence. Many matters resolve within a few weeks after intake, preservation, and interviews."
     },
-    {
-      question: "Can you work under legal privilege",
-      answer: "Yes. We align with counsel to protect privilege where possible and keep clean files."
-    }
+   
   ];
 
   return (
@@ -903,76 +903,8 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-                  Frequently asked questions
-                </h2>
-              </div>
+      <Faqs faqs={faqs} head="Frequently asked questions" />
 
-              <div className="space-y-4 max-w-4xl mx-auto">
-                {faqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-                  >
-                    <button
-                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                      className="w-full p-6 flex items-center justify-between text-left focus:ring-red-600 focus:ring-inset"
-                    >
-                      <h3 className="text-lg md:text-xl font-bold text-gray-900 pr-4">
-                        {faq.question}
-                      </h3>
-                      <motion.div
-                        animate={{ rotate: openIndex === index ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-shrink-0"
-                      >
-                        {openIndex === index ? (
-                          <ChevronUp className="w-6 h-6 text-red-600" />
-                        ) : (
-                          <ChevronDown className="w-6 h-6 text-gray-400" />
-                        )}
-                      </motion.div>
-                    </button>
-
-                    <AnimatePresence>
-                      {openIndex === index && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-6 pb-6 pt-0">
-                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-gray-900 to-black text-white">

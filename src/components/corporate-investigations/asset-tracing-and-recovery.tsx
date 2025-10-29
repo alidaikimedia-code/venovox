@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion,  } from "framer-motion";
 import Link from "next/link";
 import {
   Globe,
@@ -10,38 +10,37 @@ import {
   Network,
   TrendingUp,
   CheckCircle,
-  ChevronDown,
-  ChevronUp,
+ 
   Map,
   Fingerprint,
 } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
-import { useState } from "react";
+import { Faqs } from "../common/faq-section";
 
 export default function AssetTracingAndRecovery() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
-      question: "How long does asset tracing take",
-      answer: "Each case is different. We typically deliver initial findings within two to four weeks, with full traces taking longer depending on complexity and jurisdictions involved."
+      id: "1",
+      question: "Can you trace crypto assets?",
+      answer: "We investigate wallets and transaction flows using open sources and specialized tools, then align findings with legal strategy."
     },
     {
-      question: "Can you trace assets across borders",
-      answer: "Yes. We work through a vetted partner network across multiple jurisdictions. We handle language barriers, local laws, and data rules to keep your case moving."
+      id: "2",
+      question: "How far back can you look?",
+      answer: "We follow evidence and available records. Many traces review several years, subject to law and data retention."
     },
     {
-      question: "What if the assets are in complex offshore structures",
-      answer: "We are familiar with common offshore structures, nominee arrangements, and trusts. We trace through layers while respecting local law and keeping evidence clean."
+      id: "3",
+      question: "Will your findings support freezing orders?",
+      answer: "Yes. We document sources and methods so counsel can use them in freezing, disclosure, or enforcement steps."
     },
     {
-      question: "Will your findings hold up in court",
-      answer: "Yes. We maintain strict evidence standards, document all sources and methods, and follow chain of custody protocols. Our work is designed to support legal proceedings."
+      id: "4",
+      question: "What if assets are in another country?",
+      answer: "We coordinate with local partners to obtain records and act lawfully while keeping a single master view."
     },
-    {
-      question: "Do you work under legal privilege",
-      answer: "Yes. We align with counsel from the start to protect privilege where possible and keep clean files."
-    }
+   
   ];
 
   return (
@@ -607,76 +606,7 @@ export default function AssetTracingAndRecovery() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-                  Frequently asked questions
-                </h2>
-              </div>
-
-              <div className="space-y-4 max-w-4xl mx-auto">
-                {faqs.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-                  >
-                    <button
-                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                      className="w-full p-6 flex items-center justify-between text-left focus:ring-red-600 focus:ring-inset"
-                    >
-                      <h3 className="text-lg md:text-xl font-bold text-gray-900 pr-4">
-                        {faq.question}
-                      </h3>
-                      <motion.div
-                        animate={{ rotate: openIndex === index ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="flex-shrink-0"
-                      >
-                        {openIndex === index ? (
-                          <ChevronUp className="w-6 h-6 text-red-600" />
-                        ) : (
-                          <ChevronDown className="w-6 h-6 text-gray-400" />
-                        )}
-                      </motion.div>
-                    </button>
-
-                    <AnimatePresence>
-                      {openIndex === index && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-6 pb-6 pt-0">
-                            <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-                              {faq.answer}
-                            </p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <Faqs faqs={faqs} head="Frequently asked questions" />
 
       {/* Related Services Section */}
       <section className="py-16 bg-gray-50">
@@ -720,6 +650,10 @@ export default function AssetTracingAndRecovery() {
           </div>
         </div>
       </section>
+
+
+     
+
 
       {/* Call to Action Section */}
       <section className="py-16 bg-gradient-to-r from-gray-900 to-black text-white">

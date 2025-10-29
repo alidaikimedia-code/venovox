@@ -15,10 +15,32 @@ import {
   Globe,
 } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
+import { Faqs } from "../common/faq-section";
 
 export default function DigitalForensicsAndIncidentInvestigations() {
  
-
+  const faqs = [
+    {
+      id: "1",
+      question: "Can staff keep working while you collect evidence?",
+      answer: "Often yes. We plan safe containment and target collections to reduce disruption while protecting data."
+    },
+    {
+      id: "2",
+      question: "What cloud sources can you examine?",
+      answer: "We collect logs and artifacts from suites like Microsoft 365, Google Workspace, common EDR and SIEM tools, and major cloud platforms."
+    },
+    {
+      id: "3",
+      question: "Do you handle ransomware negotiations?",
+      answer: "We focus on investigation and recovery and can coordinate with counsel and specialist negotiators where appropriate."
+    },
+    {
+      id: "4",
+      question: "How long do you retain forensic images?",
+      answer: "Retention follows your policy and legal guidance. We store evidence securely and control access."
+    },
+  ];  
   return (
     <div className="bg-white text-gray-900">
       {/* Urgent Alert Band */}
@@ -688,7 +710,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         </div>
       </section>
 
-    
+      <Faqs faqs={faqs} head="Frequently asked questions" />
 
       {/* Related Services Section */}
       <section className="py-16 bg-gray-50">

@@ -15,8 +15,33 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
+import { Faqs } from "../common/faq-section";   
 
 export default function WhistleblowingAndEthicsManagement() {
+
+  const faqs = [
+    {
+      id: "1",
+      question: "Can reporters stay anonymous?",
+      answer: "In many places yes. Where names are required by law, we limit access and protect confidentiality."
+    },
+    {
+      id: "2",
+      question: "How fast do you acknowledge a report?",
+      answer: "Promptly, often within one business day, with a clear outline of next steps."
+    },
+    {
+      id: "3",
+      question: "Who can see a report?",
+      answer: "Only the core intake and investigation team and legal where needed, following least privilege."
+    },
+    {
+      id: "4",
+      question: "How do you prevent retaliation?",
+      answer: "We set clear rules, brief managers, monitor for signs of harm, and act quickly if issues arise."
+    },
+  ];  
+
   return (
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
@@ -104,7 +129,7 @@ export default function WhistleblowingAndEthicsManagement() {
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +143,7 @@ export default function WhistleblowingAndEthicsManagement() {
               <p className="text-gray-700 text-sm">Safe intake and clear triage</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +157,7 @@ export default function WhistleblowingAndEthicsManagement() {
               <p className="text-gray-700 text-sm">Fair process and careful review</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
               className="text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -162,16 +187,21 @@ export default function WhistleblowingAndEthicsManagement() {
               <h2 className="text-3xl md:text-4xl text-center font-bold text-red-600 mb-4">
                 What this page covers
               </h2>
-              <p className="text-lg text-gray-700 text-center [text-justify:inter-word] hyphens-none leading-relaxed mb-6">
-                This page explains how Venovox builds and improves whistleblowing and ethics programs. It shows how we set policy, create safe intake, run careful triage, manage cases, and protect people from retaliation. It also explains our reporting model for management and the board, and the training that helps your culture grow stronger.
+
+              <p className="p-8 rounded-lg shadow-sm max-w-3xl mx-auto text-center">
+                This page explains how Venovox builds and improves whistleblowing and ethics programs.
+                It shows how we set policy, create safe intake, run careful triage, manage cases,
+                and protect people from retaliation. It also explains our reporting model for
+                management and the board, and the training that helps your culture grow stronger.
               </p>
+
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Why a strong speak up program matters */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-6">
           <div className="mx-auto">
             <motion.div
@@ -186,11 +216,15 @@ export default function WhistleblowingAndEthicsManagement() {
                 </h2>
               </div>
 
-              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  People raise issues earlier when they feel safe. Early notice protects staff and reduces loss. A clear program also shows regulators and partners that you take integrity seriously. It helps leaders understand risks that normal reporting may miss. Most of all, it gives every person a fair way to be heard.
+              <div className="p-8 rounded-lg shadow-sm max-w-3xl mx-auto text-center">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  People raise issues earlier when they feel safe. Early notice protects staff and reduces loss.
+                  A clear program also shows regulators and partners that you take integrity seriously.
+                  It helps leaders understand risks that normal reporting may miss.
+                  Most of all, it gives every person a fair way to be heard.
                 </p>
               </div>
+
             </motion.div>
           </div>
         </div>
@@ -362,7 +396,7 @@ export default function WhistleblowingAndEthicsManagement() {
       </section>
 
       {/* Reporting to leaders and the board */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="mx-auto">
             <motion.div
@@ -380,48 +414,91 @@ export default function WhistleblowingAndEthicsManagement() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <p className="text-gray-700 text-justify leading-relaxed">
+              {/* Cards Section */}
+              <div className="space-y-8">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     Volume of reports and trends over time
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  </h3>
                   <p className="text-gray-700 text-justify leading-relaxed">
+                    We track how report volumes change across months and teams to spot spikes or quiet periods that may indicate deeper issues.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     Mix of channels and locations
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  </h3>
                   <p className="text-gray-700 text-justify leading-relaxed">
-                    Time from intake to first action and to close
+                    We show which channels and regions are most active, helping leaders understand communication reach and awareness gaps.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-white p-6 rounded-lg shadow-sm">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Time from intake to first action and close
+                  </h3>
                   <p className="text-gray-700 text-justify leading-relaxed">
-                    Case outcomes and common root causes
+                    Reports include average time metrics that reflect responsiveness and investigation efficiency across teams.
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-white p-6 rounded-lg shadow-sm">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Case outcomes and root causes
+                  </h3>
                   <p className="text-gray-700 text-justify leading-relaxed">
+                    We summarize how cases were resolved, highlight recurring themes, and document underlying patterns that drive incidents.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
                     Status of remedial actions and training
-                  </p>
-                </div>
-
-                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  </h3>
                   <p className="text-gray-700 text-justify leading-relaxed">
-                    Heat maps for regions or functions with higher risk
+                    Dashboards track corrective actions and completed trainings so leaders can see progress toward stronger compliance.
                   </p>
-                </div>
-              </div>
+                </motion.div>
 
-              <div className="mt-8 bg-white p-6 rounded-lg shadow-sm">
-                <p className="text-gray-700 leading-relaxed">
-                  We also prepare board ready packs for deep dives on major cases. These include a timeline, actions taken, lessons learned, and a plan to prevent repeat events.
-                </p>
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Heat maps for higher-risk regions or functions
+                  </h3>
+                  <p className="text-gray-700 text-justify leading-relaxed">
+                    We visualize where issues cluster geographically or functionally, helping prioritize oversight and preventive measures.
+                  </p>
+                </motion.div>
+
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                    Board-ready case summaries
+                  </h3>
+                  <p className="text-gray-700 text-justify leading-relaxed">
+                    We prepare concise board packs for major cases — including a clear timeline, actions taken, lessons learned, and prevention plans.
+                  </p>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -470,7 +547,7 @@ export default function WhistleblowingAndEthicsManagement() {
       </section>
 
       {/* What you receive from Venovox */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-6">
           <div className="mx-auto">
             <motion.div
@@ -553,35 +630,50 @@ export default function WhistleblowingAndEthicsManagement() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
                   <p className="text-gray-700 text-justify leading-relaxed">
                     Higher trust in the program and more timely reports
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
                   <p className="text-gray-700 text-justify leading-relaxed">
                     Faster and fairer investigations with better records
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
                   <p className="text-gray-700 text-justify leading-relaxed">
                     Lower risk of retaliation and better staff wellbeing
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
                   <p className="text-gray-700 text-justify leading-relaxed">
                     Clearer insight for leaders and the board
                   </p>
-                </div>
+                </motion.div>
 
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm md:col-span-2">
+                <motion.div
+                  className="bg-gray-50 p-6 rounded-lg shadow-sm"
+                  whileHover={{ y: -3 }}
+                >
                   <p className="text-gray-700 text-justify leading-relaxed">
                     A stronger culture of integrity across regions
                   </p>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -638,6 +730,9 @@ export default function WhistleblowingAndEthicsManagement() {
         </div>
       </section>
 
+
+      <Faqs faqs={faqs} head="Frequently asked questions" />
+
       {/* Related Services Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
@@ -653,7 +748,7 @@ export default function WhistleblowingAndEthicsManagement() {
                   Related services
                 </h2>
               </div>
-              <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none leading-relaxed mb-8">
+              <p className="text-lg text-gray-700 text-center [text-justify:inter-word] hyphens-none leading-relaxed mb-8">
                 Explore our full set of services that connect with whistleblowing and ethics management. Use the links below to learn more or to request a short scoping call.
               </p>
 
