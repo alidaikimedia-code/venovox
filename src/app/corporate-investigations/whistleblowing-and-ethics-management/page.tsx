@@ -1,5 +1,14 @@
 import WhistleblowingAndEthicsManagement from "@/components/corporate-investigations/whistleblowing-and-ethics-management";
 import { Metadata } from "next";
+import {
+    OrganizationSchema,
+    BreadcrumbSchema,
+    FAQSchema,
+    WebPageSchema,
+    ServiceSchema,
+} from "@/components/schema";
+
+const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
     title: "Whistleblowing and Ethics Management | Hotline, Intake, Retaliation Safeguards | Venovox",
@@ -7,8 +16,55 @@ export const metadata: Metadata = {
 };
 
 export default function WhistleblowingAndEthicsManagementPage() {
+    const faqs = [
+        {
+            id: "1",
+            question: "Can reporters stay anonymous?",
+            answer: "In many places yes. Where names are required by law, we limit access and protect confidentiality."
+        },
+        {
+            id: "2",
+            question: "How fast do you acknowledge a report?",
+            answer: "Promptly, often within one business day, with a clear outline of next steps."
+        },
+        {
+            id: "3",
+            question: "Who can see a report?",
+            answer: "Only the core intake and investigation team and legal where needed, following least privilege."
+        },
+        {
+            id: "4",
+            question: "How do you prevent retaliation?",
+            answer: "We set clear rules, brief managers, monitor for signs of harm, and act quickly if issues arise."
+        },
+    ];
+
+    const breadcrumbItems = [
+        { name: "Home", url: "/" },
+        { name: "Services", url: "/corporate-investigations" },
+        { name: "Corporate Investigations", url: "/corporate-investigations" },
+        { name: "Whistleblowing and Ethics Management", url: "/corporate-investigations/whistleblowing-and-ethics-management" },
+    ];
+
     return (
         <>
+            <OrganizationSchema />
+            <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
+            <WebPageSchema
+                name="Whistleblowing and Ethics Management"
+                description="Venovox builds and runs whistleblowing and ethics programs with safe intake, fair investigations, and clear board reporting. We protect people and help you act with confidence."
+                url="/corporate-investigations/whistleblowing-and-ethics-management"
+                baseUrl={BASE_URL}
+            />
+            <ServiceSchema
+                name="Whistleblowing and Ethics Management"
+                description="Venovox builds and runs whistleblowing and ethics programs with safe intake, fair investigations, and clear board reporting. We protect people and help you act with confidence."
+                url="/corporate-investigations/whistleblowing-and-ethics-management"
+                serviceType="Corporate Investigation Service"
+                areaServed="Global"
+                baseUrl={BASE_URL}
+            />
+            <FAQSchema faqs={faqs} />
             <WhistleblowingAndEthicsManagement />
         </>
     );
