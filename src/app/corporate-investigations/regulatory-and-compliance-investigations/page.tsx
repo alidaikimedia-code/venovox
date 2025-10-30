@@ -1,0 +1,71 @@
+import RegulatoryAndComplianceInvestigations from "@/components/corporate-investigations/regulatory-and-compliance-investigations";
+import { Metadata } from "next";
+import {
+    OrganizationSchema,
+    BreadcrumbSchema,
+    FAQSchema,
+    WebPageSchema,
+    ServiceSchema,
+} from "@/components/schema";
+
+const BASE_URL = "https://venovox.com";
+
+export const metadata: Metadata = {
+    title: "Regulatory and Compliance Investigations | ABC, AML, Sanctions, Dawn Raid Response | Venovox",
+    description: "Venovox investigates ABC, AML, sanctions, and books and records issues. We support dawn raid response, monitorships, and remediation plans with clear reports and practical advice.",
+};
+
+export default function RegulatoryAndComplianceInvestigationsPage() {
+    const faqs = [
+        {
+            id: "1",
+            question: "Do you help with voluntary disclosures?",
+            answer: "Yes. We align with counsel to plan timing, scope, and messaging for constructive regulator engagement."
+        },
+        {
+            id: "2",
+            question: "How do you select transactions for testing?",
+            answer: "We use risk based sampling that focuses on high risk markets, channels, counterparties, and red flag patterns."
+        },
+        {
+            id: "3",
+            question: "Can you support a dawn raid response?",
+            answer: "Yes. We provide playbooks, on call guidance, evidence logging, and post event stabilization and review."
+        },
+        {
+            id: "4",
+            question: "What outcomes should we expect?",
+            answer: "Clear answers to regulator questions, evidence that stands up to review, and a practical remediation roadmap."
+        },
+    ];
+
+    const breadcrumbItems = [
+        { name: "Home", url: "/" },
+        { name: "Services", url: "/corporate-investigations" },
+        { name: "Corporate Investigations", url: "/corporate-investigations" },
+        { name: "Regulatory and Compliance Investigations", url: "/corporate-investigations/regulatory-and-compliance-investigations" },
+    ];
+
+    return (
+        <>
+            <OrganizationSchema />
+            <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
+            <WebPageSchema
+                name="Regulatory and Compliance Investigations"
+                description="Venovox investigates ABC, AML, sanctions, and books and records issues. We support dawn raid response, monitorships, and remediation plans with clear reports and practical advice."
+                url="/corporate-investigations/regulatory-and-compliance-investigations"
+                baseUrl={BASE_URL}
+            />
+            <ServiceSchema
+                name="Regulatory and Compliance Investigations"
+                description="Venovox investigates ABC, AML, sanctions, and books and records issues. We support dawn raid response, monitorships, and remediation plans with clear reports and practical advice."
+                url="/corporate-investigations/regulatory-and-compliance-investigations"
+                serviceType="Corporate Investigation Service"
+                areaServed="Global"
+                baseUrl={BASE_URL}
+            />
+            <FAQSchema faqs={faqs} />
+            <RegulatoryAndComplianceInvestigations />
+        </>
+    );
+}
