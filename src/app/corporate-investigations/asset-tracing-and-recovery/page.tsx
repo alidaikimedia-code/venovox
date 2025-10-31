@@ -1,5 +1,6 @@
 import AssetTracingAndRecovery from "@/components/corporate-investigations/asset-tracing-and-recovery";
 import { Metadata } from "next";
+import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
@@ -48,6 +49,7 @@ export default function AssetTracingAndRecoveryPage() {
 
     return (
         <>
+        <PageBanner />
             <OrganizationSchema />
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema

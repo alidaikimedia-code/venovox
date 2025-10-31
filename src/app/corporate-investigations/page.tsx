@@ -1,11 +1,14 @@
 import CorporateInvestigations from "@/components/corporate-investigations/corporate-investigations";
 import { Metadata } from "next";
+import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
     FAQSchema,
     CollectionPageSchema,
     ItemListSchema,
+    LocalBusinessSchema,
+    WebSiteSchema,
 } from "@/components/schema";
 
 const BASE_URL = "https://venovox.com";
@@ -19,23 +22,28 @@ export default function CorporateInvestigationsPage() {
     const faqs = [
         {
             id: "1",
-            question: "How quickly can an investigation start?",
-            answer: "We can usually begin once scope and access are agreed. We prioritize evidence preservation and a safe plan first."
+            question: "What services does Venovox provide?",
+            answer: "Venovox provides risk intelligence and background screening solutions, including due diligence, security advisory, background checks, and intelligence analysis across Malaysia, the Asia-Pacific regions, and globally."
         },
         {
             id: "2",
-            question: "Do you work under legal privilege?",
-            answer: "Yes. We align with your counsel from the start, keep clean files, and protect privilege where possible."
+            question: "How does Venovox help businesses mitigate risks?",
+            answer: "Venovox helps organizations identify, assess, authenticate, and mitigate risks to people, assets, operations, and reputations, enabling secure and confident operations in complex environments."
         },
         {
             id: "3",
-            question: "Can Venovox operate across borders?",
-            answer: "Yes. We work internationally with trusted local partners and follow local rules and privacy laws."
+            question: "Which industries does Venovox serve?",
+            answer: "Venovox serves a wide range of industries, including HR and recruitment, manufacturing, retail, marketing, consulting, F&B, construction, education, IT, healthcare, financial services, advertising, production, property, logistics, insurance, engineering, medical, and transportation."
         },
         {
             id: "4",
-            question: "What will the final report include?",
-            answer: "A plain language summary, a detailed timeline, evidence lists, methods, limits, and clear next steps."
+            question: "Where are Venovox's offices located?",
+            answer: "Venovox has offices in Malaysia (Petaling Jaya, Selangor), Singapore (Shaw Centre), UAE (Downtown Dubai), and US & Canada (Houston, Texas)."
+        },
+        {
+            id: "5",
+            question: "How can I contact Venovox for services or inquiries?",
+            answer: "You can contact Venovox through their website's contact page, where you can submit a message and expect a response within 24 hours."
         },
     ];
 
@@ -78,7 +86,27 @@ export default function CorporateInvestigationsPage() {
 
     return (
         <>
+        <PageBanner />
             <OrganizationSchema />
+            <LocalBusinessSchema
+                department={{
+                    name: "Venovox Sdn Bhd",
+                    address: {
+                        streetAddress: "E-7-03, Block E, Oasis Square, No 2, Jalan PJU 1A/7",
+                        addressLocality: "Ara Damansara",
+                        addressRegion: "Selangor",
+                        postalCode: "47301",
+                        addressCountry: "MY",
+                    },
+                    contactPoint: {
+                        telephone: "+603 7800 0088",
+                        contactType: "Customer Service",
+                        areaServed: "MY",
+                        availableLanguage: "English",
+                    },
+                }}
+            />
+            <WebSiteSchema />
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <CollectionPageSchema
                 name="Corporate Investigations Services"

@@ -1,5 +1,6 @@
 import RegulatoryAndComplianceInvestigations from "@/components/corporate-investigations/regulatory-and-compliance-investigations";
 import { Metadata } from "next";
+import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
@@ -48,6 +49,7 @@ export default function RegulatoryAndComplianceInvestigationsPage() {
 
     return (
         <>
+        <PageBanner />
             <OrganizationSchema />
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
