@@ -60,7 +60,7 @@ export default function CorporateInvestigations() {
       title: "Litigation support",
       description: "We gather evidence, protect chain of custody, and coordinate with eDiscovery teams. We validate the source of documents and confirm authenticity. We locate witnesses and provide background on counterparties. We supply expert reports and testimony where required. Your legal team gains facts they can trust.",
       icon: Briefcase,
-      link: "/litigation-support-investigations",
+      link: "#",
     },
     {
       title: "Brand and IP protection",
@@ -72,7 +72,7 @@ export default function CorporateInvestigations() {
       title: "Intelligence and OSINT",
       description: "We deliver enhanced due diligence, background checks on people and companies, and human source insights. We assess market entry risk and partner risk. We combine online sources with field research where appropriate. You receive a clear view of integrity, reputation, and hidden risk before you act.",
       icon: Globe,
-      link: "/corporate-intelligence-and-osint",
+      link: "#",
     },
     {
       title: "Prevention and controls",
