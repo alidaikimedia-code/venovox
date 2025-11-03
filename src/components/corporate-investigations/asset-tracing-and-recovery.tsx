@@ -8,9 +8,6 @@ import ContentSection from "../common/hero-content";
 import { ServiceCard } from "../common/card";
 import {
 
-
-
-
   Telescope,
   BookOpenCheck,
   Brain,
@@ -155,23 +152,23 @@ export default function AssetTracingAndRecovery() {
   const services6 = [
     {
       title: "Litigation Support Investigations",
-      link: "https://chatgpt.com/litigation-support-investigations/",
+      // link: "https://chatgpt.com/litigation-support-investigations/",
     },
     {
       title: "Corporate Intelligence and OSINT",
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "Regulatory and Compliance Investigations",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
       title: "Digital Forensics and Incident Investigations",
-      link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
+      // link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
     },
     {
       title: "Corporate Investigations Hub",
-      link: "https://chatgpt.com/corporate-investigations/",
+      // link: "https://chatgpt.com/corporate-investigations/",
     },
   ];
 
@@ -205,7 +202,7 @@ export default function AssetTracingAndRecovery() {
       description: "  If you believe assets have been hidden or moved, speak with Venovox today. Share the background and your timeline. We will propose a short plan for the first safe steps, including what to preserve, who to notify, and where to look first. We can start with a scoping call and a light touch discovery, then scale to a full trace once we confirm value at stake. ",
       primaryButton: {
         text: "Get in Touch",
-        link: "/contact-us",
+        link: "/my-en/contact-us",
         icon: MailIcon,
       },
       
@@ -525,7 +522,7 @@ export default function AssetTracingAndRecovery() {
                   <ServiceCard
                     key={index}
                     title={service.title}
-                    link={service.link}
+                    // link={service.link}
                   />
                 ))}
               </div>

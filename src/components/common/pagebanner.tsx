@@ -29,15 +29,20 @@ export default function PageBanner() {
             </div>
 
             {/* Breadcrumb section */}
-            <div className="bg-gray-100 py-3 px-6">
-                <div className="text-sm text-gray-600 flex flex-wrap items-center gap-1">
-                    <Link href="/" className="hover:underline text-blue-500">
-                        Home
-                    </Link>
-                    <span>/</span>
-                    <span className="text-black font-semibold">
-                        {capitalizeWords(currentPage)}
-                    </span>
+            <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
+                <div className="container mx-auto">
+                    <div className="flex items-center text-sm text-gray-600">
+                        <Link 
+                            href="/" 
+                            className="hover:text-red-600 transition-colors duration-200"
+                        >
+                            Home
+                        </Link>
+                        <span className="mx-2 text-gray-400">/</span>
+                        <span className="text-gray-900 font-medium">
+                            {capitalizeWords(currentPage)}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

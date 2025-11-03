@@ -173,7 +173,7 @@ export default function WorkplaceMisconductInvestigations() {
         "If you need help now, contact us. Share the basic facts and your timeline. We will set a short call and outline the first safe steps. We can also prepare a one page plan you can share with leaders.",
       primaryButton: {
         text: "Get in Touch",
-        link: "/contact-us",
+        link: "/my-en/contact-us",
         icon: MailIcon,
       },
       
@@ -184,42 +184,42 @@ export default function WorkplaceMisconductInvestigations() {
   const services6 = [
     {
       title: "A short executive summary for leaders",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
     {
       title: "A detailed report with findings, evidence, and timelines",
-      link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
+      // link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
     },
     {
       title: "An appendix with interview notes and exhibits",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
     {
       title: "A remediation plan with owners and dates",
-      link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
+      // link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
     },
     {
       title: "A board ready slide pack if you need one",
-      link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
+      // link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
     },
   ];
 
   const services7 = [
     {
       title: "Whistleblowing and Ethics Management",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
     {
       title: "Digital Forensics and Incident Investigations",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
     {
       title: "Corporate Intelligence and OSINT",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
     {
       title: "Corporate Investigations Hub",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
   ]
 
@@ -594,7 +594,7 @@ export default function WorkplaceMisconductInvestigations() {
                     key={index}
                     title={service.title}
 
-                    link={service.link}
+                    //link={service.link}
                   />
                 ))}
               </div>
@@ -746,7 +746,7 @@ export default function WorkplaceMisconductInvestigations() {
                     <ServiceCard
                       key={index}
                       title={service.title}
-                      link={service.link}
+                      // link={service.link}
                     />
                   ))}
                 </div>

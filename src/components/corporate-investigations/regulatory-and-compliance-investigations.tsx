@@ -49,7 +49,7 @@ export default function RegulatoryAndComplianceInvestigations() {
       description: "  If you face a possible breach or a regulator inquiry, speak with Venovox today. Share the basic facts and your timeline. We will propose first steps that protect evidence and show control. We can start light with an intake review, then scale the work as needed. ",
       primaryButton: {
         text: "Get in Touch",
-        link: "/contact-us",
+        link: "/my-en/contact-us",
         icon: MailIcon,
       },
     },
@@ -143,32 +143,32 @@ export default function RegulatoryAndComplianceInvestigations() {
     {
       title: "Corporate Intelligence and OSINT",
    
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "Fraud Risk Management and Prevention",
      
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "Asset Tracing and Recovery",
    
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "Digital Forensics and Incident Investigations",
      
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "Litigation Support Investigations",
      
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "Corporate Investigations Hub",
      
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
   ]
 
@@ -482,7 +482,7 @@ export default function RegulatoryAndComplianceInvestigations() {
                   <ServiceCard
                     key={index}
                     title={service.title}
-                    link={service.link}
+                    // link={service.link}
                   />
                 ))}
               </div>

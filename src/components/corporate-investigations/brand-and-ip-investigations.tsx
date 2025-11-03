@@ -167,22 +167,22 @@ export default function BrandAndIpInvestigations() {
     {
       title: "Corporate Intelligence and OSINT",
 
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/"
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/"
     },
     {
         title: "Digital Forensics and Incident Investigations",
   
-        link: "https://chatgpt.com/corporate-intelligence-and-osint/"
+        // link: "https://chatgpt.com/corporate-intelligence-and-osint/"
       },
       {
         title: "Asset Tracing and Recovery",
   
-        link: "https://chatgpt.com/corporate-intelligence-and-osint/"
+        // link: "https://chatgpt.com/corporate-intelligence-and-osint/"
       },
       {
         title: "Corporate Investigations Hub",
   
-        link: "https://chatgpt.com/corporate-intelligence-and-osint/"
+        // link: "https://chatgpt.com/corporate-intelligence-and-osint/"
       },
   ]
   const services5 = [
@@ -552,7 +552,7 @@ export default function BrandAndIpInvestigations() {
                   <ServiceCard
                     key={index}
                     title={service.title}
-                    link={service.link}
+                    // link={service.link}
                   />
                 ))}
               </div>
