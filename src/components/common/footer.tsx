@@ -20,7 +20,7 @@ const Footer = () => {
     <>
 
 
-      <footer className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 px-6 py-12 md:py-16">
+      <footer className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 px-6 py-12 md:py-12">
         <div className="max-w-6xl mx-auto">
 
 

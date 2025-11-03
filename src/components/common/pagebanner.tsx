@@ -22,8 +22,14 @@ export default function PageBanner() {
     return (
         <div className="w-full">
             {/* Top banner with title */}
-            <div className="bg-gradient-to-r from-black/70 to-black/40 py-20 text-center mt-20">
-                <h1 className="text-white text-4xl md:text-6xl font-bold">
+            <div 
+                className="py-20 text-center mt-20 bg-cover bg-center bg-no-repeat relative"
+                style={{
+                    backgroundImage: `url('/close-up-people-working-from-home_23-2149173354.jpg')`,
+                }}
+            >
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+                <h1 className="text-white text-4xl md:text-6xl font-bold relative z-10">
                     {capitalizeWords(currentPage)}
                 </h1>
             </div>

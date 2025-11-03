@@ -1,4 +1,4 @@
-import FraudRiskManagementAndPrevention from "@/components/corporate-investigations/fraud-risk-management-and-prevention";
+import FraudRiskManagementAndPrevention from "@/components/CorporateInvestigations/FraudRiskManagementAndPrevention/index";
 import { Metadata } from "next";
 import PageBanner from "@/components/common/pagebanner";
 import {
@@ -7,7 +7,7 @@ import {
     FAQSchema,
     WebPageSchema,
     ServiceSchema,
-} from "@/components/schema";
+} from "@/components/Schema";
 
 const BASE_URL = "https://venovox.com";
 

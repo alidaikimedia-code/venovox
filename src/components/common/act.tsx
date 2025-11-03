@@ -19,7 +19,7 @@ export default function WhenToActSection({
   accentColor = "text-red-600",
 }: WhenToActSectionProps) {
   return (
-    <section className="py-16 ">
+    <section className="py-12 ">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

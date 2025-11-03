@@ -1,6 +1,5 @@
-import CorporateInvestigations from "@/components/corporate-investigations/corporate-investigations";
+import CorporateInvestigations from "@/components/CorporateInvestigations/corporate-investigations";
 import { Metadata } from "next";
-import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
@@ -9,8 +8,9 @@ import {
     ItemListSchema,
     LocalBusinessSchema,
     WebSiteSchema,
-} from "@/components/schema";
+} from "@/components/Schema";
 
+import PageBanner from "@/components/common/pagebanner";
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {

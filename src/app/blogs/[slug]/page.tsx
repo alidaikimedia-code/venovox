@@ -129,7 +129,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
             case "benefits_section":
                 return (
-                    <section key={index} className="mb-20 bg-white py-16">
+                    <section key={index} className="mb-20 bg-white py-12">
                         <div className=" mx-auto px-6">
                             <h2 className="text-4xl font-bold mb-12 text-gray-900 text-center leading-tight">
                                 {section.heading}

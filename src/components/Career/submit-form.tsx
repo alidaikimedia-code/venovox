@@ -41,7 +41,7 @@ export default function Form() {
 
 
   return (
-    <section className="py-16 bg-white" id="contact-form">
+    <section className="py-12 bg-white" id="contact-form">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Info section */}
