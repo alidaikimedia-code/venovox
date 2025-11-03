@@ -1,5 +1,6 @@
 import FraudRiskManagementAndPrevention from "@/components/corporate-investigations/fraud-risk-management-and-prevention";
 import { Metadata } from "next";
+import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
@@ -48,6 +49,7 @@ export default function FraudRiskManagementAndPreventionPage() {
 
     return (
         <>
+        <PageBanner />
             <OrganizationSchema />
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema

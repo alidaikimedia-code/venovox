@@ -1,24 +1,27 @@
 "use client";
 
-import { motion,  } from "framer-motion";
-import Link from "next/link";
+import { motion, } from "framer-motion";
+import ContentSection from "../common/hero-content";
+import WhenToActSection from "../common/act";
+import { ServiceCard } from "../common/card";
 import {
   ShieldCheck,
-  Network,
-  Search,
-  Server,
-  CheckCircle,
 
-  Lock,
+  MailIcon,
+  Search,
+  CheckCircle,
+  CircleUserRound,
+  BetweenHorizontalStart,
+  Worm,
+  CloudFog,
   HardDrive,
-  Users,
-  Globe,
+  Tally3,
 } from "lucide-react";
-import { FiPhone } from "react-icons/fi";
 import { Faqs } from "../common/faq-section";
+import { ActionSection } from "../common/action";
 
 export default function DigitalForensicsAndIncidentInvestigations() {
- 
+
   const faqs = [
     {
       id: "1",
@@ -40,85 +43,132 @@ export default function DigitalForensicsAndIncidentInvestigations() {
       question: "How long do you retain forensic images?",
       answer: "Retention follows your policy and legal guidance. We store evidence securely and control access."
     },
-  ];  
+  ];
+  const services = [
+    {
+      title: "Account compromise and BEC",
+      description: "Unauthorized access to email or collaboration tools that leads to invoice fraud, phishing, or data exposure.",
+      icon: CircleUserRound,
+      link: undefined,
+    },
+    {
+      title: "Data theft and insider threat",
+      description: "Copying of files to personal accounts or devices, repository cloning, or covert use of portable storage.",
+      icon: BetweenHorizontalStart,
+      link: undefined,
+    },
+    {
+      title: "Malware and ransomware",
+      description: "Execution of malicious code that encrypts systems or provides backdoor access.",
+      icon: Worm,
+      link: undefined,
+    },
+    {
+      title: "Cloud security events",
+      description: "Misconfigurations or abused tokens in Microsoft 365, Google Workspace, AWS, or Azure that expose data.",
+      icon: CloudFog,
+      link: undefined,
+    },
+    {
+      title: "Endpoint and server intrusions",
+      description: "Lateral movement, privilege escalation, and persistence on laptops, desktops, and servers.",
+      icon: HardDrive,
+      link: undefined,
+    },
+    {
+      title: "Third party incidents",
+      description: "Breaches at vendors or partners that place your data at risk.",
+      icon: Tally3,
+      link: undefined,
+    },
+  ]
+
+  const services2 = [
+    {
+      title: "Independent and trusted",
+      description: "We report facts as we find them and we protect your privacy. Our work is transparent and repeatable.",
+      link: undefined,
+    },
+    {
+      title: "Cross border capability",
+      description: "Many incidents cross regions and time zones. We coordinate with local partners and keep one master view for your leaders.",
+      link: undefined,
+    },
+    {
+      title: "Multidisciplinary team",
+      description: "Forensic analysts, investigators, and compliance specialists work as one team. You get complete answers without juggling vendors.",
+      link: undefined,
+    },
+    {
+      title: "Clear and calm communication",
+      description: "You get one point of contact, short status updates, and reports that non technical leaders can read in minutes.",
+      link: undefined,
+    },
+  ]
+  const services3 = [
+    {
+      title: "Regulatory and Compliance Investigations",
+      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+    },
+    {
+      title: "Litigation Support Investigations",
+      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+    },
+    {
+      title: "Workplace Misconduct Investigations",
+      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+    },
+    {
+      title: "Corporate Intelligence and OSINT",
+      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+    },
+    {
+      title: "Corporate Investigations Hub",
+      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+    },
+  ]
+
+  const services4 = [
+    {
+      description: "A clear view of how the incident happened and what was affected",
+      link: undefined,
+    },
+    {
+      description: "Evidence that supports legal decisions and notification",
+      link: undefined,
+    },
+    {
+      description: "Faster recovery with fewer surprises",
+      link: undefined,
+    },
+    {
+      description: "Stronger controls that reduce future risk",
+      link: undefined,
+    },
+  ]
+
+  const actionSection = [
+    {
+      title: "Ready to get started?",
+      description: "  If you are facing a cyber incident or data loss, speak with Venovox today. Share what you see and your timeline. We will propose safe first steps and begin preservation. We can start small with triage and expand as needed.",
+      primaryButton: {
+        text: "Get in Touch",
+        link: "/contact-us",
+        icon: MailIcon,
+      },
+    },
+  ]
   return (
-    <div className="bg-white text-gray-900">
-      {/* Urgent Alert Band */}
-     
+    <div className="bg-white px-6 text-gray-900">
 
       {/* Hero Section */}
-      <section className="relative mt-20 w-full min-h-[50vh] overflow-hidden flex items-center justify-center">
-        {/* Background Image */}
-        <img
-          src="/hero.webp"
-          alt="Regulatory and Compliance Investigations"
-          className="absolute inset-0 w-full h-full object-cover brightness-50"
-        />
+      <ContentSection
+        mainText="When accounts are breached or data goes missing, speed and care matter"
+        paragraphs={[
+          "  Venovox helps you understand what happened, limit the damage, and get back to safe operations. We collect and preserve evidence, analyze devices and logs, and deliver clear findings that leaders and lawyers can use. Our work is calm, methodical, and discreet.",
+        ]}
+      />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
-
-        {/* Content */}
-        <div className="relative z-20 container mx-auto px-4 sm:px-6 md:px-10 lg:px-16 text-center flex flex-col items-center justify-center py-10 sm:py-16 md:py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-5xl"
-          >
-            {/* Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 sm:mb-8 leading-snug">
-            Digital Forensics and Incident Investigations
-            </h1>
-
-            {/* Paragraph */}
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed px-2 sm:px-4 md:px-8 lg:px-16">
-            When accounts are breached or data goes missing, speed and care matter. Venovox helps you understand what happened, limit the damage, and get back to safe operations. We collect and preserve evidence, analyze devices and logs, and deliver clear findings that leaders and lawyers can use. Our work is calm, methodical, and discreet.
-            </p>
-
-            {/* Keywords */}
-            <div className="mt-6 sm:mt-8 text-gray-300 text-xs sm:text-sm md:text-base leading-relaxed px-4 sm:px-6 md:px-10 lg:px-20">
-              <p>
-                Primary keywords: digital forensics, incident investigations, cyber incident response, device forensics, log analysis, insider threat investigations, data theft investigations, ransomware investigations, business email compromise, chain of custody.
-
-              </p>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-10 sm:mt-12">
-              <Link
-                href="/my-en/contact-us"
-                className="px-8 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors w-full sm:w-auto text-center"
-              >
-                Talk to Venovox
-              </Link>
-              <button className="px-8 py-3 bg-white/10 backdrop-blur-md text-white border-2 border-white font-semibold rounded-lg hover:bg-white/20 transition-colors w-full sm:w-auto">
-                Download overview
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
-        <div className="container mx-auto">
-          <div className="flex items-center text-sm text-gray-600">
-            <Link href="/" className="hover:text-red-600 transition-colors duration-200">
-              Home
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <Link href="/corporate-investigations" className="hover:text-red-600 transition-colors duration-200">
-              Services
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <Link href="/corporate-investigations" className="hover:text-red-600 transition-colors duration-200">
-              Corporate Investigations
-            </Link>
-            <span className="mx-2 text-gray-400">/</span>
-            <span className="text-gray-900 font-medium">Digital Forensics and Incident Investigations</span>
-          </div>
-        </div>
-      </div>
 
       {/* Introduction Section */}
       <section className="py-16 bg-white">
@@ -142,81 +192,23 @@ export default function DigitalForensicsAndIncidentInvestigations() {
       </section>
 
       {/* When to Act Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-                  When to act
-                </h2>
-              </div>
+      <WhenToActSection
+        title="When to act"
+        subtitle="Move quickly if you see early signs of compromise. Fast action preserves evidence and reduces impact."
+        listItems={[
+          "A ransomware note or sudden encryption of files",
+          "Unusual data transfers or downloads outside working hours",
+          "New forwarding rules or mail flow changes in email",
+          "Alerts on admin actions or disabled security tools",
+          "Staff reporting suspicious prompts or messages",
+          "A whistleblower suggests data was taken by a departing employee",
+          "A regulator or customer asks about a potential breach",
 
-              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Move quickly if you see early signs of compromise. Fast action preserves evidence and reduces impact.
-                </p>
 
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      A ransomware note or sudden encryption of files
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Unusual data transfers or downloads outside working hours
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      New forwarding rules or mail flow changes in email
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Alerts on admin actions or disabled security tools
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Staff reporting suspicious prompts or messages
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      A whistleblower suggests data was taken by a departing employee
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      A regulator or customer asks about a potential breach
-                    </p>
-                  </li>
-                </ul>
-
-                <div className="mt-8 p-6 bg-red-50 rounded-lg">
-                  <p className="text-gray-800 font-semibold text-lg">
-                    If you are unsure, start with a short triage call. We will help you decide the first safe steps.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        ]}
+        highlightBoxText="If you are unsure, start with a short triage call. We will help you decide the first safe steps."
+        accentColor="text-red-600"
+      />
 
       {/* Incident Types We Handle Section */}
       <section className="py-16 bg-white">
@@ -235,95 +227,15 @@ export default function DigitalForensicsAndIncidentInvestigations() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
-                      <Users className="text-red-600 w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Account compromise and BEC</h3>
-                  </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Unauthorized access to email or collaboration tools that leads to invoice fraud, phishing, or data exposure.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
-                      <HardDrive className="text-red-600 w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Data theft and insider threat</h3>
-                  </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Copying of files to personal accounts or devices, repository cloning, or covert use of portable storage.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
-                      <Lock className="text-red-600 w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Malware and ransomware</h3>
-                  </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Execution of malicious code that encrypts systems or provides backdoor access.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
-                      <Globe className="text-red-600 w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Cloud security events</h3>
-                  </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Misconfigurations or abused tokens in Microsoft 365, Google Workspace, AWS, or Azure that expose data.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
-                      <Server className="text-red-600 w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Endpoint and server intrusions</h3>
-                  </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Lateral movement, privilege escalation, and persistence on laptops, desktops, and servers.
-                  </p>
-                </motion.div>
-
-                <motion.div
-                  className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="bg-red-100 p-3 rounded-full mr-4 flex-shrink-0">
-                      <Network className="text-red-600 w-7 h-7" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900">Third party incidents</h3>
-                  </div>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Breaches at vendors or partners that place your data at risk.
-                  </p>
-                </motion.div>
+                {services.map((service, index) => (
+                  <ServiceCard
+                    key={index}
+                    title={service.title}
+                    description={service.description}
+                    icon={service.icon}
+                    link={service.link}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>
@@ -436,57 +348,57 @@ export default function DigitalForensicsAndIncidentInvestigations() {
 
       {/* Legal, Privacy, and Regulator Alignment Section */}
       <section className="py-16 bg-white">
-  <div className="container mx-auto px-6">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-          Legal, privacy, and regulator alignment
-        </h2>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
-          Cyber matters often touch legal privilege and privacy rules. We work closely with counsel and privacy officers so your response stays defensible.
-        </p>
-      </div>
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
+                Legal, privacy, and regulator alignment
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                Cyber matters often touch legal privilege and privacy rules. We work closely with counsel and privacy officers so your response stays defensible.
+              </p>
+            </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            Privilege planning and clean work streams
-          </h3>
-        </motion.div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Privilege planning and clean work streams
+                </h3>
+              </motion.div>
 
-        <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            Chain of custody for all data and devices
-          </h3>
-        </motion.div>
+              <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Chain of custody for all data and devices
+                </h3>
+              </motion.div>
 
-        <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            Guidance on breach notification triggers and timelines
-          </h3>
-        </motion.div>
+              <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Guidance on breach notification triggers and timelines
+                </h3>
+              </motion.div>
 
-        <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            Support for regulator and customer communications
-          </h3>
-        </motion.div>
+              <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Support for regulator and customer communications
+                </h3>
+              </motion.div>
 
-        {/* FIXED — removed md:col-span-2 */}
-        <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-3">
-            Coordination with insurers where policies apply
-          </h3>
-        </motion.div>
-      </div>
-    </motion.div>
-  </div>
-</section>
+              {/* FIXED — removed md:col-span-2 */}
+              <motion.div className="bg-gray-50 p-6 rounded-lg" whileHover={{ y: -3 }}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Coordination with insurers where policies apply
+                </h3>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
 
       {/* Working with IT and Security Section */}
@@ -554,65 +466,19 @@ export default function DigitalForensicsAndIncidentInvestigations() {
       </section>
 
       {/* What You Receive from Venovox Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
-                  What you receive from Venovox
-                </h2>
-              </div>
+      <WhenToActSection
+        title="What you receive from Venovox"
+        listItems={[
+          "Executive summary for leaders and the board",
+          "Detailed technical report with timelines and evidence",
+          "List of indicators of compromise and defensive rules",
+          "Data exposure assessment and notification guidance",
+          "Hardening plan with quick wins and longer actions",
+          "Briefing pack for customers or regulators if required",
 
-              <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Executive summary for leaders and the board
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Detailed technical report with timelines and evidence
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      List of indicators of compromise and defensive rules
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Data exposure assessment and notification guidance
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Hardening plan with quick wins and longer actions
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="text-red-600 w-6 h-6 mr-4 mt-1 flex-shrink-0" />
-                    <p className="text-gray-700 text-justify leading-relaxed">
-                      Briefing pack for customers or regulators if required
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        ]}
+        accentColor="text-red-600"
+      />
 
       {/* Outcomes You Can Expect Section */}
       <section className="py-16 bg-white">
@@ -630,31 +496,15 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    A clear view of how the incident happened and what was affected
-                  </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                  {services4.map((service, index) => (
+                    <ServiceCard
+                      key={index}
+                      description={service.description}
+                      link={service.link}
+                    />
+                  ))}
                 </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Evidence that supports legal decisions and notification
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Faster recovery with fewer surprises
-                  </p>
-                </div>
-
-                <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Stronger controls that reduce future risk
-                  </p>
-                </div>
-              </div>
             </motion.div>
           </div>
         </div>
@@ -675,35 +525,15 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                   Why Venovox
                 </h2>
               </div>
-
               <div className="grid md:grid-cols-2 gap-8">
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm" whileHover={{ y: -3 }}>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Independent and trusted</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    We report facts as we find them and we protect your privacy. Our work is transparent and repeatable.
-                  </p>
-                </motion.div>
-
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm" whileHover={{ y: -3 }}>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Cross border capability</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Many incidents cross regions and time zones. We coordinate with local partners and keep one master view for your leaders.
-                  </p>
-                </motion.div>
-
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm" whileHover={{ y: -3 }}>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Multidisciplinary team</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    Forensic analysts, investigators, and compliance specialists work as one team. You get complete answers without juggling vendors.
-                  </p>
-                </motion.div>
-
-                <motion.div className="bg-white p-6 rounded-lg shadow-sm" whileHover={{ y: -3 }}>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Clear and calm communication</h3>
-                  <p className="text-gray-700 text-justify leading-relaxed">
-                    You get one point of contact, short status updates, and reports that non technical leaders can read in minutes.
-                  </p>
-                </motion.div>
+                {services2.map((service, index) => (
+                  <ServiceCard
+                    key={index}
+                    title={service.title}
+                    description={service.description}
+                    link={service.link}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>
@@ -731,22 +561,13 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                 Explore our full set of services that connect with digital forensics and incident investigations. Use the links below to learn more or to request a short scoping call.
               </p>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { title: "Regulatory and Compliance Investigations", href: "/regulatory-and-compliance-investigations/" },
-                  { title: "Workplace Misconduct Investigations", href: "/workplace-misconduct-investigations/" },
-                  { title: "Corporate Intelligence and OSINT", href: "/corporate-intelligence-and-osint/" },
-                  { title: "Asset Tracing and Recovery", href: "/asset-tracing-and-recovery/" },
-                  { title: "Corporate Investigations Hub", href: "/corporate-investigations/" },
-                ].map((service, index) => (
-                  <Link key={index} href={service.href}>
-                    <motion.div
-                      className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow"
-                      whileHover={{ y: -5 }}
-                    >
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
-                    </motion.div>
-                  </Link>
+              <div className="grid md:grid-cols-2 gap-8">
+                {services3.map((service, index) => (
+                  <ServiceCard
+                    key={index}
+                    title={service.title}
+                    link={service.link}
+                  />
                 ))}
               </div>
             </motion.div>
@@ -754,58 +575,16 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-900 to-black text-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            {/* Content box */}
-            <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm mb-10 text-left md:text-center">
-              <p className="text-lg leading-relaxed mb-6">
-                If you are facing a cyber incident or data loss, speak with Venovox today. Share what you see and your timeline. We will propose safe first steps and begin preservation. We can start small with triage and expand as needed.
-              </p>
-
-              <div className="space-y-6">
-                <div>
-                  <p className="font-semibold text-lg">Prefer email</p>
-                  <p className="text-gray-300">
-                    Send a short note and we will reply with times for a quick call.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold text-lg">Prefer a document</p>
-                  <p className="text-gray-300">
-                    We can send a one page plan that outlines scope, timing, and estimated effort.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Buttons */}
-            <div className="flex flex-wrap justify-center gap-6">
-              <Link
-                href="/my-en/contact-us"
-                className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
-              >
-                Contact Us Now
-              </Link>
-              <a
-                href="tel:+60128008888"
-                className="flex items-center gap-2 px-6 py-3 bg-white text-red-600 border-2 border-red-600 font-bold rounded-lg hover:bg-red-50 transition-colors"
-              >
-                <FiPhone className="text-lg" />
-                Call Us
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <div className=" mx-auto container  space-y-24 relative">
+        {actionSection.map((action, index) => (
+          <ActionSection
+            key={index}
+            title={action.title}
+            description={action.description}
+            primaryButton={action.primaryButton}
+          />
+        ))}
+      </div>
 
     </div>
   );

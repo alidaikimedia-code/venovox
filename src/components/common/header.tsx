@@ -41,6 +41,11 @@ const navData = {
     { name: "Contact Us", path: "/my-en/contact-us" },
     { name: "Career", path: "/my-en/Career" },
     { name: "Publication", path: "/blogs/" },
+    {
+      name: "corporate investigations",
+      path: "/corporate-investigations",
+    
+    },
   ] as MenuItem[]
 };
 

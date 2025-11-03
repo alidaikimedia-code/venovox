@@ -6,3 +6,5 @@ export { CollectionPageSchema } from "./collection-page-schema";
 export { ItemListSchema } from "./item-list-schema";
 export { WebPageSchema } from "./webpage-schema";
 export { ServiceSchema } from "./service-schema";
+export { LocalBusinessSchema } from "./local-business-schema";
+export { WebSiteSchema } from "./website-schema";

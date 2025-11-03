@@ -1,5 +1,6 @@
 import WhistleblowingAndEthicsManagement from "@/components/corporate-investigations/whistleblowing-and-ethics-management";
 import { Metadata } from "next";
+import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
@@ -48,6 +49,7 @@ export default function WhistleblowingAndEthicsManagementPage() {
 
     return (
         <>
+        <PageBanner />
             <OrganizationSchema />
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema

@@ -1,5 +1,6 @@
 import BrandAndIpInvestigations from "@/components/corporate-investigations/brand-and-ip-investigations";
 import { Metadata } from "next";
+import PageBanner from "@/components/common/pagebanner";
 import {
     OrganizationSchema,
     BreadcrumbSchema,
@@ -49,6 +50,7 @@ export default function BrandAndIpInvestigationsPage() {
 
     return (
         <>
+        <PageBanner />
             <OrganizationSchema />
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema

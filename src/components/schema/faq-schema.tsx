@@ -1,5 +1,3 @@
-import Script from "next/script";
-
 interface FAQ {
   id: string;
   question: string;
@@ -25,10 +23,11 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
   };
 
   return (
-    <Script
-      id="faq-schema"
+    <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema, null, 0),
+      }}
     />
   );
 }
