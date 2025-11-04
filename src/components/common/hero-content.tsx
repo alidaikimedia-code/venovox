@@ -15,7 +15,7 @@ export default function ContentSection({
   highlightColor = "text-red-600",
 }: ContentSectionProps) {
   return (
-    <section className="relative w-full py-16 sm:py-20 md:py-28">
+    <section className="relative w-full py-12">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

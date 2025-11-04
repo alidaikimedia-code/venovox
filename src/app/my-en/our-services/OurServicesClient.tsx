@@ -116,7 +116,7 @@ export default function OurServicesClient() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 py-16">
+            <div className="container mx-auto px-4 py-12">
 
                 {/* Search and filter */}
                 <div className="mb-12">
@@ -226,7 +226,7 @@ export default function OurServicesClient() {
                 {/* No results message */}
                 {filteredServices.length === 0 && (
                     <motion.div
-                        className="text-center py-16"
+                        className="text-center py-12"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}

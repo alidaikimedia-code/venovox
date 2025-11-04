@@ -5,6 +5,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
   // Enable CSS optimization
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
