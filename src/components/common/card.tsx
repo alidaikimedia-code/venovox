@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {
   title?: string;
   description?: string;
   icon?: LucideIcon;
+  imageUrl?: string;
   link?: string;
   className?: string;
 }
@@ -13,20 +15,42 @@ interface ServiceCardProps {
 export function ServiceCard({ 
   title, 
   description, 
-  icon: Icon, 
+  icon: Icon,
+  imageUrl,
   link,
   className = "" 
 }: ServiceCardProps) {
+  // Ensure image path starts with / for public folder images
+  const getImageSrc = (url?: string) => {
+    if (!url) return "";
+    if (url.startsWith("/") || url.startsWith("http")) return url;
+    return `/${url}`;
+  };
+
   return (
     <motion.div
       className={`bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow ${className}`}
       whileHover={{ y: -5 }}
     >
+      {imageUrl && (
+        <div className="mb-4 w-full h-48 relative rounded-lg overflow-hidden">
+          <Image 
+            src={getImageSrc(imageUrl)} 
+            alt={title || "Service image"} 
+            fill
+            className="object-cover"
+            unoptimized
+          />
+        </div>
+      )}
+      
       <div className="flex items-center mb-4">
-        {Icon && <div className="bg-red-600 p-3 rounded-full mr-4 flex-shrink-0">
-          <Icon className="text-white w-7 h-7" />
-        </div>}
-        <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+        {!imageUrl && Icon && (
+          <div className="bg-red-600 p-3 rounded-full mr-4 flex-shrink-0">
+            <Icon className="text-white w-7 h-7" />
+          </div>
+        )}
+        <h3 className="text-xl font-semibold text-center ">{title}</h3>
       </div>
 
       <p className="text-gray-700 text-justify leading-relaxed">

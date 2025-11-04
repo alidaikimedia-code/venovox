@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BlogsClient from "@/components/blogs/BlogsClient";
+import BlogsClient from "@/components/Blogs/BlogsClient";
 
 export const metadata: Metadata = {
     title: "Our Latest Blog Posts | Venovox",

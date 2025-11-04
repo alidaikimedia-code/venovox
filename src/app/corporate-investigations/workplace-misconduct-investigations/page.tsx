@@ -1,4 +1,4 @@
-import WorkplaceMisconductInvestigations from "@/components/corporate-investigations/workplace-misconduct-investigations";
+import WorkplaceMisconductInvestigations from "@/components/CorporateInvestigations/WorkplaceMisconductInvestigations/index";
 import { Metadata } from "next";
 import PageBanner from "@/components/common/pagebanner";
 import {
@@ -7,7 +7,7 @@ import {
     FAQSchema,
     WebPageSchema,
     ServiceSchema,
-} from "@/components/schema";
+} from "@/components/Schema";
 
 const BASE_URL = "https://venovox.com";
 

@@ -18,7 +18,7 @@ import {
   
   export function Faqs({ faqs, head }: AccordionDemoProps) {
     return (
-      <div className="w-full space-y-6 py-16 ">
+      <div className="w-full space-y-6 py-12 ">
         {head && <h3 className="text-3xl  font-bold text-red-600 text-center">{head}</h3>}
   
         <Accordion

@@ -1,4 +1,4 @@
-import AssetTracingAndRecovery from "@/components/corporate-investigations/asset-tracing-and-recovery";
+import AssetTracingAndRecovery from "@/components/CorporateInvestigations/AssetTracingAndRecovery/index";
 import { Metadata } from "next";
 import PageBanner from "@/components/common/pagebanner";
 import {
@@ -7,7 +7,7 @@ import {
     FAQSchema,
     WebPageSchema,
     ServiceSchema,
-} from "@/components/schema";
+} from "@/components/Schema";
 
 const BASE_URL = "https://venovox.com";
 

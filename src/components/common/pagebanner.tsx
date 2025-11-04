@@ -22,22 +22,33 @@ export default function PageBanner() {
     return (
         <div className="w-full">
             {/* Top banner with title */}
-            <div className="bg-gradient-to-r from-black/70 to-black/40 py-20 text-center mt-20">
-                <h1 className="text-white text-4xl md:text-6xl font-bold">
+            <div 
+                className="py-20 text-center mt-20 bg-cover bg-center bg-no-repeat relative"
+                style={{
+                    backgroundImage: `url('/close-up-people-working-from-home_23-2149173354.jpg')`,
+                }}
+            >
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
+                <h1 className="text-white text-4xl md:text-6xl font-bold relative z-10">
                     {capitalizeWords(currentPage)}
                 </h1>
             </div>
 
             {/* Breadcrumb section */}
-            <div className="bg-gray-100 py-3 px-6">
-                <div className="text-sm text-gray-600 flex flex-wrap items-center gap-1">
-                    <Link href="/" className="hover:underline text-blue-500">
-                        Home
-                    </Link>
-                    <span>/</span>
-                    <span className="text-black font-semibold">
-                        {capitalizeWords(currentPage)}
-                    </span>
+            <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
+                <div className="container mx-auto">
+                    <div className="flex items-center text-sm text-gray-600">
+                        <Link 
+                            href="/" 
+                            className="hover:text-red-600 transition-colors duration-200"
+                        >
+                            Home
+                        </Link>
+                        <span className="mx-2 text-gray-400">/</span>
+                        <span className="text-gray-900 font-medium">
+                            {capitalizeWords(currentPage)}
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

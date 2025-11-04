@@ -1,4 +1,4 @@
-import ContactUs from "@/components/contact-us/contact-us"
+import ContactUs from "@/components/ContactUs/contact-us"
 import React from "react"
 import type { Metadata } from "next";
 import Head from "next/head";
