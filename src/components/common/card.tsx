@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { LucideIcon } from "lucide-react";
 
 interface ServiceCardProps {
@@ -33,13 +32,11 @@ export function ServiceCard({
       whileHover={{ y: -5 }}
     >
       {imageUrl && (
-        <div className="mb-4 w-full h-48 relative rounded-lg overflow-hidden">
-          <Image 
+        <div className="mb-4 w-full h-48 rounded-lg overflow-hidden">
+          <img 
             src={getImageSrc(imageUrl)} 
             alt={title || "Service image"} 
-            fill
-            className="object-cover"
-            unoptimized
+            className="w-full h-full object-cover"
           />
         </div>
       )}

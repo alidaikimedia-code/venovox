@@ -24,31 +24,24 @@ import {
 export default function AssetTracingAndRecovery() {
   return (
     <div className="bg-white px-6 text-gray-900">
-      {/* Hero Section */}
       <Hero mainText={heroData.mainText} paragraphs={heroData.paragraphs} />
 
-      {/* Introduction Section */}
       <Introduction
         title={introductionData.title}
         description={introductionData.description}
       />
-
-      {/* When to start an asset trace */}
       <SimpleSection
         title={whenToStartData.title}
         description={whenToStartData.description}
       />
 
-      {/* Cards Sections */}
       <Cards sections={cardsSections} />
 
-      {/* Cross border and offshore structures */}
       <SimpleSection
         title={crossBorderData.title}
         description={crossBorderData.description}
       />
 
-      {/* Working with legal and finance teams */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="mx-auto">
@@ -76,7 +69,6 @@ export default function AssetTracingAndRecovery() {
         </div>
       </section>
 
-      {/* What You Receive Section */}
       <WhenToActSection
         title={whatYouReceiveData.title}
         subtitle={whatYouReceiveData.subtitle}
@@ -84,17 +76,14 @@ export default function AssetTracingAndRecovery() {
         accentColor="text-red-600"
       />
 
-      {/* How progress is reported */}
       <SimpleSection
         title={progressReportingData.title}
         description={progressReportingData.description}
         bgColor="bg-gray-50"
       />
 
-      {/* FAQs Section */}
       <Faqs faqs={faqsData} />
 
-      {/* CTA Section */}
       <Cta actions={ctaData} />
     </div>
   );

@@ -48,49 +48,49 @@ export const areasWeInvestigateServices: ServiceItem[] = [
     description:
       "We look at payments, benefits, and decision points that may involve public officials or private bribery. We review third party agreements, marketing development funds, rebates, sponsorships, gifts, travel, and entertainment. We compare what was approved to what occurred in the field. We test high risk markets and channels and we map the control gaps that allowed risk to pass.",
     icon: SpellCheck2,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
   {
     title: "Anti money laundering",
     description:
       "We test customer due diligence, onboarding steps, risk scoring, screening, and alert handling. We review sample files and look for missing documents, weak justification, and poor escalation. We assess the tuning of transaction monitoring and the quality of investigations. We confirm whether suspicious activity reports were made on time and with enough detail.",
     icon: CircleDollarSign,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
   {
     title: "Sanctions and export controls",
     description:
       "We screen counterparties, vessels, and beneficial owners. We review routing, transshipment, and payment paths that may hide the true party. We check restricted party lists, sectoral rules, and export classifications. We work with external counsel to judge the risk and to plan disclosures where required.",
     icon: FileUp,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
   {
     title: "Books and records",
     description:
       "We test the accuracy of accounting entries and supporting documents. We look for vague descriptions, false vendors, round numbers, and off cycle entries. We compare ledgers with contracts and delivery proof. We align payment dates with key events like tenders, site visits, and approvals.",
     icon: LibraryBig,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
   {
     title: "Dawn raid readiness and response",
     description:
       "We help you prepare playbooks and brief teams. In the event of a raid we support reception, document handling, and legal coordination. We keep a log of actions and items taken. After the event we help you stabilize systems, continue business, and plan a careful internal review.",
     icon: MessageSquareQuote,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
   {
     title: "Monitorships and independent reviews",
     description:
       "Where a regulator appoints a monitor or requests an independent review, we support planning, evidence gathering, and progress tracking. We set clear milestones, owners, and measures of success. We prepare simple reports that show how risks are being reduced over time.",
     icon: Star,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
   {
     title: "Remediation and program uplift",
     description:
       "We turn findings into practical change. We update policies, simplify approvals, and add detective controls. We train teams and leaders. We plan quick wins that reduce risk now and longer fixes that build a stronger culture.",
     icon: Code,
-    link: "/anti-bribery-and-corruption-investigations/",
+    // link: "/anti-bribery-and-corruption-investigations/",
   },
 ];
 

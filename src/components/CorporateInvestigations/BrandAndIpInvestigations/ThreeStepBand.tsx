@@ -33,7 +33,7 @@ export default function ThreeStepBand({
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <div className={`bg-red-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center`}>
+                <div className={`bg-red-100 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center`}>
                   <Icon className={`${accentColor} w-8 h-8`} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
