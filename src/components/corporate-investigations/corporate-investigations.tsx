@@ -33,6 +33,18 @@ export default function CorporateInvestigations() {
       link: undefined,
     },
     {
+      title: "Intelligence and OSINT",
+      description: "We deliver enhanced due diligence, background checks on people and companies, and human source insights. We assess market entry risk and partner risk. We combine online sources with field research where appropriate. You receive a clear view of integrity, reputation, and hidden risk before you act.",
+      icon: Globe,
+      // link: "/corporate-intelligence-and-osint",
+    },
+    {
+      title: "Litigation support",
+      description: "We gather evidence, protect chain of custody, and coordinate with eDiscovery teams. We validate the source of documents and confirm authenticity. We locate witnesses and provide background on counterparties. We supply expert reports and testimony where required. Your legal team gains facts they can trust.",
+      icon: Briefcase,
+      // link: "/litigation-support-investigations",
+    },
+    {
       title: "Workplace misconduct",
       description: "We handle harassment, discrimination, bullying, and code of conduct breaches with care and fairness. We use a trauma informed approach. We set ground rules, protect privacy, and avoid harm. We gather evidence from interviews, policies, devices, and systems. We provide balanced findings and recommendations that meet HR and legal standards.",
       icon: Users,
@@ -56,24 +68,14 @@ export default function CorporateInvestigations() {
       icon: TrendingUp,
       link: "/corporate-investigations/asset-tracing-and-recovery",
     },
-    {
-      title: "Litigation support",
-      description: "We gather evidence, protect chain of custody, and coordinate with eDiscovery teams. We validate the source of documents and confirm authenticity. We locate witnesses and provide background on counterparties. We supply expert reports and testimony where required. Your legal team gains facts they can trust.",
-      icon: Briefcase,
-      link: "#",
-    },
+   
     {
       title: "Brand and IP protection",
       description: "We fight counterfeit and grey market leakage. We run test buys on and offline. We track serial numbers and map supply chain weak points. We work with platforms, hosts, and local partners to support takedowns and seizures. You get evidence that supports enforcement and steps to protect revenue.",
       icon: ShieldCheck,
       link: "/corporate-investigations/brand-and-ip-investigations",
     },
-    {
-      title: "Intelligence and OSINT",
-      description: "We deliver enhanced due diligence, background checks on people and companies, and human source insights. We assess market entry risk and partner risk. We combine online sources with field research where appropriate. You receive a clear view of integrity, reputation, and hidden risk before you act.",
-      icon: Globe,
-      link: "#",
-    },
+   
     {
       title: "Prevention and controls",
       description: "We test controls, use data analytics, and train teams to stop issues early. We run fraud risk assessments and process walk throughs. We design simple monitoring that your team can run. We help you build a culture that values speaking up and early action.",
@@ -250,39 +252,39 @@ export default function CorporateInvestigations() {
   const services6 = [
     {
       title: "Workplace Misconduct Investigations",
-      link: "https://chatgpt.com/workplace-misconduct-investigations/",
+      // link: "https://chatgpt.com/workplace-misconduct-investigations/",
     },
     {
       title: "Asset-tracing-and-recovery",
-      link: "https://chatgpt.com/asset-tracing-and-recovery/",
+      // link: "https://chatgpt.com/asset-tracing-and-recovery/",
     },
     {
       title: "regulatory-and-compliance-investigations",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
       title: "corporate-intelligence-and-osint",
-      link: "https://chatgpt.com/corporate-intelligence-and-osint/",
+      // link: "https://chatgpt.com/corporate-intelligence-and-osint/",
     },
     {
       title: "litigation-support-investigations",
-      link: "https://chatgpt.com/litigation-support-investigations/",
+      // link: "https://chatgpt.com/litigation-support-investigations/",
     },
     {
       title: "digital-forensics-and-incident-investigations  ",
-      link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
+      // link: "https://chatgpt.com/digital-forensics-and-incident-investigations/",
     },
     {
       title: "whistleblowing-and-ethics-management",
-      link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
+      // link: "https://chatgpt.com/whistleblowing-and-ethics-management/",
     },
     {
       title: "brand-and-ip-investigations", 
-      link: "https://chatgpt.com/brand-and-ip-investigations/",
+      // link: "https://chatgpt.com/brand-and-ip-investigations/",
     },
     {
       title: "fraud-risk-management-and-prevention", 
-      link: "https://chatgpt.com/fraud-risk-management-and-prevention/",
+      // link: "https://chatgpt.com/fraud-risk-management-and-prevention/",
     },
   ]
   const actionSection = [
@@ -291,7 +293,7 @@ export default function CorporateInvestigations() {
       description: "  Ready to talk Speak with an investigations specialist today. Tell us what happened, what you need, and your timeline. We will propose a simple plan and the first safe steps to protect people and evidence. Prefer email Send a short note and we will reply with times for a quick call.Prefer a document We can send a one page plan that outlines scope, timing, and estimated effort. ",
       primaryButton: {
         text: "Get in Touch",
-        link: "/contact-us",
+        link: "/my-en/contact-us",
         icon: MailIcon,
       },
       
@@ -333,7 +335,7 @@ export default function CorporateInvestigations() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto"
         >
           {/* Top decorative line */}
           <motion.div
@@ -657,7 +659,7 @@ export default function CorporateInvestigations() {
                     <ServiceCard
                       key={index}
                       title={service.title}
-                      link={service.link}
+                      // link={service.link}
                     />
                   ))}
                 </div>

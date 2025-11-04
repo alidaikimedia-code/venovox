@@ -108,23 +108,23 @@ export default function DigitalForensicsAndIncidentInvestigations() {
   const services3 = [
     {
       title: "Regulatory and Compliance Investigations",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
       title: "Litigation Support Investigations",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
       title: "Workplace Misconduct Investigations",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
       title: "Corporate Intelligence and OSINT",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
       title: "Corporate Investigations Hub",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
   ]
 
@@ -566,7 +566,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                   <ServiceCard
                     key={index}
                     title={service.title}
-                    link={service.link}
+                    // link={service.link}
                   />
                 ))}
               </div>

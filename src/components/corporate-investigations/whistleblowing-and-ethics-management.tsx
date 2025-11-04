@@ -57,7 +57,7 @@ export default function WhistleblowingAndEthicsManagement() {
       description: " If you want to improve your speak up culture, talk to Venovox. Share your current setup and your goals. We will recommend first steps and a simple plan for rollout. We can start small with a pilot and grow from there. I",
       primaryButton: {
         text: "Get in Touch",
-        link: "/contact-us",
+        link: "/my-en/contact-us",
         icon: MailIcon,
       },
     },
@@ -197,19 +197,19 @@ export default function WhistleblowingAndEthicsManagement() {
     const services4 = [
     {
       title: "Workplace Misconduct Investigations",
-      link: "https://chatgpt.com/workplace-misconduct-investigations/",
+      // link: "https://chatgpt.com/workplace-misconduct-investigations/",
     },
     {
       title: "Corporate Investigations Hub",
-      link: "https://chatgpt.com/workplace-misconduct-investigations/",
+      // link: "https://chatgpt.com/workplace-misconduct-investigations/",
     },
     {
       title: "Regulatory and Compliance Investigations",
-      link: "https://chatgpt.com/workplace-misconduct-investigations/",
+      // link: "https://chatgpt.com/workplace-misconduct-investigations/",
     },
     {
       title: "Fraud Risk Management and Prevention",
-      link: "https://chatgpt.com/workplace-misconduct-investigations/",
+      // link: "https://chatgpt.com/workplace-misconduct-investigations/",
     },
   ]
 
@@ -566,7 +566,7 @@ export default function WhistleblowingAndEthicsManagement() {
                   <ServiceCard
                     key={index}
                     title={service.title}
-                    link={service.link}
+                    // link={service.link}
                   />
                 ))}
               </div>

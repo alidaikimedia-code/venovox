@@ -52,7 +52,7 @@ export default function FraudRiskManagementAndPrevention() {
       description: " If you want to reduce fraud risk and build simple, strong controls, talk to Venovox. Share your goals and your timeline. We will suggest a short plan that starts with the areas of highest impact and lowest effort. We can begin with a focused assessment and a pilot for one process, then scale across the business once you see results. ",
       primaryButton: {
         text: "Get in Touch",
-        link: "/contact-us",
+        link: "/my-en/contact-us",
         icon: MailIcon,
       },
     },
@@ -132,23 +132,23 @@ export default function FraudRiskManagementAndPrevention() {
   const services4 = [
     {
       title: "Regulatory and Compliance Investigations",
-      link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+      // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
     },
     {
         title: "Corporate Intelligence and OSINT",
-        link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+        // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
       },
       {
         title: "Digital Forensics and Incident Investigations",
-        link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+        // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
       },
       {
         title: "Workplace Misconduct Investigations",
-        link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+        // link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
       },
       {
         title: "Corporate Investigations Hub",
-        link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
+        //  link: "https://chatgpt.com/regulatory-and-compliance-investigations/",
       },
   ]
 
@@ -602,7 +602,7 @@ export default function FraudRiskManagementAndPrevention() {
                     <ServiceCard
                       key={index}
                       title={service.title}
-                      link={service.link}
+                      // link={service.link}
                     />
                   ))}
                 </div>

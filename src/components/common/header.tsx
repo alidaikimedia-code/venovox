@@ -38,14 +38,12 @@ const navData = {
         { name: "Cyber Security", path: "/my-en/background-screening/cyber-security/" }
       ]
     },
+    { name: "Corporate Investigations",path: "/corporate-investigations" },
+    { name: "Publication", path: "/blogs/" },
     { name: "Contact Us", path: "/my-en/contact-us" },
     { name: "Career", path: "/my-en/Career" },
-    { name: "Publication", path: "/blogs/" },
-    {
-      name: "corporate investigations",
-      path: "/corporate-investigations",
     
-    },
+    
   ] as MenuItem[]
 };
 
