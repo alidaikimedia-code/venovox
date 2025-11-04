@@ -11,18 +11,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $subject = htmlspecialchars($data['subject'] ?? 'VENOVOX: Contact Us');
     $message = nl2br(htmlspecialchars($data['message'] ?? ''));
 
-    
-    $to = "kelly@venovox.com, dato.devan@venovox.com";
+    $to = "no-reply@venovox.com"; // Placeholder in "To" field
+    $bcc = "kelly@venovox.com, dato.devan@venovox.com";
 
-    // Build headers
-    $headers  = "MIME-Version: 1.0\r\n";
+    $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8\r\n";
     $headers .= "From: Venovox Contact Us <$email>\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Bcc: $bcc\r\n";
 
-    
-    $headers .= "Bcc: troubleshoot@venovox.com\r\n";
-
-    // Build HTML message
     $htmlMessage = "
     <html>
     <head>
@@ -46,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </body>
     </html>";
 
-    // Send mail
     $success = mail($to, "New Contact Message: $subject", $htmlMessage, $headers);
 
     echo json_encode(["success" => $success]);
