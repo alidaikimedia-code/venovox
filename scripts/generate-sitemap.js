@@ -66,10 +66,6 @@ const staticPages = [
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/author',
-    lastmod: '2025-01-14T10:43:49+00:00'
-  },
-  {
     url: '/privacy/privacy-policy',
     lastmod: '2025-01-14T10:43:49+00:00'
   },

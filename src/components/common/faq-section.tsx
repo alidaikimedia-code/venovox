@@ -3,43 +3,64 @@ import {
     AccordionContent,
     AccordionItem,
     AccordionTrigger,
-  } from "@/components/ui/accordion";
-  
-  type FAQ = {
-    id: string;
+} from "@/components/ui/accordion";
+import { HTMLContent } from "@/components/common/HTMLContent";
+
+export type FAQ = {
+    id?: string;
     question: string;
     answer: string;
-  };
-  
-  interface AccordionDemoProps {
+};
+
+interface FAQSectionProps {
     faqs: FAQ[];
-    head?: string;
-  }
-  
-  export function Faqs({ faqs, head }: AccordionDemoProps) {
+    heading?: string;
+    sectionKey?: string;
+}
+
+export function FAQSection({ faqs, heading, sectionKey = "faq" }: FAQSectionProps) {
     return (
-      <div className="w-full space-y-6 py-12 ">
-        {head && <h3 className="text-3xl  font-bold text-red-600 text-center">{head}</h3>}
-  
-        <Accordion
-          type="single"
-          collapsible
-          className="w-1/2 mx-auto"
-          defaultValue={faqs[0]?.id}
-        >
-          {faqs.map((faq) => (
-            <AccordionItem key={faq.id} value={faq.id}>
-              <AccordionTrigger className="text-left font-medium text-xl ">
-                {faq.question}
-              </AccordionTrigger>
-  
-              <AccordionContent className="flex flex-col gap-4 text-lg ">
-                <p>{faq.answer}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </div>
+        <section className="mb-20">
+            <div className="mx-auto">
+                {heading && (
+                    <h2 className="text-4xl font-bold mb-12 text-black text-center leading-tight">
+                        {heading}
+                    </h2>
+                )}
+                <div className="max-w-4xl mx-auto">
+                    <Accordion
+                        type="single"
+                        collapsible
+                        className="w-full"
+                    >
+                        {faqs.map((faq, faqIndex) => {
+                            const value = faq.id || `${sectionKey}-${faqIndex}`;
+                            return (
+                                <AccordionItem
+                                    key={faqIndex}
+                                    value={value}
+                                    className="border border-gray-200 rounded-lg px-6 py-2 bg-white shadow-sm hover:shadow-md transition-shadow duration-200 mb-4 last:mb-0"
+                                >
+                                    <AccordionTrigger className="text-left font-semibold text-lg text-gray-900 hover:text-red-600 transition-colors">
+                                        {faq.question}
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-gray-600 leading-relaxed text-base text-justify pt-2 pb-4">
+                                        <HTMLContent 
+                                            content={faq.answer}
+                                        />
+                                    </AccordionContent>
+                                </AccordionItem>
+                            );
+                        })}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
     );
-  }
+}
+
+// Legacy export for backward compatibility
+export function Faqs({ faqs, head }: { faqs: FAQ[]; head?: string }) {
+    return <FAQSection faqs={faqs} heading={head} />;
+}
   

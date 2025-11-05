@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Workplace Misconduct Investigations | Harassment, Discrimination, Bullying, Retaliation",
-    description: "Independent workplace misconduct investigations with a fair and trauma informed approach. We handle harassment, discrimination, bullying, retaliation, and conduct breaches. Clear reports and safe remediation.",
+    title: "Workplace Misconduct and Ethics Investigations | Venovox",
+    description: "Venovox conducts confidential workplace misconduct investigations to address ethical breaches, harassment, and compliance violations with precision and care.",
 };
 
 export default function WorkplaceMisconductInvestigationsPage() {
@@ -54,13 +54,13 @@ export default function WorkplaceMisconductInvestigationsPage() {
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
                 name="Workplace Misconduct Investigations"
-                description="Independent workplace misconduct investigations with a fair and trauma informed approach. We handle harassment, discrimination, bullying, retaliation, and conduct breaches. Clear reports and safe remediation."
+                description="Venovox conducts confidential workplace misconduct investigations to address ethical breaches, harassment, and compliance violations with precision and care."
                 url="/corporate-investigations/workplace-misconduct-investigations"
                 baseUrl={BASE_URL}
             />
             <ServiceSchema
                 name="Workplace Misconduct Investigations"
-                description="Independent workplace misconduct investigations with a fair and trauma informed approach. We handle harassment, discrimination, bullying, retaliation, and conduct breaches. Clear reports and safe remediation."
+                description="Venovox conducts confidential workplace misconduct investigations to address ethical breaches, harassment, and compliance violations with precision and care."
                 url="/corporate-investigations/workplace-misconduct-investigations"
                 serviceType="Corporate Investigation Service"
                 areaServed="Global"

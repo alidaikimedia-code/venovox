@@ -1,7 +1,8 @@
 "use client";
 
-import { Faqs as FaqsComponent } from "@/components/common/faq-section";
+import { FAQSection, type FAQ as FAQType } from "@/components/common/faq-section";
 
+// Export FAQ interface for backward compatibility
 export interface FAQ {
   id: string;
   question: string;
@@ -9,11 +10,11 @@ export interface FAQ {
 }
 
 interface FaqsProps {
-  faqs: FAQ[];
+  faqs: FAQType[];
   head?: string;
 }
 
 export default function Faqs({ faqs, head = "Frequently asked questions" }: FaqsProps) {
-  return <FaqsComponent faqs={faqs} head={head} />;
+  return <FAQSection faqs={faqs} heading={head} />;
 }
 

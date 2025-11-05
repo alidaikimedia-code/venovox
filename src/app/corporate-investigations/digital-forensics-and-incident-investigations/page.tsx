@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Digital Forensics and Incident Investigations | Ransomware, Data Theft, Email Compromise | Venovox",
-    description: "Venovox investigates cyber incidents with careful evidence handling and clear reporting. We handle ransomware, data theft, account compromise, and cloud security events, and we help you recover safely.",
+    title: "Digital Forensics and Incident Investigations | Venovox",
+    description: "Venovox delivers digital forensics and cyber incident investigations to uncover evidence, identify threats, and support your organization’s digital resilience.",
 };
 
 export default function DigitalForensicsAndIncidentInvestigationsPage() {
@@ -54,13 +54,13 @@ export default function DigitalForensicsAndIncidentInvestigationsPage() {
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
                 name="Digital Forensics and Incident Investigations"
-                description="Venovox investigates cyber incidents with careful evidence handling and clear reporting. We handle ransomware, data theft, account compromise, and cloud security events, and we help you recover safely."
+                description="Venovox delivers digital forensics and cyber incident investigations to uncover evidence, identify threats, and support your organization’s digital resilience."
                 url="/corporate-investigations/digital-forensics-and-incident-investigations"
                 baseUrl={BASE_URL}
             />
             <ServiceSchema
                 name="Digital Forensics and Incident Investigations"
-                description="Venovox investigates cyber incidents with careful evidence handling and clear reporting. We handle ransomware, data theft, account compromise, and cloud security events, and we help you recover safely."
+                description="Venovox delivers digital forensics and cyber incident investigations to uncover evidence, identify threats, and support your organization’s digital resilience."
                 url="/corporate-investigations/digital-forensics-and-incident-investigations"
                 serviceType="Corporate Investigation Service"
                 areaServed="Global"

@@ -4,7 +4,7 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Generated dynamically on 2025-11-04T10:49:53.999Z -->
+<!-- Generated dynamically on 2025-11-05T13:00:40.217Z -->
 <url>
   <loc>https://venovox.com/</loc>
   <lastmod>2025-01-14T10:43:49+00:00</lastmod>
@@ -62,10 +62,6 @@
   <lastmod>2025-01-14T10:43:49+00:00</lastmod>
 </url>
 <url>
-  <loc>https://venovox.com/author</loc>
-  <lastmod>2025-01-14T10:43:49+00:00</lastmod>
-</url>
-<url>
   <loc>https://venovox.com/privacy/privacy-policy</loc>
   <lastmod>2025-01-14T10:43:49+00:00</lastmod>
 </url>
@@ -80,6 +76,38 @@
 <url>
   <loc>https://venovox.com/privacy/whistleblowing-policy</loc>
   <lastmod>2025-01-14T10:43:49+00:00</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/workplace-misconduct-investigations</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/asset-tracing-and-recovery</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/regulatory-and-compliance-investigations</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/digital-forensics-and-incident-investigations</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/whistleblowing-and-ethics-management</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/brand-and-ip-investigations</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/corporate-investigations/fraud-risk-management-and-prevention</loc>
+  <lastmod>2025-11-05T13:00:40.217Z</lastmod>
 </url>
 <url>
   <loc>https://venovox.com/blogs/why-global-firms-need-certified-screening-help</loc>
@@ -344,5 +372,65 @@
 <url>
   <loc>https://venovox.com/blogs/the-silent-risk-ignoring-employee-engagement-in-the-company</loc>
   <lastmod>2025-10-27T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/how-to-do-a-malaysia-company-registration-number-search-before-hiring-vendors</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/top-benefits-of-hiring-a-professional-background-check-agency-in-kuala-lumpur</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/what-to-expect-from-modern-background-screening-solutions-in-malaysia</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/free-background-check-in-malaysia-whats-real-and-whats-risky</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/why-hr-departments-in-malaysia-rely-on-background-checking-tools</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/how-property-management-companies-use-background-checks-to-vet-tenants</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/choosing-the-right-background-check-company-for-corporate-compliance</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/how-background-investigation-services-safeguard-business-reputation</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/step-by-step-guide-to-background-checks-for-employment-in-malaysia</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/cybersecurity-background-checks-ensuring-trust-in-the-digital-workforce</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/how-employment-screening-companies-detect-false-resumes-and-fraud</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/intelligence-driven-background-checks-the-future-of-workforce-screening</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/how-background-screening-in-malaysia-helps-prevent-workplace-misconduct</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/global-vs-malaysia-based-background-check-companies-what-employers-should-know</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
+</url>
+<url>
+  <loc>https://venovox.com/blogs/understanding-background-screening-solutions-for-high-security-industries</loc>
+  <lastmod>2025-11-05T00:00:00.000Z</lastmod>
 </url>
 </urlset>
