@@ -104,14 +104,14 @@ export default function WorkplaceMisconductInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-center mb-8">
+              {/* <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   {careForPeopleData.title}
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-10">
                   {careForPeopleData.description}
                 </p>
-              </div>
+              </div> */}
               <Cards sections={[cardsSections[3]]} />
               <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center max-w-2xl mx-auto">
                 {careForPeopleData.footerText}
@@ -131,14 +131,14 @@ export default function WorkplaceMisconductInvestigations() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="text-center mb-8">
+              {/* <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   {digitalEvidenceData.title}
                 </h2>
                 <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-10">
                   {digitalEvidenceData.description}
                 </p>
-              </div>
+              </div> */}
               <Cards sections={[cardsSections[4]]} />
               <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center max-w-2xl mx-auto">
                 {digitalEvidenceData.footerText}

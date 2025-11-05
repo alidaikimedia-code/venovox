@@ -216,31 +216,31 @@ export default function CorporateInvestigations() {
     {
       title: "Independent and discreet",
       description: "We act with care and keep your trust. We avoid conflicts and report facts as we find them. We keep a low profile and protect your privacy.",
-      imageUrl: "premium_photo-1661964473096-90ef8ca12e5d.avif",
+      imageUrl: "vitaly-gariev-e_2XAeZWbUI-unsplash.jpg",
       link: undefined,
     },
     {
       title: "Cross border reach",
       description: "International work is routine for us. We understand regional laws and culture and we partner with trusted local experts. We coordinate permits, translation, and data transfer rules so your case runs smoothly.",
-       imageUrl: "photo-1666718621210-e662947b5dc3.avif",
+       imageUrl: "simon-hurry-uySO9ZCbo-c-unsplash.jpg",
       link: undefined,
     },
     {
       title: "Multidisciplinary team",
       description: "Investigators, forensic accountants, cyber experts, and intelligence analysts work as one team. This saves time and gives you a complete view of risk. You do not need to manage several vendors",
-  imageUrl: "photo-1746173097873-a4b6eb66ac13.avif",      
+  imageUrl: "vitaly-gariev-Jeg0c4gnpOM-unsplash.jpg",      
       link: undefined,
     },
     {
       title: "Fast action and clear updates",
       description: "You get a single point of contact, a simple plan, and regular short updates. We remove jargon and explain choices so you can decide quickly.",
-  imageUrl: "photo-1581374820583-317d45555a82.avif",      
+  imageUrl: "vitaly-gariev-qd3w1qjI_SQ-unsplash.jpg",      
       link: undefined,
     },
     {
       title: "Human approach",
       description: "We respect people. We protect whistleblowers and witnesses. We design interviews and communications that are firm and kind. We aim to find the truth while keeping dignity in view.",
-  imageUrl: "premium_photo-1661587425187-8a4b4245b60d.avif",      
+  imageUrl: "rodeo-project-management-software-ONe-snuCaqQ-unsplash copy.jpg",      
       link: undefined,
     },
   ]

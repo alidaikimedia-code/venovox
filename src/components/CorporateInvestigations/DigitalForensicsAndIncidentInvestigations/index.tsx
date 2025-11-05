@@ -73,7 +73,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-md text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="bg-red-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <div className="bg-red-100 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                     <motion.div className="text-red-600 w-8 h-8 flex items-center justify-center">
                       Preserve
                     </motion.div>
@@ -85,7 +85,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-md text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="bg-red-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <div className="bg-red-100 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                     <motion.div className="text-red-600 w-8 h-8 flex items-center justify-center">
                       Investigate
                     </motion.div>
@@ -97,7 +97,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                   className="bg-white p-6 rounded-lg shadow-md text-center"
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="bg-red-100 p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <div className="bg-red-100 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                     <motion.div className="text-red-600 w-8 h-8 flex items-center justify-center">
                       Recover
                     </motion.div>
