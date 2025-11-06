@@ -70,7 +70,7 @@ export default function HomeClient() {
                   Rooted in <span className="text-red-600">Local Expertise</span>, Driven by <span className="text-red-600">International Standards</span>
                 </h3>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] mb-6">
-                  Founded in Malaysia back in 1999 and now headquartered in Texas, USA, VENOVOX has grown into a trusted leader in risk management solutions and background screening services.
+                  Founded in Malaysia back in 1999 and now headquartered in London, United Kingdom, VENOVOX has grown into a trusted leader in risk management solutions and background screening services.
 
                 </p>
                 <p className="text-lg text-gray-700 text-justify [text-justify:inter-word] hyphens-none max-w-[70ch]">

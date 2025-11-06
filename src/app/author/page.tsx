@@ -122,7 +122,7 @@ export default function AuthorPage() {
                                 <h2 className="text-2xl font-bold text-red-600 mb-4 italic">Venovox Journey</h2>
 
                                 <p className="text-black text-lg leading-relaxed">
-                                    He founded Venovox in Malaysia back in 1999 and now it is  headquartered in Texas, USA. Venovox's vision enables clients to navigate in an uncertain world with clarity by serving as a beacon of foresight and resilience.
+                                    He founded Venovox in Malaysia back in 1999 and now it is  headquartered in London, United Kingdom. Venovox's vision enables clients to navigate in an uncertain world with clarity by serving as a beacon of foresight and resilience.
                                 </p>
                             </div>
 

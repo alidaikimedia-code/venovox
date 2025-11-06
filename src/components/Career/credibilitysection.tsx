@@ -18,7 +18,7 @@ const VenovoxCredibilitySection = () => {
                             <img
                                 src="/career1-Photoroom.png"
                                 alt="Handshake with Tech Overlay"
-                                className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full aspect-square"
+                                className="w-72 h-72 md:w-100 md:h-100 object-cover rounded-full aspect-square"
                             />
                         </div>
 

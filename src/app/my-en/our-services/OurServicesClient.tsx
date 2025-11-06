@@ -79,7 +79,7 @@ export default function OurServicesClient() {
     return (
         <div className="bg-white">
             {/* Hero section */}
-            <div className="relative bg-black text-white">
+            <div className="relative bg-red-700 text-white">
                 <div className="absolute inset-0 z-0">
                     {/* <img
                         src="/images/services-hero.jpg"
@@ -88,7 +88,7 @@ export default function OurServicesClient() {
                         style={{ objectFit: "cover", objectPosition: "center" }}
                     // priority
                     /> */}
-                    <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+                    <div className="absolute inset-0 bg-[#b30000] bg-opacity-70"></div>
                 </div>
 
                 <div className="container mx-auto px-4 py-24 mt-20 relative z-10">
@@ -100,18 +100,19 @@ export default function OurServicesClient() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
-                        <p className="text-xl text-gray-300 mb-8">
+                        <p className="text-xl text-white-300 mb-8">
                             VENOVOX offers comprehensive solutions to protect your business, ensure continuity, and support
                             sustainable growth across the Asia-Pacific region.
                         </p>
                         <div className="flex justify-center">
                             <Link
                                 href="/my-en/contact-us"
-                                className="px-8 py-4 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors"
+                                className="px-8 py-4 bg-white text-black font-bold hover:bg-red-700 transition-colors"
                             >
                                 Get in Touch
                             </Link>
                         </div>
+
                     </motion.div>
                 </div>
             </div>

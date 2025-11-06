@@ -254,19 +254,20 @@ const Footer = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-left pb-6 ">
             {[
               {
-                title: "US & Canada",
-                company: "Venovox LLC",
+                title: "United Kingdom",
+                company: "Venovox c/o Hi Verify Ltd",
                 lines: [
-                  "3050 Post Oak Blvd",
-                  "Suite 510,",
-                  "Houston, Texas",
-                  "77056",
+                  "71-75 Shelton Street,",
+                  "Covent Garden,",
+                  "London,",
+                  "WC2H 9JQ",
+                  "United Kingdom",
                   <a
                     key="phone"
-                    href="tel:2817665055"
+                    href="tel:44 2038356542"
                     className="hover:text-red-600 transition block mt-1"
                   >
-                    📞+1 281 766 5055
+                    📞+44 2038356542
                   </a>,
                 ],
               },
