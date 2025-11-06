@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { CheckCircle, Shield, Clock, Users, Info, Lock, ShieldCheck, Gavel,AlertTriangle, Globe, TrendingUp, Search, AlertCircle, Network, Filter, Airplay, Bell, FileText, BarChart, Calendar, ShieldOff, BookX, UserX, File, OctagonAlert, ShieldAlert, CircleCheck, PhoneCall, Earth, Smartphone, SquareLibrary, BookmarkPlus, Monitor, ReceiptText, LayoutDashboard, PersonStanding, Rss, CircleFadingPlus, Scale, CheckCheck, GlobeLock, Anvil, NotebookPen, Presentation, BookOpen, CircleCheckBig, PrinterCheck, TvMinimalPlay, Heart, SquarePen, DollarSign, Briefcase, Book, Lightbulb, MapPin ,ThumbsDown} from "lucide-react";
 import { blogData } from "@/data/blogsData";
 import Link from "next/link";
+import { HTMLContent } from "@/components/common/HTMLContent";
+import { FAQSection } from "@/components/common/faq-section";
 
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://venovox.com';
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
     if (!blog) return {};
 
     // Dynamic canonical URL generation based on slug
-    const canonicalUrl = `${BASE_URL}/blog/${slug}`;
+    const canonicalUrl = `${BASE_URL}/blogs/${slug}`;
 
     return {
         title: blog.seo.metaTitle,
@@ -53,7 +55,7 @@ function generateSEOCanonicalUrl(slug: string, blogData: any): string {
 
     // Otherwise, generate based on slug
     const baseUrl = BASE_URL.replace(/\/$/, ''); // Remove trailing slash
-    return `${baseUrl}/blog/${slug}`;
+    return `${baseUrl}/blogs/${slug}`;
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
@@ -71,9 +73,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 return (
                     <section key={index} className="mb-16">
                         <div className=" mx-auto">
-                            <p className="text-gray-600 leading-relaxed text-lg text-justify ">
-                                {section.content}
-                            </p>
+                            <HTMLContent 
+                                content={section.content}
+                                className="text-gray-600 leading-relaxed text-lg text-justify"
+                            />
                         </div>
                     </section>
                 );
@@ -85,9 +88,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                             <h2 className="text-4xl font-bold  text-black text-center mb-12">
                                 {section.heading}
                             </h2>
-                            <p className="text-gray-600 leading-relaxed text-lg text-justify">
-                                {section.content}
-                            </p>
+                            <HTMLContent 
+                                content={section.content}
+                                className="text-gray-600 leading-relaxed text-lg text-justify"
+                            />
                         </div>
                     </section>
                 );
@@ -107,9 +111,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                     className={`space-y-6 ${section.imagePosition === "left" ? "lg:order-last" : ""
                                         }`}
                                 >
-                                    <p className="text-gray-600 leading-relaxed text-lg text-justify">
-                                        {section.content}
-                                    </p>
+                                    <HTMLContent 
+                                        content={section.content}
+                                        className="text-gray-600 leading-relaxed text-lg text-justify"
+                                    />
                                 </div>
                                 <div className="flex justify-center">
                                     <div className="relative overflow-hidden rounded-2xl shadow-2xl  transition-shadow duration-300">
@@ -147,9 +152,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                     </div>
                                 </div>
                                 <div className="space-y-8">
-                                    <p className="text-gray-600 text-lg  leading-relaxed text-justify">
-                                        {section.content}
-                                    </p>
+                                    <HTMLContent 
+                                        content={section.content}
+                                        className="text-gray-600 text-lg leading-relaxed text-justify"
+                                    />
                                     <div className="space-y-6">
                                         {section.benefits.map((benefit: any, benefitIndex: number) => {
                                             const Icon = iconMap[benefit.icon];
@@ -165,9 +171,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                                         <h4 className="font-semibold text-gray-900 text-lg mb-2">
                                                             {benefit.title}
                                                         </h4>
-                                                        <p className="text-gray-600 leading-relaxed text-justify">
-                                                            {benefit.description}
-                                                        </p>
+                                                        <HTMLContent 
+                                                            content={benefit.description}
+                                                            className="text-gray-600 leading-relaxed text-justify"
+                                                        />
                                                     </div>
                                                 </div>
                                             );
@@ -192,9 +199,10 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                         <h3 className="text-2xl font-bold mb-6 text-gray-900 leading-tight">
                                             {subsection.heading}
                                         </h3>
-                                        <p className="text-gray-600 leading-relaxed text-lg text-justify">
-                                            {subsection.content}
-                                        </p>
+                                        <HTMLContent 
+                                            content={subsection.content}
+                                            className="text-gray-600 leading-relaxed text-lg text-justify"
+                                        />
                                     </div>
                                 ))}
                             </div>
@@ -210,12 +218,23 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                 <h2 className="text-3xl font-bold mb-6 leading-tight">
                                     {section.heading}
                                 </h2>
-                                <p className="text-lg leading-relaxed text-justify opacity-95">
-                                    {section.content}
-                                </p>
+                                <HTMLContent 
+                                    content={section.content}
+                                    className="text-lg leading-relaxed text-justify opacity-95"
+                                />
                             </div>
                         </div>
                     </section>
+                );
+
+            case "faq_section":
+                return (
+                    <FAQSection
+                        key={index}
+                        faqs={section.faqs}
+                        heading={section.heading}
+                        sectionKey={`faq-${index}`}
+                    />
                 );
 
             default:
@@ -261,31 +280,22 @@ export default async function BlogPage({ params }: BlogPageProps) {
                     {blog.sections.map((section, index) => renderSection(section, index))}
                 </div>
                 <div className="flex items-center justify-between mt-12">
-                    <Link href="/author">
-                        <div className="flex items-start space-x-3">
-                            {/* Image */}
-                            <div className="w-16 h-16 rounded-full overflow-hidden">
-                                <img
-                                    src="/author.jpg"
-                                    alt="Author"
-                                    width={70}
-                                    height={70}
-                                    className="object-cover"
-                                />
-                            </div>
-
-                            {/* Text Content */}
-                            <div className="flex flex-col">
-                                <h2 className="text-gray-700 text-xl">
-                                    <span className="font-bold text-black ">Author:</span> Dato’ Venodevan Mariemuthu
-                                </h2>
-                                <h2 className="text-gray-700 text-base mt-2">
-                                    <span className="font-bold text-black">Bio:</span> Every risk is an opportunity in disguise, one that only the prepared can harness
-                                </h2>
-                            </div>
-                        </div>
-
-                    </Link>
+                <Link
+                                    href="/author"
+                                    className="flex items-center gap-2 text-right cursor-pointer"
+                                >
+                                    <img
+                                        src="/venovox-author1.png"
+                                        alt="Author"
+                                        className="w-12 h-12 rounded-full object-cover "
+                                    />
+                                    <div className="hidden sm:block">
+                                        <h4 className="text-sm font-semibold">Dato&apos; Venodevan</h4>
+                                        <p className="text-xs text-gray-500 line-clamp-1">
+                                            Risk is an opportunity
+                                        </p>
+                                    </div>
+                                </Link>
                     <span className="text-gray-500 text-xl">August 8th, 2024</span>
                 </div>
             </main>

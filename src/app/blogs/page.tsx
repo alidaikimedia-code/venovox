@@ -3,7 +3,7 @@ import BlogsClient from "@/components/blogs/BlogsClient";
 
 export const metadata: Metadata = {
     title: "Our Latest Blog Posts | Venovox",
-    description: "Discover insights, tips, and expert advice to help you stay ahead in the digital world. Read our latest blog posts on background screening, company verification, and business intelligence.",
+    description: "Explore expert insights from Venovox on background checks, compliance, fraud prevention, and risk intelligence to help your business make safer, smarter decisions.",
     keywords: [
         "blog posts",
         "background screening insights",

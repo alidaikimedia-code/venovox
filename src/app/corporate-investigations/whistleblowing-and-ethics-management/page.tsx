@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Whistleblowing and Ethics Management | Hotline, Intake, Retaliation Safeguards | Venovox",
-    description: "Venovox builds and runs whistleblowing and ethics programs with safe intake, fair investigations, and clear board reporting. We protect people and help you act with confidence.",
+    title: "Whistleblowing and Ethics Management Services | Venovox",
+    description: "Venovox empowers organizations with whistleblowing and ethics management systems to report misconduct, protect employees, and promote transparency.",
 };
 
 export default function WhistleblowingAndEthicsManagementPage() {
@@ -54,13 +54,13 @@ export default function WhistleblowingAndEthicsManagementPage() {
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
                 name="Whistleblowing and Ethics Management"
-                description="Venovox builds and runs whistleblowing and ethics programs with safe intake, fair investigations, and clear board reporting. We protect people and help you act with confidence."
+                description="Venovox empowers organizations with whistleblowing and ethics management systems to report misconduct, protect employees, and promote transparency."
                 url="/corporate-investigations/whistleblowing-and-ethics-management"
                 baseUrl={BASE_URL}
             />
             <ServiceSchema
                 name="Whistleblowing and Ethics Management"
-                description="Venovox builds and runs whistleblowing and ethics programs with safe intake, fair investigations, and clear board reporting. We protect people and help you act with confidence."
+                description="Venovox empowers organizations with whistleblowing and ethics management systems to report misconduct, protect employees, and promote transparency."
                 url="/corporate-investigations/whistleblowing-and-ethics-management"
                 serviceType="Corporate Investigation Service"
                 areaServed="Global"

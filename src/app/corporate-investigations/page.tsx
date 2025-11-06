@@ -14,8 +14,8 @@ import PageBanner from "@/components/common/pagebanner";
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Corporate Investigations Services | Fraud, Misconduct, Asset Tracing, Digital Forensics",
-    description: "Independent corporate investigations for fraud, misconduct, cyber incidents, regulatory breaches, asset tracing, and brand protection. Clear reports, legal ready methods, global reach.",
+    title: "Venovox – Corporate Investigations and Risk Solutions",
+    description: "Venovox offers global corporate investigation services to detect fraud, ensure compliance, and protect your organization’s assets through professional due diligence.",
 };
 
 export default function CorporateInvestigationsPage() {
@@ -110,7 +110,7 @@ export default function CorporateInvestigationsPage() {
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <CollectionPageSchema
                 name="Corporate Investigations Services"
-                description="Independent corporate investigations for fraud, misconduct, cyber incidents, regulatory breaches, asset tracing, and brand protection. Clear reports, legal ready methods, global reach."
+                description="Venovox offers global corporate investigation services to detect fraud, ensure compliance, and protect your organization’s assets through professional due diligence."
                 url="/corporate-investigations"
                 baseUrl={BASE_URL}
             />

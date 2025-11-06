@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Asset Tracing and Recovery | Cross Border Tracing, Enforcement, Offshore Structures | Venovox",
-    description: "Venovox traces assets across borders and through complex structures. We support freezing steps, receiverships, and enforcement with clear evidence and practical action plans.",
+    title: "Asset Tracing and Recovery Investigations | Venovox",
+    description: "Venovox helps trace, recover, and protect assets lost to fraud or misappropriation through expert investigations that enhance financial security and accountability.",
 };
 
 export default function AssetTracingAndRecoveryPage() {
@@ -54,13 +54,13 @@ export default function AssetTracingAndRecoveryPage() {
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
                 name="Asset Tracing and Recovery"
-                description="Venovox traces assets across borders and through complex structures. We support freezing steps, receiverships, and enforcement with clear evidence and practical action plans."
+                description="Venovox helps trace, recover, and protect assets lost to fraud or misappropriation through expert investigations that enhance financial security and accountability."
                 url="/corporate-investigations/asset-tracing-and-recovery"
                 baseUrl={BASE_URL}
             />
             <ServiceSchema
                 name="Asset Tracing and Recovery"
-                description="Venovox traces assets across borders and through complex structures. We support freezing steps, receiverships, and enforcement with clear evidence and practical action plans."
+                description="Venovox helps trace, recover, and protect assets lost to fraud or misappropriation through expert investigations that enhance financial security and accountability."
                 url="/corporate-investigations/asset-tracing-and-recovery"
                 serviceType="Corporate Investigation Service"
                 areaServed="Global"

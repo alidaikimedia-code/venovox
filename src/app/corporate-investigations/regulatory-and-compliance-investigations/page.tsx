@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Regulatory and Compliance Investigations | ABC, AML, Sanctions, Dawn Raid Response | Venovox",
-    description: "Venovox investigates ABC, AML, sanctions, and books and records issues. We support dawn raid response, monitorships, and remediation plans with clear reports and practical advice.",
+    title: "Regulatory and Compliance Investigations | Venovox",
+    description: "Ensure your business meets global standards with Venovox regulatory and compliance investigations, helping you detect breaches and maintain corporate transparency.",
 };
 
 export default function RegulatoryAndComplianceInvestigationsPage() {
@@ -54,13 +54,13 @@ export default function RegulatoryAndComplianceInvestigationsPage() {
             <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
                 name="Regulatory and Compliance Investigations"
-                description="Venovox investigates ABC, AML, sanctions, and books and records issues. We support dawn raid response, monitorships, and remediation plans with clear reports and practical advice."
+                description="Ensure your business meets global standards with Venovox regulatory and compliance investigations, helping you detect breaches and maintain corporate transparency."
                 url="/corporate-investigations/regulatory-and-compliance-investigations"
                 baseUrl={BASE_URL}
             />
             <ServiceSchema
                 name="Regulatory and Compliance Investigations"
-                description="Venovox investigates ABC, AML, sanctions, and books and records issues. We support dawn raid response, monitorships, and remediation plans with clear reports and practical advice."
+                description="Ensure your business meets global standards with Venovox regulatory and compliance investigations, helping you detect breaches and maintain corporate transparency."
                 url="/corporate-investigations/regulatory-and-compliance-investigations"
                 serviceType="Corporate Investigation Service"
                 areaServed="Global"

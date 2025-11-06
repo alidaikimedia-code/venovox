@@ -3,6 +3,18 @@ import { blogData } from '@/data/blogsData';
 // Base URL for your site
 const BASE_URL = 'https://venovox.com';
 
+// Corporate investigation pages - dynamically generated from available routes
+const corporateInvestigationPages = [
+  '/corporate-investigations',
+  '/corporate-investigations/workplace-misconduct-investigations',
+  '/corporate-investigations/asset-tracing-and-recovery',
+  '/corporate-investigations/regulatory-and-compliance-investigations',
+  '/corporate-investigations/digital-forensics-and-incident-investigations',
+  '/corporate-investigations/whistleblowing-and-ethics-management',
+  '/corporate-investigations/brand-and-ip-investigations',
+  '/corporate-investigations/fraud-risk-management-and-prevention',
+];
+
 // Static pages that should always be in the sitemap
 const staticPages = [
   {
@@ -62,10 +74,6 @@ const staticPages = [
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/author',
-    lastmod: '2025-01-14T10:43:49+00:00'
-  },
-  {
     url: '/privacy/privacy-policy',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
@@ -92,14 +100,20 @@ export function generateSitemapData(): SitemapPage[] {
   // Get current date for lastmod
   const currentDate = new Date().toISOString();
   
-  // Generate blog URLs from blog data
+  // Generate blog URLs from blog data (dynamic - automatically includes new blogs)
   const blogUrls: SitemapPage[] = blogData.map(blog => ({
     url: `/blogs/${blog.slug}`,
     lastmod: blog.publishDate ? new Date(blog.publishDate).toISOString() : currentDate
   }));
   
-  // Combine static pages and blog pages
-  return [...staticPages, ...blogUrls];
+  // Generate corporate investigation URLs (dynamic - automatically includes all pages)
+  const corporateUrls: SitemapPage[] = corporateInvestigationPages.map(page => ({
+    url: page,
+    lastmod: currentDate
+  }));
+  
+  // Combine static pages, corporate investigation pages, and blog pages
+  return [...staticPages, ...corporateUrls, ...blogUrls];
 }
 
 export function generateSitemapXML(): string {
@@ -132,10 +146,12 @@ export function generateSitemapXML(): string {
 export function getSitemapStats() {
   const allPages = generateSitemapData();
   const blogPages = allPages.filter(page => page.url.startsWith('/blogs/'));
+  const corporatePages = allPages.filter(page => page.url.startsWith('/corporate-investigations'));
   
   return {
     totalPages: allPages.length,
     blogPages: blogPages.length,
-    staticPages: allPages.length - blogPages.length
+    corporatePages: corporatePages.length,
+    staticPages: allPages.length - blogPages.length - corporatePages.length
   };
 }
