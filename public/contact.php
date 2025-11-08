@@ -2,17 +2,25 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+// CONFIG WHEN RUNNING LOCAL
+// header("Access-Control-Allow-Origin: http://localhost:3000");
+// header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+// header("Access-Control-Allow-Headers: Content-Type");
+
 // Load PHPMailer classes
 require __DIR__ . '/phpmailer/src/Exception.php';
 require __DIR__ . '/phpmailer/src/PHPMailer.php';
 require __DIR__ . '/phpmailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = strip_tags(trim($_POST["name"] ?? ''));
-    $email = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
-    $phone = strip_tags(trim($_POST["phone"] ?? ''));
-    $subject = strip_tags(trim($_POST["subject"] ?? ''));
-    $message = htmlspecialchars(trim($_POST["message"] ?? ''), ENT_QUOTES, 'UTF-8');
+
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    $name = strip_tags(trim($data["name"] ?? ''));
+    $email = filter_var(trim($data["email"] ?? ''), FILTER_SANITIZE_EMAIL);
+    $phone = strip_tags(trim($data["phone"] ?? ''));
+    $subject = strip_tags(trim($data["subject"] ?? ''));
+    $message = htmlspecialchars(trim($data["message"] ?? ''), ENT_QUOTES, 'UTF-8');
 
     if (empty($name) || empty($email) || empty($phone) || empty($subject) || empty($message)) {
         http_response_code(400);
@@ -65,14 +73,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Port = 587;
 
         $mail->setFrom('it_support@venovox.com', 'Venovox Website');
-        $mail->addReplyTo($email, $name);
+//         $mail->addReplyTo($email, $name);
+        $mail->addAddress('it_support@venovox.com');
 
-        foreach ($toRecipients as $to) {
-            $mail->addAddress($to);
-        }
-        foreach ($bccRecipients as $bcc) {
-            $mail->addBCC($bcc);
-        }
+//         foreach ($toRecipients as $to) {
+//             $mail->addAddress($to);
+//         }
+//         foreach ($bccRecipients as $bcc) {
+//             $mail->addBCC($bcc);
+//         }
 
         // Email content
         $mail->isHTML(true);
