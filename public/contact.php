@@ -2,11 +2,6 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// CONFIG WHEN RUNNING LOCAL
-// header("Access-Control-Allow-Origin: http://localhost:3000");
-// header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-// header("Access-Control-Allow-Headers: Content-Type");
-
 // Load PHPMailer classes
 require __DIR__ . '/phpmailer/src/Exception.php';
 require __DIR__ . '/phpmailer/src/PHPMailer.php';
@@ -28,8 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    $toRecipients = ["it_support@venovox.com"];
-    $bccRecipients = ["troubleshoot@venovox.com"];
+    // Recipient lists
+    $toRecipients = ['no-reply@venovox.com']; // Main recipient
+    $bccRecipients = ['kelly@venovox.com', 'dato.devan@venovox.com']; // BCC recipients
 
     $email_subject = "New Contact Form Submission: " . $subject;
     $email_body = '
@@ -67,21 +63,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.office365.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'it_support@venovox.com';
-        $mail->Password = 'gbvtddtknzszdqfh';
+        $mail->Username = 'it_support@venovox.com'; // Authorized Outlook account
+        $mail->Password = 'gbvtddtknzszdqfh'; // App password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('it_support@venovox.com', 'Venovox Website');
-//         $mail->addReplyTo($email, $name);
-        $mail->addAddress('it_support@venovox.com');
+        // Use no-reply as the sender
+        $mail->setFrom('no-reply@venovox.com', 'Venovox Website');
+        $mail->addReplyTo($email, $name); // Reply goes to the sender
 
-//         foreach ($toRecipients as $to) {
-//             $mail->addAddress($to);
-//         }
-//         foreach ($bccRecipients as $bcc) {
-//             $mail->addBCC($bcc);
-//         }
+        // Add main recipient(s)
+        foreach ($toRecipients as $to) {
+            $mail->addAddress($to);
+        }
+
+        // Add BCC recipients
+        foreach ($bccRecipients as $bcc) {
+            $mail->addBCC($bcc);
+        }
 
         // Email content
         $mail->isHTML(true);
@@ -91,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Send
         $mail->send();
         echo "success";
+
     } catch (Exception $e) {
         http_response_code(500);
         echo "Error sending message: {$mail->ErrorInfo}";
