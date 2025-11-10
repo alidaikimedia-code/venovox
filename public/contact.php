@@ -8,11 +8,14 @@ require __DIR__ . '/phpmailer/src/PHPMailer.php';
 require __DIR__ . '/phpmailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = strip_tags(trim($_POST["name"] ?? ''));
-    $email = filter_var(trim($_POST["email"] ?? ''), FILTER_SANITIZE_EMAIL);
-    $phone = strip_tags(trim($_POST["phone"] ?? ''));
-    $subject = strip_tags(trim($_POST["subject"] ?? ''));
-    $message = htmlspecialchars(trim($_POST["message"] ?? ''), ENT_QUOTES, 'UTF-8');
+
+    $data = json_decode(file_get_contents("php://input"), true);
+
+    $name = strip_tags(trim($data["name"] ?? ''));
+    $email = filter_var(trim($data["email"] ?? ''), FILTER_SANITIZE_EMAIL);
+    $phone = strip_tags(trim($data["phone"] ?? ''));
+    $subject = strip_tags(trim($data["subject"] ?? ''));
+    $message = htmlspecialchars(trim($data["message"] ?? ''), ENT_QUOTES, 'UTF-8');
 
     if (empty($name) || empty($email) || empty($phone) || empty($subject) || empty($message)) {
         http_response_code(400);
@@ -20,8 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    $toRecipients = ["it_support@venovox.com"];
-    $bccRecipients = ["troubleshoot@venovox.com"];
+    // Recipient lists
+    $toRecipients = ['no-reply@venovox.com']; // Main recipient
+    $bccRecipients = ['kelly@venovox.com', 'dato.devan@venovox.com']; // BCC recipients
 
     $email_subject = "New Contact Form Submission: " . $subject;
     $email_body = '
@@ -59,17 +63,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.office365.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'it_support@venovox.com';
-        $mail->Password = 'gbvtddtknzszdqfh';
+        $mail->Username = 'it_support@venovox.com'; // Authorized Outlook account
+        $mail->Password = 'gbvtddtknzszdqfh'; // App password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('it_support@venovox.com', 'Venovox Website');
-        $mail->addReplyTo($email, $name);
+        // Use no-reply as the sender
+        $mail->setFrom('no-reply@venovox.com', 'Venovox Website');
+        $mail->addReplyTo($email, $name); // Reply goes to the sender
 
+        // Add main recipient(s)
         foreach ($toRecipients as $to) {
             $mail->addAddress($to);
         }
+
+        // Add BCC recipients
         foreach ($bccRecipients as $bcc) {
             $mail->addBCC($bcc);
         }
@@ -82,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Send
         $mail->send();
         echo "success";
+
     } catch (Exception $e) {
         http_response_code(500);
         echo "Error sending message: {$mail->ErrorInfo}";
