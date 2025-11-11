@@ -39,6 +39,7 @@ const navData = {
       ]
     },
     { name: "Corporate Investigations",path: "/corporate-investigations" },
+    { name: "Case Studies", path: "/case-studies" },
     { name: "Publication", path: "/blogs/" },
     { name: "Contact Us", path: "/my-en/contact-us" },
     { name: "Career", path: "/my-en/Career" },
@@ -110,7 +111,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
-            <nav className="flex space-x-6 items-center">
+            <nav className="flex space-x-2 items-center">
               {navData.menuItems.map((item) => {
                 const active = isActive(item.path);
                 const hasSubItems = item.subItems && item.subItems.length > 0;
