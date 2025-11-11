@@ -14,6 +14,9 @@ const BASE_URL = "https://venovox.com";
 export const metadata: Metadata = {
     title: "Regulatory and Compliance Investigations | Venovox",
     description: "Ensure your business meets global standards with Venovox regulatory and compliance investigations, helping you detect breaches and maintain corporate transparency.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations/regulatory-and-compliance-investigations"
+    }
 };
 
 export default function RegulatoryAndComplianceInvestigationsPage() {

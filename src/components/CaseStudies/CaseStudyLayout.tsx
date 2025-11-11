@@ -63,7 +63,17 @@ export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
                                 transition={{ duration: 0.6 }}
                                 className="text-5xl lg:text-6xl font-bold leading-tight"
                             >
-                                <span className="text-red-600">{data.title}</span>
+                                {(() => {
+                                    const midPoint = Math.ceil(data.title.length / 2);
+                                    const firstHalf = data.title.substring(0, midPoint);
+                                    const secondHalf = data.title.substring(midPoint);
+                                    return (
+                                        <>
+                                            <span className="text-white">{firstHalf}</span>
+                                            <span className="text-red-600">{secondHalf}</span>
+                                        </>
+                                    );
+                                })()}
                             </motion.h1>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}

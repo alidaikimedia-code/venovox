@@ -3,7 +3,7 @@
 import Hero from "../RegulatoryAndComplianceInvestigations/Hero";
 import Introduction from "../RegulatoryAndComplianceInvestigations/Introduction";
 import WhenToAct from "../RegulatoryAndComplianceInvestigations/WhenToAct";
-import Cards from "../RegulatoryAndComplianceInvestigations/Cards";
+import CardsSection from "@/components/common/cards-section";
 import Faqs from "../RegulatoryAndComplianceInvestigations/Faqs";
 import Cta from "../RegulatoryAndComplianceInvestigations/Cta";
 import WhenToActSection from "@/components/common/act";
@@ -48,7 +48,7 @@ export default function BrandAndIpInvestigations() {
         highlightBoxText={whenToActData.highlightBoxText}
       />
 
-      <Cards sections={cardsSections} />
+      <CardsSection sections={cardsSections} />
 
       <WhenToActSection
         title={legalEnforcementSupportData.title}

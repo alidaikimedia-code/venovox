@@ -15,7 +15,10 @@ const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
     title: "Venovox – Corporate Investigations and Risk Solutions",
-    description: "Venovox offers global corporate investigation services to detect fraud, ensure compliance, and protect your organization’s assets through professional due diligence.",
+    description: "Venovox offers global corporate investigation services to detect fraud, ensure compliance, and protect your organization's assets through professional due diligence.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations"
+    }
 };
 
 export default function CorporateInvestigationsPage() {

@@ -3,7 +3,7 @@
 import Hero from "../RegulatoryAndComplianceInvestigations/Hero";
 import Introduction from "../RegulatoryAndComplianceInvestigations/Introduction";
 import WhenToAct from "../RegulatoryAndComplianceInvestigations/WhenToAct";
-import Cards from "../RegulatoryAndComplianceInvestigations/Cards";
+import CardsSection from "@/components/common/cards-section";
 import Faqs from "../RegulatoryAndComplianceInvestigations/Faqs";
 import Cta from "../RegulatoryAndComplianceInvestigations/Cta";
 import WhenToActSection from "@/components/common/act";
@@ -56,7 +56,7 @@ export default function FraudRiskManagementAndPrevention() {
       />
 
       {/* Common fraud risks */}
-      <Cards sections={[cardsSections[0]]} />
+      <CardsSection sections={[cardsSections[0]]} />
 
       {/* Our approach to fraud risk management */}
       <section className="py-12 bg-white">
@@ -113,7 +113,7 @@ export default function FraudRiskManagementAndPrevention() {
 
       {/* Governance and reporting */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -162,7 +162,7 @@ export default function FraudRiskManagementAndPrevention() {
       />
 
       {/* Outcomes and Why Venovox */}
-      <Cards sections={cardsSections.slice(1)} />
+      <CardsSection sections={cardsSections.slice(1)} />
 
       {/* FAQs Section */}
       <Faqs faqs={faqsData} />

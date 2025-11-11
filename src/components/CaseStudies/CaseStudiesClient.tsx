@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { MailIcon } from "lucide-react";
 import { FAQSection } from "../common/faq-section";
 import { ActionSection } from "../common/action";
+import { CaseStudyCard } from "../common/case-study-card";
 
-interface CaseStudyCard {
+interface CaseStudyCardData {
   title: string;
   description: string;
   industry: string;
@@ -15,7 +15,7 @@ interface CaseStudyCard {
 }
 
 export default function CaseStudiesClient() {
-  const caseStudies: CaseStudyCard[] = [
+  const caseStudies: CaseStudyCardData[] = [
     {
       title: "International School in Malaysia — Protecting Student Safety",
       description: "A pre-employment screening flagged a sexual‑offense record for a security guard candidate, enabling the school to protect students and uphold its standards.",
@@ -101,7 +101,7 @@ export default function CaseStudiesClient() {
   ];
 
   return (
-    <div className="px-6">
+    <div>
       {/* Hero Section */}
       <section className="relative w-full py-12">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
@@ -153,8 +153,8 @@ export default function CaseStudiesClient() {
       </section>
 
       {/* Why Venovox Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
+      <section className="py-12 bg-gray-50 px-6">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -192,62 +192,15 @@ export default function CaseStudiesClient() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.map((caseStudy, index) => (
-                <motion.div
+                <CaseStudyCard
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="h-full"
-                >
-                  <motion.div
-                    className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group hover:-translate-y-1 h-full flex flex-col"
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={caseStudy.imageUrl}
-                        alt={caseStudy.title}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="absolute top-4 left-4">
-                        <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full backdrop-blur-sm">
-                          {caseStudy.industry}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-red-600 transition-colors duration-300">
-                        {caseStudy.title}
-                      </h3>
-                      <p className="text-gray-600 leading-relaxed text-justify mb-4 flex-grow">
-                        {caseStudy.description}
-                      </p>
-                      <Link
-                        href={caseStudy.url}
-                        className="text-red-600 hover:text-red-700 font-medium mt-4 inline-flex items-center group/link"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        Learn more
-                        <svg
-                          className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                  </motion.div>
-                </motion.div>
+                  title={caseStudy.title}
+                  description={caseStudy.description}
+                  industry={caseStudy.industry}
+                  url={caseStudy.url}
+                  imageUrl={caseStudy.imageUrl}
+                  index={index}
+                />
               ))}
             </div>
           </motion.div>

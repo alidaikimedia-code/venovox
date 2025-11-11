@@ -3,7 +3,7 @@
 import Hero from "../RegulatoryAndComplianceInvestigations/Hero";
 import Introduction from "../RegulatoryAndComplianceInvestigations/Introduction";
 import WhenToAct from "../RegulatoryAndComplianceInvestigations/WhenToAct";
-import Cards from "../RegulatoryAndComplianceInvestigations/Cards";
+import CardsSection from "@/components/common/cards-section";
 import InvestigationMethod from "../RegulatoryAndComplianceInvestigations/InvestigationMethod";
 import Faqs from "../RegulatoryAndComplianceInvestigations/Faqs";
 import Cta from "../RegulatoryAndComplianceInvestigations/Cta";
@@ -54,11 +54,11 @@ export default function WorkplaceMisconductInvestigations() {
       />
 
       {/* Types of Cases */}
-      <Cards sections={[cardsSections[0]]} />
+      <CardsSection sections={[cardsSections[0]]} />
 
       {/* Whistleblowing and Intake */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export default function WorkplaceMisconductInvestigations() {
                   {cardsSections[1].subtitle}
                 </p>
               </div> */}
-              <Cards sections={[cardsSections[1]]} />
+              <CardsSection sections={[cardsSections[1]]} />
               <p className="text-lg text-gray-700 text-center leading-relaxed mt-6">
                 {whistleblowingIntakeNote}
               </p>
@@ -92,11 +92,11 @@ export default function WorkplaceMisconductInvestigations() {
       />
 
       {/* Legal and HR Collaboration */}
-      <Cards sections={[cardsSections[2]]} />
+      <CardsSection sections={[cardsSections[2]]} />
 
       {/* Care for People */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ export default function WorkplaceMisconductInvestigations() {
                   {careForPeopleData.description}
                 </p>
               </div> */}
-              <Cards sections={[cardsSections[3]]} />
+              <CardsSection sections={[cardsSections[3]]} />
               <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center max-w-2xl mx-auto">
                 {careForPeopleData.footerText}
               </p>
@@ -123,7 +123,7 @@ export default function WorkplaceMisconductInvestigations() {
 
       {/* Digital Evidence */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -139,7 +139,7 @@ export default function WorkplaceMisconductInvestigations() {
                   {digitalEvidenceData.description}
                 </p>
               </div> */}
-              <Cards sections={[cardsSections[4]]} />
+              <CardsSection sections={[cardsSections[4]]} />
               <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center max-w-2xl mx-auto">
                 {digitalEvidenceData.footerText}
               </p>
@@ -149,11 +149,11 @@ export default function WorkplaceMisconductInvestigations() {
       </section>
 
       {/* Deliverables */}
-      <Cards sections={[cardsSections[5]]} />
+      <CardsSection sections={[cardsSections[5]]} />
 
       {/* Outcomes */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export default function WorkplaceMisconductInvestigations() {
 
       {/* Why Choose Us */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto ">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -220,7 +220,7 @@ export default function WorkplaceMisconductInvestigations() {
       <Faqs faqs={faqsData} />
 
       {/* Related Services */}
-      <Cards sections={[cardsSections[6]]} />
+      <CardsSection sections={[cardsSections[6]]} />
 
       {/* CTA Section */}
       <Cta actions={ctaData} />

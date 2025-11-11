@@ -1,5 +1,5 @@
 import React from 'react';
-// import Image from 'next/image';
+import { ImageCard } from '../common/image-card';
 
 const cardData = [
     {
@@ -34,27 +34,12 @@ const GrowWithUsSection = () => {
 
                 <div className="grid md:grid-cols-2 gap-10">
                     {cardData.map((card, idx) => (
-                        <div key={idx} className="space-y-0">
-                            {/* Image */}
-                            <div className="relative overflow-hidden h-[296px]">
-                                <img
-                                    src={card.image}
-                                    alt={card.title}
-                                    className="absolute inset-0 w-full h-full object-cover"
-                                />
-                            </div>
-
-                            {/* Red title strip - immediately below image */}
-                            <div className="bg-red-600 text-white text-center py-2 font-semibold">
-                                {card.title}
-                            </div>
-
-                            {/* Description */}
-                            <p className="text-gray-600 text-justify [text-justify:inter-word] hyphens-none mt-4">
-
-                                {card.description}
-                            </p>
-                        </div>
+                        <ImageCard
+                            key={idx}
+                            image={card.image}
+                            title={card.title}
+                            description={card.description}
+                        />
                     ))}
                 </div>
             </div>

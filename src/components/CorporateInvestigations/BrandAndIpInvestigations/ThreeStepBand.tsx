@@ -20,7 +20,7 @@ export default function ThreeStepBand({
 }: ThreeStepBandProps) {
   return (
     <section className="py-12 bg-white border-b border-gray-200">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;

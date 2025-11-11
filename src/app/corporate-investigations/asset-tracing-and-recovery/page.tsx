@@ -14,6 +14,9 @@ const BASE_URL = "https://venovox.com";
 export const metadata: Metadata = {
     title: "Asset Tracing and Recovery Investigations | Venovox",
     description: "Venovox helps trace, recover, and protect assets lost to fraud or misappropriation through expert investigations that enhance financial security and accountability.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations/asset-tracing-and-recovery"
+    }
 };
 
 export default function AssetTracingAndRecoveryPage() {

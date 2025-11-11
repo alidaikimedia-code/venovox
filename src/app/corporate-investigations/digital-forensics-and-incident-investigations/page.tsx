@@ -13,7 +13,10 @@ const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
     title: "Digital Forensics and Incident Investigations | Venovox",
-    description: "Venovox delivers digital forensics and cyber incident investigations to uncover evidence, identify threats, and support your organization’s digital resilience.",
+    description: "Venovox delivers digital forensics and cyber incident investigations to uncover evidence, identify threats, and support your organization's digital resilience.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations/digital-forensics-and-incident-investigations"
+    }
 };
 
 export default function DigitalForensicsAndIncidentInvestigationsPage() {

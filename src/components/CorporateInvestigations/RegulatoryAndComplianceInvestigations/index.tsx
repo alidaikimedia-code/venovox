@@ -3,7 +3,7 @@
 import Hero from "./Hero";
 import Introduction from "./Introduction";
 import WhenToAct from "./WhenToAct";
-import Cards from "./Cards";
+import CardsSection from "@/components/common/cards-section";
 import InvestigationMethod from "./InvestigationMethod";
 import Faqs from "./Faqs";
 import Cta from "./Cta";
@@ -41,7 +41,7 @@ export default function RegulatoryAndComplianceInvestigations() {
       />
 
       
-      <Cards sections={cardsSections} />
+      <CardsSection sections={cardsSections} />
 
 
       <InvestigationMethod

@@ -14,6 +14,9 @@ const BASE_URL = "https://venovox.com";
 export const metadata: Metadata = {
     title: "Fraud Risk Management and Prevention Services | Venovox",
     description: "Protect your business with Venovox fraud risk management services—detect, prevent, and respond to financial crimes with effective investigative strategies.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations/fraud-risk-management-and-prevention"
+    }
 };
 
 export default function FraudRiskManagementAndPreventionPage() {
