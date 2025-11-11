@@ -2,8 +2,8 @@
 import { motion } from 'framer-motion';
 // import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
-import RecognizedBy from "@/components/Home/recognitions-section";
-import HeroSection from "@/components/Home/hero-section";
+import RecognizedBy from "@/components/home/recognitions-section";
+import HeroSection from "@/components/home/hero-section";
 import Head from "next/head";
 
 export default function BackgroundScreeningClient() {
