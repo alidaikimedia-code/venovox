@@ -321,12 +321,11 @@ export default function CorporateInvestigations() {
   ];
 
   return (
-    <div className=" px-6 ">
-
+    <div className="container mx-auto px-6">
       
       {/* Hero Section */}
       <section className="relative w-full  py-12">
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
+      <div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -386,31 +385,23 @@ export default function CorporateInvestigations() {
 
       {/* Introduction Section */}
       <section className="">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-             
-            
-            </motion.div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+        </motion.div>
       </section>
 
       {/* Scope of Work Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center max-w-3xl mx-auto mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Scope of work
@@ -434,21 +425,17 @@ export default function CorporateInvestigations() {
                   />
                 ))}
               </div>
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Industries We Serve Section */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Industries we serve
@@ -470,24 +457,17 @@ export default function CorporateInvestigations() {
                   />
                 ))}
               </div>
-
-
-             
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* How We Work Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   How we work
@@ -508,23 +488,18 @@ export default function CorporateInvestigations() {
                     />
                   ))}
                 </div>
-
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
 
       {/* Legal and Regulatory Interface Section */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">
                   Legal and regulatory interface
@@ -547,21 +522,17 @@ export default function CorporateInvestigations() {
                     />
                   ))}
                 </div>
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Outcomes Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-red-600">
                   Outcomes you can expect
@@ -578,21 +549,17 @@ export default function CorporateInvestigations() {
                     />
                   ))}
                 </div>
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Why Choose Us Section */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center mb-8">
 
                 <h2 className="text-3xl md:text-4xl font-bold  text-red-600">
@@ -611,9 +578,7 @@ export default function CorporateInvestigations() {
                     />
                   ))}
                 </div>
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* When to Act Section */}
@@ -636,14 +601,12 @@ export default function CorporateInvestigations() {
 
       {/* Related Services Section */}
       <section className=" py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className=" mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
               <div className="text-center mb-8">
 
                 <h2 className="text-3xl md:text-4xl font-bold  text-red-600">
@@ -663,15 +626,13 @@ export default function CorporateInvestigations() {
                     />
                   ))}
                 </div>
-            </motion.div>
-          </div>
-        </div>
+        </motion.div>
       </section>
 
     
 
       
-      <div className="container mx-auto  space-y-24 relative">
+      <div className="space-y-24 relative">
       {actionSection.map((action, index) => (
     <ActionSection
       key={index}

@@ -14,6 +14,9 @@ const BASE_URL = "https://venovox.com";
 export const metadata: Metadata = {
     title: "Workplace Misconduct and Ethics Investigations | Venovox",
     description: "Venovox conducts confidential workplace misconduct investigations to address ethical breaches, harassment, and compliance violations with precision and care.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations/workplace-misconduct-investigations"
+    }
 };
 
 export default function WorkplaceMisconductInvestigationsPage() {

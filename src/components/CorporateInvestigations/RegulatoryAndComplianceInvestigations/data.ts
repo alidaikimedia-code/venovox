@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import type { FAQ } from "./Faqs";
 import type { ActionItem } from "./Cta";
-import type { ServiceItem } from "./Cards";
+import type { ServiceItem } from "@/components/common/cards-section";
 import type { MethodStep } from "./InvestigationMethod";
 
 export const heroData = {

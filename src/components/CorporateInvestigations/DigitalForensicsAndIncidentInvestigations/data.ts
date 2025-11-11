@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import type { FAQ } from "../RegulatoryAndComplianceInvestigations/Faqs";
 import type { ActionItem } from "../RegulatoryAndComplianceInvestigations/Cta";
-import type { ServiceItem } from "../RegulatoryAndComplianceInvestigations/Cards";
+import type { ServiceItem } from "@/components/common/cards-section";
 import type { MethodStep } from "../RegulatoryAndComplianceInvestigations/InvestigationMethod";
 
 export const heroData = {

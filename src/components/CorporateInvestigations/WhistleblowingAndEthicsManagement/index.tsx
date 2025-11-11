@@ -2,7 +2,7 @@
 
 import Hero from "../RegulatoryAndComplianceInvestigations/Hero";
 import Introduction from "../RegulatoryAndComplianceInvestigations/Introduction";
-import Cards from "../RegulatoryAndComplianceInvestigations/Cards";
+import CardsSection from "@/components/common/cards-section";
 import Faqs from "../RegulatoryAndComplianceInvestigations/Faqs";
 import Cta from "../RegulatoryAndComplianceInvestigations/Cta";
 import WhenToActSection from "@/components/common/act";
@@ -44,14 +44,14 @@ export default function WhistleblowingAndEthicsManagement() {
       />
 
       {/* Core program elements */}
-      <Cards sections={[cardsSections[0]]} />
+      <CardsSection sections={[cardsSections[0]]} />
 
       {/* Reporting to leaders and the board */}
-      <Cards sections={[cardsSections[1]]} />
+      <CardsSection sections={[cardsSections[1]]} />
 
       {/* Legal and HR collaboration */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ export default function WhistleblowingAndEthicsManagement() {
       />
 
       {/* Outcomes and Why Venovox */}
-      <Cards sections={cardsSections.slice(2)} />
+      <CardsSection sections={cardsSections.slice(2)} />
 
       {/* FAQs Section */}
       <Faqs faqs={faqsData} />

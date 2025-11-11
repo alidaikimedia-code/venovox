@@ -3,7 +3,7 @@
 import Hero from "../RegulatoryAndComplianceInvestigations/Hero";
 import Introduction from "../RegulatoryAndComplianceInvestigations/Introduction";
 import WhenToAct from "../RegulatoryAndComplianceInvestigations/WhenToAct";
-import Cards from "../RegulatoryAndComplianceInvestigations/Cards";
+import CardsSection from "@/components/common/cards-section";
 import InvestigationMethod from "../RegulatoryAndComplianceInvestigations/InvestigationMethod";
 import Faqs from "../RegulatoryAndComplianceInvestigations/Faqs";
 import Cta from "../RegulatoryAndComplianceInvestigations/Cta";
@@ -46,11 +46,11 @@ export default function DigitalForensicsAndIncidentInvestigations() {
       />
 
       {/* Incident Types Section */}
-      <Cards sections={[cardsSections[0]]} />
+      <CardsSection sections={[cardsSections[0]]} />
 
       {/* Our Investigation and Forensics Process Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -118,7 +118,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
 
       {/* Legal, Privacy, and Regulator Alignment */}
       <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
 
       {/* Working with IT and Security */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -199,7 +199,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
       />
 
       {/* Outcomes and Why Venovox */}
-      <Cards sections={cardsSections.slice(1)} />
+      <CardsSection sections={cardsSections.slice(1)} />
 
       {/* FAQs Section */}
       <Faqs faqs={faqsData} />

@@ -12,7 +12,7 @@ export interface ServiceItem {
   link?: string;
 }
 
-interface CardsProps {
+export interface CardsSectionProps {
   sections: {
     title: string;
     subtitle?: string;
@@ -24,7 +24,7 @@ interface CardsProps {
   }[];
 }
 
-export default function Cards({ sections }: CardsProps) {
+export default function CardsSection({ sections }: CardsSectionProps) {
   return (
     <>
       {sections.map((section, sectionIndex) => (

@@ -11,8 +11,8 @@ import {
 
 export default function AboutUs() {
   return (
-    <div className="bg-white text-gray-900 px-6 py-24 overflow-hidden">
-      <div className="container mx-auto space-y-24 relative ">
+    <div className="bg-white text-gray-900 py-24 overflow-hidden">
+      <div className="container mx-auto px-6 space-y-24 relative ">
         {/* Heading */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20 mt-20">
           <motion.h2
@@ -27,18 +27,18 @@ export default function AboutUs() {
 
           <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto mt-4 rounded-full" />
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
           >
-            <h1 className="text-base">
+            <p className="text-base">
               Empowering businesses with streamlined, trustworthy hiring <br /> and advisory services.
-            </h1>
+            </p>
 
-          </motion.p>
+          </motion.div>
         </div>
 
 

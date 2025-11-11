@@ -14,6 +14,9 @@ const BASE_URL = "https://venovox.com";
 export const metadata: Metadata = {
     title: "Whistleblowing and Ethics Management Services | Venovox",
     description: "Venovox empowers organizations with whistleblowing and ethics management systems to report misconduct, protect employees, and promote transparency.",
+    alternates: {
+        canonical: "https://venovox.com/corporate-investigations/whistleblowing-and-ethics-management"
+    }
 };
 
 export default function WhistleblowingAndEthicsManagementPage() {

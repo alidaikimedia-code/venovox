@@ -2,7 +2,7 @@
 
 import Hero from "../RegulatoryAndComplianceInvestigations/Hero";
 import Introduction from "../RegulatoryAndComplianceInvestigations/Introduction";
-import Cards from "../RegulatoryAndComplianceInvestigations/Cards";
+import CardsSection from "@/components/common/cards-section";
 import Faqs from "../RegulatoryAndComplianceInvestigations/Faqs";
 import Cta from "../RegulatoryAndComplianceInvestigations/Cta";
 import WhenToActSection from "@/components/common/act";
@@ -35,7 +35,7 @@ export default function AssetTracingAndRecovery() {
         description={whenToStartData.description}
       />
 
-      <Cards sections={cardsSections} />
+      <CardsSection sections={cardsSections} />
 
       <SimpleSection
         title={crossBorderData.title}
@@ -43,7 +43,7 @@ export default function AssetTracingAndRecovery() {
       />
 
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">

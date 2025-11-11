@@ -95,7 +95,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
-      <div className="container mx-auto px-6">
+      <div className="max-w-[1800px] mx-auto px-6">
         <div className="flex justify-between items-center h-[100px]">
           {/* Left Logo */}
           <Link href="/" className="flex items-center">
