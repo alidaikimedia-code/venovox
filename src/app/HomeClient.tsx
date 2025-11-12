@@ -6,8 +6,10 @@ import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
 
+
 export default function HomeClient() {
   return (<>
+ 
     <main className="bg-white text-black">
       {/* Hero Section */}
       <HeroSection />

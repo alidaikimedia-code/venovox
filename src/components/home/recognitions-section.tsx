@@ -17,7 +17,7 @@ const recognizedByLogos = [
 const RecognizedBy = () => {
   return (
     <section className="w-full bg-gradient-to-br from-slate-50 via-white to-gray-50 py-20 lg:py-28 relative overflow-hidden">
-      <div className="container mx-auto">
+      <div className="max-w-[1800px] mx-auto">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -42,7 +42,23 @@ const RecognizedBy = () => {
           </motion.p>
         </div>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden relative">
+          {/* Left fade - natural gradient */}
+          <div 
+            className="absolute left-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to right, rgb(248 250 252), transparent)',
+            }}
+          />
+          
+          {/* Right fade - natural gradient */}
+          <div 
+            className="absolute right-0 top-0 bottom-0 w-32 z-10 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to left, rgb(249 250 251), transparent)',
+            }}
+          />
+          
           <motion.div
             className="flex gap-16 items-center"
             animate={{ x: ['0%', '-100%'] }}
