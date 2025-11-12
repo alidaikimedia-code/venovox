@@ -344,7 +344,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
                         {/* Call to action */}
                         <motion.div
-                            className="mt-16 bg-gradient-to-r from-gray-900 to-black text-white p-8 shadow-lg"
+                            className="mt-16 bg-gradient-to-r from-red-900 to-black text-white py-15.5 p-8 shadow-lg"
                             variants={scaleIn}
                         >
                             <div className="flex flex-col md:flex-row items-center justify-between">
@@ -359,7 +359,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                                 </div>
                                 <Link
                                     href="/my-en/contact-us"
-                                    className="px-8 py-4 bg-red-600 text-white text-center font-medium hover:bg-red-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                    className="px-8 py-4 bg-red-600 text-white text-center font-medium hover:bg-red-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                 >
                                     Request a Consultation
                                 </Link>
@@ -404,8 +404,8 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
                             {/* Related services */}
                             {service.internalLinks && service.internalLinks.length > 0 && (
-                                <div className="bg-white border border-gray-200 shadow-sm">
-                                    <div className="bg-gray-900 text-white p-4">
+                                <div className="bg-gray-50 border border-gray-200 shadow-sm">
+                                    <div className="bg-red-600 text-white p-4">
                                         <h3 className="text-lg font-bold">Related Services</h3>
                                     </div>
                                     <div className="p-6">
@@ -429,7 +429,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                             )}
 
                             {/* Contact box */}
-                            <div className="bg-gradient-to-br from-gray-900 to-black text-white shadow-lg">
+                            <div className="bg-gradient-to-br from-red-900 to-black text-white shadow-lg">
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold mb-4">
                                         Need Expert Assistance?

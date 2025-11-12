@@ -60,7 +60,7 @@ export default function AboutUs() {
               </h2>
             </div>
             <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-1 text-lg">
-              From its origins with a small-scale operation, VENOVOX has evolved into a cutting-edge service provider in the talent management and risk intelligence space
+              From its origins with a small-scale operation, VENOVOX has evolved into a cutting-edge service provider in the talent management and risk intelligence space.
             </p>
             <p className="text-justify [text-justify:inter-word] hyphens-none max-w-[70ch] text-gray-600 leading-relaxed mb-1 text-lg">
               Our successful journey has been defined by an unwavering commitment to excellence, innovation, and customer satisfaction. Today, we deliver comprehensive, end-to-end business solutions that empower organisations to compete and thrive in an increasingly dynamic market.

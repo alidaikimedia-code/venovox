@@ -58,22 +58,29 @@ export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
                         {/* Right Side - Text */}
                         <div className="space-y-8 order-1 lg:order-2">
                             <motion.h1
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6 }}
-                                className="text-5xl lg:text-6xl font-bold leading-tight"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-5xl lg:text-6xl font-bold leading-tight"
                             >
-                                {(() => {
-                                    const midPoint = Math.ceil(data.title.length / 2);
-                                    const firstHalf = data.title.substring(0, midPoint);
-                                    const secondHalf = data.title.substring(midPoint);
-                                    return (
-                                        <>
-                                            <span className="text-white">{firstHalf}</span>
-                                            <span className="text-red-600">{secondHalf}</span>
-                                        </>
-                                    );
-                                })()}
+                            {(() => {
+                                const title = data.title.trim();
+                                const words = title.split(" ");
+
+                                // Decide how many words should be in the red part
+                                const redWordCount = 5;
+
+                                const splitIndex = Math.max(words.length - redWordCount, 0);
+                                const firstHalf = words.slice(0, splitIndex).join(" ");
+                                const secondHalf = words.slice(splitIndex).join(" ");
+
+                                return (
+                                <>
+                                    <span className="text-white">{firstHalf} </span>
+                                    <span className="text-red-600">{secondHalf}</span>
+                                </>
+                                );
+                            })()}
                             </motion.h1>
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
