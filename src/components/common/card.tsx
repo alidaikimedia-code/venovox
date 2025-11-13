@@ -28,7 +28,7 @@ export function ServiceCard({
 
   return (
     <motion.div
-      className={`bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow ${className}`}
+      className={`bg-white p-6 rounded-lg shadow-sm hover:text-red-600 transition-colors duration-300 ${className}`}
       whileHover={{ y: -5 }}
     >
       {imageUrl && (
@@ -47,7 +47,7 @@ export function ServiceCard({
             <Icon className="text-white w-7 h-7" />
           </div>
         )}
-        <h3 className="text-xl font-semibold text-center ">{title}</h3>
+        <h3 className="text-xl font-bold text-center ">{title}</h3>
       </div>
 
       <p className="text-gray-700 text-justify leading-relaxed">
