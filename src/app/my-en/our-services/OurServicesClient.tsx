@@ -277,7 +277,7 @@ export default function OurServicesClient() {
                             </p>
                         </div>
                         <Link
-                            href="/my-en/contact"
+                            href="/my-en/contact-us" // fixed broken link
                             className="px-8 py-4 bg-white text-red-600 font-medium hover:bg-white transition-colors whitespace-nowrap"
                         >
                             Schedule a Consultation
