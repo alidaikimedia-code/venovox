@@ -1,17 +1,10 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Globe, Target, Check, Search, FileSearch, Briefcase, DollarSign, Users, Shield, Lock, LucideIcon, Building2, Award, Database, Clock, FileText, TrendingUp, BookOpen, MapPin, ClipboardCheck, Zap, Scale, Eye, Mail, Phone } from 'lucide-react';
-import RecognizedBy from "@/components/Home/recognitions-section";
-import HeroSection from "@/components/Home/hero-section";
-import { FAQSection } from "@/components/common/faq-section";
-import { FAQSchema } from "@/components/Schema";
-import ImageTextSection from "@/components/Home/image-text-section";
-import GridCardSection from "@/components/Home/grid-card-section";
-import NumberedStepsSection from "@/components/Home/numbered-steps-section";
-import ServiceCardsSection from "@/components/Home/service-cards-section";
-import SectionWithHeader from "@/components/Home/section-with-header";
-import SingleCardSection from "@/components/Home/single-card-section";
+// import Image from 'next/image';
+import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
+import RecognizedBy from "@/components/home/recognitions-section";
+import HeroSection from "@/components/home/hero-section";
 
 interface ServiceItem {
   title: string;
