@@ -2,7 +2,6 @@
 
 import { type Key, useEffect, useState } from "react";
 import Link from "next/link";
-// import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 interface InternalLink {
@@ -161,7 +160,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             .toUpperCase()}`;
     };
 
-    // Function to create anchor ID from text
     const createAnchorId = (text: string) => {
         return text
             .toLowerCase()
@@ -191,11 +189,9 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 );
             }
 
-            // Check for any emoji at the start and replace with bullet point
             if (/^[🔍🛡💼⚖📊🔄🏢📉💰🌍🔒📦🛒📁🔹✔⚖️🎙📝🛠⚖️📋🏛📜⚖🔎]/u.test(item.trim())) {
                 const cleanItem = item.trim();
                 const isIndented = item.startsWith("    ");
-                // Remove the emoji and get the rest of the text
                 const textWithoutEmoji = cleanItem.replace(/^[\u{1F000}-\u{1F6FF}][\u{2000}-\u{206F}]?/u, '').trim();
                 return (
                     <div key={index} className="flex items-center gap-4 my-6">
@@ -210,7 +206,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 );
             }
 
-            // Check if this is an h2 heading from the h2 array
             if (service.h2?.includes(item.trim())) {
                 const anchorId = createAnchorId(item.trim());
                 return (
@@ -224,7 +219,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 );
             }
 
-            // Check if this is an h3 heading from the h3 array
             if (service.h3?.includes(item.trim())) {
                 const anchorId = createAnchorId(item.trim());
                 return (
@@ -257,14 +251,11 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             exit="exit"
             variants={pageTransition}
         >
-            {/* Hero section */}
             <div className="relative mt-20 w-full h-[45vh] overflow-hidden">
                 <img
                     src={getServiceImage(service.id) || "/placeholder.svg"}
                     alt={service.title}
-                    // fill
                     style={{ objectFit: "cover" }}
-                    // priority
                     className="brightness-50"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
@@ -292,7 +283,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 </div>
             </div>
 
-            {/* Breadcrumb navigation */}
             <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
                 <div className="container mx-auto ">
                     <div className="flex items-center text-sm text-gray-600">
@@ -317,14 +307,12 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-                    {/* Main content column */}
                     <motion.div
                         className="lg:col-span-2"
                         variants={staggerContainer}
                         initial="hidden"
                         animate="visible"
                     >
-                        {/* Overview Section */}
                         <motion.div variants={fadeInUp} className="mb-12">
                             <div className="flex items-center mb-6">
                                 <div className="w-1 h-8 bg-red-600 mr-4"></div>
@@ -332,7 +320,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                             </div>
                         </motion.div>
 
-                        {/* Services Sections */}
                         {service.content && (
                             <motion.div
                                 variants={fadeInUp}
@@ -342,7 +329,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                             </motion.div>
                         )}
 
-                        {/* Call to action */}
                         <motion.div
                             className="mt-16 bg-gradient-to-r from-gray-900 to-black text-white p-8 shadow-lg"
                             variants={scaleIn}
@@ -367,7 +353,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                         </motion.div>
                     </motion.div>
 
-                    {/* Sidebar column */}
                     <motion.div
                         className="lg:col-span-1"
                         initial={{ opacity: 0, x: 30 }}
@@ -375,7 +360,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                         transition={{ delay: 0.4, duration: 0.8 }}
                     >
                         <div className="sticky top-[170px] space-y-8">
-                            {/* Service quick info */}
                             <div className="bg-gray-50 border border-gray-200 shadow-sm">
                                 <div className="bg-red-600 text-white p-4">
                                     <h3 className="text-lg font-bold">Service Highlights</h3>
@@ -402,7 +386,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                                 </div>
                             </div>
 
-                            {/* Related services */}
                             {service.internalLinks && service.internalLinks.length > 0 && (
                                 <div className="bg-white border border-gray-200 shadow-sm">
                                     <div className="bg-gray-900 text-white p-4">
@@ -428,7 +411,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                                 </div>
                             )}
 
-                            {/* Contact box */}
                             <div className="bg-gradient-to-br from-gray-900 to-black text-white shadow-lg">
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold mb-4">

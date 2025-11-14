@@ -25,31 +25,24 @@ import {
 export default function WhistleblowingAndEthicsManagement() {
   return (
     <div className="bg-white px-6 text-gray-900">
-      {/* Hero Section */}
       <Hero mainText={heroData.mainText} paragraphs={heroData.paragraphs} />
 
-      {/* Three Step Band */}
       <ThreeStepBand steps={threeStepBandData} />
 
-      {/* Introduction Section */}
       <Introduction
         title={introductionData.title}
         description={introductionData.description}
       />
 
-      {/* Why a strong speak up program matters */}
       <SimpleSection
         title={whySpeakUpMattersData.title}
         description={whySpeakUpMattersData.description}
       />
 
-      {/* Core program elements */}
       <CardsSection sections={[cardsSections[0]]} />
 
-      {/* Reporting to leaders and the board */}
       <CardsSection sections={[cardsSections[1]]} />
 
-      {/* Legal and HR collaboration */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -86,7 +79,6 @@ export default function WhistleblowingAndEthicsManagement() {
         </div>
       </section>
 
-      {/* What You Receive Section */}
       <WhenToActSection
         title={whatYouReceiveData.title}
         listItems={whatYouReceiveData.listItems}
@@ -94,13 +86,10 @@ export default function WhistleblowingAndEthicsManagement() {
         accentColor="text-red-600"
       />
 
-      {/* Outcomes and Why Venovox */}
       <CardsSection sections={cardsSections.slice(2)} />
 
-      {/* FAQs Section */}
       <Faqs faqs={faqsData} />
 
-      {/* CTA Section */}
       <Cta actions={ctaData} />
     </div>
   );

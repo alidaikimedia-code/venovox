@@ -26,7 +26,6 @@ const Footer = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
 
-            {/* Services */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -94,7 +93,6 @@ const Footer = () => {
               </ul>
             </motion.div>
 
-            {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +118,6 @@ const Footer = () => {
                 </motion.a>
               </div>
 
-              {/* Social Icons Below Phone */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -161,7 +158,6 @@ const Footer = () => {
             </motion.div>
 
 
-            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -336,13 +332,11 @@ const Footer = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex flex-col gap-2"
               >
-                {/* Icon + Country Title */}
                 <div className="flex items-center gap-1">
                   <MapPin className="h-4 w-4 text-red-600" />
                   <h4 className="font-semibold text-gray-800 text-base">{office.title}</h4>
                 </div>
 
-                {/* Address Info stays same */}
                 <div className="flex items-start gap-2">
                   <div className="flex flex-col gap-1">
                     <p className="text-gray-600 text-sm font-medium">{office.company}</p>
@@ -358,7 +352,6 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Footer Bottom */}
           <div className="flex flex-col md:flex-row md:justify-between items-center border-t border-gray-200 pt-6 text-sm text-gray-500 gap-4 md:gap-0 text-center md:text-left">
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <a href="/privacy/terms-and-conditions" className="hover:underline">Terms & Conditions</a>

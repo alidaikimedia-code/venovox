@@ -59,7 +59,6 @@ export default function RootLayout({
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
-        {/* <link rel="canonical" href="https://venovox.com/" /> */}
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="vyNUm6TmmkE39TRFt230yA"

@@ -28,16 +28,13 @@ import {
 export default function DigitalForensicsAndIncidentInvestigations() {
   return (
     <div className="bg-white px-6 text-gray-900">
-      {/* Hero Section */}
       <Hero mainText={heroData.mainText} paragraphs={heroData.paragraphs} />
 
-      {/* Introduction Section */}
       <Introduction
         title={introductionData.title}
         description={introductionData.description}
       />
 
-      {/* When to Act Section */}
       <WhenToAct
         title={whenToActData.title}
         subtitle={whenToActData.subtitle}
@@ -45,10 +42,8 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         highlightBoxText={whenToActData.highlightBoxText}
       />
 
-      {/* Incident Types Section */}
       <CardsSection sections={[cardsSections[0]]} />
 
-      {/* Our Investigation and Forensics Process Section */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -67,7 +62,6 @@ export default function DigitalForensicsAndIncidentInvestigations() {
                 </p>
               </div>
 
-              {/* Three-Step Graphic */}
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 <motion.div
                   className="bg-white p-6 rounded-lg shadow-md text-center"
@@ -116,7 +110,6 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         </div>
       </section>
 
-      {/* Legal, Privacy, and Regulator Alignment */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <motion.div
@@ -149,7 +142,6 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         </div>
       </section>
 
-      {/* Working with IT and Security */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -184,27 +176,22 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         </div>
       </section>
 
-      {/* Tools and Platforms */}
       <SimpleSection
         title={toolsPlatformsData.title}
         description={toolsPlatformsData.description}
         bgColor="bg-white"
       />
 
-      {/* What You Receive Section */}
       <WhenToActSection
         title={whatYouReceiveData.title}
         listItems={whatYouReceiveData.listItems}
         accentColor="text-red-600"
       />
 
-      {/* Outcomes and Why Venovox */}
       <CardsSection sections={cardsSections.slice(1)} />
 
-      {/* FAQs Section */}
       <Faqs faqs={faqsData} />
 
-      {/* CTA Section */}
       <Cta actions={ctaData} />
     </div>
   );

@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 
 interface ContentSectionProps {
-  highlightText?: string; // Text to be highlighted
-  mainText: string;       // Main paragraph text
-  paragraphs: string[];   // Array of content paragraphs
-  highlightColor?: string; // Optional color class (default: red)
+  highlightText?: string; 
+  mainText: string;       
+  paragraphs: string[];   
+  highlightColor?: string; 
 }
 
 export default function ContentSection({
@@ -23,7 +23,6 @@ export default function ContentSection({
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto"
         >
-          {/* Top decorative line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -33,7 +32,6 @@ export default function ContentSection({
             <div className="h-px bg-gradient-to-r from-transparent via-red-600 to-transparent w-full max-w-md" />
           </motion.div>
 
-          {/* Main content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +59,6 @@ export default function ContentSection({
             </div>
           </motion.div>
 
-          {/* Bottom decorative line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}

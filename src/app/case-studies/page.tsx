@@ -9,6 +9,8 @@ import {
     ItemListSchema,
     LocalBusinessSchema,
     WebSiteSchema,
+    WebPageSchema,
+    ServiceSchema,
 } from "@/components/Schema";
 
 const BASE_URL = "https://venovox.com";
@@ -50,10 +52,10 @@ export default function CaseStudiesPage() {
         },
     ];
 
-    // const breadcrumbItems = [
-    //     { name: "Home", url: "/" },
-    //     { name: "Case Studies", url: "/case-studies" },
-    // ];
+    const breadcrumbItems = [
+        { name: "Home", url: "/" },
+        { name: "Case Studies", url: "/case-studies" },
+    ];
 
     const caseStudies = [
         {
@@ -105,7 +107,25 @@ export default function CaseStudiesPage() {
                 }}
             />
             <WebSiteSchema />
-            {/* <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} /> */}
+            <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
+            <WebPageSchema
+                name="Case Studies"
+                description="Where discretion meets excellence. At Venovox, every engagement is treated with the care, rigour, and confidentiality expected by leading institutions. This curated portfolio showcases how our background screening and corporate intelligence help clients in Malaysia—and beyond—make safer, smarter decisions with absolute confidence."
+                url="/case-studies"
+                baseUrl={BASE_URL}
+            />
+            <ServiceSchema
+                name="Case Studies - Background Screening & Corporate Intelligence"
+                description="Real proof. Refined precision. Case studies showcasing Venovox's background screening and corporate intelligence services for leading institutions across various industries."
+                url="/case-studies"
+                provider={{
+                    name: "Venovox",
+                    url: BASE_URL,
+                }}
+                areaServed="MY"
+                serviceType="Background Screening and Corporate Intelligence Services"
+                baseUrl={BASE_URL}
+            />
             <CollectionPageSchema
                 name="Case Studies"
                 description="Where discretion meets excellence. At Venovox, every engagement is treated with the care, rigour, and confidentiality expected by leading institutions."

@@ -29,16 +29,15 @@ const RecognizedBy = () => {
             <span className="text-red-600">Recognized</span> & Trusted Worldwide
           </motion.h2>
 
-          <div className="w-24 h-1 bg-gradient-to-r from-red-400 to-red-600 mx-auto mt-4 rounded-full" />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto"
+            className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl container mx-auto"
           >
-            Endorsed by global leaders, our excellence speaks through every certification.
+           Recognised by global decision makers and guided by international standards, Venovox maintains a security posture that meets the expectations of regulated industries. Our internal controls align with ISO 27001 best practices, our screening model follows PBSA principles, and our data handling respects privacy requirements across Malaysia and the international market. Clients choose Venovox when accuracy, confidentiality and compliance are non negotiable.
           </motion.p>
         </div>
 

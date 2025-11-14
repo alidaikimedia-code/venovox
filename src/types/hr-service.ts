@@ -1,5 +1,3 @@
-// src/types/hr-service.ts
-
 export type HRService = {
   slug: string;
   title: string;

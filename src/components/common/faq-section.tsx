@@ -59,7 +59,6 @@ export function FAQSection({ faqs, heading, sectionKey = "faq" }: FAQSectionProp
     );
 }
 
-// Legacy export for backward compatibility
 export function Faqs({ faqs, head }: { faqs: FAQ[]; head?: string }) {
     return <FAQSection faqs={faqs} heading={head} />;
 }

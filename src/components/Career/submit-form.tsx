@@ -44,7 +44,6 @@ export default function Form() {
     <section className="py-12 bg-white" id="contact-form">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Info section */}
           <div>
             <h2 className="text-3xl font-bold mb-4 text-red-700">Are You VENOVOX?</h2>
             <div className="w-20 h-1 bg-red-700 mb-8" />
@@ -73,14 +72,12 @@ export default function Form() {
             </div>
           </div>
 
-          {/* Form Section */}
           <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
             <h2 className="text-2xl font-bold mb-2 text-gray-900">Join the Team</h2>
             <p className="text-gray-600 mb-6">We’ll get back to you as soon as possible</p>
 
             {formStatus === "idle" && (
               <form onSubmit={handleSubmit} className="space-y-5" encType="multipart/form-data">
-                {/* Fields */}
                 {[
                   { name: "firstName", icon: <FaUser />, placeholder: "First Name" },
                   { name: "lastName", icon: <FaUser />, placeholder: "Last Name" },
@@ -100,7 +97,6 @@ export default function Form() {
                   </div>
                 ))}
 
-                {/* Upload CV */}
                 <div className="flex items-center justify-between mt-4">
                   <label className="bg-red-700 text-white font-semibold px-6 py-3 rounded-md text-lg cursor-pointer uppercase hover:bg-red-800 transition">
                     {cvAdded ? "CV Added" : "Upload CV"}
@@ -111,7 +107,7 @@ export default function Form() {
                       accept=".pdf,.doc,.docx"
                       onChange={(e) => {
                         setCvFile(e.target.files?.[0] || null);
-                        setError(null); // clear error when a file is selected
+                        setError(null);
                       }}
                     />
                   </label>

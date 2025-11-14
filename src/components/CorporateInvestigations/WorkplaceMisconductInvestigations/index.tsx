@@ -29,16 +29,13 @@ import {
 export default function WorkplaceMisconductInvestigations() {
   return (
     <div className="bg-white px-6 text-gray-900">
-      {/* Hero Section */}
       <Hero mainText={heroData.mainText} paragraphs={heroData.paragraphs} />
 
-      {/* Introduction Section */}
       <Introduction
         title={introductionData.title}
         description={introductionData.description}
       />
 
-      {/* When to Act Section */}
       <WhenToAct
         title={whenToActData.title}
         subtitle={whenToActData.subtitle}
@@ -46,17 +43,14 @@ export default function WorkplaceMisconductInvestigations() {
         highlightBoxText={whenToActData.highlightBoxText}
       />
 
-      {/* What is Workplace Misconduct */}
       <SimpleSection
         title={whatIsWorkplaceMisconductData.title}
         description={whatIsWorkplaceMisconductData.description}
         bgColor="bg-white"
       />
 
-      {/* Types of Cases */}
       <CardsSection sections={[cardsSections[0]]} />
 
-      {/* Whistleblowing and Intake */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -83,7 +77,6 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      {/* Our Investigation Process */}
       <InvestigationMethod
         title={investigationProcessData.title}
         description={investigationProcessData.description}
@@ -91,10 +84,8 @@ export default function WorkplaceMisconductInvestigations() {
         bgColor="bg-gray-50"
       />
 
-      {/* Legal and HR Collaboration */}
       <CardsSection sections={[cardsSections[2]]} />
 
-      {/* Care for People */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -121,7 +112,6 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      {/* Digital Evidence */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -148,10 +138,8 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      {/* Deliverables */}
       <CardsSection sections={[cardsSections[5]]} />
 
-      {/* Outcomes */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -180,7 +168,6 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto ">
           <div className="mx-auto">
@@ -216,13 +203,10 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      {/* FAQs Section */}
       <Faqs faqs={faqsData} />
 
-      {/* Related Services */}
       <CardsSection sections={[cardsSections[6]]} />
 
-      {/* CTA Section */}
       <Cta actions={ctaData} />
     </div>
   );

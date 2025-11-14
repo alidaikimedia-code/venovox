@@ -19,8 +19,6 @@ export default function AuthorPage() {
             <div className="pt-24">
                 <div className="max-w-5xl mx-auto py-12 ">
                     <div className="bg-white shadow-xl rounded-lg overflow-hidden">
-
-                        {/* Profile Header */}
                         <div className="text-center py-12 px-8">
                             <div className="w-96 h-96 mx-auto mb-8 rounded-3xl overflow-hidden relative">
                                 <img
@@ -38,10 +36,8 @@ export default function AuthorPage() {
                             </p>
                         </div>
 
-                        {/* Content Section */}
                         <div className="px-8 pb-12">
 
-                            {/* About Section */}
                             <div className="mb-10">
                                 <h2 className="text-2xl font-bold text-black mb-6">About Dato' Venodevan</h2>
 
@@ -72,7 +68,6 @@ export default function AuthorPage() {
                                 </div>
                             </div>
 
-                            {/* Global Intelligence Network Section */}
                             <div className="mb-10">
                                 <h2 className="text-2xl font-bold text-black mb-6">Global Intelligence Network</h2>
 
@@ -102,7 +97,6 @@ export default function AuthorPage() {
                                 </ul>
                             </div>
 
-                            {/* Professional Recognition Section */}
                             <div className="mb-10">
                                 <h2 className="text-2xl font-bold text-black mb-6">Professional Recognition</h2>
 
@@ -117,7 +111,6 @@ export default function AuthorPage() {
                                 </div>
                             </div>
 
-                            {/* Venovox Journey Section */}
                             <div className="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-lg">
                                 <h2 className="text-2xl font-bold text-red-600 mb-4 italic">Venovox Journey</h2>
 

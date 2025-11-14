@@ -12,10 +12,8 @@ export default function OurServicesClient() {
     const headerRef = useRef(null)
     const isInView = useInView(headerRef, { once: true })
 
-    // Get unique categories from services
     const categories = ["all", ...new Set(servicesData.services.map((service) => service.id.split("-")[0]))]
 
-    // Filter services based on search term and category
     const filteredServices = servicesData.services.filter((service) => {
         const matchesSearch =
             service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -26,7 +24,6 @@ export default function OurServicesClient() {
         return matchesSearch && matchesCategory
     })
 
-    // Animation variants - properly typed
     const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -64,7 +61,6 @@ export default function OurServicesClient() {
         },
     }
 
-    // Helper function to get image for each service
     const getServiceImage = (serviceId: string, image?: string) => {
         if (image) {
             return image.startsWith('/') ? image : `/images/${image}`
@@ -78,16 +74,8 @@ export default function OurServicesClient() {
 
     return (
         <div className="bg-white">
-            {/* Hero section */}
             <div className="relative bg-red-700 text-white">
                 <div className="absolute inset-0 z-0">
-                    {/* <img
-                        src="/images/services-hero.jpg"
-                        alt="Our Services"
-                        // fill
-                        style={{ objectFit: "cover", objectPosition: "center" }}
-                    // priority
-                    /> */}
                     <div className="absolute inset-0 bg-[#b30000] bg-opacity-70"></div>
                 </div>
 
@@ -119,7 +107,6 @@ export default function OurServicesClient() {
 
             <div className="container mx-auto px-4 py-12">
 
-                {/* Search and filter */}
                 <div className="mb-12">
                     <div className="max-w-3xl mx-auto">
                         <div className="relative mb-8">
@@ -146,7 +133,6 @@ export default function OurServicesClient() {
                             </svg>
                         </div>
 
-                        {/* Category filters */}
                         <div className="flex flex-wrap justify-center gap-2 mb-8">
                             {categories.map((category) => (
                                 <button
@@ -164,7 +150,6 @@ export default function OurServicesClient() {
                     </div>
                 </div>
 
-                {/* Services grid */}
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeCategory + searchTerm}
@@ -185,7 +170,6 @@ export default function OurServicesClient() {
                                     <img
                                         src={imgErrors[service.id] ? '/images/placeholder.svg' : getServiceImage(service.id, service.image)}
                                         alt={service.title}
-                                        // fill
                                         style={{ objectFit: "cover" }}
                                         onError={() => handleImageError(service.id)}
                                         className="group-hover:scale-105 transition-transform duration-500"
@@ -224,7 +208,6 @@ export default function OurServicesClient() {
                     </motion.div>
                 </AnimatePresence>
 
-                {/* No results message */}
                 {filteredServices.length === 0 && (
                     <motion.div
                         className="text-center py-12"
@@ -260,7 +243,6 @@ export default function OurServicesClient() {
                     </motion.div>
                 )}
 
-                {/* Call to action */}
                 <motion.div
                     className="mt-24 bg-black text-white p-12"
                     variants={scaleIn}
@@ -286,7 +268,6 @@ export default function OurServicesClient() {
                 </motion.div>
             </div>
 
-            {/* Why choose us section */}
             <div className="bg-gray-100 py-20">
                 <div className="container mx-auto px-4">
                     <motion.div

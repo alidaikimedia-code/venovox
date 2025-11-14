@@ -1,9 +1,7 @@
 import { blogData } from '@/data/blogsData';
 
-// Base URL for your site
 const BASE_URL = 'https://venovox.com';
 
-// Corporate investigation pages - dynamically generated from available routes
 const corporateInvestigationPages = [
   '/corporate-investigations',
   '/corporate-investigations/workplace-misconduct-investigations',
@@ -15,7 +13,6 @@ const corporateInvestigationPages = [
   '/corporate-investigations/fraud-risk-management-and-prevention',
 ];
 
-// Static pages that should always be in the sitemap
 const staticPages = [
   {
     url: '/',
@@ -97,22 +94,18 @@ export interface SitemapPage {
 }
 
 export function generateSitemapData(): SitemapPage[] {
-  // Get current date for lastmod
   const currentDate = new Date().toISOString();
   
-  // Generate blog URLs from blog data (dynamic - automatically includes new blogs)
   const blogUrls: SitemapPage[] = blogData.map(blog => ({
     url: `/blogs/${blog.slug}`,
     lastmod: blog.publishDate ? new Date(blog.publishDate).toISOString() : currentDate
   }));
   
-  // Generate corporate investigation URLs (dynamic - automatically includes all pages)
   const corporateUrls: SitemapPage[] = corporateInvestigationPages.map(page => ({
     url: page,
     lastmod: currentDate
   }));
   
-  // Combine static pages, corporate investigation pages, and blog pages
   return [...staticPages, ...corporateUrls, ...blogUrls];
 }
 
@@ -120,7 +113,6 @@ export function generateSitemapXML(): string {
   const allPages = generateSitemapData();
   const currentDate = new Date().toISOString();
   
-  // Generate XML sitemap
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

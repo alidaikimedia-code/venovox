@@ -1,19 +1,16 @@
 import React from 'react';
-// import Image from 'next/image';
 
 const VenovoxCredibilitySection = () => {
     return (
         <div className="bg-black text-white">
             <div className="container mx-auto relative overflow-hidden px-4 sm:px-6 lg:px-8">
 
-                {/* Red accent block – bottom left (desktop only) */}
 
                 <div className="hidden md:block absolute bottom-0 left-0 w-40 h-24 bg-red-600"></div>
 
                 <div className="relative z-10 flex items-center py-6 md:py-12">
                     <div className="flex flex-col md:flex-row items-center justify-between w-full gap-8">
 
-                        {/* Left Image */}
                         <div className="w-full md:w-[40%] flex justify-center md:justify-start">
                             <img
                                 src="/career1-Photoroom.png"
@@ -24,7 +21,6 @@ const VenovoxCredibilitySection = () => {
 
 
 
-                        {/* Right Content */}
                         <div className="md:w-[60%] text-center md:text-left space-y-6 md:space-y-8">
                             <h2 className="text-4xl md:text-6xl font-bold text-white leading-tight">
                                 Why Join Us? Because

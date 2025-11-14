@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: BlogPageProps) {
     const blog = blogData.find((b) => b.slug === slug);
     if (!blog) return {};
 
-    // Dynamic canonical URL generation based on slug
     const canonicalUrl = `${BASE_URL}/blogs/${slug}`;
 
     return {
@@ -38,7 +37,6 @@ export async function generateMetadata({ params }: BlogPageProps) {
     };
 }
 
-// Alternative approach - function to generate canonical URL
 function generateCanonicalUrl(slug: string, category?: string): string {
     if (category) {
         return `${BASE_URL}/${category}/${slug}`;
@@ -46,14 +44,11 @@ function generateCanonicalUrl(slug: string, category?: string): string {
     return `${BASE_URL}/blogs/${slug}`;
 }
 
-// Another approach - with more complex URL structure
 function generateSEOCanonicalUrl(slug: string, blogData: any): string {
-    // If blog has custom canonical URL, use it
     if (blogData.seo?.canonicalUrl) {
         return blogData.seo.canonicalUrl;
     }
 
-    // Otherwise, generate based on slug
     const baseUrl = BASE_URL.replace(/\/$/, ''); // Remove trailing slash
     return `${baseUrl}/blogs/${slug}`;
 }
@@ -64,7 +59,6 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
     if (!blog) return notFound();
 
-    // Example usage of canonical URL generation
     const canonicalUrl = generateCanonicalUrl(slug);
 
     const renderSection = (section: any, index: number) => {
@@ -244,7 +238,6 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
     return (
         <div className="bg-white ">
-            {/* Hero Section */}
             <section className="relative bg-black text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <div className="relative container mx-auto px-6 py-2">
