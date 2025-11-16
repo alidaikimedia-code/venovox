@@ -29,25 +29,20 @@ import {
 export default function FraudRiskManagementAndPrevention() {
   return (
     <div className="bg-white px-6 text-gray-900">
-      {/* Hero Section */}
       <Hero mainText={heroData.mainText} paragraphs={heroData.paragraphs} />
 
-      {/* Three Step Band */}
       <ThreeStepBand steps={threeStepBandData} />
 
-      {/* Introduction Section */}
       <Introduction
         title={introductionData.title}
         description={introductionData.description}
       />
 
-      {/* Why prevention matters */}
       <SimpleSection
         title={whyPreventionMattersData.title}
         description={whyPreventionMattersData.description}
       />
 
-      {/* When to Act Section */}
       <WhenToAct
         title={whenToActData.title}
         subtitle={whenToActData.subtitle}
@@ -55,10 +50,8 @@ export default function FraudRiskManagementAndPrevention() {
         highlightBoxText={whenToActData.highlightBoxText}
       />
 
-      {/* Common fraud risks */}
       <CardsSection sections={[cardsSections[0]]} />
 
-      {/* Our approach to fraud risk management */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -102,7 +95,6 @@ export default function FraudRiskManagementAndPrevention() {
         </div>
       </section>
 
-      {/* Data analytics and continuous monitoring */}
       <WhenToActSection
         title={dataAnalyticsData.title}
         subtitle={dataAnalyticsData.subtitle}
@@ -111,7 +103,6 @@ export default function FraudRiskManagementAndPrevention() {
         accentColor="text-red-600"
       />
 
-      {/* Governance and reporting */}
       <section className="py-12 bg-white">
         <div className="container mx-auto">
           <div className="mx-auto">
@@ -154,20 +145,16 @@ export default function FraudRiskManagementAndPrevention() {
         </div>
       </section>
 
-      {/* What You Receive Section */}
       <WhenToActSection
         title={whatYouReceiveData.title}
         listItems={whatYouReceiveData.listItems}
         accentColor="text-red-600"
       />
 
-      {/* Outcomes and Why Venovox */}
       <CardsSection sections={cardsSections.slice(1)} />
 
-      {/* FAQs Section */}
       <Faqs faqs={faqsData} />
 
-      {/* CTA Section */}
       <Cta actions={ctaData} />
     </div>
   );

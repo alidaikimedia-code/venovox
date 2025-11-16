@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 interface CaseStudyData {
     title: string;
@@ -31,21 +33,59 @@ interface CaseStudyLayoutProps {
     data: CaseStudyData;
 }
 
+// Capitalize each word's first letter and remove hyphens
+const capitalizeWords = (str: string) =>
+    str
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(" ");
+
 export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
+    const pathname = usePathname();
+    const pathSegments = pathname.split("/").filter(Boolean);
+
+    // Build breadcrumb items
+    const buildBreadcrumbs = () => {
+        const breadcrumbs: Array<{ name: string; url: string; isLast?: boolean }> = [
+            { name: "Home", url: "/" }
+        ];
+
+        let currentPath = "";
+        pathSegments.forEach((segment, index) => {
+            currentPath += `/${segment}`;
+            const isLast = index === pathSegments.length - 1;
+            
+            let displayName = capitalizeWords(segment);
+            if (segment === "case-studies") {
+                displayName = "Case Studies";
+            }
+            
+            breadcrumbs.push({
+                name: displayName,
+                url: currentPath,
+                isLast
+            });
+        });
+
+        return breadcrumbs;
+    };
+
+    const breadcrumbs = buildBreadcrumbs();
+
     return (
         <div className="bg-white">
             {/* Hero Section */}
             <section className="relative bg-black text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <div className="relative container mx-auto px-6 py-2">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px] mt-20">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px] mt-28 lg:mt-20">
                         {/* Left Side - Image */}
                         <div className="flex justify-center lg:justify-start order-2 lg:order-1">
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.3 }}
-                                className="relative overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-300 w-[600px] h-[400px]"
+                                className="relative overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-300 w-full max-w-[600px] h-[300px] lg:h-[400px]"
                             >
                                 <img
                                     src={data.heroImage}
@@ -93,6 +133,31 @@ export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
                     </div>
                 </div>
             </section>
+
+              {/* Breadcrumb Section - Only Breadcrumbs, No Banner */}
+              <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
+                <div className="container mx-auto">
+                    <div className="flex items-center flex-wrap text-sm text-gray-600">
+                        {breadcrumbs.map((crumb, index) => (
+                            <div key={index} className="flex items-center">
+                                {index > 0 && <span className="mx-2 text-gray-400">/</span>}
+                                {crumb.isLast ? (
+                                    <span className="text-gray-900 font-medium">
+                                        {crumb.name}
+                                    </span>
+                                ) : (
+                                    <Link 
+                                        href={crumb.url} 
+                                        className="hover:text-red-600 transition-colors duration-200"
+                                    >
+                                        {crumb.name}
+                                    </Link>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             <main className="container mx-auto px-6 py-20">
                 {/* Introduction */}

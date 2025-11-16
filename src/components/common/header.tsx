@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-// import Image from "next/image";
 
 interface MenuItem {
   name: string;
@@ -56,10 +55,8 @@ export default function Navbar() {
 
   const isActive = (path: string) => {
     if (path === "/my-en/background-screening") {
-      // Home active only if exact match
       return pathname === path;
     } else {
-      // For others, active if pathname starts with path
       return pathname === path || pathname.startsWith(path + "/");
     }
   };
@@ -97,19 +94,16 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
       <div className="max-w-[1800px] mx-auto px-6">
         <div className="flex justify-between items-center h-[100px]">
-          {/* Left Logo */}
           <Link href="/" className="flex items-center">
             <img
               src={navData.logo}
               alt="Main Logo"
               width={125}
               height={125}
-              // priority
               className=""
             />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
             <nav className="flex space-x-2 items-center">
               {navData.menuItems.map((item) => {
@@ -156,7 +150,6 @@ export default function Navbar() {
             </nav>
           </div>
 
-          {/* Right Logo */}
           <a
             href="https://hi.venovox.com"
             rel="noopener noreferrer"
@@ -174,7 +167,6 @@ export default function Navbar() {
           </a>
 
 
-          {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -187,7 +179,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden fixed inset-x-0 top-[100px] bg-white z-[100] shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto mt-[69px]">
           <div className="px-6 pt-4 pb-6 space-y-2">
@@ -239,7 +230,6 @@ export default function Navbar() {
               );
             })}
 
-            {/* End Logo in Mobile Menu */}
             <div className="pt-4 pb-2 flex justify-center">
               <a href="https://hi.venovox.com" onClick={() => setIsMenuOpen(false)}>
                 <div className="h-16 w-16 relative">
@@ -254,7 +244,6 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Contact Button */}
             <div className="pt-4">
               <Link
                 href="/my-en/contact-us"

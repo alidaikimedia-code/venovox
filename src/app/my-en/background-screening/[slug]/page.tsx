@@ -30,6 +30,5 @@ export default async function ServicePage({
     params: Promise<{ slug: string }>;
 }) {
     const { slug } = await params;
-    console.log("***************", slug);
     return <ServicePageClient slug={slug} />;
 }

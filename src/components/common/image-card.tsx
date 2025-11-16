@@ -17,7 +17,6 @@ export function ImageCard({
 }: ImageCardProps) {
   return (
     <div className="space-y-0">
-      {/* Image */}
       <div className="relative overflow-hidden h-[296px]">
         <img
           src={image}
@@ -26,12 +25,10 @@ export function ImageCard({
         />
       </div>
 
-      {/* Title strip - immediately below image */}
       <div className={`${titleBgColor} ${titleTextColor} text-center py-2 font-semibold`}>
         {title}
       </div>
 
-      {/* Description */}
       <p className="text-gray-600 text-justify [text-justify:inter-word] hyphens-none mt-4">
         {description}
       </p>

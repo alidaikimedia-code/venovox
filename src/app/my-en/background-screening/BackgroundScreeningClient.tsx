@@ -1,6 +1,5 @@
 "use client";
 import { motion } from 'framer-motion';
-// import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Check } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
@@ -12,12 +11,10 @@ export default function BackgroundScreeningClient() {
       <Head>
         <link rel="canonical" href="https://venovox.com/my-en/background-screening" />
       </Head>
-      {/* Hero Section */}
       <HeroSection />
       <RecognizedBy />
 
 
-      {/* About Section */}
       <section id="about" className="py-20 px-6  bg-gray-50">
         <div className="container mx-auto">
           <motion.div
@@ -43,7 +40,6 @@ export default function BackgroundScreeningClient() {
                 <img
                   src="/about-us.jpg"
                   alt="VENOVOX Global Team"
-                  // fill
                   className="object-contain md:object-cover"
                 />
               </div>
@@ -52,7 +48,6 @@ export default function BackgroundScreeningClient() {
         </div>
       </section>
 
-      {/* Expertise Section */}
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <motion.div
@@ -66,7 +61,6 @@ export default function BackgroundScreeningClient() {
                 <img
                   src="/vector2.png"
                   alt="International Standards"
-                  // fill
                   className="object-cover"
                 />
               </div>
@@ -88,7 +82,6 @@ export default function BackgroundScreeningClient() {
         </div>
       </section>
 
-      {/* Screening Section */}
       <section className="py-20 px-6 bg-gray-50">
         <div className="container mx-auto">
           <motion.div
@@ -114,7 +107,6 @@ export default function BackgroundScreeningClient() {
                 <img
                   src="/vector1.png"
                   alt="Screening Process"
-                  // fill
                   className="object-cover"
                 />
               </div>
@@ -123,7 +115,6 @@ export default function BackgroundScreeningClient() {
         </div>
       </section>
 
-      {/* Vision, Mission, Values */}
       <section className="py-20 px-6 bg-white">
         <div className="container mx-auto">
           <motion.div
@@ -137,7 +128,6 @@ export default function BackgroundScreeningClient() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Vision */}
               <motion.div
                 className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ y: -5 }}
@@ -153,7 +143,6 @@ export default function BackgroundScreeningClient() {
                 </p>
               </motion.div>
 
-              {/* Mission */}
               <motion.div
                 className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ y: -5 }}
@@ -169,7 +158,6 @@ export default function BackgroundScreeningClient() {
                 </p>
               </motion.div>
 
-              {/* Values */}
               <motion.div
                 className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ y: -5 }}
@@ -200,7 +188,6 @@ export default function BackgroundScreeningClient() {
         </div>
       </section>
 
-      {/* Quote Section */}
       <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <motion.div

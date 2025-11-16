@@ -20,7 +20,6 @@ const VenovoxHero = () => {
                                 </p>
                             </div>
 
-                            {/* Right Image */}
                             <div className="w-full md:w-[40%] flex justify-center md:justify-end">
                                 <div className="relative">
                                     <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-white opacity-20 rounded-full blur-lg"></div>

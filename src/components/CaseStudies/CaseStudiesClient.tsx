@@ -102,7 +102,6 @@ export default function CaseStudiesClient() {
 
   return (
     <div>
-      {/* Hero Section */}
       <section className="relative w-full py-12">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
           <motion.div
@@ -111,7 +110,6 @@ export default function CaseStudiesClient() {
             transition={{ duration: 0.8 }}
             className="mx-auto"
           >
-            {/* Top decorative line */}
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -121,7 +119,6 @@ export default function CaseStudiesClient() {
               <div className="h-px bg-gradient-to-r from-transparent via-red-600 to-transparent w-full max-w-md" />
             </motion.div>
 
-            {/* Main content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -139,7 +136,6 @@ export default function CaseStudiesClient() {
               </div>
             </motion.div>
 
-            {/* Bottom decorative line */}
             <motion.div
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -152,7 +148,6 @@ export default function CaseStudiesClient() {
         </div>
       </section>
 
-      {/* Why Venovox Section */}
       <section className="py-12 bg-gray-50 px-6">
         <div className="container mx-auto">
           <motion.div
@@ -172,7 +167,6 @@ export default function CaseStudiesClient() {
         </div>
       </section>
 
-      {/* Case Studies Grid Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
@@ -207,7 +201,6 @@ export default function CaseStudiesClient() {
         </div>
       </section>
 
-      {/* Action Section */}
       <div className="container mx-auto space-y-24 relative py-12">
         {actionSection.map((action, index) => (
           <ActionSection
@@ -219,7 +212,6 @@ export default function CaseStudiesClient() {
         ))}
       </div>
 
-      {/* FAQs Section */}
       <FAQSection faqs={faqs} heading="FAQs" />
     </div>
   );

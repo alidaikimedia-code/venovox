@@ -7,13 +7,11 @@ import {
   BookOpen,
   ClipboardList,
 } from "lucide-react";
-// import Image from "next/image";
 
 export default function AboutUs() {
   return (
     <div className="bg-white text-gray-900 py-24 overflow-hidden">
       <div className="container mx-auto px-6 space-y-24 relative ">
-        {/* Heading */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20 mt-20">
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
@@ -42,7 +40,6 @@ export default function AboutUs() {
         </div>
 
 
-        {/* Our Story */}
         <motion.section
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -80,14 +77,11 @@ export default function AboutUs() {
             <img
               src="/ourstory.jpg"
               alt="Our team working together"
-              // fill
               className="object-cover"
-            // priority
             />
           </motion.div>
         </motion.section>
 
-        {/* Our Approach */}
         <motion.section
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -105,7 +99,6 @@ export default function AboutUs() {
             <img
               src="/our-story.png"
               alt="Our consultative approach"
-              // fill
               className="object-cover"
             />
           </motion.div>
@@ -142,7 +135,6 @@ export default function AboutUs() {
 
         </motion.section>
 
-        {/* Contact Us CTA */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

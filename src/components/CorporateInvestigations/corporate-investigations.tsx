@@ -32,13 +32,11 @@ export default function CorporateInvestigations() {
       title: "Intelligence and OSINT",
       description: "We deliver enhanced due diligence, background checks on people and companies, and human source insights. We assess market entry risk and partner risk. We combine online sources with field research where appropriate. You receive a clear view of integrity, reputation, and hidden risk before you act.",
       imageUrl: "tingey-injury-law-firm-nSpj-Z12lX0-unsplash (1).jpg",
-      // link: "/corporate-intelligence-and-osint",
     },
     {
       title: "Litigation support",
       description: "We gather evidence, protect chain of custody, and coordinate with eDiscovery teams. We validate the source of documents and confirm authenticity. We locate witnesses and provide background on counterparties. We supply expert reports and testimony where required. Your legal team gains facts they can trust.",
       imageUrl: "18026.jpg",
-      // link: "/litigation-support-investigations",
     },
     {
       title: "Workplace misconduct",
@@ -276,11 +274,9 @@ export default function CorporateInvestigations() {
     },
     {
       title: "litigation-support-investigations",
-      // link: "/corporate-investigations/litigation-support-investigations",
     },
     {
       title: "corporate-intelligence-and-osint",
-      // link: "/corporate-investigations/corporate-intelligence-and-osint",
     },
   ]
   const actionSection = [
@@ -323,7 +319,6 @@ export default function CorporateInvestigations() {
   return (
     <div className="container mx-auto px-6">
       
-      {/* Hero Section */}
       <section className="relative w-full  py-12">
       <div>
         <motion.div
@@ -332,7 +327,6 @@ export default function CorporateInvestigations() {
           transition={{ duration: 0.8 }}
           className="mx-auto"
         >
-          {/* Top decorative line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -342,7 +336,6 @@ export default function CorporateInvestigations() {
             <div className="h-px bg-gradient-to-r from-transparent via-red-600 to-transparent w-full max-w-md" />
           </motion.div>
 
-          {/* Main content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -367,7 +360,6 @@ export default function CorporateInvestigations() {
             </div>
           </motion.div>
 
-          {/* Bottom decorative line */}
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
@@ -383,7 +375,6 @@ export default function CorporateInvestigations() {
 
      
 
-      {/* Introduction Section */}
       <section className="">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -394,7 +385,6 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      {/* Scope of Work Section */}
       <section className="py-12 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -428,7 +418,6 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      {/* Industries We Serve Section */}
       <section className="py-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -460,7 +449,6 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      {/* How We Work Section */}
       <section className="py-12 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -492,7 +480,6 @@ export default function CorporateInvestigations() {
       </section>
 
 
-      {/* Legal and Regulatory Interface Section */}
       <section className="py-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -525,7 +512,6 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      {/* Outcomes Section */}
       <section className="py-12 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -552,7 +538,6 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      {/* Why Choose Us Section */}
       <section className="py-12 bg-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -581,7 +566,6 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      {/* When to Act Section */}
       <WhenToActSection
   title="When to act"
   listItems={[
@@ -599,7 +583,6 @@ export default function CorporateInvestigations() {
 
       <Faqs faqs={faqs} head="Frequently asked questions" />
 
-      {/* Related Services Section */}
       <section className=" py-12 bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

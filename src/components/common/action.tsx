@@ -35,12 +35,10 @@ export function ActionSection({
       viewport={{ once: true }}
       className={`bg-gradient-to-r from-red-700 to-red-800 rounded-2xl p-10 text-center shadow-xl relative overflow-hidden ${className}`}
     >
-      {/* Decorative Icon */}
       <div className="absolute -right-10 -top-10 opacity-20">
         <MailIcon className="w-32 h-32 text-white" />
       </div>
 
-      {/* Main Content */}
       <div className="relative z-10">
         <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
 
@@ -48,7 +46,6 @@ export function ActionSection({
           <span className="text-white font-medium">{description}</span>
         </p>
 
-        {/* Buttons (Dynamic) */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
           {primaryButton && (
             <Link

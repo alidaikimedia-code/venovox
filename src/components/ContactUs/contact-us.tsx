@@ -15,7 +15,7 @@ const ContactUs = () => {
   const [formValues, setFormValues] = useState({
     name: "",
     email: "",
-    phone: "",   // <-- Include this
+    phone: "",   
     subject: "",
     message: ""
   });
@@ -60,7 +60,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4 text-center pt-8">
           <div className="inline-block mb-4 px-6 py-2 bg-red-50 rounded-full text-red-700 font-medium">
@@ -94,7 +93,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
             </motion.p>
           </div>
           <div className="flex flex-wrap justify-center gap-6">
-            {/* Send Message Button */}
             <button
               onClick={openWhatsApp}
               className="flex items-center gap-2 px-6 py-3 bg-red-700 text-white font-bold rounded-lg hover:bg-red-800 transition-colors"
@@ -103,7 +101,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               Send Message
             </button>
 
-            {/* Call Us Button */}
             <a
               href="tel:+60128008888"
               className="flex items-center gap-2 px-6 py-3 bg-white text-red-700 border-2 border-red-700 font-bold rounded-lg hover:bg-red-50 transition-colors"
@@ -115,11 +112,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </div>
       </section>
 
-      {/* Contact Grid */}
       <section className="py-12 bg-white" id="contact-form">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Contact Info */}
             <div >
               <h2 className="text-3xl font-bold mb-4 text-red-700">
                 Reach Out To Us
@@ -167,7 +162,6 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
               <h2 className="text-2xl font-bold mb-2 text-gray-900">Send Us a Message</h2>
               <p className="text-gray-600 mb-6">We&lsquo;ll get back to you as soon as possible</p>

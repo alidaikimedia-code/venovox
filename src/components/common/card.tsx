@@ -19,7 +19,6 @@ export function ServiceCard({
   link,
   className = "" 
 }: ServiceCardProps) {
-  // Ensure image path starts with / for public folder images
   const getImageSrc = (url?: string) => {
     if (!url) return "";
     if (url.startsWith("/") || url.startsWith("http")) return url;

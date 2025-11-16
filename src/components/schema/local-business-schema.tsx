@@ -41,7 +41,7 @@ export function LocalBusinessSchema({
   image = "https://venovox.com/venovox-logo.png",
   url = "https://venovox.com",
   logo = "https://venovox.com/venovox-logo.png",
-  description = "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services.",
+  description = "Venovox delivers premium background screening, due diligence, risk and corporate investigations in Malaysia, Singapore and the UK. PDPA aligned, ISO 27001 oriented, discreet and precise for confident decisions.",
   address = {
     streetAddress: "E-7-03, Block E, Oasis Square, No 2, Jalan PJU 1A/7",
     addressLocality: "Ara Damansara",

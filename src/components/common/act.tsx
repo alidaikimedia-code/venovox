@@ -8,7 +8,7 @@ interface WhenToActSectionProps {
   subtitle?: string; 
   listItems: string[];
   highlightBoxText?: string;
-  accentColor?: string; // default red-600
+  accentColor?: string; 
 }
 
 export default function WhenToActSection({
@@ -28,7 +28,6 @@ export default function WhenToActSection({
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto"
         >
-          {/* Title and Subtitle */}
           <div className="text-center mb-10">
             <h2 className={`text-3xl md:text-4xl font-bold ${accentColor}`}>
               {title}
@@ -40,7 +39,6 @@ export default function WhenToActSection({
             )}
           </div>
 
-          {/* List Box */}
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
             <ul className="space-y-6">
               {listItems.map((item, index) => (
@@ -55,7 +53,6 @@ export default function WhenToActSection({
               ))}
             </ul>
 
-            {/* Highlight Box */}
             {highlightBoxText && (
               <div className="mt-10 p-6 bg-red-50 rounded-lg border border-red-100">
                 <p className="text-gray-800 font-semibold text-lg leading-relaxed text-center md:text-left">

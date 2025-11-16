@@ -3,6 +3,10 @@ import { Metadata } from "next";
 import {
     OrganizationSchema,
     WebPageSchema,
+    BreadcrumbSchema,
+    LocalBusinessSchema,
+    WebSiteSchema,
+    ServiceSchema,
 } from "@/components/Schema";
 
 const BASE_URL = "https://venovox.com";
@@ -16,13 +20,51 @@ export const metadata: Metadata = {
 };
 
 export default function LogisticsDriverScreeningPage() {
+    const breadcrumbItems = [
+        { name: "Home", url: "/" },
+        { name: "Case Studies", url: "/case-studies" },
+        { name: "Logistics Driver Screening", url: "/case-studies/logistics-driver-screening" },
+    ];
+
     return (
         <>
             <OrganizationSchema />
+            <LocalBusinessSchema
+                department={{
+                    name: "Venovox Sdn Bhd",
+                    address: {
+                        streetAddress: "E-7-03, Block E, Oasis Square, No 2, Jalan PJU 1A/7",
+                        addressLocality: "Ara Damansara",
+                        addressRegion: "Selangor",
+                        postalCode: "47301",
+                        addressCountry: "MY",
+                    },
+                    contactPoint: {
+                        telephone: "+603 7800 0088",
+                        contactType: "Customer Service",
+                        areaServed: "MY",
+                        availableLanguage: "English",
+                    },
+                }}
+            />
+            <WebSiteSchema />
+            <BreadcrumbSchema items={breadcrumbItems} baseUrl={BASE_URL} />
             <WebPageSchema
                 name="Driver Background Screening for Logistics Company in Malaysia"
                 description="How Venovox Malaysia helped a logistics company improve safety and reliability through driver background screening and risk verification services."
                 url="/case-studies/logistics-driver-screening"
+                baseUrl={BASE_URL}
+            />
+            <ServiceSchema
+                name="Driver Background Screening for Logistics"
+                description="How Venovox Malaysia helped a logistics company improve safety and reliability through driver background screening and risk verification services."
+                url="/case-studies/logistics-driver-screening"
+                provider={{
+                    name: "Venovox",
+                    url: BASE_URL,
+                }}
+                areaServed="MY"
+                serviceType="Driver Background Screening and Risk Verification Services"
                 baseUrl={BASE_URL}
             />
             <LogisticsDriverScreening />
