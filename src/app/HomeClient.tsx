@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ShieldCheck, Globe, Target, Check, Search, FileSearch, Briefcase, DollarSign, Users, Shield, Lock, LucideIcon, Building2, Award, Database, Clock, FileText, TrendingUp, BookOpen, MapPin, ClipboardCheck, Zap, Scale, Eye, Mail, Phone } from 'lucide-react';
+import { ShieldCheck, Globe, Target, Search, FileSearch, Briefcase, DollarSign, Users, Shield, Lock, LucideIcon, Building2, Award, Database, Clock, FileText, TrendingUp, BookOpen, MapPin, ClipboardCheck, Zap, Scale, Eye, Mail, Phone } from 'lucide-react';
 import RecognizedBy from "@/components/Home/recognitions-section";
 import HeroSection from "@/components/Home/hero-section";
 import { FAQSection } from "@/components/common/faq-section";
@@ -260,8 +260,8 @@ export default function HomeClient() {
           "Our executive level analysis delivers verified intelligence, precision reporting and recommendations. With deep local expertise and global operating footprint, we provide on ground capability across APAC and beyond.",
           "Our compliance driven culture ensures PDPA aligned practices, strict data minimisation, and access controls. We offer transparent, realistic turnarounds with a commitment to integrity."
         ]}
-        imageSrc="/vector2.png"
-        imageAlt="International Standards"
+        imageSrc="/why-leaders-choose-us.png"
+        imageAlt="why leaders choose us"
         bgColor="white"
         imageFirst={true}
       />
@@ -375,7 +375,7 @@ export default function HomeClient() {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="/vector2.png"
+                  src="/Thought-Leadership-and-Publications.png"
                   alt="Thought Leadership and Publications"
                   className="object-cover w-full h-full"
                 />
