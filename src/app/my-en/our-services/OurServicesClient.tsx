@@ -12,8 +12,21 @@ export default function OurServicesClient() {
     const headerRef = useRef(null)
     const isInView = useInView(headerRef, { once: true })
 
+    // Get unique categories from services
+    const categoryLabels: Record<string, string> = {
+    all: "All",
+    risk: "Risk Intelligence",
+    due: "Due Diligence",
+    compliance: "Compliance",
+    intellectual: "Intellectual Property",
+    counter: "Counter Measures",
+    financial: "Financial Crime",
+    hr: "HR Services",
+    cyber: "Cyber Security"
+};
     const categories = ["all", ...new Set(servicesData.services.map((service) => service.id.split("-")[0]))]
 
+    // Filter services based on search term and category
     const filteredServices = servicesData.services.filter((service) => {
         const matchesSearch =
             service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -24,6 +37,7 @@ export default function OurServicesClient() {
         return matchesSearch && matchesCategory
     })
 
+    // Animation variants - properly typed
     const staggerContainer: Variants = {
         hidden: { opacity: 0 },
         visible: {
@@ -61,6 +75,7 @@ export default function OurServicesClient() {
         },
     }
 
+    // Helper function to get image for each service
     const getServiceImage = (serviceId: string, image?: string) => {
         if (image) {
             return image.startsWith('/') ? image : `/images/${image}`
@@ -74,9 +89,14 @@ export default function OurServicesClient() {
 
     return (
         <div className="bg-white">
-            <div className="relative bg-red-700 text-white">
+            {/* Hero section */}
+            <div className="relative bg-gradient-to-br from-red-900 to-black text-white shadow-lg">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[#b30000] bg-opacity-70"></div>
+                    {/* <img
+                        src="/images/services-hero.jpg"
+                        alt="Our Services"
+                        style={{ objectFit: "cover", objectPosition: "center" }}
+                    /> */}
                 </div>
 
                 <div className="container mx-auto px-4 py-24 mt-20 relative z-10">
@@ -107,6 +127,7 @@ export default function OurServicesClient() {
 
             <div className="container mx-auto px-4 py-12">
 
+                {/* Search and filter */}
                 <div className="mb-12">
                     <div className="max-w-3xl mx-auto">
                         <div className="relative mb-8">
@@ -133,23 +154,26 @@ export default function OurServicesClient() {
                             </svg>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-2 mb-8">
-                            {categories.map((category) => (
-                                <button
-                                    key={category}
-                                    onClick={() => setActiveCategory(category)}
-                                    className={`px-4 py-2 text-sm font-medium transition-colors ${activeCategory === category
-                                        ? "bg-red-600 text-white"
-                                        : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                        {/* Category filters */}
+                            <div className="flex flex-wrap justify-center gap-2 mb-8">
+                                {categories.map((category) => (
+                                    <button
+                                        key={category}
+                                        onClick={() => setActiveCategory(category)}
+                                        className={`px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
+                                            activeCategory === category
+                                                ? "bg-red-600 text-white"
+                                                : "bg-gray-200 text-gray-800 hover:bg-gray-300"
                                         }`}
-                                >
-                                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                                </button>
-                            ))}
-                        </div>
+                                    >
+                                        {categoryLabels[category] || category}
+                                    </button>
+                                ))}
+                            </div>
                     </div>
                 </div>
 
+                {/* Services grid */}
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeCategory + searchTerm}
@@ -170,6 +194,7 @@ export default function OurServicesClient() {
                                     <img
                                         src={imgErrors[service.id] ? '/images/placeholder.svg' : getServiceImage(service.id, service.image)}
                                         alt={service.title}
+                                        // fill
                                         style={{ objectFit: "cover" }}
                                         onError={() => handleImageError(service.id)}
                                         className="group-hover:scale-105 transition-transform duration-500"
@@ -208,6 +233,7 @@ export default function OurServicesClient() {
                     </motion.div>
                 </AnimatePresence>
 
+                {/* No results message */}
                 {filteredServices.length === 0 && (
                     <motion.div
                         className="text-center py-12"
@@ -243,8 +269,9 @@ export default function OurServicesClient() {
                     </motion.div>
                 )}
 
+                {/* Call to action */}
                 <motion.div
-                    className="mt-24 bg-[#b30000] text-white p-12"
+                    className="mt-24 bg-gradient-to-br from-red-900 to-black text-white shadow-lg p-12"
                     variants={scaleIn}
                     initial="hidden"
                     whileInView="visible"
@@ -259,8 +286,8 @@ export default function OurServicesClient() {
                             </p>
                         </div>
                         <Link
-                            href="/my-en/contact-us" // fixed broken link
-                            className="px-8 py-4 bg-white text-red-600 font-medium hover:bg-white transition-colors whitespace-nowrap"
+                            href="/my-en/contact-us"
+                            className="px-8 py-4 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors whitespace-nowrap"
                         >
                             Schedule a Consultation
                         </Link>
@@ -268,6 +295,7 @@ export default function OurServicesClient() {
                 </motion.div>
             </div>
 
+            {/* Why choose us section */}
             <div className="bg-gray-100 py-20">
                 <div className="container mx-auto px-4">
                     <motion.div

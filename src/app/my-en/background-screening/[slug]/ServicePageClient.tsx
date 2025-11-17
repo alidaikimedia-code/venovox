@@ -2,6 +2,7 @@
 
 import { type Key, useEffect, useState } from "react";
 import Link from "next/link";
+// import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 interface InternalLink {
@@ -160,6 +161,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             .toUpperCase()}`;
     };
 
+    // Function to create anchor ID from text
     const createAnchorId = (text: string) => {
         return text
             .toLowerCase()
@@ -189,9 +191,11 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 );
             }
 
+            // Check for any emoji at the start and replace with bullet point
             if (/^[🔍🛡💼⚖📊🔄🏢📉💰🌍🔒📦🛒📁🔹✔⚖️🎙📝🛠⚖️📋🏛📜⚖🔎]/u.test(item.trim())) {
                 const cleanItem = item.trim();
                 const isIndented = item.startsWith("    ");
+                // Remove the emoji and get the rest of the text
                 const textWithoutEmoji = cleanItem.replace(/^[\u{1F000}-\u{1F6FF}][\u{2000}-\u{206F}]?/u, '').trim();
                 return (
                     <div key={index} className="flex items-center gap-4 my-6">
@@ -206,6 +210,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 );
             }
 
+            // Check if this is an h2 heading from the h2 array
             if (service.h2?.includes(item.trim())) {
                 const anchorId = createAnchorId(item.trim());
                 return (
@@ -219,6 +224,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 );
             }
 
+            // Check if this is an h3 heading from the h3 array
             if (service.h3?.includes(item.trim())) {
                 const anchorId = createAnchorId(item.trim());
                 return (
@@ -251,38 +257,35 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
             exit="exit"
             variants={pageTransition}
         >
-            <div className="relative mt-20 w-full h-[45vh] overflow-hidden">
-                <img
-                    src={getServiceImage(service.id) || "/placeholder.svg"}
-                    alt={service.title}
-                    style={{ objectFit: "cover" }}
-                    className="brightness-50"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 flex items-center justify-center">
-                    <div className="text-center px-4 max-w-4xl">
-                        {service.tagline && (
-                            <motion.p
-                                className="text-red-400 text-lg font-medium mb-4"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2, duration: 0.8 }}
-                            >
-                                {service.tagline}
-                            </motion.p>
-                        )}
-                        <motion.h1
-                            className="text-4xl md:text-6xl font-bold text-white"
+            {/* Hero section */}
+            <div className="relative mt-20 w-full h-[45vh] overflow-hidden bg-gradient-to-br from-red-900 to-black flex items-center justify-center">
+                <div className="text-center px-4 max-w-4xl">
+
+                    {service.tagline && (
+                        <motion.p
+                            className="text-red-300 text-lg font-medium mb-4"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3, duration: 0.8 }}
+                            transition={{ delay: 0.2, duration: 0.8 }}
                         >
-                            {service.h1}
-                        </motion.h1>
-                    </div>
+                            {service.tagline}
+                        </motion.p>
+                    )}
+
+                    <motion.h1
+                        className="text-4xl md:text-6xl font-bold text-white drop-shadow-lg"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3, duration: 0.8 }}
+                    >
+                        {service.h1}
+                    </motion.h1>
+
                 </div>
             </div>
 
+
+            {/* Breadcrumb navigation */}
             <div className="bg-gray-50 py-4 px-4 border-b border-gray-200">
                 <div className="container mx-auto ">
                     <div className="flex items-center text-sm text-gray-600">
@@ -307,12 +310,14 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
 
             <div className="container mx-auto px-4 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    {/* Main content column */}
                     <motion.div
                         className="lg:col-span-2"
                         variants={staggerContainer}
                         initial="hidden"
                         animate="visible"
                     >
+                        {/* Overview Section */}
                         <motion.div variants={fadeInUp} className="mb-12">
                             <div className="flex items-center mb-6">
                                 <div className="w-1 h-8 bg-red-600 mr-4"></div>
@@ -320,6 +325,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                             </div>
                         </motion.div>
 
+                        {/* Services Sections */}
                         {service.content && (
                             <motion.div
                                 variants={fadeInUp}
@@ -328,31 +334,9 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                                 {renderContent(service.content)}
                             </motion.div>
                         )}
-
-                        <motion.div
-                            className="mt-16 bg-gradient-to-r from-red-900 to-black text-white py-15.5 p-8 shadow-lg"
-                            variants={scaleIn}
-                        >
-                            <div className="flex flex-col md:flex-row items-center justify-between">
-                                <div className="mb-6 md:mb-0">
-                                    <h3 className="text-2xl font-bold mb-2">
-                                        Ready to Get Started?
-                                    </h3>
-                                    <p className="text-gray-300 text-justify max-w-md mr-10">
-                                        Let our experts help you navigate the complexities of your
-                                        business challenges with tailored solutions.
-                                    </p>
-                                </div>
-                                <Link
-                                    href="/my-en/contact-us"
-                                    className="px-8 py-4 bg-red-600 text-white text-center font-medium hover:bg-red-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                                >
-                                    Request a Consultation
-                                </Link>
-                            </div>
-                        </motion.div>
                     </motion.div>
 
+                    {/* Sidebar column */}
                     <motion.div
                         className="lg:col-span-1"
                         initial={{ opacity: 0, x: 30 }}
@@ -360,8 +344,9 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                         transition={{ delay: 0.4, duration: 0.8 }}
                     >
                         <div className="sticky top-[170px] space-y-8">
+                            {/* Service quick info */}
                             <div className="bg-gray-50 border border-gray-200 shadow-sm">
-                                <div className="bg-red-600 text-white p-4">
+                                <div className="bg-gradient-to-br from-red-900 to-black text-white shadow-lg p-4">
                                     <h3 className="text-lg font-bold">Service Highlights</h3>
                                 </div>
                                 <div className="p-6">
@@ -386,9 +371,10 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                                 </div>
                             </div>
 
+                            {/* Related services */}
                             {service.internalLinks && service.internalLinks.length > 0 && (
-                                <div className="bg-gray-50 border border-gray-200 shadow-sm">
-                                    <div className="bg-red-600 text-white p-4">
+                                <div className="bg-white border border-red-200 shadow-sm">
+                                    <div className="bg-gradient-to-br from-red-900 to-black text-white shadow-lg p-4">
                                         <h3 className="text-lg font-bold">Related Services</h3>
                                     </div>
                                     <div className="p-6">
@@ -412,8 +398,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                             )}
 
                             {/* Contact box */}
-                            <div className="bg-gradient-to-br from-red-900 to-black text-white shadow-lg">
-                                <div className="p-6">
+                                    <div className="bg-gradient-to-br from-red-900 to-black text-white shadow-lg">                                <div className="p-6">
                                     <h3 className="text-xl font-bold mb-4">
                                         Need Expert Assistance?
                                     </h3>
