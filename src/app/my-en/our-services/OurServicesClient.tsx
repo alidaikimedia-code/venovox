@@ -244,7 +244,7 @@ export default function OurServicesClient() {
                 )}
 
                 <motion.div
-                    className="mt-24 bg-black text-white p-12"
+                    className="mt-24 bg-[#b30000] text-white p-12"
                     variants={scaleIn}
                     initial="hidden"
                     whileInView="visible"
@@ -259,8 +259,8 @@ export default function OurServicesClient() {
                             </p>
                         </div>
                         <Link
-                            href="/my-en/contact"
-                            className="px-8 py-4 bg-red-600 text-white font-medium hover:bg-red-700 transition-colors whitespace-nowrap"
+                            href="/my-en/contact-us" // fixed broken link
+                            className="px-8 py-4 bg-white text-red-600 font-medium hover:bg-white transition-colors whitespace-nowrap"
                         >
                             Schedule a Consultation
                         </Link>

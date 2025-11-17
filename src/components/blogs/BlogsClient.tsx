@@ -14,37 +14,10 @@ export default function BlogsClient() {
 
     const reversedBlogs = [...blogData].reverse();
     const currentBlogs = reversedBlogs.slice(startIndex, endIndex);
-    
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [currentPage]);
-
-    const getPaginationNumbers = () => {
-        const numbers = [];
-        const maxVisible = 5;
-
-        if (totalPages <= maxVisible) {
-            for (let i = 1; i <= totalPages; i++) {
-                numbers.push(i);
-            }
-        } else {
-            numbers.push(1);
-            if (currentPage > 3) {
-                numbers.push('...');
-            }
-            const startPage = Math.max(2, currentPage - 1);
-            const endPage = Math.min(totalPages - 1, currentPage + 1);
-            for (let i = startPage; i <= endPage; i++) {
-                numbers.push(i);
-            }
-            if (currentPage < totalPages - 2) {
-                numbers.push('...');
-            }
-            numbers.push(totalPages);
-        }
-        return numbers;
-    };
 
     const handlePageChange = (page: number | string) => {
         if (typeof page === 'number' && page >= 1 && page <= totalPages) {
@@ -64,8 +37,12 @@ export default function BlogsClient() {
         }
     };
 
+    // Added the word "VENOVOX" used for pagination
+    const venovoxLetters = ["V", "E", "N", "O", "V", "O", "O", "O", "X"];
+
     return (
         <main className="container mx-auto px-6 py-20">
+            {/* Blog Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {currentBlogs.map((blog) => (
                     <BlogCard
@@ -79,56 +56,86 @@ export default function BlogsClient() {
                 ))}
             </div>
 
+            {/* Custom VENOVOX Pagination */}
             {totalPages > 1 && (
-                <div className="flex justify-center items-center mt-16 space-x-2">
-                    <button
-                        onClick={handlePrevious}
-                        disabled={currentPage === 1}
-                        className={`flex items-center justify-center w-12 h-12 rounded-xl border transition-all duration-300 ${currentPage === 1
-                            ? 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
-                            : 'border-gray-300 text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-red-50 cursor-pointer'
-                            }`}
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-
-                    {getPaginationNumbers().map((number, index) => (
-                        <div key={index}>
-                            {number === '...' ? (
-                                <span className="flex items-center justify-center w-12 h-12 text-gray-500 font-medium">
-                                    ...
-                                </span>
-                            ) : (
+                <div className="flex flex-col items-center justify-center mt-16 space-y-4">
+                    {/* Word pagination (VENOVOX) */}
+                    <div className="flex justify-center items-center space-x-3">
+                        {venovoxLetters.map((letter, index) => {
+                            const page = index + 1;
+                            return (
                                 <button
-                                    onClick={() => handlePageChange(number)}
-                                    className={`flex items-center justify-center w-12 h-12 rounded-xl font-semibold transition-all duration-300 cursor-pointer ${currentPage === number
-                                        ? 'bg-red-600 text-white shadow-md'
-                                        : 'border border-gray-300 text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-red-50'
-                                        }`}
+                                    key={index}
+                                    onClick={() => handlePageChange(page)}
+                                    disabled={page > totalPages}
+                                    className={`text-2xl font-extrabold tracking-wider transition-all duration-300 ${
+                                        currentPage === page
+                                            ? "text-red-600 scale-125 drop-shadow-[0_0_6px_rgba(220,38,38,0.5)]"
+                                            : page > totalPages
+                                                ? "text-red-300 cursor-not-allowed"
+                                                : "text-red-500 hover:text-white-500 hover:scale-110"
+                                    }`}
                                 >
-                                    {number}
+                                    {letter}
                                 </button>
-                            )}
-                        </div>
-                    ))}
+                            );
+                        })}
+                    </div>
 
-                    <button
-                        onClick={handleNext}
-                        disabled={currentPage === totalPages}
-                        className={`flex items-center justify-center w-12 h-12 rounded-xl border transition-all duration-300 ${currentPage === totalPages
-                            ? 'border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50'
-                            : 'border-gray-300 text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-red-50 cursor-pointer'
+                    {/* Prev / Next arrows (optional, kept for usability) */}
+                    <div className="flex items-center space-x-6">
+                        <button
+                            onClick={handlePrevious}
+                            disabled={currentPage === 1}
+                            className={`p-3 rounded-full border transition-all duration-300 ${
+                                currentPage === 1
+                                    ? "border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50"
+                                    : "border-gray-300 text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-red-50"
                             }`}
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                        >
+                            <svg
+                                className="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg>
+                        </button>
+
+                        <button
+                            onClick={handleNext}
+                            disabled={currentPage === totalPages}
+                            className={`p-3 rounded-full border transition-all duration-300 ${
+                                currentPage === totalPages
+                                    ? "border-gray-200 text-gray-400 cursor-not-allowed bg-gray-50"
+                                    : "border-gray-300 text-gray-600 hover:border-red-600 hover:text-red-600 hover:bg-red-50"
+                            }`}
+                        >
+                            <svg
+                                className="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             )}
 
+            {/* Empty state (no blogs) */}
             {blogData.length === 0 && (
                 <div className="text-center py-20">
                     <div className="space-y-4">
