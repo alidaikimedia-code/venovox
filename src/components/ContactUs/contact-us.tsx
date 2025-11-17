@@ -136,7 +136,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1 text-black">Phone</h3>
-                    <p className="text-gray-600 mb-1">Customer support:</p>
+                    <p className="text-gray-600 mb-1">Customer Support:</p>
                     <a
                       href="tel:+60128008888"
                       className="text-red-700 hover:underline"
@@ -153,9 +153,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1 text-black">Business Hours</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: Closed<br />
-                      Sunday: Closed
+  Monday - Friday<span className="ml-1">:</span> 9:00 AM - 6:00 PM<br />
+  Saturday<span className="ml-1">:</span> Closed<br />
+  Sunday<span className="ml-3.5">:</span> Closed
                     </p>
                   </div>
                 </div>
