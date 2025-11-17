@@ -509,23 +509,23 @@ export default function HomeClient() {
               </p>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
                 <a
-                  href="mailto:kelly@venovox.com"
+                  href="mailto:info@venovox.com"
                   className="flex items-center gap-3 text-gray-700 hover:text-red-600 transition-colors"
                 >
                   <div className="bg-red-600 p-3 rounded-full">
                     <Mail className="text-white w-5 h-5" />
                   </div>
-                  <span className="text-lg font-medium">kelly@venovox.com</span>
+                  <span className="text-lg font-medium">info@venovox.com</span>
                 </a>
                 <div className="hidden md:block text-gray-300">|</div>
                 <a
-                  href="tel:+60378000088"
+                  href="tel:+60128008888"
                   className="flex items-center gap-3 text-gray-700 hover:text-red-600 transition-colors"
                 >
                   <div className="bg-red-600 p-3 rounded-full">
                     <Phone className="text-white w-5 h-5" />
                   </div>
-                  <span className="text-lg font-medium">+603 7800 0088</span>
+                  <span className="text-lg font-medium">+6012 800 8888</span>
                 </a>
               </div>
             </div>
