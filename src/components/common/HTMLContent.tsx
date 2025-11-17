@@ -30,6 +30,13 @@ export function HTMLContent({ content, className = "" }: HTMLContentProps) {
             const attributes = match[1];
             const linkContent = match[2];
             const hrefMatch = attributes.match(/href=["']([^"']+)["']/i);
+            const classNameMatch = attributes.match(/className=["']([^"']+)["']/i);
+            const targetMatch = attributes.match(/target=["']([^"']+)["']/i);
+            
+            // Extract className if present, otherwise use default
+            const linkClassName = classNameMatch 
+                ? classNameMatch[1] 
+                : "text-red-600 hover:text-red-700 underline font-medium transition-colors";
             
             if (hrefMatch) {
                 const href = hrefMatch[1];
@@ -37,15 +44,16 @@ export function HTMLContent({ content, className = "" }: HTMLContentProps) {
                                   href.startsWith("https://") || 
                                   href.startsWith("mailto:") || 
                                   href.startsWith("tel:");
+                const target = targetMatch ? targetMatch[1] : undefined;
                 
                 if (isExternal) {
                     parts.push(
                         <a
                             key={`ext-link-${keyIndex++}`}
                             href={href}
-                            target="_blank"
+                            target={target || "_blank"}
                             rel="noopener noreferrer"
-                            className="text-red-600 hover:text-red-700 underline font-medium transition-colors"
+                            className={linkClassName}
                         >
                             {linkContent}
                         </a>
@@ -55,7 +63,7 @@ export function HTMLContent({ content, className = "" }: HTMLContentProps) {
                         <Link
                             key={`int-link-${keyIndex++}`}
                             href={href}
-                            className="text-red-600 hover:text-red-700 underline font-medium transition-colors"
+                            className={linkClassName}
                         >
                             {linkContent}
                         </Link>
