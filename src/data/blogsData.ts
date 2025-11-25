@@ -2175,15 +2175,15 @@ export const blogData = [
     {
         "id": 28,
         "slug": "police-mobile-checks-and-pdpa-2010",
-        "title": "Police Checking Mobile Phones and Its Relation to the PDPA 2010",
+        "title": "Police Checking Mobile Phones and Its Relation to the PDPA 2025",
         "description": "Explore the balance between police authority to inspect mobile phones and personal data protection under Malaysia’s Personal Data Protection Act (PDPA) 2010, highlighting legal frameworks and privacy concerns.",
-        "h1": "Police Mobile Phone Checks and PDPA 2010: Balancing Law Enforcement and Privacy",
+        "h1": "Police Mobile Phone Checks and PDPA 2025: Balancing Law Enforcement and Privacy",
         "featuredImage": "/police-mobile-checks.png",
         "altTag": "Police inspecting mobile phone",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-13",
         "readTime": "6 min read",
-        "tags": ["PDPA 2010", "Mobile Phone Checks", "Data Privacy", "Law Enforcement", "Malaysia", "Human Rights"],
+        "tags": ["PDPA 2025", "Mobile Phone Checks", "Data Privacy", "Law Enforcement", "Malaysia", "Human Rights"],
         "category": "Data Protection and Privacy",
         "sections": [
             {
@@ -2200,13 +2200,13 @@ export const blogData = [
             },
             {
                 "type": "content_section",
-                "heading": "Overview of the PDPA 2010",
+                "heading": "Overview of the PDPA 2025",
                 "content": "Enacted in 2010 and enforced in 2013, the Personal Data Protection Act (PDPA) governs the processing of personal data in commercial transactions in Malaysia. It establishes seven key principles, including obtaining consent, providing notice and choice, and ensuring data security. However, the PDPA explicitly exempts federal and state governments, including law enforcement agencies, from its provisions. This exemption allows the Royal Malaysia Police to access personal data during criminal investigations without adhering to the PDPA’s requirements, creating a unique challenge in balancing privacy and public safety."
             },
             {
                 "type": "benefits_section",
-                "heading": "Key Principles of the PDPA 2010",
-                "content": "The PDPA 2010 outlines critical principles to ensure responsible handling of personal data. Understanding these principles helps clarify the exemptions provided to law enforcement and their implications for privacy:",
+                "heading": "Key Principles of the PDPA 2025",
+                "content": "The PDPA 2025 outlines critical principles to ensure responsible handling of personal data. Understanding these principles helps clarify the exemptions provided to law enforcement and their implications for privacy:",
                 "image": "/pdpa-principles.png",
                 "imageAlt": "PDPA 2010 principles",
                 "benefits": [

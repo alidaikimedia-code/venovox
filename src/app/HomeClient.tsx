@@ -5,7 +5,7 @@ import { ShieldCheck, Globe, Target, Search, FileSearch, Briefcase, DollarSign, 
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
 import { FAQSection } from "@/components/common/faq-section";
-import { FAQSchema } from "@/components/Schema";
+import { FAQSchema } from "@/components/schema";
 import ImageTextSection from "@/components/home/image-text-section";
 import GridCardSection from "@/components/home/grid-card-section";
 import NumberedStepsSection from "@/components/home/numbered-steps-section";
@@ -79,7 +79,7 @@ const homeFAQs = [
   {
     id: "1",
     question: "Is background screening legal in Malaysia?",
-    answer: "Yes. Background screening is legal when conducted under PDPA 2010 and related regulations. Venovox applies strict data security and privacy controls.",
+    answer: "Yes. Background screening is legal when conducted under PDPA 2025 and related regulations. Venovox applies strict data security and privacy controls.",
   },
   {
     id: "2",
@@ -116,7 +116,7 @@ const industries = [
 const certifications = [
   { title: "ISO 27001", description: "Data security aligned to ISO 27001 control families", icon: Award },
   { title: "PBSA Guidelines", description: "Screening approach follows PBSA guidelines", icon: Award },
-  { title: "PDPA 2010", description: "Respects PDPA 2010 in Malaysia and privacy frameworks", icon: Award },
+  { title: "PDPA 2025", description: "Respects PDPA 2025 in Malaysia and privacy frameworks", icon: Award },
 ];
 
 const technologyItems = [
@@ -287,7 +287,7 @@ export default function HomeClient() {
 
       <SectionWithHeader
         title={<>Certifications and <span className="text-red-600">Compliance</span></>}
-        description="We operate with strict governance. Our data security program is aligned to ISO 27001 control families. Our screening approach follows PBSA guidelines. Our work respects PDPA 2010 in Malaysia and relevant privacy frameworks in other jurisdictions. We audit our processes, train our analysts and log access to sensitive records. The objective is consistent. Protect data, prove compliance, and deliver dependable evidence that stands up to scrutiny."
+        description="We operate with strict governance. Our data security program is aligned to ISO 27001 control families. Our screening approach follows PBSA guidelines. Our work respects PDPA 2025 in Malaysia and relevant privacy frameworks in other jurisdictions. We audit our processes, train our analysts and log access to sensitive records. The objective is consistent. Protect data, prove compliance, and deliver dependable evidence that stands up to scrutiny."
         bgColor="white"
       >
         <GridCardSection
@@ -509,13 +509,13 @@ export default function HomeClient() {
               </p>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8">
                 <a
-                  href="mailto:info@venovox.com"
+                  href="mailto:hi@venovox.com"
                   className="flex items-center gap-3 text-gray-700 hover:text-red-600 transition-colors"
                 >
                   <div className="bg-red-600 p-3 rounded-full">
                     <Mail className="text-white w-5 h-5" />
                   </div>
-                  <span className="text-lg font-medium">info@venovox.com</span>
+                  <span className="text-lg font-medium">hi@venovox.com</span>
                 </a>
                 <div className="hidden md:block text-gray-300">|</div>
                 <a

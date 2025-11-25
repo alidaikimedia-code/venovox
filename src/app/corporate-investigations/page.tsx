@@ -8,7 +8,7 @@ import {
     ItemListSchema,
     LocalBusinessSchema,
     WebSiteSchema,
-} from "@/components/Schema";
+} from "@/components/schema";
 
 import PageBanner from "@/components/common/pagebanner";
 const BASE_URL = "https://venovox.com";

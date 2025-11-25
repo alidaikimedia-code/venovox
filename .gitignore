@@ -13,6 +13,21 @@
 # testing
 /coverage
 
+# IDE
+.idea/
+
+# Build output
+out/
+out.zip
+
+# Next.js build
+.next/
+dist/
+
+# Auto-generated sitemap
+public/sitemap.xml
+
+
 # next.js
 /.next/
 /out/
