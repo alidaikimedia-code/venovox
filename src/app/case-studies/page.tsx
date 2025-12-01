@@ -11,7 +11,7 @@ import {
     WebSiteSchema,
     WebPageSchema,
     ServiceSchema,
-} from "@/components/Schema";
+} from "@/components/schema";
 
 const BASE_URL = "https://venovox.com";
 

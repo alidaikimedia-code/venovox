@@ -5,7 +5,7 @@ import {
   WebSiteSchema,
   LocalBusinessSchema,
   WebPageSchema,
-} from '@/components/Schema';
+} from '@/components/schema';
 
 const BASE_URL = "https://venovox.com";
 
