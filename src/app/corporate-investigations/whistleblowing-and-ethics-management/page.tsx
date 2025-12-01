@@ -7,7 +7,7 @@ import {
     FAQSchema,
     WebPageSchema,
     ServiceSchema,
-} from "@/components/schema";
+} from "@/components/Schema";
 
 const BASE_URL = "https://venovox.com";
 

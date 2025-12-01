@@ -2,16 +2,16 @@
 
 import { motion } from 'framer-motion';
 import { ShieldCheck, Globe, Target, Search, FileSearch, Briefcase, DollarSign, Users, Shield, Lock, LucideIcon, Building2, Award, Database, Clock, FileText, TrendingUp, BookOpen, MapPin, ClipboardCheck, Zap, Scale, Eye, Mail, Phone } from 'lucide-react';
-import RecognizedBy from "@/components/home/recognitions-section";
-import HeroSection from "@/components/home/hero-section";
+import RecognizedBy from "@/components/Home/recognitions-section";
+import HeroSection from "@/components/Home/hero-section";
 import { FAQSection } from "@/components/common/faq-section";
-import { FAQSchema } from "@/components/schema";
-import ImageTextSection from "@/components/home/image-text-section";
-import GridCardSection from "@/components/home/grid-card-section";
-import NumberedStepsSection from "@/components/home/numbered-steps-section";
-import ServiceCardsSection from "@/components/home/service-cards-section";
-import SectionWithHeader from "@/components/home/section-with-header";
-import SingleCardSection from "@/components/home/single-card-section";
+import { FAQSchema } from "@/components/Schema";
+import ImageTextSection from "@/components/Home/image-text-section";
+import GridCardSection from "@/components/Home/grid-card-section";
+import NumberedStepsSection from "@/components/Home/numbered-steps-section";
+import ServiceCardsSection from "@/components/Home/service-cards-section";
+import SectionWithHeader from "@/components/Home/section-with-header";
+import SingleCardSection from "@/components/Home/single-card-section";
 
 interface ServiceItem {
   title: string;
@@ -27,49 +27,49 @@ const servicesData: ServiceItem[] = [
     title: "Due Diligence",
     description: "Strategic partner verification and investigative research that strengthens leadership decisions.",
     icon: Search,
-    image: "/due.png",
+    image: "/Due Delligence.jpeg",
     link: "/my-en/background-screening/due-diligence"
   },
   {
     title: "Risk and Audit",
     description: "Operational and compliance reviews that surface gaps before they escalate.",
     icon: FileSearch,
-    image: "/risk.png",
+    image: "/Risk And Audit.jpeg",
     link: "/my-en/background-screening/risk-audit"
   },
   {
     title: "Corporate Investigations",
     description: "Discreet inquiries into misconduct, fraud, brand and IP abuse, and asset tracing.",
     icon: Briefcase,
-    image: "/coroporate.png",
+    image: "/Corporate Investigation.jpeg",
     link: "/corporate-investigations"
   },
   {
     title: "Financial Crime",
     description: "AML and fraud risk assessments with remediation guidance.",
     icon: DollarSign,
-    image: "/fiancial.png",
+    image: "/Finanical Crime.jpeg",
     link: ""
   },
   {
     title: "HR Background Screening",
     description: "Employment checks that are fair, consistent and PDPA aligned.",
     icon: Users,
-    image: "/backbg.png",
+    image: "/HR background screening .jpeg",
     link: " "
   },
   {
     title: "Cyber Security",
     description: "Digital risk assessments and incident response coordination.",
     icon: Shield,
-    image: "/cyber.png",
+    image: "/Cyber Security.jpeg",
     link: " "
   },
   {
     title: "Counter Measures and Intellectual Property",
     description: "Protection for sensitive assets, trade secrets and brand value.",
     icon: Lock,
-    image: "/intellectual-property.png",
+    image: "/Counter Measures.jpeg",
     link: " ",
     colSpan: "md:col-span-2 lg:col-span-1"
   }
@@ -260,7 +260,7 @@ export default function HomeClient() {
           "Our executive level analysis delivers verified intelligence, precision reporting and recommendations. With deep local expertise and global operating footprint, we provide on ground capability across APAC and beyond.",
           "Our compliance driven culture ensures PDPA aligned practices, strict data minimisation, and access controls. We offer transparent, realistic turnarounds with a commitment to integrity."
         ]}
-        imageSrc="/why-leaders-choose-us.png"
+        imageSrc="/Why Leaders Choose Us.jpeg"
         imageAlt="why leaders choose us"
         bgColor="white"
         imageFirst={true}
@@ -375,9 +375,9 @@ export default function HomeClient() {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src="/Thought-Leadership-and-Publications.png"
+                  src="/Thought Leadership .jpeg"
                   alt="Thought Leadership and Publications"
-                  className="object-cover w-full h-full"
+                  className="object-contain md:object-cover"
                 />
               </div>
             </div>
