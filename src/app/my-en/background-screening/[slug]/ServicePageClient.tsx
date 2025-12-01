@@ -297,7 +297,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                         </Link>
                         <span className="mx-2 text-gray-400">/</span>
                         <Link
-                            href="/my-en/background-screening/our-services"
+                            href="/my-en/our-services"
                             className="hover:text-red-600 transition-colors duration-200"
                         >
                             Our Services

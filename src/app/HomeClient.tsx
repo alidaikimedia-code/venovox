@@ -79,7 +79,7 @@ const homeFAQs = [
   {
     id: "1",
     question: "Is background screening legal in Malaysia?",
-    answer: "Yes. Background screening is legal when conducted under PDPA 2025 and related regulations. Venovox applies strict data security and privacy controls.",
+    answer: "Yes. Background screening is legal when conducted under PDPA (Amendment) 2024 and related regulations. Venovox applies strict data security and privacy controls.",
   },
   {
     id: "2",
@@ -116,7 +116,7 @@ const industries = [
 const certifications = [
   { title: "ISO 27001", description: "Data security aligned to ISO 27001 control families", icon: Award },
   { title: "PBSA Guidelines", description: "Screening approach follows PBSA guidelines", icon: Award },
-  { title: "PDPA 2025", description: "Respects PDPA 2025 in Malaysia and privacy frameworks", icon: Award },
+  { title: "PDPA 2024", description: "Respects PDPA (Amendment) 2024 in Malaysia and privacy frameworks", icon: Award },
 ];
 
 const technologyItems = [
@@ -287,7 +287,7 @@ export default function HomeClient() {
 
       <SectionWithHeader
         title={<>Certifications and <span className="text-red-600">Compliance</span></>}
-        description="We operate with strict governance. Our data security program is aligned to ISO 27001 control families. Our screening approach follows PBSA guidelines. Our work respects PDPA 2025 in Malaysia and relevant privacy frameworks in other jurisdictions. We audit our processes, train our analysts and log access to sensitive records. The objective is consistent. Protect data, prove compliance, and deliver dependable evidence that stands up to scrutiny."
+        description="We operate with strict governance. Our data security program is aligned to ISO 27001 control families. Our screening approach follows PBSA guidelines. Our work respects PDPA (Amendment) 2024 in Malaysia and relevant privacy frameworks in other jurisdictions. We audit our processes, train our analysts and log access to sensitive records. The objective is consistent. Protect data, prove compliance, and deliver dependable evidence that stands up to scrutiny."
         bgColor="white"
       >
         <GridCardSection
