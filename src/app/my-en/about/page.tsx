@@ -1,4 +1,4 @@
-import AboutUs from "@/components/About/AboutUs"
+import AboutUs from "@/components/about/AboutUs"
 import React from "react"
 import Head from "next/head";
 export const metadata = {

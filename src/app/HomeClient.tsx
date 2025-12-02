@@ -2,16 +2,16 @@
 
 import { motion } from 'framer-motion';
 import { ShieldCheck, Globe, Target, Search, FileSearch, Briefcase, DollarSign, Users, Shield, Lock, LucideIcon, Building2, Award, Database, Clock, FileText, TrendingUp, BookOpen, MapPin, ClipboardCheck, Zap, Scale, Eye, Mail, Phone } from 'lucide-react';
-import RecognizedBy from "@/components/Home/recognitions-section";
-import HeroSection from "@/components/Home/hero-section";
+import RecognizedBy from "@/components/home/recognitions-section";
+import HeroSection from "@/components/home/hero-section";
 import { FAQSection } from "@/components/common/faq-section";
-import { FAQSchema } from "@/components/Schema";
-import ImageTextSection from "@/components/Home/image-text-section";
-import GridCardSection from "@/components/Home/grid-card-section";
-import NumberedStepsSection from "@/components/Home/numbered-steps-section";
-import ServiceCardsSection from "@/components/Home/service-cards-section";
-import SectionWithHeader from "@/components/Home/section-with-header";
-import SingleCardSection from "@/components/Home/single-card-section";
+import { FAQSchema } from "@/components/schema/faq-schema";
+import ImageTextSection from "@/components/home/image-text-section";
+import GridCardSection from "@/components/home/grid-card-section";
+import NumberedStepsSection from "@/components/home/numbered-steps-section";
+import ServiceCardsSection from "@/components/home/service-cards-section";
+import SectionWithHeader from "@/components/home/section-with-header";
+import SingleCardSection from "@/components/home/single-card-section";
 
 interface ServiceItem {
   title: string;
