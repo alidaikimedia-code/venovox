@@ -29,7 +29,7 @@ export default function ImageTextSection({
       <img
         src={imageSrc}
         alt={imageAlt}
-        className="object-contain md:object-cover w-full h-full"
+        className="w-full h-full object-cover object-top"
       />
     </div>
   );

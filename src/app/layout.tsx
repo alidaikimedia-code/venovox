@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/header";
 import StickyPromoBar from "@/components/common/cta-section";
+import FloatingWhatsApp from "@/components/common/floatingWhatsApp";
 import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,6 +74,7 @@ export default function RootLayout({
         <StickyPromoBar />
         {children}
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );
