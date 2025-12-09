@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ShieldCheck, Globe, Target, Search, FileSearch, Briefcase, DollarSign, Users, Shield, Lock, LucideIcon, Building2, Award, Database, Clock, FileText, TrendingUp, BookOpen, MapPin, ClipboardCheck, Zap, Scale, Eye, Mail, Phone } from 'lucide-react';
 import RecognizedBy from "@/components/home/recognitions-section";
 import HeroSection from "@/components/home/hero-section";
@@ -204,8 +205,8 @@ export default function HomeClient() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
               About <span className="text-red-600">VENOVOX</span>
@@ -220,10 +221,14 @@ export default function HomeClient() {
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="/about-us.jpg"
                   alt="VENOVOX Global Team"
-                  className="object-contain md:object-cover w-full h-full"
+                  fill
+                  className="object-contain md:object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
             </div>
@@ -353,8 +358,8 @@ export default function HomeClient() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -374,10 +379,14 @@ export default function HomeClient() {
                 </p>
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-                <img
+                <Image
                   src="/Thought Leadership .jpeg"
                   alt="Thought Leadership and Publications"
+                  fill
                   className="object-contain md:object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
             </div>
@@ -390,8 +399,8 @@ export default function HomeClient() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -421,8 +430,8 @@ export default function HomeClient() {
                         className="bg-white p-4 rounded-lg text-center"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ delay: index * 0.05, duration: 0.3, ease: "easeOut" }}
                       >
                         <p className="font-semibold text-red-600">{location}</p>
                       </motion.div>
@@ -462,8 +471,8 @@ export default function HomeClient() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <blockquote className="text-xl md:text-2xl italic text-gray-800 text-center">
               <p className="relative">
@@ -482,7 +491,7 @@ export default function HomeClient() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <FAQSection
               faqs={homeFAQs}
@@ -497,8 +506,8 @@ export default function HomeClient() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">

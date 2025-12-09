@@ -42,7 +42,7 @@ export default function AssetTracingAndRecovery() {
         description={crossBorderData.description}
       />
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="container mx-auto">
           <div className="mx-auto">
             <div className="text-center mb-8">

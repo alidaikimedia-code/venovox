@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 interface MenuItem {
   name: string;
@@ -95,12 +96,13 @@ export default function Navbar() {
       <div className="max-w-[1800px] mx-auto px-6">
         <div className="flex justify-between items-center h-[100px]">
           <Link href="/" className="flex items-center">
-            <img
+            <Image
               src={navData.logo}
               alt="Main Logo"
               width={125}
               height={125}
-              className=""
+              priority
+              quality={90}
             />
           </Link>
 
@@ -156,12 +158,13 @@ export default function Navbar() {
             className="hidden lg:block"
           >
             <div className="h-16 w-16 relative">
-              <img
+              <Image
                 src={navData.endLogo}
                 alt="End Logo"
                 width={64}
                 height={64}
-                className="object-contain w-full h-full"
+                className="object-contain"
+                quality={90}
               />
             </div>
           </a>
@@ -233,12 +236,13 @@ export default function Navbar() {
             <div className="pt-4 pb-2 flex justify-center">
               <a href="https://hi.venovox.com" onClick={() => setIsMenuOpen(false)}>
                 <div className="h-16 w-16 relative">
-                  <img
+                  <Image
                     src={navData.endLogo}
                     alt="End Logo"
                     width={64}
                     height={64}
-                    className="object-contain w-full h-full"
+                    className="object-contain"
+                    quality={90}
                   />
                 </div>
               </a>

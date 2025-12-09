@@ -385,7 +385,7 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -449,7 +449,7 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -512,7 +512,7 @@ export default function CorporateInvestigations() {
         </motion.div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -583,7 +583,7 @@ export default function CorporateInvestigations() {
 
       <Faqs faqs={faqs} head="Frequently asked questions" />
 
-      <section className=" py-12 bg-gray-50">
+      <section className=" py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
