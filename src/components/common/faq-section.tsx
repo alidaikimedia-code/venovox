@@ -20,7 +20,7 @@ interface FAQSectionProps {
 
 export function FAQSection({ faqs, heading, sectionKey = "faq" }: FAQSectionProps) {
     return (
-        <section className="mb-20">
+        <section className="mb-2">
             <div className="mx-auto">
                 {heading && (
                     <h2 className="text-4xl font-bold mb-12 text-black text-center leading-tight">

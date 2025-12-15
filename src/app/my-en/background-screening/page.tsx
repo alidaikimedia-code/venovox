@@ -1,19 +1,29 @@
 import type { Metadata } from 'next';
-import BackgroundScreeningClient from '../background-screening/BackgroundScreeningClient';
-import Head from 'next/head';
+import BackgroundScreeningMalaysiaClient from '@/components/BackgroundscreeningMalaysia';
+
 export const metadata: Metadata = {
-  title: "Background Screening | Venovox",
-  description:
-    "Learn about our journey from Texas headquarters to becoming APAC's premier risk consultancy offering security advisory and intelligence analysis.",
+  title: "Background Screening Malaysia | Trusted Pre Employment Checks",
+  description: "Fast, accurate background screening services in Malaysia. Verify criminal records, employment history, education, identity and more. PDPA compliant. Get a quote.",
+  keywords: [
+    "background screening malaysia",
+    "background check malaysia",
+    "employment verification malaysia",
+    "criminal record check malaysia",
+    "PDPA compliant screening",
+    "background check agency kuala lumpur",
+    "employee verification malaysia",
+    "pre-employment screening malaysia"
+  ],
   alternates: {
-    canonical: "https://venovox.com/my-en/background-screening",
+    canonical: "https://venovox.com/background-screening-malaysia",
+  },
+  openGraph: {
+    title: "Background Screening Malaysia | Trusted Pre Employment Checks",
+    description: "Fast, accurate background screening services in Malaysia. Verify criminal records, employment history, education, identity and more. PDPA compliant. Get a quote.",
+    type: "website",
   },
 };
 
-export default function Home() {
-  <Head>
-    <link rel="canonical" href="https://venovox.com/my-en/background-screening" />
-  </Head>
-
-  return <BackgroundScreeningClient />;
+export default function BackgroundScreeningMalaysia() {
+  return <BackgroundScreeningMalaysiaClient />;
 }
