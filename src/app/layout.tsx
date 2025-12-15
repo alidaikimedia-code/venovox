@@ -9,16 +9,20 @@ import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+  preload: false, // Only preload primary font
 });
 
 export const metadata: Metadata = {
   title: "Trusted Background Screening & Company Search | Venovox",
-  description: "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services.",
+  description: "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services. ISO 27001 certified risk management solutions.",
   keywords: [
     "company name search malaysia",
     "ctos score report",
@@ -32,6 +36,15 @@ export const metadata: Metadata = {
     "company profile malaysia",
     "Background screening Malaysia"
   ],
+  openGraph: {
+    title: "Trusted Background Screening & Company Search | Venovox",
+    description: "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services.",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

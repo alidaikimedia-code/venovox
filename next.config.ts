@@ -5,7 +5,15 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export, but we'll optimize images manually
+    formats: ['image/avif', 'image/webp'],
+  },
+  compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
 
   async redirects() {

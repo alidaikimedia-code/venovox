@@ -1,6 +1,6 @@
 'use client';
 
-// import Image from 'next/image';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const recognizedByLogos = [
@@ -22,8 +22,8 @@ const RecognizedBy = () => {
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black tracking-tight"
           >
             <span className="text-red-600">Recognized</span> & Trusted Worldwide
@@ -33,8 +33,8 @@ const RecognizedBy = () => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="text-gray-600 mt-5 text-sm sm:text-base md:text-lg lg:text-xl container mx-auto"
           >
            Recognised by global decision makers and guided by international standards, Venovox maintains a security posture that meets the expectations of regulated industries. Our internal controls align with ISO 27001 best practices, our screening model follows PBSA principles, and our data handling respects privacy requirements across Malaysia and the international market. Clients choose Venovox when accuracy, confidentiality and compliance are non negotiable.
@@ -60,17 +60,19 @@ const RecognizedBy = () => {
           
           <motion.div
             className="flex gap-16 items-center"
-            animate={{ x: ['0%', '-100%'] }}
-            transition={{ repeat: Infinity, duration: 25, ease: 'linear' }}
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
           >
             {[...recognizedByLogos, ...recognizedByLogos].map((logo, index) => (
               <div key={index} className="min-w-[160px] h-[120px] flex items-center justify-center">
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.alt}
                   width={logo.width}
                   height={logo.height}
                   className="object-contain transition-all duration-300"
+                  loading="lazy"
+                  quality={75}
                 />
               </div>
             ))}

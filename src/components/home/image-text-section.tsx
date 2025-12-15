@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
+import Image from 'next/image';
 
 interface ImageTextSectionProps {
   title?: string | ReactNode;
@@ -26,10 +27,14 @@ export default function ImageTextSection({
   
   const imageContent = (
     <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
-      <img
+      <Image
         src={imageSrc}
         alt={imageAlt}
-        className="object-contain md:object-cover w-full h-full"
+        fill
+        className="object-contain md:object-cover"
+        sizes="(max-width: 768px) 100vw, 50vw"
+        loading="lazy"
+        quality={85}
       />
     </div>
   );
@@ -58,8 +63,8 @@ export default function ImageTextSection({
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {imageFirst ? (

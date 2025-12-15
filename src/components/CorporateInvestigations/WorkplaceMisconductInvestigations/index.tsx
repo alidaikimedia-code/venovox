@@ -86,7 +86,7 @@ export default function WorkplaceMisconductInvestigations() {
 
       <CardsSection sections={[cardsSections[2]]} />
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
@@ -168,7 +168,7 @@ export default function WorkplaceMisconductInvestigations() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="container mx-auto ">
           <div className="mx-auto">
             <motion.div

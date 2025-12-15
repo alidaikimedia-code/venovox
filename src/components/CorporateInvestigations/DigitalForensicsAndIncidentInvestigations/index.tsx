@@ -44,7 +44,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
 
       <CardsSection sections={[cardsSections[0]]} />
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div
@@ -142,7 +142,7 @@ export default function DigitalForensicsAndIncidentInvestigations() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
+      <section className="py-12">
         <div className="container mx-auto">
           <div className="mx-auto">
             <motion.div

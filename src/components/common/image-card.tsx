@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export interface ImageCardProps {
   image: string;
   title: string;
@@ -18,10 +20,14 @@ export function ImageCard({
   return (
     <div className="space-y-0">
       <div className="relative overflow-hidden h-[296px]">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
+          quality={80}
         />
       </div>
 
