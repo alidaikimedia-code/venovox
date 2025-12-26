@@ -289,7 +289,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                         </p>
                                     </div>
                                 </Link>
-                    <span className="text-gray-500 text-xl">August 8th, 2024</span>
+                    <span className="text-gray-500 text-xl">August 8th, 2024.</span>
                 </div>
             </main>
         </div>
