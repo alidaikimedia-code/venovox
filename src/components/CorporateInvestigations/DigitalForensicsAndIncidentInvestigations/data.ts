@@ -279,7 +279,7 @@ export const ctaData: ActionItem[] = [
       "  If you are facing a cyber incident or data loss, speak with Venovox today. Share what you see and your timeline. We will propose safe first steps and begin preservation. We can start small with triage and expand as needed.",
     primaryButton: {
       text: "Get in Touch",
-      link: "/contact-us",
+      link: "/my-en/contact-us",
       icon: MailIcon,
     },
   },

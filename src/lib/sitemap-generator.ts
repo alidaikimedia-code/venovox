@@ -93,20 +93,36 @@ export interface SitemapPage {
   lastmod: string;
 }
 
+// Helper function to ensure URLs end with trailing slash (except root)
+function normalizeUrl(url: string): string {
+  // Root URL stays as is
+  if (url === '/') {
+    return url;
+  }
+  // Add trailing slash if not present
+  return url.endsWith('/') ? url : `${url}/`;
+}
+
 export function generateSitemapData(): SitemapPage[] {
   const currentDate = new Date().toISOString();
   
   const blogUrls: SitemapPage[] = blogData.map(blog => ({
-    url: `/blogs/${blog.slug}`,
+    url: normalizeUrl(`/blogs/${blog.slug}`),
     lastmod: blog.publishDate ? new Date(blog.publishDate).toISOString() : currentDate
   }));
   
   const corporateUrls: SitemapPage[] = corporateInvestigationPages.map(page => ({
-    url: page,
+    url: normalizeUrl(page),
     lastmod: currentDate
   }));
   
-  return [...staticPages, ...corporateUrls, ...blogUrls];
+  // Normalize static pages URLs
+  const normalizedStaticPages = staticPages.map(page => ({
+    ...page,
+    url: normalizeUrl(page.url)
+  }));
+  
+  return [...normalizedStaticPages, ...corporateUrls, ...blogUrls];
 }
 
 export function generateSitemapXML(): string {

@@ -22,7 +22,7 @@ export default function AuthorPage() {
                         <div className="text-center py-12 px-8">
                             <div className="w-96 h-96 mx-auto mb-8 rounded-3xl overflow-hidden relative">
                                 <img
-                                    src="/venovox-author.webp"
+                                    src="/images/venovox-author1.webp"
                                     alt="Author"
 
                                     className="object-cover"

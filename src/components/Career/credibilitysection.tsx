@@ -16,7 +16,7 @@ const VenovoxCredibilitySection = () => {
                             <div className="relative">
                                 <div className="absolute -top-4 -left-4 w-20 h-20 bg-white/30 rounded-full blur-md"></div>
                                 <img
-                                    src="/career1-Photoroom.png"
+                                    src="/images/career1-Photoroom.webp"
                                     alt="Handshake with Tech Overlay"
                                     className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-2xl"
                                 />
