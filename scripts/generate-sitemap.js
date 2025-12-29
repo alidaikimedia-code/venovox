@@ -18,6 +18,10 @@ const staticPages = [
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
+    url: '/my-en/background-screening',
+    lastmod: '2025-01-14T10:43:49+00:00'
+  },
+  {
     url: '/my-en/background-screening/due-diligence',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
@@ -83,6 +87,16 @@ const staticPages = [
   }
 ];
 
+// Helper function to ensure URLs end with trailing slash (except root)
+function normalizeUrl(url) {
+  // Root URL stays as is
+  if (url === '/') {
+    return url;
+  }
+  // Add trailing slash if not present
+  return url.endsWith('/') ? url : `${url}/`;
+}
+
 function generateSitemap() {
   console.log('Generating dynamic sitemap...');
   
@@ -91,12 +105,18 @@ function generateSitemap() {
   
   // Generate blog URLs from blog data
   const blogUrls = blogData.map(blog => ({
-    url: `/blogs/${blog.slug}`,
+    url: normalizeUrl(`/blogs/${blog.slug}`),
     lastmod: blog.publishDate ? new Date(blog.publishDate).toISOString() : currentDate
   }));
   
+  // Normalize static pages URLs
+  const normalizedStaticPages = staticPages.map(page => ({
+    ...page,
+    url: normalizeUrl(page.url)
+  }));
+  
   // Combine static pages and blog pages
-  const allPages = [...staticPages, ...blogUrls];
+  const allPages = [...normalizedStaticPages, ...blogUrls];
   
   // Generate XML sitemap
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>

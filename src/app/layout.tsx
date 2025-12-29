@@ -5,6 +5,7 @@ import Footer from "@/components/common/footer";
 import Navbar from "@/components/common/header";
 import StickyPromoBar from "@/components/common/cta-section";
 import FloatingWhatsApp from "@/components/common/floatingWhatsApp";
+import ClientLayoutWrapper from "@/components/common/client-layout-wrapper";
 import Script from "next/script";
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,11 +84,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased hyphens-none`}
       >
-        <Navbar />
-        <StickyPromoBar />
-        {children}
-        <Footer />
-        <FloatingWhatsApp />
+        <ClientLayoutWrapper>
+          <Navbar />
+          <StickyPromoBar />
+          {children}
+          <Footer />
+          <FloatingWhatsApp />
+        </ClientLayoutWrapper>
       </body>
     </html>
   );

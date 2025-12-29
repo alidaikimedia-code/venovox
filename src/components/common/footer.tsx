@@ -9,8 +9,12 @@ import {
   FaWhatsapp,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getLocalizedPath } from "@/lib/language-utils";
 
 const Footer = () => {
+  const { language } = useLanguage();
+  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert("Message sent successfully!");
@@ -21,7 +25,7 @@ const Footer = () => {
 
 
       <footer className="bg-gradient-to-b from-white to-gray-50 border-t border-gray-200 px-6 py-12 md:py-12">
-        <div className="max-w-6xl mx-auto">
+        <div className="container mx-auto">
 
 
 <div className="flex flex-col items-center text-center gap-10">
@@ -47,6 +51,7 @@ const Footer = () => {
         { name: "Financial Crime", url: "/my-en/background-screening/financial-crime/" },
         { name: "HR Services", url: "/my-en/background-screening/hr-services/" },
         { name: "Cyber Security", url: "/my-en/background-screening/cyber-security/" },
+        { name: "Corporate Investigations", url: "/corporate-investigations/" },
       ].map((service, index) => (
         <motion.li
           key={service.name}
@@ -56,7 +61,7 @@ const Footer = () => {
           className="list-none"
         >
           <Link
-            href={service.url}
+            href={getLocalizedPath(service.url, language)}
             className="text-gray-600 hover:text-red-600 transition duration-200 text-sm md:text-base flex items-center group"
           >
             <span className="h-1 w-1 bg-red-600 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition"></span>
@@ -238,10 +243,10 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row md:justify-between items-center border-t border-gray-200 pt-6 text-sm text-gray-500 gap-4 md:gap-0 text-center md:text-left">
             <div className="flex flex-wrap justify-center md:justify-start gap-4">
-              <a href="/privacy/terms-and-conditions" className="hover:underline">Terms & Conditions</a>
-              <a href="/privacy/privacy-policy" className="hover:underline">Privacy Policy</a>
-              <a href="/privacy/security-policy" className="hover:underline">Security Policy</a>
-              <a href="/privacy/whistleblowing-policy" className="hover:underline">Whistleblowing Policy</a>
+              <Link href={getLocalizedPath("/privacy/terms-and-conditions", language)} className="hover:underline">Terms & Conditions</Link>
+              <Link href={getLocalizedPath("/privacy/privacy-policy", language)} className="hover:underline">Privacy Policy</Link>
+              <Link href={getLocalizedPath("/privacy/security-policy", language)} className="hover:underline">Security Policy</Link>
+              <Link href={getLocalizedPath("/privacy/whistleblowing-policy", language)} className="hover:underline">Whistleblowing Policy</Link>
             </div>
             <p className="mt-2 md:mt-0">© {new Date().getFullYear()} Venovox. All rights reserved.</p>
           </div>
