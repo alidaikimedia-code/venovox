@@ -23,12 +23,7 @@ export default function StickyPromoBar() {
   const translatedMessages = useTranslations(promoMessages);
   const chatNowText = useTranslation("Chat Now");
   
-  // Debug: Log when translations change
-  useEffect(() => {
-    if (translatedMessages && translatedMessages.length > 0) {
-      console.log('Translated messages:', translatedMessages);
-    }
-  }, [translatedMessages]);
+  // Removed debug logging to reduce console spam
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
