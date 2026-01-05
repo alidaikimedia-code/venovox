@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { translateText } from '@/lib/translation';
+import { translateText, shouldSkipTranslation } from '@/lib/translation';
 import { usePathname } from 'next/navigation';
 
 const BASE_URL = 'https://venovox.com';
@@ -14,12 +14,27 @@ export default function MetaUpdater() {
   const pathname = usePathname();
   const metaUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isUpdatingRef = useRef(false);
+  const lastUpdatedRef = useRef<string>('');
 
   useEffect(() => {
+    // Skip translations for bots/crawlers
+    if (shouldSkipTranslation()) {
+      // Still update canonical URL for bots
+      const canonicalUrl = `${BASE_URL}${pathname}`;
+      updateCanonicalUrl(canonicalUrl);
+      return;
+    }
+
     // Clear any pending updates
     if (metaUpdateTimeoutRef.current) {
       clearTimeout(metaUpdateTimeoutRef.current);
       metaUpdateTimeoutRef.current = null;
+    }
+
+    // Check if we've already updated for this pathname + language combination
+    const updateKey = `${pathname}:${language}`;
+    if (lastUpdatedRef.current === updateKey) {
+      return; // Already updated
     }
 
     const updateMetaTags = async () => {
@@ -40,12 +55,13 @@ export default function MetaUpdater() {
         updateTitle(defaultMetaTitle);
         updateMetaTag('og:title', defaultMetaTitle);
         updateMetaTag('og:url', canonicalUrl);
+        lastUpdatedRef.current = updateKey;
         isUpdatingRef.current = false;
         return;
       }
 
       try {
-        // Translate meta description and title
+        // Translate meta description and title (will use cache if available)
         const [translatedDescription, translatedTitle] = await Promise.all([
           translateText(defaultMetaDescription, language),
           translateText(defaultMetaTitle, language)
@@ -57,6 +73,7 @@ export default function MetaUpdater() {
         updateTitle(translatedTitle);
         updateMetaTag('og:title', translatedTitle);
         updateMetaTag('og:url', canonicalUrl);
+        lastUpdatedRef.current = updateKey;
       } catch (error) {
         console.error('Error translating meta tags:', error);
         // Keep original on error
@@ -65,19 +82,13 @@ export default function MetaUpdater() {
         updateTitle(defaultMetaTitle);
         updateMetaTag('og:title', defaultMetaTitle);
         updateMetaTag('og:url', canonicalUrl);
+        lastUpdatedRef.current = updateKey;
       } finally {
         isUpdatingRef.current = false;
       }
     };
 
-    // Use requestAnimationFrame for immediate execution
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        updateMetaTags();
-      });
-    });
-
-    // Also retry after a short delay to ensure it runs
+    // Single debounced call instead of multiple triggers
     metaUpdateTimeoutRef.current = setTimeout(() => {
       if (!isUpdatingRef.current) {
         updateMetaTags();

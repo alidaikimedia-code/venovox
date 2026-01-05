@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { translateBatch, clearTranslationCache } from '@/lib/translation';
+import { translateBatch, shouldSkipTranslation } from '@/lib/translation';
 import { usePathname } from 'next/navigation';
 
 // Component to translate all text content on the page
@@ -11,13 +11,71 @@ export default function PageTranslator() {
   const pathname = usePathname();
   const translationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isTranslatingRef = useRef(false);
+  const lastTranslatedPathRef = useRef<string>('');
+  const lastTranslatedLangRef = useRef<string>('');
+
+  // Listen for language change events
+  useEffect(() => {
+    const handleLanguageChange = (event: CustomEvent) => {
+      const newLang = event.detail?.language;
+      if (newLang && newLang !== language) {
+        // Reset translation state to force re-translation
+        lastTranslatedPathRef.current = '';
+        lastTranslatedLangRef.current = '';
+        isTranslatingRef.current = false;
+      }
+    };
+
+    window.addEventListener('language-changed', handleLanguageChange as EventListener);
+    return () => {
+      window.removeEventListener('language-changed', handleLanguageChange as EventListener);
+    };
+  }, [language]);
 
   useEffect(() => {
+    // Skip translations for bots/crawlers
+    if (shouldSkipTranslation()) {
+      return;
+    }
+
     // Clear any pending translations
     if (translationTimeoutRef.current) {
       clearTimeout(translationTimeoutRef.current);
       translationTimeoutRef.current = null;
     }
+
+    // Reset translation state when language changes
+    if (lastTranslatedLangRef.current !== language) {
+      isTranslatingRef.current = false;
+      // Clear the "already translated" flag when language changes
+      if (lastTranslatedLangRef.current && lastTranslatedLangRef.current !== language) {
+        lastTranslatedPathRef.current = '';
+      }
+    }
+
+    // IMPORTANT: Only translate when language ACTUALLY changes (explicit user click)
+    // Don't translate on:
+    // - Page reload (same page, same language)
+    // - Re-render (same page, same language, component re-render)
+    // - Navigation (new page, same language - requirement: ONLY on language click)
+    const pageKey = `${pathname}:${language}`;
+    const languageChanged = lastTranslatedLangRef.current !== language;
+    
+    // Skip if language didn't change (this covers: page reload, re-render, navigation)
+    // Requirement: "Translation API must be called ONLY on explicit user language click"
+    if (!languageChanged && language !== 'en') {
+      // Language didn't change - don't translate
+      // This prevents: page reload, re-render, and navigation from triggering translation
+      return;
+    }
+    
+    // Skip if already translated this exact page with this language (page reload scenario)
+    if (lastTranslatedPathRef.current === pageKey && language !== 'en') {
+      // Already translated this exact page with this language - skip
+      return;
+    }
+    
+    // Proceed ONLY if language changed (explicit user click)
 
     if (language === 'en') {
       // If switching back to English, restore original text
@@ -40,24 +98,30 @@ export default function PageTranslator() {
             el.removeAttribute('data-original-text');
           }
         });
-        console.log('Restored English text for', originalTexts.length, 'elements');
+        if (originalTexts.length > 0) {
+          console.log('Restored English text for', originalTexts.length, 'elements');
+        }
       };
 
       // Try immediately, then retry after a short delay to catch any late-rendered content
       restoreEnglish();
       translationTimeoutRef.current = setTimeout(restoreEnglish, 100);
+      lastTranslatedPathRef.current = `${pathname}:en`;
+      lastTranslatedLangRef.current = 'en';
       return;
     }
 
-    // Clear cache when language changes
-    clearTranslationCache();
+    // Don't clear cache when language changes - cache is keyed by language
+    // so we can keep translations for all languages
     isTranslatingRef.current = false;
 
-    // Clear all translation markers so we can re-translate
-    const translatedElements = document.querySelectorAll('[data-translated]');
-    translatedElements.forEach((el) => {
-      el.removeAttribute('data-translated');
-    });
+    // Only clear translation markers if language changed, not on same-language navigation
+    if (lastTranslatedLangRef.current !== language) {
+      const translatedElements = document.querySelectorAll('[data-translated]');
+      translatedElements.forEach((el) => {
+        el.removeAttribute('data-translated');
+      });
+    }
 
     // Translate all text on the page
     const translatePage = async () => {
@@ -99,7 +163,7 @@ export default function PageTranslator() {
             const skipTags = ['SCRIPT', 'STYLE', 'NOSCRIPT', 'CODE', 'PRE', 'META', 'LINK'];
             if (skipTags.includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
             
-            // Skip if already translated or marked as no-translate
+            // Skip if already translated (check both attribute and if text matches cached translation)
             if (parent.hasAttribute('data-translated')) return NodeFilter.FILTER_REJECT;
             if (parent.hasAttribute('data-no-translate')) return NodeFilter.FILTER_REJECT;
             
@@ -130,12 +194,14 @@ export default function PageTranslator() {
       const textsToTranslate = textNodes.map(item => item.text);
       
       if (textsToTranslate.length === 0) {
-        console.log('No text nodes found to translate');
         isTranslatingRef.current = false;
         return;
       }
 
-      console.log(`Translating ${textsToTranslate.length} text nodes to ${language}`);
+      // Only log if there are texts to translate
+      if (textsToTranslate.length > 0) {
+        console.log(`Translating ${textsToTranslate.length} text nodes to ${language}`);
+      }
 
       // Translate in batches
       const batchSize = 50; // Google API allows up to 100 texts per request
@@ -146,58 +212,103 @@ export default function PageTranslator() {
         try {
           const translatedTexts = await translateBatch(batch, language);
           
+          // Debug: Check if translations are different
+          let updatedCount = 0;
+          let sameCount = 0;
+          
           // Update DOM with translations
           batchIndices.forEach((item, idx) => {
             const translated = translatedTexts[idx];
-            if (translated && translated !== item.text) {
+            // Update if translation exists
+            if (translated) {
               // Store original text if not already stored
               if (!item.parent.hasAttribute('data-original-text')) {
                 item.parent.setAttribute('data-original-text', item.text);
               }
-              item.node.textContent = translated;
-              item.parent.setAttribute('data-translated', 'true');
+              
+              // Always update DOM, even if same (for consistency)
+              const currentText = item.node.textContent || '';
+              
+              // Check if translation is different from original
+              if (translated !== item.text) {
+                // Real translation received
+                item.node.textContent = translated;
+                item.parent.setAttribute('data-translated', 'true');
+                updatedCount++;
+              } else if (translated !== currentText) {
+                // Translation same as original but different from current DOM
+                item.node.textContent = translated;
+                item.parent.setAttribute('data-translated', 'true');
+                updatedCount++;
+              } else {
+                // Translation same as both original and current
+                item.parent.setAttribute('data-translated', 'true');
+                sameCount++;
+              }
+            } else {
+              console.warn(`[PageTranslator] No translation received for text: "${item.text.substring(0, 30)}..."`);
             }
           });
-          console.log(`Translated batch ${Math.floor(i / batchSize) + 1}`);
+          
+          // Debug log - always show batch progress
+          console.log(`Batch ${Math.floor(i / batchSize) + 1}: Updated ${updatedCount} texts, ${sameCount} unchanged`);
+          
+          // If no texts updated, log first few examples for debugging
+          if (updatedCount === 0 && batchIndices.length > 0) {
+            const firstItem = batchIndices[0];
+            const firstTranslated = translatedTexts[0];
+            console.warn(`[PageTranslator] No texts updated in batch. Example: "${firstItem.text.substring(0, 50)}..." -> "${firstTranslated?.substring(0, 50) || 'NO TRANSLATION'}..."`);
+          }
+          // Only log batch progress for debugging (commented out to reduce console spam)
+          // console.log(`Translated batch ${Math.floor(i / batchSize) + 1}`);
         } catch (error) {
           console.error('Batch translation error:', error);
           // Log the error details
           if (error instanceof Error) {
             console.error('Error message:', error.message);
-            console.error('Error stack:', error.stack);
+            // Don't log stack for 403 errors (rate limits)
+            if (!error.message.includes('403')) {
+              console.error('Error stack:', error.stack);
+            }
           }
         }
         
         // Small delay between batches to avoid rate limiting
         if (i + batchSize < textsToTranslate.length) {
-          await new Promise(resolve => setTimeout(resolve, 100));
+          await new Promise(resolve => setTimeout(resolve, 200)); // Increased delay
         }
       }
 
+      // Mark page as translated
+      lastTranslatedPathRef.current = pageKey;
+      lastTranslatedLangRef.current = language;
       isTranslatingRef.current = false;
     };
 
-    // Use requestAnimationFrame for immediate execution, then retry after a short delay
-    // This ensures we catch both immediate DOM updates and any late-rendered content
+    // Debounced translation start to prevent multiple calls
     const startTranslation = () => {
-      console.log('Starting page translation for language:', language, 'pathname:', pathname);
+      // Double-check we're not already translating
+      if (isTranslatingRef.current) {
+        return;
+      }
       translatePage().catch(err => {
         console.error('Error in translatePage:', err);
         isTranslatingRef.current = false;
       });
     };
 
-    // Start immediately with requestAnimationFrame
-    requestAnimationFrame(() => {
-      requestAnimationFrame(startTranslation);
-    });
-
-    // Also retry after a short delay to catch any content that renders later
+    // Use a single debounced call instead of multiple triggers
+    // Wait a bit for DOM to be ready, but only trigger once
+    // Always trigger when language changes (not just on pathname change)
+    // Note: language !== 'en' check not needed here since we already returned early for English
     translationTimeoutRef.current = setTimeout(() => {
       if (!isTranslatingRef.current) {
-        startTranslation();
+        // Force translation when language changes
+        requestAnimationFrame(() => {
+          requestAnimationFrame(startTranslation);
+        });
       }
-    }, 200);
+    }, 100); // Reduced delay for faster language switching
 
     return () => {
       if (translationTimeoutRef.current) {
