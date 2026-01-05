@@ -5,6 +5,9 @@ import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getLocalizedPath } from "@/lib/language-utils";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface MenuItem {
   name: string;
@@ -38,7 +41,7 @@ const navData = {
         { name: "Cyber Security", path: "/my-en/background-screening/cyber-security/" }
       ]
     },
-    { name: "Corporate Investigations",path: "/corporate-investigations" },
+    { name: "Background Screening",path: "/my-en/background-screening" },
     { name: "Case Studies", path: "/case-studies" },
     { name: "Publication", path: "/blogs/" },
     { name: "Contact Us", path: "/my-en/contact-us" },
@@ -50,6 +53,7 @@ const navData = {
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { language } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
@@ -95,7 +99,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-sm">
       <div className="max-w-[1800px] mx-auto px-6">
         <div className="flex justify-between items-center h-[100px]">
-          <Link href="/" className="flex items-center">
+          <Link href={getLocalizedPath("/", language)} className="flex items-center">
             <Image
               src={navData.logo}
               alt="Main Logo"
@@ -110,42 +114,20 @@ export default function Navbar() {
             <nav className="flex space-x-2 items-center">
               {navData.menuItems.map((item) => {
                 const active = isActive(item.path);
-                const hasSubItems = item.subItems && item.subItems.length > 0;
+                const hasSubItems = !!(item.subItems && item.subItems.length > 0);
 
                 return (
                   <div key={item.name} className="relative group/nav">
-                    <Link
-                      href={item.path}
-                      className={`px-4 py-3 text-base font-medium flex items-center hover:bg-gray-50 transition ${active
-                        ? "text-red-600 font-semibold border-b-2 border-red-600"
-                        : "text-gray-800 hover:text-red-600"
-                        }`}
-                      onMouseEnter={() => hasSubItems && handleMouseEnter(item.name)}
-                      onMouseLeave={() => hasSubItems && handleMouseLeave()}
-                    >
-                      {item.name}
-                      {hasSubItems && <ChevronDown size={16} className="ml-1" />}
-                    </Link>
-                    {hasSubItems && activeSubMenu === item.name && (
-                      <div
-                        className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-xl z-50"
-                        onMouseEnter={() => handleMouseEnter(item.name)}
-                        onMouseLeave={() => handleMouseLeave()}
-                      >
-                        {item.subItems?.map((sub) => (
-                          <Link
-                            key={sub.name}
-                            href={sub.path}
-                            className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
-                              ? "text-red-600 font-medium bg-red-50"
-                              : "text-gray-700"
-                              }`}
-                          >
-                            {sub.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    <NavMenuItem 
+                      item={item}
+                      active={active}
+                      hasSubItems={hasSubItems}
+                      language={language}
+                      isActive={isActive}
+                      activeSubMenu={activeSubMenu}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    />
                   </div>
                 );
               })}
@@ -188,46 +170,29 @@ export default function Navbar() {
             {navData.menuItems.map((item) => {
               const active = isActive(item.path);
               const isOpen = activeSubMenu === item.name;
-              const hasSubItems = item.subItems && item.subItems.length > 0;
+              const hasSubItems = !!(item.subItems && item.subItems.length > 0);
 
               return (
                 <div key={item.name} className="border-b border-gray-100">
                   {hasSubItems ? (
-                    <button
-                      onClick={() => handleMenuItemClick(item)}
-                      className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${active ? "text-red-600 bg-red-50" : "text-gray-800 hover:bg-gray-50"
-                        }`}
-                    >
-                      <span>{item.name}</span>
-                      {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                    </button>
+                    <MobileNavMenuItem
+                      item={item}
+                      active={active}
+                      isOpen={isOpen}
+                      language={language}
+                      onMenuItemClick={handleMenuItemClick}
+                      isActive={isActive}
+                      onClose={() => setIsMenuOpen(false)}
+                    />
                   ) : (
                     <Link
-                      href={item.path}
+                      href={getLocalizedPath(item.path, language)}
                       onClick={() => setIsMenuOpen(false)}
                       className={`w-full block px-4 py-4 rounded-lg text-lg font-medium ${active ? "text-red-600 bg-red-50" : "text-gray-800 hover:bg-gray-50"
                         }`}
                     >
-                      {item.name}
+                      <TranslatedText text={item.name} />
                     </Link>
-                  )}
-
-                  {hasSubItems && isOpen && (
-                    <div className="pl-6 space-y-2 py-2">
-                      {item.subItems?.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          href={sub.path}
-                          onClick={() => setIsMenuOpen(false)}
-                          className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
-                            ? "text-red-600 bg-red-50 font-medium"
-                            : "text-gray-700 hover:bg-gray-100"
-                            }`}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
                   )}
                 </div>
               );
@@ -250,16 +215,154 @@ export default function Navbar() {
 
             <div className="pt-4">
               <Link
-                href="/my-en/contact-us"
+                href={getLocalizedPath("/my-en/contact-us", language)}
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full text-center px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition"
               >
-                Contact Us
+                <TranslatedText text="Contact Us" />
               </Link>
             </div>
           </div>
         </div>
       )}
     </header>
+  );
+}
+
+// Helper component to translate text
+function TranslatedText({ text }: { text: string }) {
+  const translatedText = useTranslation(text);
+  return <>{translatedText}</>;
+}
+
+// Component for desktop nav menu items with sub-items
+function NavMenuItem({ 
+  item, 
+  active, 
+  hasSubItems, 
+  language, 
+  isActive, 
+  activeSubMenu, 
+  onMouseEnter, 
+  onMouseLeave 
+}: { 
+  item: MenuItem; 
+  active: boolean; 
+  hasSubItems: boolean; 
+  language: string; 
+  isActive: (path: string) => boolean; 
+  activeSubMenu: string | null; 
+  onMouseEnter: (name: string) => void; 
+  onMouseLeave: () => void;
+}) {
+  const translatedName = useTranslation(item.name);
+  
+  return (
+    <>
+      <Link
+        href={getLocalizedPath(item.path, language as any)}
+        className={`px-4 py-3 text-base font-medium flex items-center hover:bg-gray-50 transition ${active
+          ? "text-red-600 font-semibold border-b-2 border-red-600"
+          : "text-gray-800 hover:text-red-600"
+          }`}
+        onMouseEnter={() => hasSubItems && onMouseEnter(item.name)}
+        onMouseLeave={() => hasSubItems && onMouseLeave()}
+      >
+        {translatedName}
+        {hasSubItems && <ChevronDown size={16} className="ml-1" />}
+      </Link>
+      {hasSubItems && activeSubMenu === item.name && (
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 top-full mt-2 w-64 bg-white border border-gray-200 rounded-md shadow-xl z-50"
+          onMouseEnter={() => onMouseEnter(item.name)}
+          onMouseLeave={() => onMouseLeave()}
+        >
+          {item.subItems?.map((sub) => (
+            <NavSubMenuItem
+              key={sub.name}
+              sub={sub}
+              language={language}
+              isActive={isActive}
+            />
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
+
+// Component for sub-menu items
+function NavSubMenuItem({ 
+  sub, 
+  language, 
+  isActive 
+}: { 
+  sub: SubMenuItem; 
+  language: string; 
+  isActive: (path: string) => boolean;
+}) {
+  const translatedName = useTranslation(sub.name);
+  
+  return (
+    <Link
+      href={getLocalizedPath(sub.path, language as any)}
+      className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
+        ? "text-red-600 font-medium bg-red-50"
+        : "text-gray-700"
+        }`}
+    >
+      {translatedName}
+    </Link>
+  );
+}
+
+// Component for mobile nav menu items with sub-items
+function MobileNavMenuItem({ 
+  item, 
+  active, 
+  isOpen, 
+  language, 
+  onMenuItemClick, 
+  isActive, 
+  onClose 
+}: { 
+  item: MenuItem; 
+  active: boolean; 
+  isOpen: boolean; 
+  language: string; 
+  onMenuItemClick: (item: MenuItem) => void; 
+  isActive: (path: string) => boolean; 
+  onClose: () => void;
+}) {
+  const translatedName = useTranslation(item.name);
+  
+  return (
+    <>
+      <button
+        onClick={() => onMenuItemClick(item)}
+        className={`w-full flex justify-between items-center px-4 py-4 rounded-lg text-lg font-medium ${active ? "text-red-600 bg-red-50" : "text-gray-800 hover:bg-gray-50"
+          }`}
+      >
+        <span>{translatedName}</span>
+        {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+      </button>
+      {isOpen && (
+        <div className="pl-6 space-y-2 py-2">
+          {item.subItems?.map((sub) => (
+            <Link
+              key={sub.name}
+              href={getLocalizedPath(sub.path, language as any)}
+              onClick={onClose}
+              className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
+                ? "text-red-600 bg-red-50 font-medium"
+                : "text-gray-700 hover:bg-gray-100"
+                }`}
+            >
+              <TranslatedText text={sub.name} />
+            </Link>
+          ))}
+        </div>
+      )}
+    </>
   );
 }
