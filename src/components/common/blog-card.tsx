@@ -22,7 +22,7 @@ export function BlogCard({
   altTag,
   authorName = "Dato' Venodevan",
   authorTitle = "Risk is an opportunity",
-  authorImage = "/venovox-author1.png",
+  authorImage = "/images/venovox-author1.webp",
   authorLink = "/author",
 }: BlogCardProps) {
   return (

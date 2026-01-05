@@ -25,7 +25,7 @@ export default function CorporateInvestigations() {
     {
       title: "Third party fraud",
       description: "We test the integrity of vendors, distributors, partners, and agents. We look for kickbacks, bid rigging, diversion, duplicate invoicing, and false claims. We review contracts, side letters, pricing, rebate structures, and proof of delivery. We compare expected activity to actual activity using data analytics. You receive findings and a practical plan to fix controls and recover value.",
-      imageUrl: "1450.jpg",
+      imageUrl: "images/1450.webp",
       link: undefined,
     },
     {
@@ -36,7 +36,7 @@ export default function CorporateInvestigations() {
     {
       title: "Litigation support",
       description: "We gather evidence, protect chain of custody, and coordinate with eDiscovery teams. We validate the source of documents and confirm authenticity. We locate witnesses and provide background on counterparties. We supply expert reports and testimony where required. Your legal team gains facts they can trust.",
-      imageUrl: "18026.jpg",
+      imageUrl: "images/18026.webp",
     },
     {
       title: "Workplace misconduct",

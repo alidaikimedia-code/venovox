@@ -97,7 +97,7 @@ export default function AboutUs() {
             className="relative h-80 rounded-xl overflow-hidden shadow-lg order-2 md:order-1"
           >
             <img
-              src="/our-story.png"
+              src="/images/our-story.webp"
               alt="Our consultative approach"
               className="object-cover"
             />

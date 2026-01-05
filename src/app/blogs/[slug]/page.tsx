@@ -278,7 +278,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                     className="flex items-center gap-2 text-right cursor-pointer"
                                 >
                                     <img
-                                        src="/venovox-author1.png"
+                                        src="/images/venovox-author1.webp"
                                         alt="Author"
                                         className="w-12 h-12 rounded-full object-cover "
                                     />
@@ -289,7 +289,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                                         </p>
                                     </div>
                                 </Link>
-                    <span className="text-gray-500 text-xl">August 8th, 2024</span>
+                    <span className="text-gray-500 text-xl">August 8th, 2024.</span>
                 </div>
             </main>
         </div>
