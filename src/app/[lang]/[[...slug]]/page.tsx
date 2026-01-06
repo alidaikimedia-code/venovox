@@ -15,6 +15,7 @@ import { blogData } from '@/data/blogsData';
 
 // Map language codes to their URL prefixes
 const languageMap: Record<string, string> = {
+  'my-en': 'my-en',
   'ms': 'ms',
   'zh': 'zh',
   'ar': 'ar',
@@ -51,7 +52,7 @@ const corporateInvestigationSlugs = [
 ];
 
 export async function generateStaticParams() {
-  const languages = ['ms', 'zh', 'ar', 'de', 'fr'];
+  const languages = ['my-en', 'ms', 'zh', 'ar', 'de', 'fr'];
   const params: Array<{ lang: string; slug?: string[] }> = [];
 
   // Generate params for root/home pages
@@ -67,7 +68,7 @@ export async function generateStaticParams() {
     params.push({ lang, slug: ['blogs'] });
     params.push({ lang, slug: ['case-studies'] });
     params.push({ lang, slug: ['corporate-investigations'] });
-    params.push({ lang, slug: ['companies'] });
+    // Companies pages are gitignored, so removed from static params
 
     // Generate params for background-screening subpages
     servicesData.services.forEach(service => {
@@ -207,22 +208,8 @@ export default async function LanguagePage({ params }: PageProps) {
     }
   }
 
-  // Handle companies page
-  if (path === 'companies') {
-    const CompaniesPage = (await import('@/app/companies/page')).default;
-    return <CompaniesPage />;
-  }
-
-  // Handle companies/[slug] pages - need to check if this exists
-  if (path.startsWith('companies/')) {
-    const companySlug = path.replace('companies/', '');
-    try {
-      const CompanyPage = (await import('@/app/companies/[slug]/page')).default;
-      return <CompanyPage params={Promise.resolve({ slug: companySlug })} />;
-    } catch {
-      notFound();
-    }
-  }
+  // Companies pages are gitignored, so removed from routing
+  // If companies pages are needed, they should be added to the repository first
 
   // If no matching page found, return 404
   notFound();

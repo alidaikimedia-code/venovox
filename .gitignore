@@ -56,8 +56,3 @@ yarn-error.log*
 next-env.d.ts
 
 # Companies data and components (excluded from git)
-public/companies/
-src/app/companies/
-src/components/common/company-card.tsx
-src/components/companies/
-src/data/companiesData.ts
