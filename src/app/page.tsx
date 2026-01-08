@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import HomeClient from './HomeClient';
+import { homeFAQs } from '@/data/homeFAQs';
 import {
   OrganizationSchema,
   WebSiteSchema,
   LocalBusinessSchema,
   WebPageSchema,
+  FAQSchema,
 } from '@/components/schema';
 
 const BASE_URL = "https://venovox.com";
@@ -44,6 +46,7 @@ export default function Home() {
         url="/"
         baseUrl={BASE_URL}
       />
+      <FAQSchema faqs={homeFAQs} />
       <HomeClient />
     </>
   );
