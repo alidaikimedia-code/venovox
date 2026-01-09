@@ -1135,10 +1135,10 @@ export const blogData = [
     },
     {
         "id": 14,
-        "slug": "how-cybersecurity-and-financial-crime-teams-must-collaborate-in-2025",
-        "title": "Cybersecurity & Financial Crime: 2025 Collaboration",
+        "slug": "how-cybersecurity-and-financial-crime-teams-must-collaborate-in-2026",
+        "title": "Cybersecurity & Financial Crime: 2026 Collaboration",
         "description": "Collaboration between cybersecurity and financial crime units is essential in 2025 to manage evolving risks, data breaches, and compliance challenges.",
-        "h1": "How Cybersecurity and Financial Crime Teams Must Collaborate in 2025",
+        "h1": "How Cybersecurity and Financial Crime Teams Must Collaborate in 2026",
         "featuredImage": "/Financial-cybersecurity-teamwork.png",
         "altTag": "Financial Cybersecurity teamwork",
         "author": "VENOVOX Team",
@@ -1221,12 +1221,12 @@ export const blogData = [
     },
     {
         "id": 15,
-        "slug": "compliance-in-2025-key-regulations-every-business-should-know",
-        "title": "Top Compliance Trends 2025: What Businesses Must Know",
-        "description": "Stay ahead in 2025 with key compliance insights on AI, cybersecurity, ESG, and data laws. Discover what every business must know to avoid legal risks.",
-        "h1": "Compliance in 2025: Key Regulations Every Business Should Know",
+        "slug": "compliance-in-2026-key-regulations-every-business-should-know",
+        "title": "Top Compliance Trends 2026: What Businesses Must Know",
+        "description": "Stay ahead in 2026 with key compliance insights on AI, cybersecurity, ESG, and data laws. Discover what every business must know to avoid legal risks.",
+        "h1": "Compliance in 2026: Key Regulations Every Business Should Know",
         "featuredImage": "/2025-compliance-regulations.png",
-        "altTag": "2025 Compliance Regulations",
+        "altTag": "2026 Compliance Regulations",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
         "readTime": "6 min read",
@@ -1235,12 +1235,12 @@ export const blogData = [
         "sections": [
             {
                 "type": "introduction",
-                "content": "The companies in Malaysia are increasingly required to comply with the new and emerging regulations as the year 2025 approaches. Business organizations must remain conscious and informed of policies such as data privacy and recruitment, among others. Regardless of the size of your business, whether it is large or small, it is pertinent to know how to go about the rules in order to make your business successful. Business intelligence services in Malaysia are increasingly taking center stage in ensuring that a company remains ahead as the global standards and local laws evolve."
+                "content": "The companies in Malaysia are increasingly required to comply with the new and emerging regulations as the year 2026 approaches. Business organizations must remain conscious and informed of policies such as data privacy and recruitment, among others. Regardless of the size of your business, whether it is large or small, it is pertinent to know how to go about the rules in order to make your business successful. Business intelligence services in Malaysia are increasingly taking center stage in ensuring that a company remains ahead as the global standards and local laws evolve."
             },
             {
                 "type": "content_section",
                 "heading": "Protecting Your Company with Smart Hiring",
-                "content": "Compliance isn't just about checking off boxes; it's also about keeping your organization safe and earning the trust of clients, partners, and staff. Background checks for jobs are becoming more and more important. Companies have to check more than just resumes in 2025. They have to evaluate qualifications, criminal backgrounds, and former jobs to meet tight regulatory standards. Hiring the incorrect person might have bad effects. The correct screening process not only keeps your business secure from legal problems, but it also makes sure that the workplace is safe and honest."
+                "content": "Compliance isn't just about checking off boxes; it's also about keeping your organization safe and earning the trust of clients, partners, and staff. Background checks for jobs are becoming more and more important. Companies have to check more than just resumes in 2026. They have to evaluate qualifications, criminal backgrounds, and former jobs to meet tight regulatory standards. Hiring the incorrect person might have bad effects. The correct screening process not only keeps your business secure from legal problems, but it also makes sure that the workplace is safe and honest."
             },
             {
                 "type": "content_with_image",
@@ -1253,7 +1253,7 @@ export const blogData = [
             {
                 "type": "benefits_section",
                 "heading": "Hiring Compliance: What Employers Must Know",
-                "content": "As more foreign companies invest in Malaysia, checking the backgrounds of potential employees has become quite important. Now, employers have to follow hiring rules that are the same all around the world. In 2025, every employer should follow these four important rules:",
+                "content": "As more foreign companies invest in Malaysia, checking the backgrounds of potential employees has become quite important. Now, employers have to follow hiring rules that are the same all around the world. In 2026, every employer should follow these four important rules:",
                 "image": "/hiring-compliance.jpg",
                 "imageAlt": "Hiring Compliance",
                 "benefits": [
@@ -1295,12 +1295,12 @@ export const blogData = [
             {
                 "type": "conclusion",
                 "heading": "Conclusion",
-                "content": "Planning, being attentive, and having the correct tools are all necessary to stay compliant in 2025. In Malaysia, services like employment background checks and business intelligence are not only helpful, but they are also becoming necessary for all kinds of businesses. They make complicated rules easier to understand and help businesses keep focused on growing. Businesses may confidently and responsibly achieve the compliance demands of 2025 with help from trustworthy specialists like VENOVOX."
+                "content": "Planning, being attentive, and having the correct tools are all necessary to stay compliant in 2026. In Malaysia, services like employment background checks and business intelligence are not only helpful, but they are also becoming necessary for all kinds of businesses. They make complicated rules easier to understand and help businesses keep focused on growing. Businesses may confidently and responsibly achieve the compliance demands of 2026 with help from trustworthy specialists like VENOVOX."
             }
         ],
         "seo": {
-            "metaTitle": "Top Compliance Trends 2025: What Businesses Must Know",
-            "metaDescription": "Stay ahead in 2025 with key compliance insights on AI, cybersecurity, ESG, and data laws. Discover what every business must know to avoid legal risks.",
+            "metaTitle": "Top Compliance Trends 2026: What Businesses Must Know",
+            "metaDescription": "Stay ahead in 2026 with key compliance insights on AI, cybersecurity, ESG, and data laws. Discover what every business must know to avoid legal risks.",
             "keywords": ["compliance", "business intelligence", "hiring", "data privacy", "regulations"],
         }
     },
@@ -1436,7 +1436,7 @@ export const blogData = [
     },
     {
         "id": 18,
-        "slug": "ptptn-legal-action-2025",
+        "slug": "ptptn-legal-action-2026",
         "title": "PTPTN TO TAKE LEGAL ACTION!",
         "description": "Explore PTPTN's announcement to take legal action against 430,000 debtors owing nearly RM6 billion, the impacts, penalties, and ways to manage loan repayments responsibly.",
         "h1": "PTPTN TO TAKE LEGAL ACTION!",
@@ -2071,10 +2071,10 @@ export const blogData = [
     },
     {
         "id": 27,
-        "slug": "putra-heights-gas-leak-incident-2025-security-auditing",
-        "title": "The Gas Pipe Leak Incident at Putra Heights 2025: How Security Auditing Strengthens Corporate Safety and Public Trust",
-        "description": "Explore how the 2025 Putra Heights gas pipeline explosion highlights the need for robust security auditing to enhance corporate safety, ensure compliance, and build public trust in Malaysia’s energy and construction sectors.",
-        "h1": "The Gas Pipe Leak Incident at Putra Heights 2025: Strengthening Safety Through Security Auditing",
+        "slug": "putra-heights-gas-leak-incident-2026-security-auditing",
+        "title": "The Gas Pipe Leak Incident at Putra Heights 2026: How Security Auditing Strengthens Corporate Safety and Public Trust",
+        "description": "Explore how the 2026 Putra Heights gas pipeline explosion highlights the need for robust security auditing to enhance corporate safety, ensure compliance, and build public trust in Malaysia’s energy and construction sectors.",
+        "h1": "The Gas Pipe Leak Incident at Putra Heights 2026: Strengthening Safety Through Security Auditing",
         "featuredImage": "/putra-heights-gas-leak.png",
         "altTag": "Putra Heights gas pipeline explosion",
         "author": "VENOVOX Team",
@@ -2771,10 +2771,10 @@ export const blogData = [
     },
     {
         "id": 34,
-        "slug": "global-security-landscape-2025",
-        "title": "2025 - Global Security Landscape",
+        "slug": "global-security-landscape-2026",
+        "title": "2026 - Global Security Landscape",
         "description": "Explore the key security threats shaping the global landscape in 2025, from geopolitical tensions and cyberattacks to climate change and emerging technologies, and how Venovox addresses these challenges.",
-        "h1": "2025 Global Security Landscape: Navigating Emerging Threats",
+        "h1": "2026 Global Security Landscape: Navigating Emerging Threats",
         "featuredImage": "/global-security-2025.png",
         "altTag": "Global security landscape 2025",
         "author": "VENOVOX Team",
@@ -4988,10 +4988,10 @@ export const blogData = [
 },
 {
     "id": 61,
-    "slug": "key-trends-shaping-the-background-check-industry-in-2025",
-    "title": "Key Trends Shaping the Background Check Industry in 2025",
-    "description": "Venovox Sendirian Berhad highlights key trends shaping the background check industry in 2025, including employment screening, HR checks, and cyber security background checks.",
-    "h1": "Key Trends Shaping the Background Check Industry in 2025",
+    "slug": "key-trends-shaping-the-background-check-industry-in-2026",
+    "title": "Key Trends Shaping the Background Check Industry in 2026",
+    "description": "Venovox Sendirian Berhad highlights key trends shaping the background check industry in 2026, including employment screening, HR checks, and cyber security background checks.",
+    "h1": "Key Trends Shaping the Background Check Industry in 2026",
     "featuredImage": "/images/background-check-industry-trends-2025.webp",
     "altTag": "Background Check Industry Trends 2025",
     "author": "VENOVOX Team",
