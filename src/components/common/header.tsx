@@ -5,8 +5,8 @@ import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { getLocalizedPath } from "@/lib/language-utils";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
+import { getLocalizedPath, getBasePath } from "@/lib/language-utils";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface MenuItem {
@@ -59,11 +59,50 @@ export default function Navbar() {
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const isActive = (path: string) => {
-    if (path === "/my-en/background-screening") {
-      return pathname === path;
-    } else {
-      return pathname === path || pathname.startsWith(path + "/");
+    // Normalize pathname by removing language prefix
+    const normalizedPathname = getBasePath(pathname);
+    
+    // Normalize menu item path by removing language prefix
+    let normalizedPath = path;
+    if (normalizedPath.startsWith('/my-en')) {
+      normalizedPath = normalizedPath.replace('/my-en', '');
     }
+    // Remove any other language prefixes
+    const existingPrefixes = ['/ms', '/zh', '/ar', '/de', '/fr'];
+    for (const prefix of existingPrefixes) {
+      if (normalizedPath.startsWith(prefix + '/') || normalizedPath === prefix) {
+        normalizedPath = normalizedPath.replace(prefix, '');
+        break;
+      }
+    }
+    
+    // Ensure both paths start with /
+    if (!normalizedPath.startsWith('/')) {
+      normalizedPath = '/' + normalizedPath;
+    }
+    
+    // Remove trailing slashes for comparison
+    const cleanPathname = normalizedPathname.replace(/\/$/, '');
+    const cleanPath = normalizedPath.replace(/\/$/, '');
+    
+    // Special case: "Our Services" should be active when on any background-screening sub-item
+    // Check using normalized path to handle all language variants
+    if (cleanPath === '/our-services') {
+      return cleanPathname === '/our-services' || cleanPathname.startsWith('/background-screening/');
+    }
+    
+    // Special case: "Background Screening" should only match exact path, not sub-paths
+    if (cleanPath === '/background-screening') {
+      return cleanPathname === '/background-screening';
+    }
+    
+    // Special case: Home page (root)
+    if (cleanPath === '/' || cleanPath === '') {
+      return cleanPathname === '/' || cleanPathname === '';
+    }
+    
+    // For all other paths, match exact path or paths that start with path + /
+    return cleanPathname === cleanPath || cleanPathname.startsWith(cleanPath + '/');
   };
 
   useEffect(() => {
@@ -249,7 +288,7 @@ function NavMenuItem({
   item: MenuItem; 
   active: boolean; 
   hasSubItems: boolean; 
-  language: string; 
+  language: Language; 
   isActive: (path: string) => boolean; 
   activeSubMenu: string | null; 
   onMouseEnter: (name: string) => void; 
@@ -260,7 +299,7 @@ function NavMenuItem({
   return (
     <>
       <Link
-        href={getLocalizedPath(item.path, language as any)}
+        href={getLocalizedPath(item.path, language)}
         className={`px-4 py-3 text-base font-medium flex items-center hover:bg-gray-50 transition ${active
           ? "text-red-600 font-semibold border-b-2 border-red-600"
           : "text-gray-800 hover:text-red-600"
@@ -298,14 +337,14 @@ function NavSubMenuItem({
   isActive 
 }: { 
   sub: SubMenuItem; 
-  language: string; 
+  language: Language; 
   isActive: (path: string) => boolean;
 }) {
   const translatedName = useTranslation(sub.name);
   
   return (
     <Link
-      href={getLocalizedPath(sub.path, language as any)}
+      href={getLocalizedPath(sub.path, language)}
       className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
         ? "text-red-600 font-medium bg-red-50"
         : "text-gray-700"
@@ -329,7 +368,7 @@ function MobileNavMenuItem({
   item: MenuItem; 
   active: boolean; 
   isOpen: boolean; 
-  language: string; 
+  language: Language; 
   onMenuItemClick: (item: MenuItem) => void; 
   isActive: (path: string) => boolean; 
   onClose: () => void;
@@ -351,7 +390,7 @@ function MobileNavMenuItem({
           {item.subItems?.map((sub) => (
             <Link
               key={sub.name}
-              href={getLocalizedPath(sub.path, language as any)}
+              href={getLocalizedPath(sub.path, language)}
               onClick={onClose}
               className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
                 ? "text-red-600 bg-red-50 font-medium"
