@@ -1,19 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  //this  will give me out file 
-  output: "export",
+  output: "export", // for static export
   trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export, but we'll optimize images manually
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true, // required for static export
+    formats: ["image/avif", "image/webp"],
   },
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
-  swcMinify: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === "production",
   },
 
   async redirects() {
