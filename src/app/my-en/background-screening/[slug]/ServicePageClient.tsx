@@ -57,17 +57,10 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         setService(foundService || null);
     }, [slug]);
 
-    useEffect(() => {
-        if (isMounted && service) {
-            document.title = service.metaTitle;
-            const metaDescription = document.querySelector(
-                'meta[name="description"]'
-            );
-            if (metaDescription) {
-                metaDescription.setAttribute("content", service.metaDescription);
-            }
-        }
-    }, [service, isMounted]);
+    // REMOVED: Client-side meta tag updates
+    // Meta tags are now 100% server-side via generateMetadata() in [lang]/[[...slug]]/page.tsx
+    // This ensures they appear ONLY in HTML, NOT in "Rendered"
+    // Client-side updates cause meta tags to appear in "Rendered" which breaks SEO
 
     const scrollToSection = (anchor: string) => {
         const element = document.querySelector(anchor);
@@ -112,18 +105,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         },
     };
 
-    const scaleIn: Variants = {
-        hidden: { scale: 0.9, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring" as const,
-                damping: 20,
-                stiffness: 100,
-            },
-        },
-    };
 
     if (!isMounted) {
         return (
@@ -155,11 +136,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         );
     }
 
-    const getServiceImage = (serviceId: string) => {
-        return `/placeholder.svg?height=400&width=600&text=${serviceId
-            .replace(/-/g, " ")
-            .toUpperCase()}`;
-    };
 
     // Function to create anchor ID from text
     const createAnchorId = (text: string) => {
