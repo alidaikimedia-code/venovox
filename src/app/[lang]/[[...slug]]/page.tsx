@@ -62,7 +62,7 @@ export async function generateStaticParams() {
     // Generate params for main pages
     params.push({ lang, slug: ['about'] });
     params.push({ lang, slug: ['contact-us'] });
-    params.push({ lang, slug: ['Career'] });
+    params.push({ lang, slug: ['career'] });
     params.push({ lang, slug: ['our-services'] });
     params.push({ lang, slug: ['background-screening'] });
     params.push({ lang, slug: ['blogs'] });
@@ -70,7 +70,12 @@ export async function generateStaticParams() {
     params.push({ lang, slug: ['corporate-investigations'] });
     // Companies pages are gitignored, so removed from static params
 
-    // Generate params for background-screening subpages
+    // Generate params for our-services subpages
+    servicesData.services.forEach(service => {
+      params.push({ lang, slug: ['our-services', service.id] });
+    });
+
+    // Generate params for background-screening subpages (for backward compatibility)
     servicesData.services.forEach(service => {
       params.push({ lang, slug: ['background-screening', service.id] });
     });
@@ -120,7 +125,7 @@ export default async function LanguagePage({ params }: PageProps) {
   }
 
   // Handle Career page
-  if (path === 'Career') {
+  if (path === 'career') {
     return (
       <>
         <VenovoxHero />
@@ -137,12 +142,22 @@ export default async function LanguagePage({ params }: PageProps) {
     return <OurServicesClient />;
   }
 
+  // Handle our-services/[slug] pages
+  if (path.startsWith('our-services/')) {
+    const serviceSlug = path.replace('our-services/', '');
+    // Verify the slug exists in services data
+    const serviceExists = servicesData.services.some(s => s.id === serviceSlug);
+    if (serviceExists) {
+      return <ServicePageClient slug={serviceSlug} />;
+    }
+  }
+
   // Handle background-screening main page
   if (path === 'background-screening') {
     return <BackgroundScreeningMalaysiaClient />;
   }
 
-  // Handle background-screening/[slug] pages
+  // Handle background-screening/[slug] pages (for backward compatibility)
   if (path.startsWith('background-screening/')) {
     const serviceSlug = path.replace('background-screening/', '');
     // Verify the slug exists in services data

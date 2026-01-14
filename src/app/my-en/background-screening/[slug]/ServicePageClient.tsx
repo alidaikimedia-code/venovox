@@ -112,18 +112,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         },
     };
 
-    const scaleIn: Variants = {
-        hidden: { scale: 0.9, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                type: "spring" as const,
-                damping: 20,
-                stiffness: 100,
-            },
-        },
-    };
 
     if (!isMounted) {
         return (
@@ -155,11 +143,6 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         );
     }
 
-    const getServiceImage = (serviceId: string) => {
-        return `/placeholder.svg?height=400&width=600&text=${serviceId
-            .replace(/-/g, " ")
-            .toUpperCase()}`;
-    };
 
     // Function to create anchor ID from text
     const createAnchorId = (text: string) => {
@@ -290,7 +273,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 <div className="container mx-auto ">
                     <div className="flex items-center text-sm text-gray-600">
                         <Link
-                            href="/my-en/background-screening"
+                            href="/"
                             className="hover:text-red-600 transition-colors duration-200"
                         >
                             Home

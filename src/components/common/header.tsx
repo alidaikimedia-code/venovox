@@ -5,8 +5,8 @@ import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { getLocalizedPath } from "@/lib/language-utils";
+import { useLanguage, Language } from "@/contexts/LanguageContext";
+import { getLocalizedPath, getBasePath } from "@/lib/language-utils";
 import { useTranslation } from "@/hooks/useTranslation";
 
 interface MenuItem {
@@ -30,22 +30,22 @@ const navData = {
       name: "Our Services",
       path: "/my-en/our-services",
       subItems: [
-        { name: "Risk Intelligence", path: "/my-en/background-screening/risk-intelligence/" },
-        { name: "Due Diligence", path: "/my-en/background-screening/due-diligence/" },
-        { name: "Risk & Audit", path: "/my-en/background-screening/risk-audit/" },
-        { name: "Compliance", path: "/my-en/background-screening/compliance/" },
-        { name: "Intellectual Property", path: "/my-en/background-screening/intellectual-property/" },
-        { name: "Counter Measures", path: "/my-en/background-screening/counter-measures/" },
-        { name: "Financial Crime", path: "/my-en/background-screening/financial-crime/" },
-        { name: "HR Services", path: "/my-en/background-screening/hr-services/" },
-        { name: "Cyber Security", path: "/my-en/background-screening/cyber-security/" }
+        { name: "Risk Intelligence", path: "/my-en/our-services/risk-intelligence/" },
+        { name: "Due Diligence", path: "/my-en/our-services/due-diligence/" },
+        { name: "Risk & Audit", path: "/my-en/our-services/risk-audit/" },
+        { name: "Compliance", path: "/my-en/our-services/compliance/" },
+        { name: "Intellectual Property", path: "/my-en/our-services/intellectual-property/" },
+        { name: "Counter Measures", path: "/my-en/our-services/counter-measures/" },
+        { name: "Financial Crime", path: "/my-en/our-services/financial-crime/" },
+        { name: "HR Services", path: "/my-en/our-services/hr-services/" },
+        { name: "Cyber Security", path: "/my-en/our-services/cyber-security/" }
       ]
     },
     { name: "Background Screening",path: "/my-en/background-screening" },
     { name: "Case Studies", path: "/case-studies" },
     { name: "Publication", path: "/blogs/" },
     { name: "Contact Us", path: "/my-en/contact-us" },
-    { name: "Career", path: "/my-en/Career" },
+    { name: "Career", path: "/my-en/career" },
     
     
   ] as MenuItem[]
@@ -58,12 +58,41 @@ export default function Navbar() {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  const isActive = (path: string) => {
-    if (path === "/my-en/background-screening") {
-      return pathname === path;
-    } else {
-      return pathname === path || pathname.startsWith(path + "/");
+  const isActive = (path: string, subItems?: SubMenuItem[]) => {
+    // Get base paths (without language prefixes) for comparison
+    const basePathname = getBasePath(pathname);
+    const basePath = getBasePath(path);
+    
+    // Normalize paths (remove trailing slashes for comparison)
+    const normalizedPathname = basePathname.replace(/\/$/, '');
+    const normalizedPath = basePath.replace(/\/$/, '');
+    
+    // Special handling for home page: only match exact root path
+    if (normalizedPath === "/" || normalizedPath === "") {
+      return normalizedPathname === "/" || normalizedPathname === "";
     }
+    
+    // Special handling for background-screening: only match exact path, not sub-pages
+    if (normalizedPath === "/background-screening") {
+      return normalizedPathname === normalizedPath;
+    }
+    
+    // If menu item has sub-items, check if current path matches any sub-item
+    if (subItems && subItems.length > 0) {
+      const isSubItemActive = subItems.some(subItem => {
+        const subBasePath = getBasePath(subItem.path);
+        const normalizedSubPath = subBasePath.replace(/\/$/, '');
+        return normalizedPathname === normalizedSubPath || normalizedPathname.startsWith(normalizedSubPath + "/");
+      });
+      
+      // Return true if current path matches the parent path OR any sub-item path
+      if (isSubItemActive) {
+        return true;
+      }
+    }
+    
+    // For other paths, match exact path or paths that start with it
+    return normalizedPathname === normalizedPath || normalizedPathname.startsWith(normalizedPath + "/");
   };
 
   useEffect(() => {
@@ -113,7 +142,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center space-x-6">
             <nav className="flex space-x-2 items-center">
               {navData.menuItems.map((item) => {
-                const active = isActive(item.path);
+                const active = isActive(item.path, item.subItems);
                 const hasSubItems = !!(item.subItems && item.subItems.length > 0);
 
                 return (
@@ -168,7 +197,7 @@ export default function Navbar() {
         <div className="lg:hidden fixed inset-x-0 top-[100px] bg-white z-[100] shadow-xl max-h-[calc(100vh-100px)] overflow-y-auto mt-[69px]">
           <div className="px-6 pt-4 pb-6 space-y-2">
             {navData.menuItems.map((item) => {
-              const active = isActive(item.path);
+              const active = isActive(item.path, item.subItems);
               const isOpen = activeSubMenu === item.name;
               const hasSubItems = !!(item.subItems && item.subItems.length > 0);
 
@@ -249,8 +278,8 @@ function NavMenuItem({
   item: MenuItem; 
   active: boolean; 
   hasSubItems: boolean; 
-  language: string; 
-  isActive: (path: string) => boolean; 
+  language: Language; 
+  isActive: (path: string, subItems?: SubMenuItem[]) => boolean; 
   activeSubMenu: string | null; 
   onMouseEnter: (name: string) => void; 
   onMouseLeave: () => void;
@@ -260,7 +289,7 @@ function NavMenuItem({
   return (
     <>
       <Link
-        href={getLocalizedPath(item.path, language as any)}
+        href={getLocalizedPath(item.path, language)}
         className={`px-4 py-3 text-base font-medium flex items-center hover:bg-gray-50 transition ${active
           ? "text-red-600 font-semibold border-b-2 border-red-600"
           : "text-gray-800 hover:text-red-600"
@@ -298,14 +327,14 @@ function NavSubMenuItem({
   isActive 
 }: { 
   sub: SubMenuItem; 
-  language: string; 
-  isActive: (path: string) => boolean;
+  language: Language; 
+  isActive: (path: string, subItems?: SubMenuItem[]) => boolean;
 }) {
   const translatedName = useTranslation(sub.name);
   
   return (
     <Link
-      href={getLocalizedPath(sub.path, language as any)}
+      href={getLocalizedPath(sub.path, language)}
       className={`block px-5 py-3 text-sm hover:bg-gray-50 transition ${isActive(sub.path)
         ? "text-red-600 font-medium bg-red-50"
         : "text-gray-700"
@@ -329,9 +358,9 @@ function MobileNavMenuItem({
   item: MenuItem; 
   active: boolean; 
   isOpen: boolean; 
-  language: string; 
+  language: Language; 
   onMenuItemClick: (item: MenuItem) => void; 
-  isActive: (path: string) => boolean; 
+  isActive: (path: string, subItems?: SubMenuItem[]) => boolean; 
   onClose: () => void;
 }) {
   const translatedName = useTranslation(item.name);
@@ -351,7 +380,7 @@ function MobileNavMenuItem({
           {item.subItems?.map((sub) => (
             <Link
               key={sub.name}
-              href={getLocalizedPath(sub.path, language as any)}
+              href={getLocalizedPath(sub.path, language)}
               onClick={onClose}
               className={`block text-base py-3 px-4 rounded-md ${isActive(sub.path)
                 ? "text-red-600 bg-red-50 font-medium"

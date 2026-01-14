@@ -21,16 +21,25 @@ export default function PageBanner() {
             { name: "Home", url: "/" }
         ];
 
+        // Filter out all language segments from path segments
+        const languageSegments = ["en", "my-en", "ms", "zh", "ar", "de", "fr"];
+        const filteredSegments = pathSegments.filter(segment => !languageSegments.includes(segment));
+
         let currentPath = "";
-        pathSegments.forEach((segment, index) => {
-            currentPath += `/${segment}`;
-            const isLast = index === pathSegments.length - 1;
+        filteredSegments.forEach((segment, index) => {
+            // Replace "background-screening" with "our-services" in breadcrumb for service pages
+            const isServicePage = filteredSegments.length > 1 && index === 0 && segment === "background-screening";
+            const pathSegment = isServicePage ? "our-services" : segment;
+            currentPath += `/${pathSegment}`;
+            const isLast = index === filteredSegments.length - 1;
             
-            let displayName = capitalizeWords(segment);
-            if (segment === "case-studies") {
+            let displayName = capitalizeWords(pathSegment);
+            if (pathSegment === "case-studies") {
                 displayName = "Case Studies";
-            } else if (segment === "corporate-investigations") {
+            } else if (pathSegment === "corporate-investigations") {
                 displayName = "Corporate Investigations";
+            } else if (pathSegment === "our-services") {
+                displayName = "Our Services";
             }
             
             breadcrumbs.push({

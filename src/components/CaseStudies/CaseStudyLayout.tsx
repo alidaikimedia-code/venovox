@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 interface CaseStudyData {
     title: string;
@@ -50,10 +51,14 @@ export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
             { name: "Home", url: "/" }
         ];
 
+        // Filter out all language segments from path segments
+        const languageSegments = ["en", "my-en", "ms", "zh", "ar", "de", "fr"];
+        const filteredSegments = pathSegments.filter(segment => !languageSegments.includes(segment));
+
         let currentPath = "";
-        pathSegments.forEach((segment, index) => {
+        filteredSegments.forEach((segment, index) => {
             currentPath += `/${segment}`;
-            const isLast = index === pathSegments.length - 1;
+            const isLast = index === filteredSegments.length - 1;
             
             let displayName = capitalizeWords(segment);
             if (segment === "case-studies") {
@@ -87,10 +92,11 @@ export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
                                 transition={{ duration: 0.6, delay: 0.3 }}
                                 className="relative overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-300 w-full max-w-[600px] h-[300px] lg:h-[400px]"
                             >
-                                <img
+                                <Image
                                     src={data.heroImage}
                                     alt={data.heroImageAlt}
-                                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500"
+                                    fill
+                                    className="object-cover transition-transform duration-500"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </motion.div>
@@ -233,12 +239,11 @@ export default function CaseStudyLayout({ data }: CaseStudyLayoutProps) {
                         </div>
                         {/* Right Side - Image */}
                         <div className="flex justify-center">
-                            <div className="relative overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-300">
-                                <img
+                            <div className="relative overflow-hidden rounded-2xl shadow-2xl transition-shadow duration-300 w-full max-w-[500px] h-[350px]">
+                                <Image
                                     src={data.result.image}
                                     alt={data.result.imageAlt}
-                                    width={500}
-                                    height={350}
+                                    fill
                                     className="object-cover"
                                 />
                             </div>
