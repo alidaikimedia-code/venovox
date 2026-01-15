@@ -34,7 +34,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/Career",
-        destination: "/my-en/Career",
+        destination: "/my-en/career",
         permanent: true,
       },
       {
@@ -43,50 +43,96 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-      // Background Screening subpages
+      // Our Services subpages
+      {
+        source: "/our-services/risk-intelligence",
+        destination: "/my-en/our-services/risk-intelligence",
+        permanent: true,
+      },
+      {
+        source: "/our-services/due-diligence",
+        destination: "/my-en/our-services/due-diligence",
+        permanent: true,
+      },
+      {
+        source: "/our-services/risk-audit",
+        destination: "/my-en/our-services/risk-audit",
+        permanent: true,
+      },
+      {
+        source: "/our-services/compliance",
+        destination: "/my-en/our-services/compliance",
+        permanent: true,
+      },
+      {
+        source: "/our-services/intellectual-property",
+        destination: "/my-en/our-services/intellectual-property",
+        permanent: true,
+      },
+      {
+        source: "/our-services/counter-measures",
+        destination: "/my-en/our-services/counter-measures",
+        permanent: true,
+      },
+      {
+        source: "/our-services/financial-crime",
+        destination: "/my-en/our-services/financial-crime",
+        permanent: true,
+      },
+      {
+        source: "/our-services/hr-services",
+        destination: "/my-en/our-services/hr-services",
+        permanent: true,
+      },
+      {
+        source: "/our-services/cyber-security",
+        destination: "/my-en/our-services/cyber-security",
+        permanent: true,
+      },
+      // Background Screening subpages (redirect to our-services for backward compatibility)
       {
         source: "/background-screening/risk-intelligence",
-        destination: "/my-en/background-screening/risk-intelligence",
+        destination: "/my-en/our-services/risk-intelligence",
         permanent: true,
       },
       {
         source: "/background-screening/due-diligence",
-        destination: "/my-en/background-screening/due-diligence",
+        destination: "/my-en/our-services/due-diligence",
         permanent: true,
       },
       {
         source: "/background-screening/risk-audit",
-        destination: "/my-en/background-screening/risk-audit",
+        destination: "/my-en/our-services/risk-audit",
         permanent: true,
       },
       {
         source: "/background-screening/compliance",
-        destination: "/my-en/background-screening/compliance",
+        destination: "/my-en/our-services/compliance",
         permanent: true,
       },
       {
         source: "/background-screening/intellectual-property",
-        destination: "/my-en/background-screening/intellectual-property",
+        destination: "/my-en/our-services/intellectual-property",
         permanent: true,
       },
       {
         source: "/background-screening/counter-measures",
-        destination: "/my-en/background-screening/counter-measures",
+        destination: "/my-en/our-services/counter-measures",
         permanent: true,
       },
       {
         source: "/background-screening/financial-crime",
-        destination: "/my-en/background-screening/financial-crime",
+        destination: "/my-en/our-services/financial-crime",
         permanent: true,
       },
       {
         source: "/background-screening/hr-services",
-        destination: "/my-en/background-screening/hr-services",
+        destination: "/my-en/our-services/hr-services",
         permanent: true,
       },
       {
         source: "/background-screening/cyber-security",
-        destination: "/my-en/background-screening/cyber-security",
+        destination: "/my-en/our-services/cyber-security",
         permanent: true,
       },
       //privacy pages

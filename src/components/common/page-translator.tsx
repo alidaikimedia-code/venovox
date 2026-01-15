@@ -53,25 +53,25 @@ export default function PageTranslator() {
       }
     }
 
-    // IMPORTANT: Only translate when language ACTUALLY changes (explicit user click)
+    // Translate when:
+    // 1. Language changes (explicit user click)
+    // 2. Pathname changes (navigation to new page) - even if language is same
     // Don't translate on:
     // - Page reload (same page, same language)
     // - Re-render (same page, same language, component re-render)
-    // - Navigation (new page, same language - requirement: ONLY on language click)
     const pageKey = `${pathname}:${language}`;
     const languageChanged = lastTranslatedLangRef.current !== language;
-    
-    // Skip if language didn't change (this covers: page reload, re-render, navigation)
-    // Requirement: "Translation API must be called ONLY on explicit user language click"
-    if (!languageChanged && language !== 'en') {
-      // Language didn't change - don't translate
-      // This prevents: page reload, re-render, and navigation from triggering translation
-      return;
-    }
+    const pathnameChanged = lastTranslatedPathRef.current !== pageKey;
     
     // Skip if already translated this exact page with this language (page reload scenario)
     if (lastTranslatedPathRef.current === pageKey && language !== 'en') {
       // Already translated this exact page with this language - skip
+      return;
+    }
+    
+    // Skip if neither language nor pathname changed (re-render scenario)
+    if (!languageChanged && !pathnameChanged && language !== 'en') {
+      // Neither language nor pathname changed - don't translate (re-render only)
       return;
     }
     
@@ -115,11 +115,14 @@ export default function PageTranslator() {
     // so we can keep translations for all languages
     isTranslatingRef.current = false;
 
-    // Only clear translation markers if language changed, not on same-language navigation
-    if (lastTranslatedLangRef.current !== language) {
+    // Clear translation markers if language or pathname changed (new page or new language)
+    const currentPathKey = `${pathname}:${language}`;
+    if (lastTranslatedPathRef.current !== currentPathKey) {
       const translatedElements = document.querySelectorAll('[data-translated]');
       translatedElements.forEach((el) => {
         el.removeAttribute('data-translated');
+        // Also clear original text attribute so new page content can be translated fresh
+        el.removeAttribute('data-original-text');
       });
     }
 

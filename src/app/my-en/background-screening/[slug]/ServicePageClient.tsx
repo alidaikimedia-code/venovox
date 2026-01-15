@@ -266,7 +266,7 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
                 <div className="container mx-auto ">
                     <div className="flex items-center text-sm text-gray-600">
                         <Link
-                            href="/my-en/background-screening"
+                            href="/"
                             className="hover:text-red-600 transition-colors duration-200"
                         >
                             Home

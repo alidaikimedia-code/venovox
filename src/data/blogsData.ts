@@ -6706,7 +6706,7 @@ export const blogData = [
     "title": "Malaysia Company Registration Number Search Steps Guide MY",
     "description": "Learn how to perform a Malaysia company registration number search via SSM with clear steps to check company status, registration details, and records online.",
     "h1": "How to Perform a Malaysia Company Registration Number Search: A Step-by-Step Guide",
-    "featuredImage": "/blogs-images/Malaysi-company-registration-number-search.png",
+    "featuredImage": "/blogs-images/malaysi-company-registration-number-search.png",
     "altTag": "Malaysia company registration number search",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-20",
@@ -6784,7 +6784,7 @@ export const blogData = [
     "title": "Why Malaysian HR Need Professional Background Checks 2025",
     "description": "Understand why HR departments in Malaysia must conduct professional background checks in 2025 to ensure hiring trustworthy, qualified, and compliant employees.",
     "h1": "Why HR Departments in Malaysia Need Professional Background Checks in 2025",
-    "featuredImage": "/blogs-images/Malaysia-HR-background-check.png",
+    "featuredImage": "/blogs-images/malaysia-hr-background-check.png",
     "altTag": "Malaysia HR background check",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-21",
@@ -6810,7 +6810,7 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "What Professional Background Checks Typically Cover",
             "content": "A structured screening program goes beyond simple identity checks. Common components include:\n\nIdentity and document verification\n\nEmployment history confirmation\n\nAcademic and professional qualification checks\n\nCriminal record screening (where legally permitted)\n\nRegulatory, sanctions, and adverse media checks\n\nThese elements can be tailored based on role sensitivity, industry, and risk exposure.",
-            "image": "/blogs-images/Professional-background-check-details.png",
+            "image": "/blogs-images/professional-background-check-details.png",
             "imageAlt": "Professional background check details",
             "imagePosition": "right"
         },
@@ -6828,7 +6828,7 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "How HR Teams Should Prepare for 2025",
             "content": "To stay ahead, HR leaders should:\n\nReview current screening policies.\n\nAlign checks with role-based risk levels.\n\nEnsure compliance with local and cross-border regulations.\n\nPartner with experienced screening professionals\n\nThis approach transforms background checks from an administrative task into a strategic risk management tool.",
-            "image": "/blogs-images/HR-team-preparation-2025.png",
+            "image": "/blogs-images/hr-team-preparation-2025.png",
             "imageAlt": "HR team preparation 2025",
             "imagePosition": "right"
         },
@@ -6872,7 +6872,7 @@ export const blogData = [
     "title": "Background Check Malaysia: Key Insights for Employers Hiring",
     "description": "Learn what employers in Malaysia should know about background checks before hiring to verify candidates' history, qualifications, and ensure a safe workplace.",
     "h1": "Background Check Malaysia: What Employers Should Know Before Hiring",
-    "featuredImage": "/blogs-images/Malaysia-employer-background-check2.png",
+    "featuredImage": "/blogs-images/malaysia-employer-background-check2.png",
     "altTag": "Malaysia employer background check",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-22",
@@ -6893,7 +6893,7 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Legal Framework Employers Must Follow",
             "content": "Personal Data Protection Act (PDPA) 2010\n\nBefore gathering personal information or authenticating it, employers will be required to seek written consent. Every screening exercise should be pertinent, measured and safely managed.\n\nFair Hiring Practices\n\nChecks should be applied consistently across candidates for the same role to avoid discrimination claims.\n\nRole-Based Screening\n\nThe depth of screening should align with the job responsibility. Senior finance, IT and compliance roles typically require enhanced checks.",
-            "image": "/blogs-images/Employer-legal-framework-guide.png",
+            "image": "/blogs-images/employer-legal-framework-guide.png",
             "imageAlt": "Employer legal framework guide",
             "imagePosition": "right"
         },
@@ -6960,7 +6960,10 @@ export const blogData = [
     "title": "Top Background Check Agencies in Kuala Lumpur: What to Know",
     "description": "Learn the top background check agencies in Kuala Lumpur and key factors to consider for accurate, reliable, and compliant employee screening services.",
     "h1": "Top Background Check Agencies in Kuala Lumpur & What to Look For",
-    "featuredImage": "/blogs-images/Background-Check-Agencies.png",
+
+    "featuredImage": "/blogs-images/background-check-agencies.png",
+
+
     "altTag": "Background Check Agencies",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-23",
@@ -6981,7 +6984,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "What to Look for When Choosing a Background Check Agency",
             "content": "Local Expertise and Legal Compliance\n\nMalaysia has strict data privacy laws and also labour laws. The agencies should be in a position to prove that they comply with the PDPA that they have clear-cut consent practices and that they process data in a legal way.\n\nAccuracy and Verification Methodology\n\nReliable agencies use primary-source verification rather than database-only searches. Ask how information is collected, validated, and documented.\n\nReporting Quality\n\nReports should be clear, structured, and audit-ready. Poorly written reports can create compliance risk and internal confusion.\n\nTurnaround Time and Scalability\n\nBusinesses in Kuala Lumpur often operate regionally. The agency should be able to handle both local hires and cross-border screening efficiently.\n\nSecurity and Information Protection\n\nLook for certifications such as ISO 27001 or equivalent internal security controls. Background data is sensitive and must be protected accordingly.",
-            "image": "/blogs-images/Global-Screening-Platforms.png",
+
+            "image": "/blogs-images/global-screening-platforms.png",
+
             "imageAlt": "Global Screening Platforms",
             "imagePosition": "right"
         },
@@ -7035,7 +7040,10 @@ export const blogData = [
     "title": "Employment Background Screening in Malaysia: HR Guide 2025",
     "description": "A complete guide for HR teams in Malaysia on employment background screening, including candidate verification, compliance checks, and safe hiring practices.",
     "h1": "Employment Background Screening in Malaysia: Complete Guide for HR Teams",
-    "featuredImage": "/blogs-images/Malaysia-HR-Screening-Guide.png",
+
+    "featuredImage": "/blogs-images/malaysia-hr-screening-guide.png",
+
+
     "altTag": "Malaysia HR Screening Guide",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-24",
@@ -7061,7 +7069,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Compliance and Legal Considerations for HR Teams",
             "content": "Malaysia's PDPA requires organizations to:\n\nObtain clear, written consent from candidates\n\nLimit data use to stated screening purposes.\n\nProtect personal data from unauthorized access.\n\nRetain data only for a defined period.\n\nHR teams should work with screening partners who follow documented processes and maintain audit-ready records. A compliant pre-employment screening Malaysia framework protects both the employer and the candidate.",
-            "image": "/blogs-images/HR-Compliance-and-Legal-Guide.png",
+
+            "image": "/blogs-images/hr-compliance-and-legal-guide.png",
+
             "imageAlt": "HR Compliance and Legal Guide",
             "imagePosition": "right"
         },
@@ -7074,7 +7084,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Common Challenges and How to Address Them",
             "content": "Delayed responses from past employers: Use multiple verification sources\n\nCross-border employment history: Engage providers with regional reach\n\nCandidate disputes: Maintain transparent processes and documentation\n\nClear communication with candidates during screening also reduces friction and improves employer brand perception.",
-            "image": "/blogs-images/Addressing-Common-Challenges.png",
+
+            "image": "/blogs-images/addressing-common-challenges.png",
+
             "imageAlt": "Addressing Common Challenges",
             "imagePosition": "right"
         },
@@ -7123,7 +7135,9 @@ export const blogData = [
     "title": "Free Background Check Malaysia: Risks and Limitations",
     "description": "Understand the risks and limitations of free background checks in Malaysia and why companies should rely on trusted screening methods for safe hiring decisions.",
     "h1": "Free Background Check Malaysia: Risks, Limitations & Why Companies Should Avoid It",
-    "featuredImage": "/blogs-images/Risks-of-Free-Background-Checks.png",
+
+    "featuredImage": "/blogs-images/risks-of-free-background-checks.png",
+
     "altTag": "Risks of Free Background Checks",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-25",
@@ -7154,7 +7168,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Why Professional Screening Is a Better Business Decision",
             "content": "Professional background screening service providers have clear-cut procedures, authentic sources and legal regulations. An organized screening strategy would normally incorporate:\n\nVerified identity and document checks\n\nEmployment and education validation\n\nCourt, litigation, or adverse media screening\n\nData handling aligned with local regulations.\n\nThis approach supports informed decision-making rather than assumptions based on incomplete data.",
-            "image": "/blogs-images/Professional-Screening-Benefits.png",
+
+            "image": "/blogs-images/professional-screening-benefits.png",
+
             "imageAlt": "Professional Screening Benefits",
             "imagePosition": "right"
         },
@@ -7208,7 +7224,9 @@ export const blogData = [
     "title": "Cybersecurity Background Checks to Prevent Insider Threats",
     "description": "Learn how cybersecurity background checks protect your business from insider threats by verifying employee reliability and minimizing internal risks effectively",
     "h1": "How Cybersecurity Background Checks Protect Your Business From Insider Threats",
-    "featuredImage": "/blogs-images/Cybersecurity-Employee-Checks.png",
+
+    "featuredImage": "/blogs-images/cybersecurity-employee-checks.png",
+
     "altTag": "Cybersecurity Employee Checks",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-26",
@@ -7234,7 +7252,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "How Cybersecurity Background Checks Reduce Insider Risk",
             "content": "Pre-Employment Risk Identification\n\nBefore onboarding, structured screening evaluates an individual's history against role-specific risk factors. For cybersecurity-sensitive roles, this may include:\n\nCriminal and financial record checks (where legally permitted)\n\nCredential and certification verification\n\nEmployment gaps or inconsistencies\n\nDigital footprint and reputation analysis\n\nThese checks allow organizations to make informed hiring decisions without delaying operations.\n\nRole-Based Screening for Access Control\n\nThe amount of cyber risk associated with positions is not all equal. IT administrators, finance departments and data handlers should be looked into more than ordinary employees. Specialized cybersecurity background checks will ensure the same level of screening as the access level without unreasonable exposure.\n\nOngoing Monitoring and Rescreening\n\nInsider risk evolves. Regular rescreening and ongoing monitoring are useful in the identification of any changes that may pose new vulnerabilities, including financial distress, Policy violations, or outside affiliations that are risky.",
-            "image": "/blogs-images/Reduce-Insider-Risk-Checks.png",
+
+            "image": "/blogs-images/reduce-insider-risk-checks.png",
+
             "imageAlt": "Reduce Insider Risk Checks",
             "imagePosition": "right"
         },
@@ -7288,7 +7308,9 @@ export const blogData = [
     "title": "Worldwide Background Checks for Malaysian Employers",
     "description": "Learn how Malaysian companies conduct secure worldwide background checks to verify global candidates, reduce hiring risks, and support trustworthy recruitment.",
     "h1": "worldwide Background Checks: How Malaysian Companies Can Vet Global Candidates",
-    "featuredImage": "/blogs-images/Worldwide-Background-Checks.png",
+
+    "featuredImage": "/blogs-images/worldwide-background-checks.png",
+
     "altTag": "Worldwide Background Checks",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-27",
@@ -7314,7 +7336,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Employment and Education Verification",
             "content": "Past employment and academic credentials are verified directly with institutions and employers across countries. This step helps identify false experience claims and degree fraud.",
-            "image": "/blogs-images/Employment-and-Education-Verification.png",
+
+            "image": "/blogs-images/employment-and-education-verification.png",
+
             "imageAlt": "Employment and Education Verification",
             "imagePosition": "right"
         },
@@ -7378,7 +7402,7 @@ export const blogData = [
     "title": "Property Management: Why Tenant & Staff Screening Matters",
     "description": "Learn why thorough tenant and staff background checks are crucial in property management to reduce risk, ensure safety, and protect your investment.",
     "h1": "Property Management Background Check: Why Tenant & Staff Screening Matters",
-    "featuredImage": "/blogs-images/Tenant-&-Staff-Screening.png",
+    "featuredImage": "/blogs-images/tenant-&-staff-screening.png",
     "altTag": "Tenant & Staff Screening",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-28",
@@ -7404,7 +7428,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Staff Screening: Operational Risk and Compliance Control",
             "content": "Property management staff often have access to sensitive data, physical premises, and financial systems. Verifying their credentials is essential for operational continuity.\n\nEssential Employee Screening Areas\n\nEffective staff screening may cover:\n\nEmployment history verification\n\nAcademic and professional credential checks\n\nCriminal record screening where legally permitted\n\nRole-specific risk assessments\n\nEmployee verification Malaysia is especially applicable to organizations working in Southeast Asia because of issues that pertain to regulatory frameworks, labor mobility, and cross-border hiring. Correct verification assists the property companies in meeting the local labor regulations as well as upholding internal checks.",
-            "image": "/blogs-images/Employee-Screening-Areas.png",
+
+            "image": "/blogs-images/employee-screening-areas.png",
+
             "imageAlt": "Employee Screening Areas",
             "imagePosition": "right"
         },
@@ -7463,7 +7489,9 @@ export const blogData = [
     "title": "Background Investigation Services to Reduce Hiring Fraud",
     "description": "Learn how background investigation services in Malaysia help prevent hiring fraud, verify candidates, reduce risk, and support safer, more reliable recruitment.",
     "h1": "Background Investigation Services: How They Reduce Hiring Fraud in Malaysia",
-    "featuredImage": "/blogs-images/Reduce-Fraud-in-Malaysia.png",
+
+    "featuredImage": "/blogs-images/reduce-fraud-in-malaysia.png",
+
     "altTag": "Reduce Fraud in Malaysia",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-29",
@@ -7489,7 +7517,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "How Background Screening Reduces Hiring Fraud",
             "content": "Early Detection of False Information\n\nFormal screening determines anomalies prior to the completion of an offer. Even the small inconsistencies frequently become an indication of bigger integrity issues.\n\nProtection Against Regulatory Non-Compliance\n\nThe industries including finance, healthcare, logistics and technology have to comply with high standards. Screenings facilitate compliance with both the internal rules and the foreign regulations.\n\nImproved Workforce Integrity\n\nEmployees who pass thorough checks are statistically less likely to engage in misconduct, internal fraud, or policy violations.\n\nReduced Financial and Legal Exposure\n\nHiring fraud can lead to:\n\nCostly termination processes\n\nOperational disruption\n\nLegal disputes\n\nBrand damage\n\nPreventive screening significantly lowers these risks.",
-            "image": "/blogs-images/Screening-Reduces-Hiring-Fraud.png",
+
+            "image": "/blogs-images/screening-reduces-hiring-fraud.png",
+
             "imageAlt": "Screening Reduces Hiring Fraud",
             "imagePosition": "right"
         },
@@ -7582,7 +7612,9 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Benefits for Employers and HR Teams",
             "content": "Organizations adopting intelligence-led screening gain measurable advantages:\n\nImproved hiring accuracy and risk mitigation\n\nStronger compliance with regulatory frameworks\n\nReduced exposure to fraud and misconduct\n\nFaster, decision-ready reports for leadership\n\nEnhanced protection of brand and stakeholder trust\n\nThese advantages are particularly applicable to the financial services, health care, energy, technology and logistics sectors.",
-            "image": "/blogs-images/Employers-and-HR-Teams-Benefits.png",
+
+            "image": "/blogs-images/employers-and-hr-teams-benefits.png",
+
             "imageAlt": "Employers and HR Teams Benefits",
             "imagePosition": "right"
         },
@@ -7670,7 +7702,7 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "Why Due Diligence Matters Beyond Hiring",
             "content": "Background screening is no longer limited to employees. Many organisations now apply similar checks to vendors, partners, and third parties. Selecting the right screening provider supports broader risk management and governance frameworks, not just recruitment workflows.",
-            "image": "/blogs-images/Due-intelligence.png",
+            "image": "/blogs-images/due-intelligence.png",
             "imageAlt": "Due intelligence",
             "imagePosition": "right"
         },
@@ -7714,7 +7746,7 @@ export const blogData = [
     "title": "Advanced Background Screening for High-Risk Industries",
     "description": "Discover background screening solutions for high-security industries in Malaysia, helping organizations mitigate risk, ensure compliance, and protect critical assets.",
     "h1": "Background Screening Solutions for High-Security Industries in Malaysia",
-    "featuredImage": "/blogs-images/Background-screening-solutions.png",
+    "featuredImage": "/blogs-images/background-screening-solutions.png",
     "altTag": "Background Screening Solutions",
     "author": "VENOVOX Team",
     "publishDate": "2025-02-01",
@@ -7735,7 +7767,7 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "The Importance of PDPA-Compliant Screening",
             "content": "Personal details and laws and regulations are provided under the PDPA compliant screening in Malaysia, which governs the manner in which personal information is gathered, processed and stored. Background checks should be done in an organization that complies with PDPA because it will prevent legal consequences and protect the privacy of data.\n\nObtaining explicit consent from candidates before collecting data.\n\nSecuring sensitive information against unauthorized access.\n\nEnsuring accurate and up-to-date reporting.",
-            "image": "/blogs-images/PDPA-compliant-screening.png",
+            "image": "/blogs-images/pdpa-compliant-screening.png",
             "imageAlt": "PDPA compliant screening",
             "imagePosition": "right"
         },

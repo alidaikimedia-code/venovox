@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description:
         "Explore exciting career opportunities at VENOVOX. Become part of a global leader in risk consultancy, security advisory, and intelligence analysis.",
     alternates: {
-        canonical: "https://venovox.com/my-en/Career",
+        canonical: "https://venovox.com/my-en/career",
     },
 };
 
@@ -21,7 +21,7 @@ export default function Careers() {
     return (
         <>
             <Head>
-                <link rel="canonical" href="https://venovox.com/my-en/Career" />
+                <link rel="canonical" href="https://venovox.com/my-en/career" />
             </Head>
             < VenovoxHero />
             <VenovoxCredibilitySection />
