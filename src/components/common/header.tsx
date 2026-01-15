@@ -26,22 +26,22 @@ const navData = {
   menuItems: [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/my-en/about" },
+    { name: "Our Services", path: "/my-en/our-services" },
     {
-      name: "Our Services",
-      path: "/my-en/our-services",
+      name: "Background Screening",
+      path: "/my-en/background-screening",
       subItems: [
-        { name: "Risk Intelligence", path: "/my-en/our-services/risk-intelligence/" },
-        { name: "Due Diligence", path: "/my-en/our-services/due-diligence/" },
-        { name: "Risk & Audit", path: "/my-en/our-services/risk-audit/" },
-        { name: "Compliance", path: "/my-en/our-services/compliance/" },
-        { name: "Intellectual Property", path: "/my-en/our-services/intellectual-property/" },
-        { name: "Counter Measures", path: "/my-en/our-services/counter-measures/" },
-        { name: "Financial Crime", path: "/my-en/our-services/financial-crime/" },
-        { name: "HR Services", path: "/my-en/our-services/hr-services/" },
-        { name: "Cyber Security", path: "/my-en/our-services/cyber-security/" }
+        { name: "Risk Intelligence", path: "/my-en/background-screening/risk-intelligence/" },
+        { name: "Due Diligence", path: "/my-en/background-screening/due-diligence/" },
+        { name: "Risk & Audit", path: "/my-en/background-screening/risk-audit/" },
+        { name: "Compliance", path: "/my-en/background-screening/compliance/" },
+        { name: "Intellectual Property", path: "/my-en/background-screening/intellectual-property/" },
+        { name: "Counter Measures", path: "/my-en/background-screening/counter-measures/" },
+        { name: "Financial Crime", path: "/my-en/background-screening/financial-crime/" },
+        { name: "HR Services", path: "/my-en/background-screening/hr-services/" },
+        { name: "Cyber Security", path: "/my-en/background-screening/cyber-security/" }
       ]
     },
-    { name: "Background Screening",path: "/my-en/background-screening" },
     { name: "Case Studies", path: "/case-studies" },
     { name: "Publication", path: "/blogs/" },
     { name: "Contact Us", path: "/my-en/contact-us" },
@@ -70,11 +70,6 @@ export default function Navbar() {
     // Special handling for home page: only match exact root path
     if (normalizedPath === "/" || normalizedPath === "") {
       return normalizedPathname === "/" || normalizedPathname === "";
-    }
-    
-    // Special handling for background-screening: only match exact path, not sub-pages
-    if (normalizedPath === "/background-screening") {
-      return normalizedPathname === normalizedPath;
     }
     
     // If menu item has sub-items, check if current path matches any sub-item
