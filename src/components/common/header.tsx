@@ -58,6 +58,7 @@ export default function Navbar() {
   const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
   const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
+
   const isActive = (path: string, subItems?: SubMenuItem[]) => {
     // Get base paths (without language prefixes) for comparison
     const basePathname = getBasePath(pathname);
@@ -93,6 +94,7 @@ export default function Navbar() {
     
     // For other paths, match exact path or paths that start with it
     return normalizedPathname === normalizedPath || normalizedPathname.startsWith(normalizedPath + "/");
+
   };
 
   useEffect(() => {
@@ -279,7 +281,9 @@ function NavMenuItem({
   active: boolean; 
   hasSubItems: boolean; 
   language: Language; 
+
   isActive: (path: string, subItems?: SubMenuItem[]) => boolean; 
+
   activeSubMenu: string | null; 
   onMouseEnter: (name: string) => void; 
   onMouseLeave: () => void;
@@ -328,7 +332,9 @@ function NavSubMenuItem({
 }: { 
   sub: SubMenuItem; 
   language: Language; 
+
   isActive: (path: string, subItems?: SubMenuItem[]) => boolean;
+
 }) {
   const translatedName = useTranslation(sub.name);
   

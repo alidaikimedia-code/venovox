@@ -1,0 +1,57 @@
+{
+  "home": {
+    "en": {
+      "title": "Trusted Background Screening & Company Search | Venovox",
+      "description": "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services. ISO 27001 certified risk management solutions."
+    }
+  },
+  "about": {
+    "en": {
+      "title": "About Us | Venovox",
+      "description": "Learn about Venovox, Malaysia's trusted background screening and company verification service provider."
+    }
+  },
+  "contact-us": {
+    "en": {
+      "title": "Contact Us | Venovox",
+      "description": "Get in touch with Venovox for background screening, company verification, and risk management services in Malaysia."
+    }
+  },
+  "Career": {
+    "en": {
+      "title": "Careers | Venovox",
+      "description": "Join Venovox and help businesses in Malaysia with secure background checks and risk management solutions."
+    }
+  },
+  "our-services": {
+    "en": {
+      "title": "Our Services | Venovox",
+      "description": "Comprehensive background screening, company verification, and risk management services in Malaysia."
+    }
+  },
+  "background-screening": {
+    "en": {
+      "title": "Background Screening Malaysia | Venovox",
+      "description": "Professional background screening services in Malaysia. CTOS & SSM reports, employee verification, and company profile checks."
+    }
+  },
+  "blogs": {
+    "en": {
+      "title": "Blogs | Venovox",
+      "description": "Read the latest articles and insights about background screening, company verification, and risk management in Malaysia."
+    }
+  },
+  "case-studies": {
+    "en": {
+      "title": "Case Studies | Venovox",
+      "description": "Explore real-world case studies of background screening and risk management solutions by Venovox."
+    }
+  },
+  "corporate-investigations": {
+    "en": {
+      "title": "Corporate Investigations | Venovox",
+      "description": "Professional corporate investigation services including fraud prevention, asset tracing, and compliance investigations."
+    }
+  }
+}
+

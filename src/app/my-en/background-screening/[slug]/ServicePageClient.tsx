@@ -57,17 +57,10 @@ export default function ServicePageClient({ slug }: ServicePageClientProps) {
         setService(foundService || null);
     }, [slug]);
 
-    useEffect(() => {
-        if (isMounted && service) {
-            document.title = service.metaTitle;
-            const metaDescription = document.querySelector(
-                'meta[name="description"]'
-            );
-            if (metaDescription) {
-                metaDescription.setAttribute("content", service.metaDescription);
-            }
-        }
-    }, [service, isMounted]);
+    // REMOVED: Client-side meta tag updates
+    // Meta tags are now 100% server-side via generateMetadata() in [lang]/[[...slug]]/page.tsx
+    // This ensures they appear ONLY in HTML, NOT in "Rendered"
+    // Client-side updates cause meta tags to appear in "Rendered" which breaks SEO
 
     const scrollToSection = (anchor: string) => {
         const element = document.querySelector(anchor);
