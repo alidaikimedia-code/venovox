@@ -1,11 +1,63 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLanguage, languages, Language } from '@/contexts/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getLocalizedPath, getBasePath } from '@/lib/language-utils';
+
+// Static mapping of language names in all languages
+const languageNames: Record<Language, Record<Language, string>> = {
+  en: {
+    en: 'English',
+    ms: 'Malay',
+    zh: 'Chinese',
+    ar: 'Arabic',
+    de: 'German',
+    fr: 'French',
+  },
+  ms: {
+    en: 'Bahasa Inggeris',
+    ms: 'Bahasa Malaysia',
+    zh: 'Bahasa Cina',
+    ar: 'Bahasa Arab',
+    de: 'Bahasa Jerman',
+    fr: 'Bahasa Perancis',
+  },
+  zh: {
+    en: '英语',
+    ms: '马来语',
+    zh: '中文',
+    ar: '阿拉伯语',
+    de: '德语',
+    fr: '法语',
+  },
+  ar: {
+    en: 'الإنجليزية',
+    ms: 'الماليزية',
+    zh: 'الصينية',
+    ar: 'العربية',
+    de: 'الألمانية',
+    fr: 'الفرنسية',
+  },
+  de: {
+    en: 'Englisch',
+    ms: 'Malaiisch',
+    zh: 'Chinesisch',
+    ar: 'Arabisch',
+    de: 'Deutsch',
+    fr: 'Französisch',
+  },
+  fr: {
+    en: 'Anglais',
+    ms: 'Malais',
+    zh: 'Chinois',
+    ar: 'Arabe',
+    de: 'Allemand',
+    fr: 'Français',
+  },
+};
 
 export default function LanguageDropdown() {
   const { language, setLanguage, isTranslating } = useLanguage();
@@ -14,7 +66,15 @@ export default function LanguageDropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLanguage = languages.find(l => l.code === language) || languages[0];
+  // Get language name in the currently selected language
+  const getLanguageName = (langCode: Language): string => {
+    return languageNames[language]?.[langCode] || languages.find(l => l.code === langCode)?.nativeName || langCode;
+  };
+
+  // Get current language display name - directly computed from language state to ensure reactivity
+  const currentLanguageName = useMemo(() => {
+    return languageNames[language]?.[language] || languages.find(l => l.code === language)?.nativeName || language;
+  }, [language]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -209,8 +269,8 @@ export default function LanguageDropdown() {
           disabled={isTranslating}
         >
           <Globe size={18} />
-          <span className="language-button-text">
-            {currentLanguage.nativeName}
+          <span className="language-button-text" key={language}>
+            {currentLanguageName}
           </span>
           <ChevronDown 
             size={16} 
@@ -239,7 +299,7 @@ export default function LanguageDropdown() {
                   onClick={() => handleLanguageChange(lang.code)}
                 >
                   <div className="language-option-name">
-                    <span>{lang.name}</span>
+                    <span>{getLanguageName(lang.code)}</span>
                     <span className="language-option-native">{lang.nativeName}</span>
                   </div>
                   {language === lang.code && (

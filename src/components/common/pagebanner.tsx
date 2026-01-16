@@ -27,19 +27,18 @@ export default function PageBanner() {
 
         let currentPath = "";
         filteredSegments.forEach((segment, index) => {
-            // Replace "background-screening" with "our-services" in breadcrumb for service pages
-            const isServicePage = filteredSegments.length > 1 && index === 0 && segment === "background-screening";
-            const pathSegment = isServicePage ? "our-services" : segment;
-            currentPath += `/${pathSegment}`;
+            currentPath += `/${segment}`;
             const isLast = index === filteredSegments.length - 1;
             
-            let displayName = capitalizeWords(pathSegment);
-            if (pathSegment === "case-studies") {
+            let displayName = capitalizeWords(segment);
+            if (segment === "case-studies") {
                 displayName = "Case Studies";
-            } else if (pathSegment === "corporate-investigations") {
+            } else if (segment === "corporate-investigations") {
                 displayName = "Corporate Investigations";
-            } else if (pathSegment === "our-services") {
+            } else if (segment === "our-services") {
                 displayName = "Our Services";
+            } else if (segment === "background-screening") {
+                displayName = "Background Screening";
             }
             
             breadcrumbs.push({

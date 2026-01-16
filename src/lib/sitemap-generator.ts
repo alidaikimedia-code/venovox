@@ -23,39 +23,39 @@ const staticPages = [
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/risk-intelligence',
+    url: '/my-en/background-screening/risk-intelligence',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/due-diligence',
+    url: '/my-en/background-screening/due-diligence',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/risk-audit',
+    url: '/my-en/background-screening/risk-audit',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/compliance',
+    url: '/my-en/background-screening/compliance',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/intellectual-property',
+    url: '/my-en/background-screening/intellectual-property',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/counter-measures',
+    url: '/my-en/background-screening/counter-measures',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/financial-crime',
+    url: '/my-en/background-screening/financial-crime',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/hr-services',
+    url: '/my-en/background-screening/hr-services',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
-    url: '/my-en/our-services/cyber-security',
+    url: '/my-en/background-screening/cyber-security',
     lastmod: '2025-01-14T10:43:49+00:00'
   },
   {
