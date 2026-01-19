@@ -5,7 +5,7 @@ export const blogData = [
         "title": "Benefits of Certified Background Screening Worldwide",
         "description": "Learn how certified screening partners help global firms meet regulatory standards, protect brand reputation, and streamline international hiring processes",
         "h1": "Why Global Companies Need Certified Background Screening Partners",
-        "featuredImage": "/Global-screening-partner.png",
+        "featuredImage": "/global-screening-partner.png",
         "altTag": "Global screening partner",
         "author": "VENOVOX Team",
         "publishDate": "2024-01-15",
@@ -21,7 +21,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Navigating Local and International Laws",
                 "content": "Countries have diverse regulations, cultures, and databases. That's where certified Background screening Malaysia partners come in. These partners are familiar with the legislation in the area and can do a thorough background check on the candidate. It's not simply about ticking off boxes; it's about keeping the business, its employees, and its customers safe. In Malaysia, all businesses, but notably those that engage with international partners, are starting to need background checks.",
-                "image": "/Navigating-Local-and-International-Laws.png",
+                "image": "/navigating-local-and-international-laws.png",
                 "imageAlt": "Navigating Local and International Laws",
                 "imagePosition": "right"
             },
@@ -34,7 +34,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Key Benefits of Certified Screening Partners",
                 "content": "Here are some reasons why global companies should cooperate with accredited screening partners:",
-                "image": "/Certified-screening-benefits.png",
+                "image": "/certified-screening-benefits.png",
                 "imageAlt": "Certified screening benefits",
                 "benefits": [
                     {
@@ -76,7 +76,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Building Long-Term Trust Through Smart Hiring",
                 "content": "Verified Employment background screening is beneficial both during the employment process and in achieving the long-term objectives of the corporations. The correct screening of the people ensures that there is a safer work environment, reduces turnover and enhances a strong culture in a firm. One composed of well-selected employees operates even better and is trusted more by clients. This may give a company a huge advantage over other competitors in the business world, which is all about reputation.",
-                "image": "/Trusted-hiring-practices.png",
+                "image": "/trusted-hiring-practices.png",
                 "imageAlt": "Trusted hiring practices",
                 "imagePosition": "left"
             },
@@ -98,7 +98,7 @@ export const blogData = [
         "title": "Future of Background Checks: AI, Ethics & Data Privacy",
         "description": "AI, ethics, and data privacy are reshaping background screening, enabling smarter hiring, improved compliance, and greater transparency across industries.",
         "h1": "What's Next in Background Screening: AI, Ethics, and Data Privacy",
-        "featuredImage": "/AI-background-screening.png",
+        "featuredImage": "/ai-background-screening.png",
         "altTag": "AI background screening",
         "author": "VENOVOX Team",
         "publishDate": "2025-07-30",
@@ -119,7 +119,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "The Role of AI in Smarter Screening",
                 "content": "AI is now a very useful tool for background checks in Malaysia. It can find phony documents, indicate problems in apps, and check data in real time. This speeds up the process of hiring. But AI isn't perfect. It can inaccurately categorize someone if it uses data that is biased or wrong. It might even miss critical details that a person would notice. This is why businesses need to employ smart tools along with smart judgment and ethical data use.",
-                "image": "/The-Role-of-AI-in-Smarter-Screening.png",
+                "image": "/the-role-of-ai-in-smarter-screening.png",
                 "imageAlt": "The Role of AI in Smarter Screening",
                 "imagePosition": "right"
             },
@@ -127,7 +127,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Four Key Principles for Ethical Screening",
                 "content": "Fair and ethical background checks for jobs establish trust and stop unjust treatment. Employers should not just employ the latest tools, but they should also do things fairly. These four things can help you do a responsible screening:",
-                "image": "/AI-powered-screening.png",
+                "image": "/ai-powered-screening.png",
                 "imageAlt": "AI-powered screening",
                 "benefits": [
                     {
@@ -156,7 +156,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Legal Framework and Data Protection in Malaysia",
                 "content": "In Malaysia, there are also tough privacy regulations that businesses that conduct background checks must comply with. According to the Personal Data Protection Act (PDPA), a business should employ personal data responsibly. This implies storing, exchanging, and destroying data properly. Failure to observe these rules will put the companies in trouble with the law. The citizens who go job hunting are also more informed of their rights. They desire their employers to be open and to guard their information. ",
-                "image": "/Data-protection-laws-Malaysia.png",
+                "image": "/data-protection-laws-malaysia.png",
                 "imageAlt": "Data protection laws Malaysia",
                 "imagePosition": "left"
             },
@@ -184,7 +184,7 @@ export const blogData = [
         "title": "How Risk Intelligence Boosts Corporate Protection",
         "description": "Integrate risk intelligence to protect your business from emerging threats, improve resilience, and support informed decision-making at every level.",
         "h1": "What Is Risk Intelligence and How Does It Strengthen Corporate Defense",
-        "featuredImage": "/Risk-Awareness-Planning.png",
+        "featuredImage": "/risk-awareness-planning.png",
         "altTag": "Risk Awareness Planning",
         "author": "VENOVOX Team",
         "publishDate": "2025-07-30",
@@ -205,7 +205,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Making Smarter Decisions with Trusted Data",
                 "content": "One of the best things about risk intelligence is that it helps leaders stay sure of themselves. Businesses that use Corporate due diligence services don't only go with their instincts. They base their behavior on facts and reports that they know are true. This means that there will be fewer failed investments, better employment decisions, and stronger collaborations. In Malaysia, business intelligence services enable both local and international businesses to make decisions with confidence, knowing they've done their research.",
-                "image": "/Making-Smarter-Decisions-with-Trusted-Data.jpg",
+                "image": "/making-smarter-decisions-with-trusted-data.jpg",
                 "imageAlt": "Making Smarter Decisions with Trusted Data",
                 "imagePosition": "right"
             },
@@ -213,7 +213,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Top Benefits of Risk Intelligence Services",
                 "content": "Using risk intelligence technologies has a lot of real-world benefits. This is what it can accomplish for a business:",
-                "image": "/Risk-Intelligence-Services.png",
+                "image": "/risk-intelligence-services.png",
                 "imageAlt": "Risk Intelligence Services",
                 "benefits": [
                     {
@@ -242,7 +242,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "The Role of Technology in Risk Management",
                 "content": "Businesses now handle risk differently because of technology. Before, due diligence took a long time and was done by hand. Now, thanks to digital tools, Malaysia's business intelligence agencies can collect and analyze huge amounts of data in real time. This means that judgments will be made more quickly and that people will be better protected. Corporate due diligence services also employ these techniques to look for signals of hazard in the news, court records, and public databases. ",
-                "image": "/Intelligent-Business-Solutions.png",
+                "image": "/intelligent-business-solutions.png",
                 "imageAlt": "Technology risk management",
                 "imagePosition": "left"
             },
@@ -270,7 +270,7 @@ export const blogData = [
         "title": "AI in Action: Smarter Detection of Financial Crimes",
         "description": "Learn how AI technologies are helping businesses combat financial crimes through predictive analytics, automated monitoring, and faster threat detection.",
         "h1": "The Growing Role of AI in Detecting Financial Crimes",
-        "featuredImage": "/Automated-crime-analysis-through-AI.png",
+        "featuredImage": "/automated-crime-analysis-through-ai.png",
         "altTag": "Automated crime analysis through AI",
         "author": "VENOVOX Team",
         "publishDate": "2025-07-30",
@@ -291,7 +291,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Detecting Hidden Risks with Greater Accuracy",
                 "content": "This is not a matter of speed only: AI is about precision in the investigation of financial crimes. Most often, the criminals attempt to mix illegal dealings with a large number of legal ones. To give an example, it can monitor any unexpected shifts in the manner in which users can access their accounts or mention connections between individuals or companies that were previously unknown. Such smart solutions are assisting companies to stay ahead of fraud by just one step and reduce the chances of not only losing money, but also damaging their brand",
-                "image": "/Detecting-Hidden-Risks-with-Greater-Accuracy.jpg",
+                "image": "/detecting-hidden-risks-with-greater-accuracy.jpg",
                 "imageAlt": "Detecting Hidden Risks with Greater Accuracy",
                 "imagePosition": "right"
             },
@@ -299,7 +299,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Key Benefits of AI in Due Diligence",
                 "content": "Companies preserve their brand and customer trust when they pay for corporate due diligence services. AI makes due diligence more thorough and less expensive. Traditional approaches require long manual checks, but AI can cut that time by as much as 70%",
-                "image": "/Accurate-risk-detection.png",
+                "image": "/accurate-risk-detection.png",
                 "imageAlt": "Accurate risk detection",
                 "benefits": [
                     {
@@ -328,7 +328,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Learning from the Past, Preventing the Future",
                 "content": "One of the best things about AI for investigating financial crimes is that it can learn from past cases. AI tools update their models every time a new way to commit fraud is found so that they can capture similar efforts in the future. They become more trustworthy over time because they keep learning. AI can look through thousands of pages of financial records and find trends across multiple locations far faster than human teams, even those with a lot of experience.",
-                "image": "/Real-time-compliance-monitoring.png",
+                "image": "/real-time-compliance-monitoring.png",
                 "imageAlt": "Real-time compliance monitoring",
                 "imagePosition": "left"
             },
@@ -336,7 +336,7 @@ export const blogData = [
                 "type": "content_section",
                 "heading": "Real-Time Monitoring and Global Compliance",
                 "content": "AI is not only concerned about looking at the past but also about what is happening at the very moment. It is able to monitor accounts, identify suspicious behavior, and provide a warning immediately. This timely action is quite crucial towards preventing money laundering, tax evasion and insider dealing. AI is able to assist companies in abiding by regulations that prevail in every part of the globe. The AI systems can be reprogrammed frequently due to the frequent changes in regulations.",
-                "image": "/Real-time-compliance-monitoring.png",
+                "image": "/real-time-compliance-monitoring.png",
                 "imageAlt": "Real-time compliance monitoring",
                 "imagePosition": "right"
             },
@@ -359,7 +359,7 @@ export const blogData = [
         "title": "How AI Reduces False Positives in Financial Crime Detection",
         "description": "AI helps reduce false positives in financial crime detection by improving pattern recognition, enhancing accuracy, and streamlining compliance workflows.",
         "h1": "What Role Does AI Play in Reducing False Positives in Financial Crime Detection?",
-        "featuredImage": "/Crime-Detection-Through-AI.png",
+        "featuredImage": "/crime-detection-through-ai.png",
         "altTag": "Crime Detection Through AI",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -380,14 +380,14 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "The Role of AI in Company Screening and Verification",
                 "content": "AI speeds up the process of searching for a firm name in Malaysia by comparing names in databases all around the world. This helps find possible fraud or fake companies. AI can also look at the structures and histories of companies to find phony profiles. It can connect people involved in a financial crime investigation and identify trends that aren't normal. A fresh company registration number Malaysia can be used to check if a corporation is officially registered and open for operation.",
-                "image": "/Company-Screening-Through-AI.jpg",
+                "image": "/company-screening-through-ai.jpg",
                 "imageAlt": "Company Screening Through AI",
                 "imagePosition": "right"
             },
             {
                 "type": "benefits_section",
                 "heading": "Key Benefits of AI in Reducing False Positives",
-                "image": "/Role_of_AI_in_Company.png",
+                "image": "/role_of_ai_in_company.png",
                 "imageAlt": "Role of AI in Company",
                 "content": "One of the best things about AI is that it can swiftly process a lot of data. It makes everything easier, from looking into financial crimes to doing standard checks like a firm name search in Malaysia. Here are four important reasons why utilizing AI to find fraud is a good idea:",
                 "benefits": [
@@ -417,7 +417,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "AI Ensures Fair and Consistent Decision-Making",
                 "content": "Fairness is another essential strength of AI. AI follows the same steps every time, unlike human checks, which can change. This helps keep things fair and cuts down on bias during a financial crime inquiry. AI treats every name the same way when a company name search Malaysia is done. This impartiality makes people trust the system. Companies can trust the AI to give them correct results without any mistakes, which helps them follow the law and do the right thing.",
-                "image": "/AI_Ensures_Fair.png",
+                "image": "/ai_ensures_fair.png",
                 "imageAlt": "AI_Ensures_Fair",
                 "imagePosition": "left"
             },
@@ -445,7 +445,7 @@ export const blogData = [
         "title": "Essential Tools for Real-Time Risk Detection & Monitoring",
         "description": "Real-time risk monitoring tools and techniques designed to enhance threat detection, minimize disruptions, and support consistent compliance outcomes.",
         "h1": "Top Tools & Techniques for Real-Time Risk Monitoring",
-        "featuredImage": "/Real-Time-Risk-Monitoring.png",
+        "featuredImage": "/real-time-risk-monitoring.png",
         "altTag": "Real Time Risk Monitoring",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -466,7 +466,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Verifying Company Legitimacy Through SSM Search",
                 "content": "SSM Search Malaysia is a powerful tool for verifying a company’s legitimacy in real time. By accessing the Companies Commission of Malaysia (SSM) database, businesses can confirm if a company is legally registered, helping avoid scams or dormant entities. This tool ensures you only engage with trustworthy organizations, reducing the risk of costly mistakes.",
-                "image": "/images/SSM-Search-Malaysia.webp",
+                "image": "/images/ssm-search-malaysia.webp",
                 "imageAlt": "SSM Search Malaysia",
                 "imagePosition": "right"
             },
@@ -474,7 +474,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Gaining Insight with Company Profiles",
                 "content": "Company profiles in Malaysia provide critical details about a business’s size, operations, directors, and history. Understanding who runs a company and its track record helps assess its reliability. Regular monitoring of these profiles allows businesses to spot changes in partners or suppliers that may signal new risks, ensuring informed decision-making.",
-                "image": "/Company-Profile-Insights.jpg",
+                "image": "/company-profile-insights.jpg",
                 "imageAlt": "Company Profile Insights",
                 "imagePosition": "left"
             },
@@ -482,7 +482,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Practical Techniques for Everyday Monitoring",
                 "content": "Effective risk monitoring relies on simple, actionable techniques. Here are some practical methods businesses can adopt:",
-                "image": "/Everyday-Risk-Monitoring.png",
+                "image": "/everyday-risk-monitoring.png",
                 "imageAlt": "Everyday Risk Monitoring",
                 "benefits": [
                     {
@@ -516,7 +516,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Easy Access for Smarter Decisions",
                 "content": "Tools like SSM Search Malaysia and CTOS reports are designed for ease of use, making them accessible to businesses of all sizes. No legal expertise is required to leverage these platforms. A quick check using a company profile in Malaysia can save significant costs and enhance decision-making speed and accuracy.",
-                "image": "/Access-for-Smarter-Decisions.png",
+                "image": "/access-for-smarter-decisions.png",
                 "imageAlt": "Access for Smarter Decisions",
                 "imagePosition": "right"
             },
@@ -539,7 +539,7 @@ export const blogData = [
         "title": "Top 5 Background Check Mistakes & How to Avoid Them",
         "description": "Hiring mistakes can be costly. These 5 background screening missteps often go unnoticed—learn how to prevent them, protect your business, and stay compliant.",
         "h1": "Top 5 Background Screening Mistakes and How to Prevent Them",
-        "featuredImage": "/Background-Screening-Mistakes.png",
+        "featuredImage": "/background-screening-mistakes.png",
         "altTag": "Background Screening Mistakes Guide",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -555,7 +555,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Using Outdated or Incomplete Checks",
                 "content": "One of the biggest mistakes is relying on outdated or incomplete background checks. Using old tools or skipping comprehensive checks can miss critical information like criminal records or falsified education claims. Partnering with experts in Background screening Malaysia ensures accurate, up-to-date, and legally compliant checks, giving HR teams confidence in their hiring decisions.",
-                "image": "/images/Outdated-Background-Checks.webp",
+                "image": "/images/outdated-background-checks.webp",
                 "imageAlt": "Outdated Background Checks",
                 "imagePosition": "right"
             },
@@ -568,7 +568,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Skipping Legal Consent and Compliance Steps",
                 "content": "Neglecting to obtain proper consent from candidates before conducting background checks is both risky and illegal in many jurisdictions. Employers must inform candidates and secure signed approval. Professional Background check agencies in Kuala Lumpur ensure all steps are compliant, with clear communication and proper documentation to avoid lawsuits or fines.",
-                "image": "/Legal-Consent-Compliance.png",
+                "image": "/legal-consent-compliance.png",
                 "imageAlt": "Avoiding Legal Consent and Compliance",
                 "imagePosition": "left"
             },
@@ -576,7 +576,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Failing to Verify Job and Education History",
                 "content": "Many employers overlook verifying candidates’ job history and education, trusting resumes without cross-checking. This can lead to hiring unqualified individuals. A reliable Background check firm in Kuala Lumpur verifies work experience, education, and skills. Watch for these red flags during screening:",
-                "image": "/Job-Education-Verification.jpg",
+                "image": "/job-education-verification.jpg",
                 "imageAlt": "Job and Education Verification",
                 "benefits": [
                     {
@@ -605,7 +605,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Avoiding Poor Communication With Your Provider",
                 "content": "Poor communication between HR and the background check provider can delay hiring and cause confusion. Unclear or delayed reports hinder decision-making. Choosing an Employment background screening provider with clear, timely communication ensures HR receives actionable insights quickly, keeping candidates informed and the process efficient.",
-                "image": "/Communication-Risks.png",
+                "image": "/communication-risks.png",
                 "imageAlt": "Poor Communication Risks",
                 "imagePosition": "right"
             },
@@ -628,7 +628,7 @@ export const blogData = [
         "title": "Avoid Screening Mistakes: Do’s and Don’ts for Employers",
         "description": "Understand the critical do’s and don’ts of background checks to avoid hiring missteps, protect your business, and stay aligned with legal standards.",
         "h1": "The Do's and Don'ts of Background Screening: A Practical Guide",
-        "featuredImage": "/Background-screening-tips.png",
+        "featuredImage": "/background-screening-tips.png",
         "altTag": "Background screening tips",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -649,7 +649,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "The Right Way to Handle Screening",
                 "content": "There are some best practices that companies in Malaysia must adhere to conduct background checks correctly. The first tip is that written permission from the candidate is always paramount before any digging is done on their history. Then, be sure that the data you gather remains confidential and is used solely for the process of hiring. Background checks on jobs make the employment background screening, when conducted with fairness and properness, bring about a good environment to work in for all.",
-                "image": "/Right-way-of-screening.png",
+                "image": "/right-way-of-screening.png",
                 "imageAlt": "Right way of Screening",
                 "imagePosition": "right"
             },
@@ -662,7 +662,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Key Do's and Don'ts for Successful Screening",
                 "content": "Here are some crucial do's and don'ts to keep in mind when doing background checks in Malaysia:",
-                "image": "/Screening-dos-and-donts.png",
+                "image": "/screening-dos-and-donts.png",
                 "imageAlt": "Screening do’s and don’ts",
                 "benefits": [
                     {
@@ -710,7 +710,7 @@ export const blogData = [
         "title": "Reliable Background Checks for Smarter Hiring Decisions",
         "description": "Make hiring smarter with proven tricks to accelerate and secure background checks. Ensure reliable, compliant results while improving candidate experience.",
         "h1": "Smart Hiring: Tricks to Make Background Checks Faster, Safer & More Reliable",
-        "featuredImage": "/Smart-hiring-process.png",
+        "featuredImage": "/smart-hiring-process.png",
         "altTag": "Smart hiring process",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -731,7 +731,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Go Beyond the Resume with Due Diligence",
                 "content": "Corporate due diligence services don't just look at the candidate; they also look at their past, their connections to firms, and their legal records. These services keep your business out of difficulty with the law and bad press. Many individuals appear to look good on paper, but they have been associated with fraud or lawsuits. That is why one HPVone should do his homework. It will assist the HR professionals to make wise choices concerning the selection of new employees to go on board, prevent surprises and maintain the image of the company as strong and clean.",
-                "image": "/Diligence-beyond-resume.png",
+                "image": "/diligence-beyond-resume.png",
                 "imageAlt": "Diligence beyond resume",
                 "imagePosition": "right"
             },
@@ -744,7 +744,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Tips to Make Your Hiring Process Smarter",
                 "content": "Here are four easy techniques to make background checks easier and more accurate:",
-                "image": "/Smart-hiring-tips.png",
+                "image": "/smart-hiring-tips.png",
                 "imageAlt": "Smart Hiring Tips",
                 "benefits": [
                     {
@@ -793,7 +793,7 @@ export const blogData = [
         "title": "Avoid Hiring Risks: Spot and Fix Background Check Red Flags",
         "description": "Learn how to identify and resolve background check red flags before they lead to hiring mistakes, legal risks, or long-term damage to your company’s reputation.",
         "h1": "How to Spot and Solve Background Check Red Flags Before They Cost You",
-        "featuredImage": "/Background-check-warning.png",
+        "featuredImage": "/background-check-warning.png",
         "altTag": "Background check warning",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -819,7 +819,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Key Areas to Investigate During Checks",
                 "content": "Companies should utilise an organised background check approach to avoid problems in the future. Every time, you should check these four crucial things:",
-                "image": "/Investigate-during-checks.png",
+                "image": "/investigate-during-checks.png",
                 "imageAlt": "Investigate during checks",
                 "benefits": [
                     {
@@ -858,7 +858,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Protecting Your Business for the Long Term",
                 "content": "In today's fast-paced society, it's too expensive to ignore warning signs. The people and partners you work with are very important to your company's success. This is why a lot of sensible organisations hire professional Due Diligence services to protect their capital. The process keeps your firm safe from risk and regret by examining the new company registration number in Malaysia and looking into global connections. You can expand with confidence and prevent hidden hazards with the support of a reliable Global due diligence provider.",
-                "image": "/Protection-of-business.png",
+                "image": "/protection-of-business.png",
                 "imageAlt": "Protection of Business",
                 "imagePosition": "left"
             },
@@ -881,7 +881,7 @@ export const blogData = [
         "title": "Safeguard Brand IP in Emerging Markets – Key Strategies",
         "description": "Safeguard your brand’s intellectual property in emerging markets with proven strategies to combat counterfeiting, piracy, legal gaps, and regulatory risks.",
         "h1": "How to Protect Your Brand's Intellectual Property in Emerging Markets",
-        "featuredImage": "/Intellectual-property-protection.png",
+        "featuredImage": "/intellectual-property-protection.png",
         "altTag": "Intellectual property protection",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -902,7 +902,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Use Due Diligence to Reduce Risk",
                 "content": "They help you in discovering whether the market is a safe place, whether local partners can be relied upon, and whether the legal regime can be useful as a means of protecting your brand. These services often involve a review of the law in the region, a review of the competitors' activities, and the monitoring process of the successful IP rights enforcement in the nation. The research also assists you in making rational decisions and avoiding business transactions that may disadvantage your brand name or value.",
-                "image": "/Due-diligence-strategy.png",
+                "image": "/due-diligence-strategy.png",
                 "imageAlt": "Due diligence strategy",
                 "imagePosition": "left"
             },
@@ -910,7 +910,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Simple Steps to Protect Your Brand",
                 "content": "You need to do things to protect your IP. A lot of firms don't do simple things that may save them a lot of money. Here are four strategies to make your IP strategy stronger in new markets:",
-                "image": "/Brand-protection-strategies.png",
+                "image": "/brand-protection-strategies.png",
                 "imageAlt": "Brand protection strategies",
                 "benefits": [
                     {
@@ -939,7 +939,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Check Before You Trust New Partners",
                 "content": "Competition can be tough in places like Malaysia, where the economy is rising quickly. Because of this, other companies can try to copy your brand. When you work with a background check firm in Kuala Lumpur, you can be sure that you are safe when you interact with new vendors, clients, or suppliers. They can examine corporate records, make sure you know who you're doing business with, and assist you in preventing fraud. Your brand may flourish without any legal or reputational problems if you build your presence on a stable and safe base.",
-                "image": "/Checking-business-partners.jpg",
+                "image": "/checking-business-partners.jpg",
                 "imageAlt": "Checking Business Partners",
                 "imagePosition": "left"
             },
@@ -967,7 +967,7 @@ export const blogData = [
         "title": "Smart Ways to Use Risk Intelligence in Business Operations",
         "description": "Integrate risk intelligence into daily operations to strengthen decision-making, reduce exposure to threats, and improve overall business performance.",
         "h1": "How to Integrate Risk Intelligence into Day-to-Day Business Operations",
-        "featuredImage": "/Operational-risk-integration.png",
+        "featuredImage": "/operational-risk-integration.png",
         "altTag": "Operational Risk Integration",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -988,7 +988,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Making Risk Intelligence a Team Effort",
                 "content": "Business intelligence services in Malaysia empower companies to create robust risk management plans integrated into daily tasks like hiring, budgeting, and strategic planning. When every team member understands potential risks, they can act proactively to safeguard the business. Partnering with a trusted global due diligence agency ensures thorough vetting of clients, partners, and suppliers, minimizing risks in business dealings.",
-                "image": "/Collaborative-risk-strategy.png",
+                "image": "/collaborative-risk-strategy.png",
                 "imageAlt": "Collaborative Risk Strategy",
                 "imagePosition": "left"
             },
@@ -996,7 +996,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Easy Steps to Integrate Risk Intelligence",
                 "content": "Here are practical steps to embed risk intelligence into your daily operations, making your workplace smarter and safer:",
-                "image": "/Risk-intelligence-integration.png",
+                "image": "/risk-intelligence-integration.png",
                 "imageAlt": "Risk Intelligence Integration",
                 "benefits": [
                     {
@@ -1025,7 +1025,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Avoiding Risks Before They Grow",
                 "content": "Proactively monitoring risks prevents small issues from escalating. Businesses in Malaysia using intelligence services can detect early warning signs, such as rising customer complaints or supply chain delays. A reliable global due diligence agency provides tools and insights to identify these risks before they become significant problems.",
-                "image": "/Mitigate-emerging-risks.png",
+                "image": "/mitigate-emerging-risks.png",
                 "imageAlt": "Mitigate Emerging Risks",
                 "imagePosition": "left"
             },
@@ -1053,7 +1053,7 @@ export const blogData = [
         "title": "Safe Global Hiring: Background Checks & Legal Compliance",
         "description": "Learn how to run global background checks while staying compliant with local laws. Hire smarter, reduce risks, and protect your team from costly legal violations.",
         "h1": "How to Conduct a Global Background Check Without Violating Local Laws",
-        "featuredImage": "/Global-hiring-compliance.png",
+        "featuredImage": "/global-hiring-compliance.png",
         "altTag": "Global hiring compliance",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -1074,7 +1074,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "The Importance of Local Expertise",
                 "content": "To get records from other nations, you need to know the area. A worldwide due diligence organization works with people in each area who know the culture, language, and laws. This helps you avoid making mistakes and makes sure you get the right information. Businesses who don't have these local connections could get information that is missing or out of current. You should also know how that information was gathered. It's really important to have boots on the ground, especially in nations where exchanging data is against the law.",
-                "image": "/Significance-of-local-expertise.png",
+                "image": "/significance-of-local-expertise.png",
                 "imageAlt": "Significance of Local Expertise",
                 "imagePosition": "left"
             },
@@ -1082,7 +1082,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Steps for a Safe and Legal Global Background Check",
                 "content": "Before doing any foreign background check, you need to plan. A good plan helps you stay out of trouble in the future. Keep these things in mind:",
-                "image": "/Safe-background-check-steps.png",
+                "image": "/safe-background-check-steps.png",
                 "imageAlt": "Safe Background Check Steps",
                 "benefits": [
                     {
@@ -1111,7 +1111,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Tailoring Checks to Match the Situation",
                 "content": "Not every case has the same background check. The demands are different when you hire someone, merge with someone, or choose a provider. A good global due diligence provider will tailor the check to your needs. For instance, you might look at someone's educational past while recruiting in Asia. But if you're working with a company in Europe, it's more necessary to keep track of your finances and legal papers. Companies can receive only what they need in a way that is legal because of this flexibility.",
-                "image": "/Tailored-background-checks.png",
+                "image": "/tailored-background-checks.png",
                 "imageAlt": "Tailored Background Checks",
                 "imagePosition": "left"
             },
@@ -1139,7 +1139,7 @@ export const blogData = [
         "title": "Cybersecurity & Financial Crime: 2026 Collaboration",
         "description": "Collaboration between cybersecurity and financial crime units is essential in 2025 to manage evolving risks, data breaches, and compliance challenges.",
         "h1": "How Cybersecurity and Financial Crime Teams Must Collaborate in 2026",
-        "featuredImage": "/Financial-cybersecurity-teamwork.png",
+        "featuredImage": "/financial-cybersecurity-teamwork.png",
         "altTag": "Financial Cybersecurity teamwork",
         "author": "VENOVOX Team",
         "publishDate": "2025-08-05",
@@ -1160,7 +1160,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Different Skills, One Goal",
                 "content": "They need each other FV because they have different Bab skills. Cybersecurity experts are familiar with viruses, firewalls, and system breaches. People who look into financial crimes, on the other hand, know how money is moved or cleaned up in illicit ways. But when they operate on their own, they leave holes. These holes let crooks get away. The safest firms in 2025 will be the ones with habitually communicate, training, and have responsive teams that may be ready in the event of any foul play.",
-                "image": "/United-goals-different-skills.png",
+                "image": "/united-goals-different-skills.png",
                 "imageAlt": "United Goals- Different Skills",
                 "imagePosition": "left"
             },
@@ -1168,7 +1168,7 @@ export const blogData = [
                 "type": "benefits_section",
                 "heading": "Key Ways to Improve Collaboration",
                 "content": "Let's look at what good teamwork looks like:",
-                "image": "/Collaboration-strategies.jpg",
+                "image": "/collaboration-strategies.jpg",
                 "imageAlt": "Collaboration Strategies",
                 "benefits": [
                     {
@@ -1202,7 +1202,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Technology Is the Bridge Between Teams",
                 "content": "Also, technology is making it easier to work together. Cloud systems, shared data hubs, and smart software tools let teams talk to each other in real time. In the past, it took longer to investigate financial crimes because information was delayed in getting to the right people. But with AI and automation, you can now let both teams know right away. This lowers the chance of human error and makes sure that responses are faster. The teams can halt crimes while they're happening, not simply after the fact, by employing tools that both sides can grasp.",
-                "image": "/Technology-bridges-collaboration.png",
+                "image": "/technology-bridges-collaboration.png",
                 "imageAlt": "Technology bridges collaboration",
                 "imagePosition": "left"
             },
@@ -2939,7 +2939,7 @@ export const blogData = [
         "title": "How Anti-Money Laundering Services Protect Your Business",
         "description": "Safeguard operations using anti-money laundering services and background screening Malaysia to reduce fraud, ensure compliance, and secure growth.",
         "h1": "How Anti-Money Laundering Services Protect Your Business",
-        "featuredImage": "/Anti-money-laundering-protection.png",
+        "featuredImage": "/anti-money-laundering-protection.png",
         "altTag": "Anti-money laundering protection",
         "author": "VENOVOX Team",
         "publishDate": "2025-09-02",
@@ -2960,7 +2960,7 @@ export const blogData = [
                 "type": "content_with_image",
                 "heading": "Why Global Due Diligence Matters",
                 "content": "When you work with a global due diligence company, you can be sure that your business is safe around the world. These businesses are experts at checking the backgrounds of people, suppliers, and partners from foreign countries. This is significant because financial crimes sometimes include networks that are hard to follow and traverse borders. A due diligence provider can look into legal records, firm ownership, and transaction history to provide you with a clear picture of who you're doing business with. This, in turn, lowers the danger of working with high-risk groups.",
-                "image": "/Global-diligence-importance.png",
+                "image": "/global-diligence-importance.png",
                 "imageAlt": "Global diligence importance",
                 "imagePosition": "right"
             },
@@ -5334,7 +5334,7 @@ export const blogData = [
   "title": "The Silent Risk: Ignoring Employee Engagement in the Company",
   "description": "Employee engagement is not just an HR metric — it’s a governance issue that influences resilience, ethics, and long-term corporate value.",
   "h1": "The Silent Risk: Ignoring Employee Engagement in the Company",
-  "featuredImage": "/Employee Engagement Risk.png",
+  "featuredImage": "/employee-engagement-risk.png",
   "altTag": "Employee Engagement Risk",
   "author": "VENOVOX Team",
   "publishDate": "2025-10-27",
@@ -5355,7 +5355,7 @@ export const blogData = [
       "type": "content_with_image",
       "heading": "The Fiduciary Duty of Directors",
       "content": "Companies and directors have a fiduciary duty to safeguard not only shareholder returns and client engagements but also the sustainability of the enterprise. In today’s environment, where ESG metrics, diversity, and transparency are increasingly scrutinized, ignoring employee sentiment is tantamount to ignoring financial risk or reputational risk. Companies celebrated for resilience often share a common trait of directors who prioritize culture, ethics, and well-being as much as balance sheets.",
-      "image": "/Employee Engagement Risk2.png",
+      "image": "/employee-engagement-risk2.png",
       "imageAlt": "Corporate Fiduciary Duty",
       "imagePosition": "right"
     },
@@ -5368,7 +5368,7 @@ export const blogData = [
       "type": "content_with_image",
       "heading": "Why Engagement Is a Governance Issue",
       "content": "The notion that employee engagement belongs solely to HR is outdated. In reality, it is a governance issue with direct implications for resilience, ethical conduct, and market competitiveness. Companies that overlook it are not just neglecting their workforce but they are overlooking a core component of corporate survival.",
-      "image": "/Employee Engagement3 .png",
+      "image": "/employee-engagement3.png",
       "imageAlt": "Employee Engagement Governance",
       "imagePosition": "left"
     },
@@ -5412,7 +5412,7 @@ export const blogData = [
             "type": "content_with_image",
             "heading": "How to Perform a Malaysia Company Registration Number Search",
             "content": "Doing a Malaysia business enterprise registration range seek is simple when you recognize where to appearance.\nHere’s a simple step-by-step guide anyone can follow:\n- Visit the SSM e-Info Portal – The official government website for company records.\n- Enter the company name or registration number – Make sure the spelling matches exactly.\n- Check the company profile: Verify details like business address, registration date, and status.\n- Confirm the director list: This helps identify who actually owns or manages the business.\n- Download an official report: For deeper checks, get an SSM report showing full company details.\nIf this sounds time-consuming, don’t worry, a <a href='https://venovox.com' target='_blank'>Background check agency Kuala Lumpur</a> can handle the process efficiently while ensuring all data is up-to-date and verified.",
-            "image": "/background-check agency-Kuala Lumpur.png",
+            "image": "/background-check-agency-kuala-lumpur.png",
             "imageAlt": "Background check agency Kuala Lumpur",
             "imagePosition": "right"
         },

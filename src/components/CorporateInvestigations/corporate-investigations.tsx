@@ -31,7 +31,7 @@ export default function CorporateInvestigations() {
     {
       title: "Intelligence and OSINT",
       description: "We deliver enhanced due diligence, background checks on people and companies, and human source insights. We assess market entry risk and partner risk. We combine online sources with field research where appropriate. You receive a clear view of integrity, reputation, and hidden risk before you act.",
-      imageUrl: "tingey-injury-law-firm-nSpj-Z12lX0-unsplash (1).jpg",
+      imageUrl: "tingey-injury-law-firm-nspj-z12lx0-unsplash-1.jpg",
     },
     {
       title: "Litigation support",
@@ -73,7 +73,7 @@ export default function CorporateInvestigations() {
     {
       title: "Prevention and controls",
       description: "We test controls, use data analytics, and train teams to stop issues early. We run fraud risk assessments and process walk throughs. We design simple monitoring that your team can run. We help you build a culture that values speaking up and early action.",
-      imageUrl: "markus-winkler--NEEL2Qzlwc-unsplash.jpg",
+      imageUrl: "markus-winkler--neel2qzlwc-unsplash.jpg",
       link: "/corporate-investigations/fraud-risk-management-and-prevention",
     },
   ];
@@ -129,25 +129,25 @@ export default function CorporateInvestigations() {
     {
       title: "Intake and scoping",
       description: "We listen to your concerns and gather the facts you already have. We define the problem, the goals, and the limits. We agree on access, roles, and timelines. We set early safeguards so nothing is lost and nobody is harmed.",
-      imageUrl: "campaign-creators-gMsnXqILjp4-unsplash.jpg",
+      imageUrl: "campaign-creators-gmsnxqiljp4-unsplash.jpg",
       link: undefined,
     },
     {
       title: "Evidence preservation",
       description: "We secure devices, emails, chat records, cloud drives, and paper files. We document every action to protect chain of custody. We place holds where needed and isolate systems that may be at risk. Our goal is to freeze the scene without stopping your business.",
-      imageUrl: "israel-andrade-YI_9SivVt_s-unsplash.jpg",
+      imageUrl: "israel-andrade-yi_9sivvt_s-unsplash.jpg",
       link: undefined,
     },
     {
       title: " Collection and analysis",
       description: "We collect data and testimony in a fair and consistent way. We use digital forensics, accounting reviews, OSINT and HUMINT checks, and structured interviews. We build a clear timeline that shows who did what and when. We test competing theories and note what we cannot confirm.",
-      imageUrl: "kate-sade-2zZp12ChxhU-unsplash.jpg",
+      imageUrl: "kate-sade-2zzp12chxhu-unsplash.jpg",
       link: undefined,
     },
     {
       title: "Findings and reporting",
       description: "We turn complex facts into a clear story. You get a concise executive summary and detailed appendices with evidence, methods, and sources. We explain limits and confidence levels. We brief leaders, HR, and counsel and support next steps.",
-      imageUrl: "rodeo-project-management-software-ONe-snuCaqQ-unsplash.jpg",
+      imageUrl: "rodeo-project-management-software-one-snucaqq-unsplash.jpg",
       link: undefined,
     },
     {
@@ -214,31 +214,31 @@ export default function CorporateInvestigations() {
     {
       title: "Independent and discreet",
       description: "We act with care and keep your trust. We avoid conflicts and report facts as we find them. We keep a low profile and protect your privacy.",
-      imageUrl: "vitaly-gariev-e_2XAeZWbUI-unsplash.jpg",
+      imageUrl: "vitaly-gariev-e_2xaezwbui-unsplash.jpg",
       link: undefined,
     },
     {
       title: "Cross border reach",
       description: "International work is routine for us. We understand regional laws and culture and we partner with trusted local experts. We coordinate permits, translation, and data transfer rules so your case runs smoothly.",
-       imageUrl: "simon-hurry-uySO9ZCbo-c-unsplash.jpg",
+       imageUrl: "simon-hurry-uyso9zcbo-c-unsplash.jpg",
       link: undefined,
     },
     {
       title: "Multidisciplinary team",
       description: "Investigators, forensic accountants, cyber experts, and intelligence analysts work as one team. This saves time and gives you a complete view of risk. You do not need to manage several vendors",
-  imageUrl: "vitaly-gariev-Jeg0c4gnpOM-unsplash.jpg",      
+  imageUrl: "vitaly-gariev-jeg0c4gnpom-unsplash.jpg",      
       link: undefined,
     },
     {
       title: "Fast action and clear updates",
       description: "You get a single point of contact, a simple plan, and regular short updates. We remove jargon and explain choices so you can decide quickly.",
-  imageUrl: "vitaly-gariev-qd3w1qjI_SQ-unsplash.jpg",      
+  imageUrl: "vitaly-gariev-qd3w1qji_sq-unsplash.jpg",      
       link: undefined,
     },
     {
       title: "Human approach",
       description: "We respect people. We protect whistleblowers and witnesses. We design interviews and communications that are firm and kind. We aim to find the truth while keeping dignity in view.",
-  imageUrl: "rodeo-project-management-software-ONe-snuCaqQ-unsplash copy.jpg",      
+  imageUrl: "rodeo-project-management-software-one-snucaqq-unsplash-copy.jpg",      
       link: undefined,
     },
   ]
