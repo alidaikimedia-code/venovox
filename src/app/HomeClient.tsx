@@ -28,49 +28,49 @@ const servicesData: ServiceItem[] = [
     title: "Due Diligence",
     description: "Strategic partner verification and investigative research that strengthens leadership decisions.",
     icon: Search,
-    image: "/Due Delligence.jpeg",
+    image: "/due-delligence.jpeg",
     link: "/my-en/background-screening/due-diligence"
   },
   {
     title: "Risk and Audit",
     description: "Operational and compliance reviews that surface gaps before they escalate.",
     icon: FileSearch,
-    image: "/Risk And Audit.jpeg",
+    image: "/risk-and-audit.jpeg",
     link: "/my-en/background-screening/risk-audit"
   },
   {
     title: "Corporate Investigations",
     description: "Discreet inquiries into misconduct, fraud, brand and IP abuse, and asset tracing.",
     icon: Briefcase,
-    image: "/Corporate Investigation.jpeg",
+    image: "/corporate-investigation.jpeg",
     link: "/corporate-investigations"
   },
   {
     title: "Financial Crime",
     description: "AML and fraud risk assessments with remediation guidance.",
     icon: DollarSign,
-    image: "/Finanical Crime.jpeg",
+    image: "/finanical-crime.jpeg",
     link: ""
   },
   {
     title: "HR Background Screening",
     description: "Employment checks that are fair, consistent and PDPA aligned.",
     icon: Users,
-    image: "/HR background screening .jpeg",
+    image: "/hr-background-screening.jpeg",
     link: " "
   },
   {
     title: "Cyber Security",
     description: "Digital risk assessments and incident response coordination.",
     icon: Shield,
-    image: "/Cyber Security.jpeg",
+    image: "/cyber-security.jpeg",
     link: " "
   },
   {
     title: "Counter Measures and Intellectual Property",
     description: "Protection for sensitive assets, trade secrets and brand value.",
     icon: Lock,
-    image: "/Counter Measures.jpeg",
+    image: "/counter-measures.jpeg",
     link: " ",
     colSpan: "md:col-span-2 lg:col-span-1"
   }
@@ -240,7 +240,7 @@ export default function HomeClient() {
           "Our executive level analysis delivers verified intelligence, precision reporting and recommendations. With deep local expertise and global operating footprint, we provide on ground capability across APAC and beyond.",
           "Our compliance driven culture ensures PDPA aligned practices, strict data minimisation, and access controls. We offer transparent, realistic turnarounds with a commitment to integrity."
         ]}
-        imageSrc="/Why Leaders Choose Us.jpeg"
+        imageSrc="/why-leaders-choose-us.jpeg"
         imageAlt="why leaders choose us"
         bgColor="white"
         imageFirst={true}
@@ -355,7 +355,7 @@ export default function HomeClient() {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/Thought Leadership .jpeg"
+                  src="/thought-leadership.jpeg"
                   alt="Thought Leadership and Publications"
                   fill
                   className="object-contain md:object-cover"
