@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 import HomeClient from '@/app/HomeClient';
 import AboutUs from '@/components/about/AboutUs';
 import ContactUs from '@/components/ContactUs/contact-us';
@@ -12,6 +13,8 @@ import VenovoxHero from '@/components/Career/top-section';
 import Form from '@/components/Career/submit-form';
 import servicesData from '@/data/our-services.json';
 import { blogData } from '@/data/blogsData';
+
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://venovox.com';
 
 // Map language codes to their URL prefixes
 const languageMap: Record<string, string> = {
@@ -58,7 +61,7 @@ export async function generateStaticParams() {
   // Generate params for root/home pages
   languages.forEach(lang => {
     params.push({ lang, slug: [] });
-    
+
     // Generate params for main pages
     params.push({ lang, slug: ['about'] });
     params.push({ lang, slug: ['contact-us'] });
@@ -97,6 +100,335 @@ export async function generateStaticParams() {
   });
 
   return params;
+}
+
+// Generate metadata for language routes
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang, slug = [] } = await params;
+
+  // Validate language
+  if (!languageMap[lang]) {
+    return {};
+  }
+
+  const path = slug.join('/');
+  const canonicalUrl = `${BASE_URL}/${lang}${path ? `/${path}` : ''}`;
+
+  // Default metadata for homepage
+  const defaultMeta = {
+    title: "Trusted Background Screening & Company Search | Venovox",
+    description: "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services. ISO 27001 certified risk management solutions.",
+  };
+
+  // Handle homepage
+  if (path === '') {
+    return {
+      title: defaultMeta.title,
+      description: defaultMeta.description,
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: defaultMeta.title,
+        description: defaultMeta.description,
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle blog pages - get metadata from blog data
+  if (path.startsWith('blogs/')) {
+    const blogSlug = path.replace('blogs/', '');
+    const blog = blogData.find(b => b.slug === blogSlug);
+    if (blog) {
+      return {
+        title: blog.seo.metaTitle,
+        description: blog.seo.metaDescription,
+        keywords: blog.seo.keywords.join(', '),
+        alternates: {
+          canonical: canonicalUrl
+        },
+        openGraph: {
+          title: blog.seo.metaTitle,
+          description: blog.seo.metaDescription,
+          url: canonicalUrl,
+          type: 'article',
+        },
+      };
+    }
+  }
+
+  // Handle service pages - get metadata from services data
+  if (path.startsWith('our-services/') || path.startsWith('background-screening/')) {
+    const serviceSlug = path.replace('our-services/', '').replace('background-screening/', '');
+    const service = servicesData.services.find(s => s.id === serviceSlug);
+    if (service) {
+      return {
+        title: service.metaTitle || `${service.title} | Venovox`,
+        description: service.metaDescription,
+        keywords: service.keyWords?.join(', '),
+        alternates: {
+          canonical: canonicalUrl
+        },
+        openGraph: {
+          title: service.metaTitle || `${service.title} | Venovox`,
+          description: service.metaDescription,
+          url: canonicalUrl,
+          type: 'website',
+        },
+      };
+    }
+  }
+
+  // Handle about page
+  if (path === 'about') {
+    return {
+      title: "About Us | Venovox - Background Screening Experts",
+      description: "Learn about Venovox, Malaysia's trusted background screening and corporate investigation company. ISO 27001 certified with over a decade of experience.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "About Us | Venovox",
+        description: "Learn about Venovox, Malaysia's trusted background screening and corporate investigation company.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle contact page
+  if (path === 'contact-us') {
+    return {
+      title: "Contact Us | Venovox",
+      description: "Get in touch with Venovox for background screening, corporate investigations, and risk management services in Malaysia.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Contact Us | Venovox",
+        description: "Get in touch with Venovox for background screening and corporate investigation services.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle career page
+  if (path === 'career') {
+    return {
+      title: "Careers | Join Venovox Team",
+      description: "Explore career opportunities at Venovox. Join our team of background screening and corporate investigation professionals.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Careers | Venovox",
+        description: "Explore career opportunities at Venovox.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle our-services page
+  if (path === 'our-services') {
+    return {
+      title: "Our Services | Venovox Background Screening Solutions",
+      description: "Comprehensive background screening services including employment verification, criminal checks, education verification, and more.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Our Services | Venovox",
+        description: "Comprehensive background screening services for businesses in Malaysia.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle background-screening page
+  if (path === 'background-screening') {
+    return {
+      title: "Background Screening Malaysia | Venovox",
+      description: "Professional background screening services in Malaysia. Employment verification, criminal checks, education verification, and more.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Background Screening Malaysia | Venovox",
+        description: "Professional background screening services in Malaysia.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle blogs listing page
+  if (path === 'blogs') {
+    return {
+      title: "Blog | Venovox - Background Screening Insights",
+      description: "Read the latest insights on background screening, corporate investigations, and risk management from Venovox experts.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Blog | Venovox",
+        description: "Latest insights on background screening and corporate investigations.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle case-studies page
+  if (path === 'case-studies') {
+    return {
+      title: "Case Studies | Venovox Success Stories",
+      description: "Explore our case studies showcasing successful background screening and corporate investigation projects across various industries.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Case Studies | Venovox",
+        description: "Explore our background screening and investigation success stories.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle corporate-investigations page
+  if (path === 'corporate-investigations') {
+    return {
+      title: "Corporate Investigations | Venovox",
+      description: "Professional corporate investigation services including fraud investigation, asset tracing, due diligence, and more.",
+      alternates: {
+        canonical: canonicalUrl
+      },
+      openGraph: {
+        title: "Corporate Investigations | Venovox",
+        description: "Professional corporate investigation services for businesses.",
+        url: canonicalUrl,
+        type: 'website',
+      },
+    };
+  }
+
+  // Handle case study sub-pages
+  if (path.startsWith('case-studies/')) {
+    const caseStudySlug = path.replace('case-studies/', '');
+    const caseStudyMeta: Record<string, { title: string; description: string }> = {
+      'airline-mass-screening': {
+        title: "Mass Employee Screening for Airlines in Malaysia | Venovox",
+        description: "Venovox Malaysia supported a national airline with large-scale employee background screening, ensuring full compliance and risk management during its recruitment drive."
+      },
+      'international-bank-fit-and-proper-test': {
+        title: "Fit and Proper Test for International Banks | Venovox",
+        description: "Learn how Venovox helped an international bank comply with fit and proper requirements through comprehensive background screening."
+      },
+      'international-school-malaysia': {
+        title: "Background Screening for International Schools | Venovox",
+        description: "Discover how Venovox provides comprehensive background screening for international schools in Malaysia."
+      },
+      'logistics-driver-screening': {
+        title: "Driver Screening for Logistics Companies | Venovox",
+        description: "Learn how Venovox helps logistics companies screen drivers for safety and compliance."
+      },
+      'pharma-employee-verification': {
+        title: "Employee Verification for Pharmaceutical Companies | Venovox",
+        description: "Discover how Venovox provides employee verification services for pharmaceutical companies."
+      },
+      'venture-capital-due-diligence': {
+        title: "Due Diligence for Venture Capital | Venovox",
+        description: "Learn how Venovox helps venture capital firms conduct thorough due diligence investigations."
+      },
+    };
+    const meta = caseStudyMeta[caseStudySlug];
+    if (meta) {
+      return {
+        title: meta.title,
+        description: meta.description,
+        alternates: {
+          canonical: canonicalUrl
+        },
+        openGraph: {
+          title: meta.title,
+          description: meta.description,
+          url: canonicalUrl,
+          type: 'article',
+        },
+      };
+    }
+  }
+
+  // Handle corporate investigation sub-pages
+  if (path.startsWith('corporate-investigations/')) {
+    const corpSlug = path.replace('corporate-investigations/', '');
+    const corpMeta: Record<string, { title: string; description: string }> = {
+      'workplace-misconduct-investigations': {
+        title: "Workplace Misconduct Investigations | Venovox",
+        description: "Professional workplace misconduct investigation services to help organizations address employee misconduct issues."
+      },
+      'asset-tracing-and-recovery': {
+        title: "Asset Tracing and Recovery | Venovox",
+        description: "Expert asset tracing and recovery services to help locate and recover misappropriated assets."
+      },
+      'regulatory-and-compliance-investigations': {
+        title: "Regulatory and Compliance Investigations | Venovox",
+        description: "Comprehensive regulatory and compliance investigation services for businesses."
+      },
+      'digital-forensics-and-incident-investigations': {
+        title: "Digital Forensics and Incident Investigations | Venovox",
+        description: "Expert digital forensics and cyber incident investigation services."
+      },
+      'whistleblowing-and-ethics-management': {
+        title: "Whistleblowing and Ethics Management | Venovox",
+        description: "Comprehensive whistleblowing and ethics management solutions for organizations."
+      },
+      'brand-and-ip-investigations': {
+        title: "Brand and IP Investigations | Venovox",
+        description: "Protect your brand and intellectual property with our investigation services."
+      },
+      'fraud-risk-management-and-prevention': {
+        title: "Fraud Risk Management and Prevention | Venovox",
+        description: "Professional fraud risk management and prevention services for businesses."
+      },
+    };
+    const meta = corpMeta[corpSlug];
+    if (meta) {
+      return {
+        title: meta.title,
+        description: meta.description,
+        alternates: {
+          canonical: canonicalUrl
+        },
+        openGraph: {
+          title: meta.title,
+          description: meta.description,
+          url: canonicalUrl,
+          type: 'article',
+        },
+      };
+    }
+  }
+
+  // Default metadata for other pages
+  return {
+    title: defaultMeta.title,
+    description: defaultMeta.description,
+    alternates: {
+      canonical: canonicalUrl
+    },
+    openGraph: {
+      title: defaultMeta.title,
+      description: defaultMeta.description,
+      url: canonicalUrl,
+      type: 'website',
+    },
+  };
 }
 
 export default async function LanguagePage({ params }: PageProps) {
