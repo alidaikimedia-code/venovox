@@ -17,12 +17,16 @@ export default function PageTranslator() {
   // Listen for language change events
   useEffect(() => {
     const handleLanguageChange = (event: CustomEvent) => {
-      const newLang = event.detail?.language;
-      if (newLang && newLang !== language) {
-        // Reset translation state to force re-translation
-        lastTranslatedPathRef.current = '';
-        lastTranslatedLangRef.current = '';
-        isTranslatingRef.current = false;
+      try {
+        const newLang = event.detail?.language;
+        if (newLang && newLang !== language) {
+          // Reset translation state to force re-translation
+          lastTranslatedPathRef.current = '';
+          lastTranslatedLangRef.current = '';
+          isTranslatingRef.current = false;
+        }
+      } catch (error) {
+        console.error('Error handling language change event:', error);
       }
     };
 
