@@ -87,8 +87,19 @@ export default function MetaUpdater() {
       const canonicalUrl = `${BASE_URL}${pathname}`;
       updateCanonicalUrl(canonicalUrl);
 
+      // Only update title/description on homepage - other pages have their own metadata
+      const isHomePage = pathname === '/' || pathname === '/my-en' || pathname === '/ms' || pathname === '/zh' || pathname === '/ar' || pathname === '/de' || pathname === '/fr';
+
+      if (!isHomePage) {
+        // For non-home pages, only update canonical URL and og:url, keep page-specific title/description
+        updateMetaTag('og:url', canonicalUrl);
+        lastUpdatedRef.current = updateKey;
+        isUpdatingRef.current = false;
+        return;
+      }
+
       if (language === 'en') {
-        // Restore original English meta tags immediately
+        // Restore original English meta tags immediately (homepage only)
         updateMetaTag('description', defaultMetaDescription);
         updateMetaTag('og:description', defaultMetaDescription);
         updateTitle(defaultMetaTitle);
@@ -100,7 +111,7 @@ export default function MetaUpdater() {
       }
 
       try {
-        // Translate meta description and title (will use cache if available)
+        // Translate meta description and title (will use cache if available) - homepage only
         const [translatedDescription, translatedTitle] = await Promise.all([
           translateText(defaultMetaDescription, language),
           translateText(defaultMetaTitle, language)
