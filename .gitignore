@@ -56,3 +56,5 @@ yarn-error.log*
 next-env.d.ts
 
 # Companies data and components (excluded from git)
+public/sitemap.xml
+public/sitemap-*.xml
