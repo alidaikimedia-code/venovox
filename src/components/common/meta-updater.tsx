@@ -1,9 +1,17 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { translateText, shouldSkipTranslation } from '@/lib/translation';
+import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+
+/**
+ * MetaUpdater - Minimal component that only handles canonical URL for English routes
+ *
+ * IMPORTANT: This component no longer modifies title or description tags.
+ * All meta tags are now handled server-side via generateMetadata in page components.
+ *
+ * For language routes (/ms, /zh, /ar, /de, /fr, /my-en), this component does nothing
+ * because those routes have proper server-side metadata via generateMetadata.
+ */
 
 const BASE_URL = 'https://venovox.com';
 const defaultMetaDescription = "Venovox helps businesses in Malaysia with secure background checks, CTOS & SSM reports, company profile verification, and anti-money laundering services. ISO 27001 certified risk management solutions.";
@@ -64,7 +72,6 @@ if (typeof document !== 'undefined') {
 }
 
 export default function MetaUpdater() {
-  const { language } = useLanguage();
   const pathname = usePathname();
   const metaUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const isUpdatingRef = useRef(false);

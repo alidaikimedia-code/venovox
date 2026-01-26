@@ -7402,7 +7402,7 @@ export const blogData = [
     "title": "Property Management: Why Tenant & Staff Screening Matters",
     "description": "Learn why thorough tenant and staff background checks are crucial in property management to reduce risk, ensure safety, and protect your investment.",
     "h1": "Property Management Background Check: Why Tenant & Staff Screening Matters",
-    "featuredImage": "/blogs-images/tenant-&-staff-screening.png",
+    "featuredImage": "/blogs-images/tenant-and-staff-screening.png",
     "altTag": "Tenant & Staff Screening",
     "author": "VENOVOX Team",
     "publishDate": "2025-01-28",

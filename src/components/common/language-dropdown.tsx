@@ -83,27 +83,53 @@ export default function LanguageDropdown() {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    // Use click instead of mousedown to avoid race conditions with button onClick
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
-  const handleLanguageChange = (lang: Language) => {
-    // Get base path from current pathname and convert to target language
-    const basePath = getBasePath(pathname);
-    const newPath = getLocalizedPath(basePath, lang);
-    
-    // Update language state
-    setLanguage(lang);
-    setIsOpen(false);
-    
-    // Navigate to the new path if it's different
-    if (newPath !== pathname) {
-      router.push(newPath);
+  const handleLanguageChange = (lang: Language, event: React.MouseEvent) => {
+    try {
+      // Stop propagation to prevent handleClickOutside from interfering
+      event.stopPropagation();
+
+      // Close dropdown first
+      setIsOpen(false);
+
+      // Get base path from current pathname and convert to target language
+      const basePath = getBasePath(pathname);
+      const newPath = getLocalizedPath(basePath, lang);
+
+      // Update language state
+      setLanguage(lang);
+
+      // Navigate to the new path if it's different
+      if (newPath !== pathname) {
+        router.push(newPath);
+      }
+
+      // Trigger page translation (wrapped in try-catch to prevent errors from breaking the dropdown)
+      if (typeof window !== 'undefined') {
+        try {
+          window.dispatchEvent(new CustomEvent('language-changed', { detail: { language: lang } }));
+        } catch (e) {
+          console.error('Error dispatching language-changed event:', e);
+        }
+      }
+    } catch (error) {
+      console.error('Error changing language:', error);
+      // Ensure dropdown is closed even if there's an error
+      setIsOpen(false);
     }
-    
-    // Trigger page translation
-    if (typeof window !== 'undefined') {
-      window.dispatchEvent(new CustomEvent('language-changed', { detail: { language: lang } }));
+  };
+
+  const handleButtonClick = (event: React.MouseEvent) => {
+    try {
+      // Stop propagation to prevent handleClickOutside from immediately closing
+      event.stopPropagation();
+      setIsOpen(prev => !prev);
+    } catch (error) {
+      console.error('Error toggling dropdown:', error);
     }
   };
 
@@ -264,9 +290,8 @@ export default function LanguageDropdown() {
       <div className="language-dropdown" ref={dropdownRef}>
         <button
           className="language-button"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleButtonClick}
           aria-label="Select language"
-          disabled={isTranslating}
         >
           <Globe size={18} />
           <span className="language-button-text" key={language}>
@@ -296,7 +321,7 @@ export default function LanguageDropdown() {
                 <div
                   key={lang.code}
                   className={`language-option ${language === lang.code ? 'active' : ''}`}
-                  onClick={() => handleLanguageChange(lang.code)}
+                  onClick={(e) => handleLanguageChange(lang.code, e)}
                 >
                   <div className="language-option-name">
                     <span>{getLanguageName(lang.code)}</span>
