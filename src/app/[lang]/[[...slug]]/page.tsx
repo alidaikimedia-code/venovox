@@ -60,7 +60,8 @@ export async function generateStaticParams() {
 
   // Generate params for root/home pages
   languages.forEach(lang => {
-    params.push({ lang, slug: [] });
+    // For optional catch-all [[...slug]], use undefined for root path, not empty array
+    params.push({ lang, slug: undefined });
 
     // Generate params for main pages
     params.push({ lang, slug: ['about'] });
@@ -97,6 +98,12 @@ export async function generateStaticParams() {
     corporateInvestigationSlugs.forEach(slug => {
       params.push({ lang, slug: ['corporate-investigations', slug] });
     });
+
+    // Generate params for privacy pages (will show 404 as they don't exist for language routes)
+    params.push({ lang, slug: ['privacy', 'terms-and-conditions'] });
+    params.push({ lang, slug: ['privacy', 'privacy-policy'] });
+    params.push({ lang, slug: ['privacy', 'security-policy'] });
+    params.push({ lang, slug: ['privacy', 'whistleblowing-policy'] });
   });
 
   return params;
