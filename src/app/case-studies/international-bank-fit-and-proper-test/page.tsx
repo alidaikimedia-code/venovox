@@ -12,7 +12,7 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Employee Background Screening for International Bank in Malaysia",
+    title: "International Bank Fit and Proper Test Case Study|Venovox",
     description: "Learn how Venovox helped a global bank in Malaysia ensure compliance with Bank Negara's fit and proper test through enhanced employee background screening.",
     alternates: {
         canonical: "https://venovox.com/case-studies/international-bank-fit-and-proper-test"

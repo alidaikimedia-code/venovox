@@ -12,7 +12,7 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Corporate Due Diligence and Investigation for Venture Capital in Malaysia",
+    title: "Venture Capital Due Diligence Case Study Analysis|Venovox",
     description: "Venovox Malaysia conducted an in-depth due diligence and corporate investigation in Malaysia to help a venture capital firm make an informed M&A decision.",
     alternates: {
         canonical: "https://venovox.com/case-studies/venture-capital-due-diligence"

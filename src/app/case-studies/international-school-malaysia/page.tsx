@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Pre Employment Screening for International School in Kuala Lumpur",
-    description: "How Venovox helped a leading international school in Kuala Lumpur prevent a potential safety risk through pre employment screening and secure a trusted learning environment.",
+    title: "Pre Employment Screening for International School KL|Venovox",
+    description: "Pre employment screening for international schools in Kuala Lumpur, supporting staff verification, child safety, regulatory compliance, and institutional trust.",
     alternates: {
         canonical: "https://venovox.com/case-studies/international-school-malaysia"
     }

@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Recipient lists
     $toRecipients = ['no-reply@venovox.com']; // Main recipient
-    $bccRecipients = ['kelly@venovox.com', 'dato.devan@venovox.com']; // BCC recipients
+    $bccRecipients = ['kelly@venovox.com', 'dato.devan@venovox.com', 'sharmila@venovox.com']; // BCC recipients
 
     $email_subject = "New Contact Form Submission: " . $subject;
     $email_body = '
