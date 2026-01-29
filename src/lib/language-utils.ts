@@ -17,6 +17,11 @@ const langPrefixMap: Record<Language, string> = {
  * @returns The language-prefixed path
  */
 export function getLocalizedPath(basePath: string, language: Language): string {
+  // Don't localize privacy/legal pages - they should be accessible without language prefix
+  if (basePath.startsWith('/privacy')) {
+    return basePath;
+  }
+
   // Remove any existing language prefixes to get the base path
   let cleanPath = basePath;
   
