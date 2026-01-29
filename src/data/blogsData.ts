@@ -8010,7 +8010,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "When SSM Search Is Essential",
-            "content": "SSM Search supports due diligence at multiple stages:\n\n<strong>Common Use Cases</strong>\n\n• Vendor onboarding and procurement\n• Mergers and acquisitions\n• Franchise or partnership evaluation\n• Investor background checks\n• Legal and compliance reviews\n\nUsing SSM early prevents engagement with shell companies, dissolved entities, or misrepresented businesses."
+            "content": "SSM Search supports due diligence at multiple stages:\n\nCommon Use Cases\n\n• Vendor onboarding and procurement\n• Mergers and acquisitions\n• Franchise or partnership evaluation\n• Investor background checks\n• Legal and compliance reviews\n\nUsing SSM early prevents engagement with shell companies, dissolved entities, or misrepresented businesses."
         },
         {
             "type": "content_section",
@@ -8054,7 +8054,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "What to Review in SSM Data",
-            "content": "SSM data is only useful when analyzed correctly. Focus on:\n\n• <strong>Company Status</strong> – Active, dormant, or struck off\n• <strong>Director Patterns</strong> – Repeated names across risky entities\n• <strong>Shareholding Changes</strong> – Sudden transfers or nominee structures\n• <strong>Address Consistency</strong> – Virtual or frequently changed locations\n• <strong>Business Scope</strong> – Matches the deal you are considering\n\nRed flags in these areas often signal deeper issues that require investigation."
+            "content": "SSM data is only useful when analyzed correctly. Focus on:\n\n• Company Status – Active, dormant, or struck off\n• Director Patterns – Repeated names across risky entities\n• Shareholding Changes – Sudden transfers or nominee structures\n• Address Consistency – Virtual or frequently changed locations\n• Business Scope – Matches the deal you are considering\n\nRed flags in these areas often signal deeper issues that require investigation."
         },
         {
             "type": "content_section",
@@ -8160,7 +8160,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "How to Interpret SSM Results",
-            "content": "An SSM profile tells you more than just whether a company exists or not.\n\nLook closely at:\n\n• <strong>Status</strong>: Active is required for any engagement\n• <strong>Director names</strong>: Compare with ID or resumes\n• <strong>Business nature</strong>: Must match claimed operations\n• <strong>Age of company</strong>: Very new firms carry higher risk\n• <strong>Address consistency</strong>: A mismatch may signal concern\n\nAn experienced <a href=\"https://venovox.com/my-en/background-screening/hr-services\">employment screening company</a> uses this data to flag inconsistencies before they become liabilities."
+            "content": "An SSM profile tells you more than just whether a company exists or not.\n\nLook closely at:\n\n• Status: Active is required for any engagement\n• Director names: Compare with ID or resumes\n• Business nature: Must match claimed operations\n• Age of company: Very new firms carry higher risk\n• Address consistency: A mismatch may signal concern\n\nAn experienced <a href=\"https://venovox.com/my-en/background-screening/hr-services\">employment screening company</a> uses this data to flag inconsistencies before they become liabilities."
         },
         {
             "type": "content_section",
@@ -8235,7 +8235,7 @@ export const blogData = [
         {
             "type": "content_with_image",
             "heading": "Core Details Included in an SSM Report",
-            "content": "<strong>Company Identity</strong>\n\nThis section confirms the legal existence of the business.\n\n• Registered company name\n• Registration number\n• Business type\n• Date of incorporation\n• Current operational status\n\nIt ensures you are dealing with the correct legal entity, not a look-alike or shell operation.\n\n<strong>Registered Address and Business Location</strong>\n\nThe report lists:\n\n• Registered office address\n• Principal place of business\n\nThese details support physical verification and jurisdiction checks, especially important for cross-border engagements.",
+            "content": "Company Identity\n\nThis section confirms the legal existence of the business.\n\n• Registered company name\n• Registration number\n• Business type\n• Date of incorporation\n• Current operational status\n\nIt ensures you are dealing with the correct legal entity, not a look-alike or shell operation.\n\nRegistered Address and Business Location\n\nThe report lists:\n\n• Registered office address\n• Principal place of business\n\nThese details support physical verification and jurisdiction checks, especially important for cross-border engagements.",
             "image": "/blogs-images/ssm-report-details.jfif",
             "imageAlt": "SSM Report",
             "imagePosition": "right"
@@ -8341,7 +8341,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "When SSM Checks Are Critical",
-            "content": "SSM verification is essential in three common scenarios:\n\n<strong>Partner and Vendor Due Diligence</strong>\nBefore onboarding a supplier, distributor, or agent, confirm they are legally registered and active.\n\n<strong>Employment and HR Screening</strong>\nIn <a href=\"https://venovox.com/my-en/background-screening/hr-services\">employment verification Malaysia</a>, HR teams use SSM data to confirm past employers, business owners, and freelance entities listed by candidates.\n\n<strong>Investment and M&A Reviews</strong>\nInvestors and advisors validate targets through SSM to ensure clean ownership and legal standing.\n\nEach case depends on reliable registry data to reduce risk."
+            "content": "SSM verification is essential in three common scenarios:\n\nPartner and Vendor Due Diligence\nBefore onboarding a supplier, distributor, or agent, confirm they are legally registered and active.\n\nEmployment and HR Screening\nIn <a href=\"https://venovox.com/my-en/background-screening/hr-services\">employment verification Malaysia</a>, HR teams use SSM data to confirm past employers, business owners, and freelance entities listed by candidates.\n\nInvestment and M&A Reviews\nInvestors and advisors validate targets through SSM to ensure clean ownership and legal standing.\n\nEach case depends on reliable registry data to reduce risk."
         },
         {
             "type": "content_section",
@@ -8421,7 +8421,7 @@ export const blogData = [
         {
             "type": "content_with_image",
             "heading": "Common Reasons for Name Rejection",
-            "content": "SSM follows strict naming rules. Rejections usually happen for these reasons:\n\n<strong>Similarity to existing names</strong>\nEven small variations can be rejected if the name appears confusingly similar.\n\n<strong>Use of restricted words</strong>\nTerms like Bank, Royal, National, or Trust need special approval.\n\n<strong>Misleading business scope</strong>\nA name suggesting financial, legal, or government authority without licenses is not allowed.\n\n<strong>Offensive or sensitive language</strong>\nCultural, political, or religious references are closely regulated.\n\n<strong>Vague or generic wording</strong>\nOverly broad names fail to define a clear business purpose.",
+            "content": "SSM follows strict naming rules. Rejections usually happen for these reasons:\n\nSimilarity to existing names\nEven small variations can be rejected if the name appears confusingly similar.\n\nUse of restricted words\nTerms like Bank, Royal, National, or Trust need special approval.\n\nMisleading business scope\nA name suggesting financial, legal, or government authority without licenses is not allowed.\n\nOffensive or sensitive language\nCultural, political, or religious references are closely regulated.\n\nVague or generic wording\nOverly broad names fail to define a clear business purpose.",
             "image": "/blogs-images/cyber-security-background.jfif",
             "imageAlt": "Cyber Security Background",
             "imagePosition": "right"
@@ -8429,7 +8429,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "How to Choose a Name That Gets Approved",
-            "content": "<strong>Run Multiple Variations</strong>\nPrepare at least three alternatives. This reduces downtime if your first choice fails.\n\n<strong>Keep It Distinct</strong>\nAvoid:\n• Plural/singular swaps\n• Minor spelling changes\n• Adding Global, Solutions, or Group to an existing name\n\nSSM evaluates overall resemblance, not just exact matches."
+            "content": "Run Multiple Variations\nPrepare at least three alternatives. This reduces downtime if your first choice fails.\n\nKeep It Distinct\nAvoid:\n• Plural/singular swaps\n• Minor spelling changes\n• Adding Global, Solutions, or Group to an existing name\n\nSSM evaluates overall resemblance, not just exact matches."
         },
         {
             "type": "content_section",
@@ -8527,12 +8527,12 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Malaysia Company Registration Process",
-            "content": "<strong>Standard Registration Steps</strong>\n\n• Name availability search with SSM\n• Submission of incorporation documents\n• Appointment of directors and shareholders\n• Issuance of the company registration number\n• Post-registration compliance setup\n\nOnce registered, businesses frequently conduct a <a href=\"https://venovox.com/my-en/background-screening/hr-services\">Malaysia company registration number search</a> to validate company status, director details and filing history. This verification step is widely used for compliance checks, background screening and due diligence assessments."
+            "content": "Standard Registration Steps\n\n• Name availability search with SSM\n• Submission of incorporation documents\n• Appointment of directors and shareholders\n• Issuance of the company registration number\n• Post-registration compliance setup\n\nOnce registered, businesses frequently conduct a <a href=\"https://venovox.com/my-en/background-screening/hr-services\">Malaysia company registration number search</a> to validate company status, director details and filing history. This verification step is widely used for compliance checks, background screening and due diligence assessments."
         },
         {
             "type": "content_with_image",
             "heading": "Compliance Requirements After Registration",
-            "content": "<strong>Obligations for Sdn Bhd Companies</strong>\n\n• Annual return filings\n• Audited financial statements\n• Corporate tax submissions\n• Maintenance of statutory registers\n• Updates to directorship and shareholding\n\n<strong>Obligations for Sole Proprietors</strong>\n\n• Annual renewal of business registration\n• Personal income tax filing\n• Local authority licensing compliance\n\nNot meeting compliance requirements could lead to fines, deregistration or reputational risk.",
+            "content": "Obligations for Sdn Bhd Companies\n\n• Annual return filings\n• Audited financial statements\n• Corporate tax submissions\n• Maintenance of statutory registers\n• Updates to directorship and shareholding\n\nObligations for Sole Proprietors\n\n• Annual renewal of business registration\n• Personal income tax filing\n• Local authority licensing compliance\n\nNot meeting compliance requirements could lead to fines, deregistration or reputational risk.",
             "image": "/blogs-images/ssm-company-lookup.jfif",
             "imageAlt": "SSM company lookup",
             "imagePosition": "right"
@@ -8602,7 +8602,7 @@ export const blogData = [
         {
             "type": "content_with_image",
             "heading": "Key Income Tax Deadlines Businesses Must Track",
-            "content": "<strong>Corporate Income Tax Filing</strong>\n\nFor companies operating in Malaysia:\n• Form C must be filed within 7 months from the end of the financial year.\n• Tax payable is due by the same deadline.\n\nFor example, a company with a financial year ending on 31 December must file and pay by 31 July.\n\n<strong>Monthly Tax Deduction (PCB)</strong>\n\nEmployers must:\n• Deduct PCB from employee salaries\n• Submit payments to LHDN by the 15th of the following month\n\nLate PCB payments often attract immediate penalties and can flag employer compliance issues.\n\n<strong>Withholding Tax Deadlines</strong>\n\nWithholding tax applies to payments made to non-residents, such as:\n• Professional fees\n• Royalties\n• Technical services\n\nPayment and submission are generally due within one month of payment or crediting the amount.",
+            "content": "Corporate Income Tax Filing\n\nFor companies operating in Malaysia:\n• Form C must be filed within 7 months from the end of the financial year.\n• Tax payable is due by the same deadline.\n\nFor example, a company with a financial year ending on 31 December must file and pay by 31 July.\n\nMonthly Tax Deduction (PCB)\n\nEmployers must:\n• Deduct PCB from employee salaries\n• Submit payments to LHDN by the 15th of the following month\n\nLate PCB payments often attract immediate penalties and can flag employer compliance issues.\n\nWithholding Tax Deadlines\n\nWithholding tax applies to payments made to non-residents, such as:\n• Professional fees\n• Royalties\n• Technical services\n\nPayment and submission are generally due within one month of payment or crediting the amount.",
             "image": "/blogs-images/malaysia-company-info.jfif",
             "imageAlt": "Malaysia Company Info",
             "imagePosition": "right"
@@ -8610,7 +8610,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Penalties for Late or Incorrect Tax Submissions",
-            "content": "Malaysia enforces strict penalties to encourage compliance. Common penalties include:\n\n• <strong>Late filing penalty:</strong> 10% of the unpaid tax\n• <strong>Further delay:</strong> Additional 5% if unpaid after 60 days\n• <strong>Incorrect declaration:</strong> Up to 100% penalty for underreported tax\n• <strong>Failure to submit PCB:</strong> Compound fines and legal action\n\nRepeated non-compliance may also lead to audits, travel restrictions for directors, or prosecution."
+            "content": "Malaysia enforces strict penalties to encourage compliance. Common penalties include:\n\n• Late filing penalty: 10% of the unpaid tax\n• Further delay: Additional 5% if unpaid after 60 days\n• Incorrect declaration: Up to 100% penalty for underreported tax\n• Failure to submit PCB: Compound fines and legal action\n\nRepeated non-compliance may also lead to audits, travel restrictions for directors, or prosecution."
         },
         {
             "type": "content_section",
@@ -8620,7 +8620,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Best Practices to Avoid Tax Penalties",
-            "content": "Business owners can reduce risk by implementing structured compliance controls:\n\n<strong>Maintain a tax calendar</strong>\nTrack filing and payment deadlines across all tax categories.\n\n<strong>Align payroll and tax data</strong>\nEnsure employee records match tax submissions and statutory filings.\n\n<strong>Conduct internal compliance reviews</strong>\nPeriodically check PCB, CIT and withholding tax calculations.\n\n<strong>Use professional verification processes</strong>\nReliable employee data supports accurate tax reporting and audit readiness.\n\n<strong>Respond quickly to LHDN notices</strong>\nDelayed responses often escalate penalties."
+            "content": "Business owners can reduce risk by implementing structured compliance controls:\n\nMaintain a tax calendar\nTrack filing and payment deadlines across all tax categories.\n\nAlign payroll and tax data\nEnsure employee records match tax submissions and statutory filings.\n\nConduct internal compliance reviews\nPeriodically check PCB, CIT and withholding tax calculations.\n\nUse professional verification processes\nReliable employee data supports accurate tax reporting and audit readiness.\n\nRespond quickly to LHDN notices\nDelayed responses often escalate penalties."
         },
         {
             "type": "conclusion",
@@ -8677,12 +8677,12 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Poor Record-Keeping and Incomplete Documentation",
-            "content": "Many SMEs fail to maintain structured financial records. Missing invoices, untracked expenses and delayed entries create reporting gaps that affect audits and tax filings.\n\n<strong>Why it happens</strong>\n• Manual bookkeeping\n• Lack of accounting SOPs\n• No periodic internal reviews\n\n<strong>How to avoid it</strong>\n• Use cloud-based accounting software compliant with Malaysian standards\n• Maintain digital copies of all receipts and invoices\n• Reconcile accounts monthly, not annually\n\nConsistent documentation reduces errors and simplifies LHDN audits."
+            "content": "Many SMEs fail to maintain structured financial records. Missing invoices, untracked expenses and delayed entries create reporting gaps that affect audits and tax filings.\n\nWhy it happens\n• Manual bookkeeping\n• Lack of accounting SOPs\n• No periodic internal reviews\n\nHow to avoid it\n• Use cloud-based accounting software compliant with Malaysian standards\n• Maintain digital copies of all receipts and invoices\n• Reconcile accounts monthly, not annually\n\nConsistent documentation reduces errors and simplifies LHDN audits."
         },
         {
             "type": "content_with_image",
             "heading": "Mixing Personal and Business Finances",
-            "content": "This is one of the most frequent mistakes among owner-managed SMEs. Using personal accounts for business transactions blurs financial visibility and complicates tax reporting.\n\n<strong>Risks involved</strong>\n• Inaccurate profit calculations\n• Higher audit risk\n• Difficulty in securing funding\n\n<strong>Prevention steps</strong>\n• Maintain separate bank accounts\n• Assign clear expense policies\n• Track owner withdrawals properly\n\nClear financial separation improves credibility with banks, investors and regulators.",
+            "content": "This is one of the most frequent mistakes among owner-managed SMEs. Using personal accounts for business transactions blurs financial visibility and complicates tax reporting.\n\nRisks involved\n• Inaccurate profit calculations\n• Higher audit risk\n• Difficulty in securing funding\n\nPrevention steps\n• Maintain separate bank accounts\n• Assign clear expense policies\n• Track owner withdrawals properly\n\nClear financial separation improves credibility with banks, investors and regulators.",
             "image": "/blogs-images/business-intelligence-my.jfif",
             "imageAlt": "Business Intelligence MY",
             "imagePosition": "right"
@@ -8690,27 +8690,27 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Incorrect Tax Calculations and Late Filings",
-            "content": "Tax compliance errors, especially related to SST, corporate tax or payroll deductions, can result in fines and reputational damage.\n\n<strong>Common issues</strong>\n• Misclassified expenses\n• Incorrect SST registration thresholds\n• Late CP204 or SST submissions\n\n<strong>How SMEs can stay compliant</strong>\n• Work with licensed tax professionals\n• Schedule compliance calendars\n• Conduct quarterly tax reviews\n\nAccurate tax handling is a core part of financial risk management."
+            "content": "Tax compliance errors, especially related to SST, corporate tax or payroll deductions, can result in fines and reputational damage.\n\nCommon issues\n• Misclassified expenses\n• Incorrect SST registration thresholds\n• Late CP204 or SST submissions\n\nHow SMEs can stay compliant\n• Work with licensed tax professionals\n• Schedule compliance calendars\n• Conduct quarterly tax reviews\n\nAccurate tax handling is a core part of financial risk management."
         },
         {
             "type": "content_section",
             "heading": "Weak Internal Controls and Unverified Staff Roles",
-            "content": "Accounting errors are not always accidental. Weak controls increase exposure to internal fraud, payroll manipulation or unauthorized transactions.\n\n<strong>Control gaps often include</strong>\n• One person handling end-to-end accounting\n• No approval workflows\n• Limited staff verification\n\nImplementing role-based access and using structured <a href=\"https://venovox.com/my-en/background-screening/hr-services\">background screening solutions</a> during hiring reduces financial and compliance risks. Finance and payroll staff should always be vetted before access is granted."
+            "content": "Accounting errors are not always accidental. Weak controls increase exposure to internal fraud, payroll manipulation or unauthorized transactions.\n\nControl gaps often include\n• One person handling end-to-end accounting\n• No approval workflows\n• Limited staff verification\n\nImplementing role-based access and using structured <a href=\"https://venovox.com/my-en/background-screening/hr-services\">background screening solutions</a> during hiring reduces financial and compliance risks. Finance and payroll staff should always be vetted before access is granted."
         },
         {
             "type": "content_section",
             "heading": "Ignoring Vendor and Third-Party Verification",
-            "content": "Unverified vendors can inflate costs, submit fake invoices or expose SMEs to compliance violations.\n\n<strong>Best practices</strong>\n• Conduct basic due diligence on suppliers\n• Verify company registration and bank details\n• Review contracts annually\n\nThird-party risks affect accounting accuracy more than most SMEs realize."
+            "content": "Unverified vendors can inflate costs, submit fake invoices or expose SMEs to compliance violations.\n\nBest practices\n• Conduct basic due diligence on suppliers\n• Verify company registration and bank details\n• Review contracts annually\n\nThird-party risks affect accounting accuracy more than most SMEs realize."
         },
         {
             "type": "content_section",
             "heading": "Lack of Periodic Financial Review and Audit Readiness",
-            "content": "Many SMEs only review accounts during year-end closing, which is often too late to correct systemic issues.\n\n<strong>What to implement instead</strong>\n• Monthly management accounts\n• Quarterly internal audits\n• External reviews when scaling\n\nRegular reviews help identify errors early and improve decision-making."
+            "content": "Many SMEs only review accounts during year-end closing, which is often too late to correct systemic issues.\n\nWhat to implement instead\n• Monthly management accounts\n• Quarterly internal audits\n• External reviews when scaling\n\nRegular reviews help identify errors early and improve decision-making."
         },
         {
             "type": "content_with_image",
             "heading": "Overlooking Compliance When Scaling Operations",
-            "content": "As SMEs grow, financial complexity increases. Expansion without updated accounting processes leads to misreporting and compliance gaps.\n\n<strong>Scaling safely requires</strong>\n• Updated accounting policies\n• Staff training\n• Integrated risk and compliance checks\n\nThis is where accounting, compliance and <a href=\"https://venovox.com/my-en/background-screening/hr-services\">background screening solutions</a> should work together to protect business integrity.",
+            "content": "As SMEs grow, financial complexity increases. Expansion without updated accounting processes leads to misreporting and compliance gaps.\n\nScaling safely requires\n• Updated accounting policies\n• Staff training\n• Integrated risk and compliance checks\n\nThis is where accounting, compliance and <a href=\"https://venovox.com/my-en/background-screening/hr-services\">background screening solutions</a> should work together to protect business integrity.",
             "image": "/blogs-images/financial-crime-investigation.jfif",
             "imageAlt": "Financial crime investigation",
             "imagePosition": "right"
@@ -8775,7 +8775,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Core Responsibilities of a Company Secretary",
-            "content": "<strong>Regulatory Compliance</strong>\n\nThe primary duty of a company secretary is to ensure compliance with Malaysian corporate laws. This includes:\n\n• Filing annual returns with SSM\n• Maintaining statutory registers\n• Ensuring deadlines are met\n• Advising directors on legal obligations\n\nFailure to comply can lead to penalties or legal action against the company.\n\n<strong>Corporate Governance Support</strong>\n\nCompany secretaries guide directors and shareholders on governance matters. They ensure that company decisions follow proper procedures and are documented correctly.\n\nKey governance tasks include:\n\n• Preparing board meeting agendas\n• Recording meeting minutes\n• Ensuring resolutions are legally valid\n\nThis helps maintain transparency and accountability.\n\n<strong>Company Formation and Structural Changes</strong>\n\nA company secretary assists with:\n\n• Company incorporation\n• Changes in directors or shareholders\n• Share issuance or transfer\n• Company name or address changes\n\nThese updates must be accurately recorded and reported to authorities."
+            "content": "Regulatory Compliance\n\nThe primary duty of a company secretary is to ensure compliance with Malaysian corporate laws. This includes:\n\n• Filing annual returns with SSM\n• Maintaining statutory registers\n• Ensuring deadlines are met\n• Advising directors on legal obligations\n\nFailure to comply can lead to penalties or legal action against the company.\n\nCorporate Governance Support\n\nCompany secretaries guide directors and shareholders on governance matters. They ensure that company decisions follow proper procedures and are documented correctly.\n\nKey governance tasks include:\n\n• Preparing board meeting agendas\n• Recording meeting minutes\n• Ensuring resolutions are legally valid\n\nThis helps maintain transparency and accountability.\n\nCompany Formation and Structural Changes\n\nA company secretary assists with:\n\n• Company incorporation\n• Changes in directors or shareholders\n• Share issuance or transfer\n• Company name or address changes\n\nThese updates must be accurately recorded and reported to authorities."
         },
         {
             "type": "content_section",
@@ -8863,7 +8863,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "Understanding Mandatory Employer Contributions in Malaysia",
-            "content": "<strong>What Is EPF</strong>\n\nThe Employees Provident Fund (EPF) is a mandatory retirement savings scheme for Malaysian employees.\n\nEmployer responsibilities include:\n\n• Registering the company and employees with EPF\n• Contributing a minimum of 12%–13% of monthly wages (rate depends on salary level)\n• Deducting the employee's portion and submitting total contributions monthly\n• Ensuring accurate payroll reporting and timely payments\n\nLate or incorrect EPF contributions can trigger fines and interest charges.\n\n<strong>What Is SOCSO</strong>\n\nSOCSO provides social security protection against workplace injuries, invalidity and death.\n\nEmployers must:\n\n• Register employees under SOCSO\n• Contribute based on prescribed wage categories\n• Cover both the Employment Injury Scheme and the Invalidity Scheme where applicable\n\nSOCSO contributions apply to both local and certain foreign workers, depending on eligibility.\n\n<strong>What Is EIS</strong>\n\nThe Employment Insurance System (EIS) helps employees who lose their jobs by providing financial assistance and re-employment help.\n\nEmployer duties include:\n\n• Registering eligible employees\n• Contributing 0.2% of monthly wages\n• Matching the employee's 0.2% contribution\n• Reporting employment termination accurately and on time"
+            "content": "What Is EPF\n\nThe Employees Provident Fund (EPF) is a mandatory retirement savings scheme for Malaysian employees.\n\nEmployer responsibilities include:\n\n• Registering the company and employees with EPF\n• Contributing a minimum of 12%–13% of monthly wages (rate depends on salary level)\n• Deducting the employee's portion and submitting total contributions monthly\n• Ensuring accurate payroll reporting and timely payments\n\nLate or incorrect EPF contributions can trigger fines and interest charges.\n\nWhat Is SOCSO\n\nSOCSO provides social security protection against workplace injuries, invalidity and death.\n\nEmployers must:\n\n• Register employees under SOCSO\n• Contribute based on prescribed wage categories\n• Cover both the Employment Injury Scheme and the Invalidity Scheme where applicable\n\nSOCSO contributions apply to both local and certain foreign workers, depending on eligibility.\n\nWhat Is EIS\n\nThe Employment Insurance System (EIS) helps employees who lose their jobs by providing financial assistance and re-employment help.\n\nEmployer duties include:\n\n• Registering eligible employees\n• Contributing 0.2% of monthly wages\n• Matching the employee's 0.2% contribution\n• Reporting employment termination accurately and on time"
         },
         {
             "type": "content_section",
@@ -9044,7 +9044,7 @@ export const blogData = [
         {
             "type": "content_section",
             "heading": "What Is SST and Why Does It Matter",
-            "content": "Sales and Service Tax is Malaysia's indirect tax system administered by the Royal Malaysian Customs Department. It is divided into two components.\n\n• <strong>Sales Tax</strong> applies to manufacturers and importers of taxable goods.\n• <strong>Service Tax</strong> applies to businesses providing specific taxable services.\n\nSST matters because registration is not optional once eligibility criteria are met. Failure to register on time can result in penalties, backdated tax liabilities, and increased scrutiny of business records."
+            "content": "Sales and Service Tax is Malaysia's indirect tax system administered by the Royal Malaysian Customs Department. It is divided into two components.\n\n• Sales Tax applies to manufacturers and importers of taxable goods.\n• Service Tax applies to businesses providing specific taxable services.\n\nSST matters because registration is not optional once eligibility criteria are met. Failure to register on time can result in penalties, backdated tax liabilities, and increased scrutiny of business records."
         },
         {
             "type": "content_with_image",
