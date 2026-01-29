@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Driver Background Screening for Logistics Company in Malaysia",
-    description: "How Venovox Malaysia helped a logistics company improve safety and reliability through driver background screening and risk verification services.",
+    title: "Logistics Driver Background Screening Case Study | Venovox",
+    description: "Driver background screening for a logistics company in Malaysia focusing on identity checks, driving history verification risk reduction and compliance support.",
     alternates: {
         canonical: "https://venovox.com/case-studies/logistics-driver-screening"
     }

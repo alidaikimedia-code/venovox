@@ -13,7 +13,7 @@ const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
     title: "Mass Employee Screening for Airlines in Malaysia | Venovox",
-    description: "Venovox Malaysia supported a national airline with large-scale employee background screening, ensuring full compliance and risk management during its recruitment drive.",
+    description: "Mass employee screening for airlines in Malaysia, covering identity verification, compliance checks, workforce risk management, and aviation safety requirements.",
     alternates: {
         canonical: "https://venovox.com/case-studies/airline-mass-screening"
     }

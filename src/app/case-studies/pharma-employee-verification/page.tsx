@@ -12,8 +12,8 @@ import {
 const BASE_URL = "https://venovox.com";
 
 export const metadata: Metadata = {
-    title: "Executive Background Screening for Healthcare Company in Malaysia | Venovox",
-    description: "Venovox Malaysia helped a pharmaceutical company strengthen compliance and HR services through executive background screening and verification.",
+    title: "Pharma Employee Background Verification Case Study|Venovox",
+    description: "Pharma employee background verification case study focusing on regulatory compliance, credential checks, risk mitigation, and maintaining workforce integrity.",
     alternates: {
         canonical: "https://venovox.com/case-studies/pharma-employee-verification"
     }

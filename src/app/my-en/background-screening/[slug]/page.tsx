@@ -14,10 +14,12 @@ export async function generateMetadata({
 }) {
     const { slug } = await params;
 
+    // Find the service from the data
+    const service = servicesData.services.find((s) => s.id === slug);
+
     return {
-        title: "Background Screening | Venovox",
-        description:
-            "Learn about our journey from Texas headquarters to becoming APAC's premier risk consultancy offering security advisory and intelligence analysis.",
+        title: service?.metaTitle,
+        description: service?.metaDescription,
         alternates: {
             canonical: `https://venovox.com/my-en/background-screening/${slug}`,
         },

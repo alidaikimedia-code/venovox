@@ -269,14 +269,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Handle blogs listing page
   if (path === 'blogs') {
     return {
-      title: "Blog | Venovox - Background Screening Insights",
-      description: "Read the latest insights on background screening, corporate investigations, and risk management from Venovox experts.",
+      title: "Business Risk, Compliance & Investigation Blog | Venovox",
+      description: "Expert insights on business risk, compliance, and investigations, covering regulatory updates, risk management strategies, and corporate governance best practices.",
       alternates: {
         canonical: canonicalUrl
       },
       openGraph: {
-        title: "Blog | Venovox",
-        description: "Latest insights on background screening and corporate investigations.",
+        title: "Business Risk, Compliance & Investigation Blog | Venovox",
+        description: "Expert insights on business risk, compliance, and investigations, covering regulatory updates, risk management strategies, and corporate governance best practices.",
         url: canonicalUrl,
         type: 'website',
       },
@@ -286,14 +286,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Handle case-studies page
   if (path === 'case-studies') {
     return {
-      title: "Case Studies | Venovox Success Stories",
-      description: "Explore our case studies showcasing successful background screening and corporate investigation projects across various industries.",
+      title: "Corporate Investigation Case Studies & Insights | Venovox",
+      description: "Corporate investigation case studies highlighting verified risk scenarios, investigative methods, and insights that support governance and decision-making.",
       alternates: {
         canonical: canonicalUrl
       },
       openGraph: {
-        title: "Case Studies | Venovox",
-        description: "Explore our background screening and investigation success stories.",
+        title: "Corporate Investigation Case Studies & Insights | Venovox",
+        description: "Corporate investigation case studies highlighting verified risk scenarios, investigative methods, and insights that support governance and decision-making.",
         url: canonicalUrl,
         type: 'website',
       },
@@ -303,14 +303,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Handle corporate-investigations page
   if (path === 'corporate-investigations') {
     return {
-      title: "Corporate Investigations | Venovox",
-      description: "Professional corporate investigation services including fraud investigation, asset tracing, due diligence, and more.",
+      title: "Corporate Investigations & Business Intelligence | Venovox",
+      description: "Corporate investigations and business intelligence services delivering accurate insights, background checks, and risk analysis for confident decisions.",
       alternates: {
         canonical: canonicalUrl
       },
       openGraph: {
-        title: "Corporate Investigations | Venovox",
-        description: "Professional corporate investigation services for businesses.",
+        title: "Corporate Investigations & Business Intelligence | Venovox",
+        description: "Corporate investigations and business intelligence services delivering accurate insights, background checks, and risk analysis for confident decisions.",
         url: canonicalUrl,
         type: 'website',
       },
